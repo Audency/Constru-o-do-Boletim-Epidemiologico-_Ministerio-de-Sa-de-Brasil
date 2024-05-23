@@ -1,0 +1,223 @@
+---
+title: "Monitoramento da COVID-19"
+subtitle: "Atualização Diária dos Dados dos Municípios"
+author: "Ronaldo Fernandes Santos Alves"
+output: word_document
+---
+
+
+#### CARREGAR BIBLIOTECAS
+
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+library(data.table)
+library(lubridate)
+library(openxlsx)
+library(hablar)
+library(abjutils)
+```
+
+
+#### CONFIGURAR DIRETÓRIO DO PROJETO
+
+```{r}
+path = "C:/Users/audencio.victor/OneDrive - Ministério da Saúde/14. Análises COE-COVID/ROTINAS/"
+```
+
+
+#### IMPORTAR DADOS
+
+```{r}
+DADOSMUNBR = read.xlsx(paste0(path, "1_Data/DADOSMUNBR.xlsx"))
+DT_FONTEMUN = read.xlsx(paste0(path, "1_Data/Dados_Municipio/Confirmados-municipio.xlsx"), sheet = 1, cols = c(1,2,3,4))
+DT_NOMESMUN = read.xlsx(paste0(path, "1_Data/Dados_Municipio/DT_NOMESMUN.xlsx"), sheet = 1)
+MONITOR_OLDMUN = read.xlsx(paste0(path, "1_Data/Dados_Municipio/Confirmados-municipio.xlsx"), sheet = 5, cols = c(1,2,3,4))
+```
+
+
+#### CURADORIA DE DADOS 1
+
+```{r}
+DADOSMUNBR = DADOSMUNBR %>% 
+  select(NOMEREG, CODIGOUF, SIGLAUF, NOMEUF, CODIGOMUN, NOMEMUN, LINKMUN) %>% 
+  mutate(NOMEUF = rm_accent(NOMEUF)) %>% 
+  mutate(NOMEUF = str_replace_all(NOMEUF, "[^[:alpha:]]", " ")) %>% 
+  mutate(NOMEUF = str_to_upper(NOMEUF)) %>% 
+  mutate(NOMEUF = str_trim(NOMEUF, side = "both")) %>% 
+  mutate(NOMEUF = str_squish(NOMEUF))
+```
+
+```{r}
+DT_FONTEMUN = DT_FONTEMUN %>% 
+  rename(NOMEUF = "ESTADO",
+         NOMEMUN = "Município.de.residência",
+         casosAcumulado = "Casos.confirmados",
+         obitosAcumulado = "Óbitos") %>% 
+  mutate(data = format(Sys.Date(), "%Y%m%d")) %>% 
+  mutate(casosAcumulado = parse_number(str_remove_all(casosAcumulado,"-"))) %>% 
+  mutate(obitosAcumulado = parse_number(str_remove_all(obitosAcumulado,"-"))) %>% 
+  mutate(LINKMUN = NOMEMUN) %>% 
+  mutate_at(c("NOMEUF","LINKMUN"), ~rm_accent(.)) %>% 
+  mutate_at(c("NOMEUF","LINKMUN"), ~str_replace_all(., "[^[:alpha:]]", " ")) %>% 
+  mutate_at(c("NOMEUF","LINKMUN"), ~str_to_upper(.)) %>% 
+  mutate(LINKMUN = str_remove_all(LINKMUN, "\\bLPI\\b")) %>% 
+  mutate_at(c("NOMEUF","LINKMUN"), ~str_trim(., side = "both")) %>% 
+  mutate_at(c("NOMEUF","LINKMUN"), ~str_squish(.)) %>% 
+  select(data, everything())
+```
+
+
+#### CURADORIA DE DADOS 2
+
+```{r}
+MONITOR_MUN = DT_FONTEMUN %>% 
+  left_join(DT_NOMESMUN, by = c("NOMEUF" = "NOMEUF", "LINKMUN" = "LINKMUN")) %>% 
+  mutate(LINKMUN = ifelse(!is.na(NO_CERTO), NO_CERTO, LINKMUN)) %>% 
+  select(-"NO_CERTO")
+```
+
+```{r}
+MONITOR_MUN = DADOSMUNBR %>% 
+  full_join(MONITOR_MUN, by = c("NOMEUF" = "NOMEUF", "LINKMUN" = "LINKMUN"), suffix = c("_Base", "_Atual")) %>% 
+  group_by(CODIGOMUN) %>% 
+  mutate(DUPLICATE = n(),
+         DUPLICATE = if_else(is.na(CODIGOMUN), NA_integer_, DUPLICATE)) %>% 
+  ungroup() %>% 
+  mutate(LINKMUN = if_else(is.na(DUPLICATE), "OUTROS", LINKMUN)) %>% 
+  filter(!is.na(casosAcumulado) | !is.na(obitosAcumulado)) 
+# MONITOR_MUN %>% count(LINKMUN == "OUTROS")
+```
+
+
+#### CURADORIA DE DADOS 3
+
+```{r}
+MONITOR_OLDMUN = MONITOR_OLDMUN %>% 
+  rename(NOMEUF = "ESTADO",
+         NOMEMUN = "Município.de.residência",
+         casosAcumulado = "Casos.confirmados",
+         obitosAcumulado = "Óbitos") %>% 
+  mutate(data = format(Sys.Date() - 1, "%Y%m%d")) %>% 
+  mutate(casosAcumulado = parse_number(str_remove_all(casosAcumulado,"-"))) %>% 
+  mutate(obitosAcumulado = parse_number(str_remove_all(obitosAcumulado,"-"))) %>% 
+  mutate(LINKMUN = NOMEMUN) %>% 
+  mutate_at(c("NOMEUF","LINKMUN"), ~rm_accent(.)) %>% 
+  mutate_at(c("NOMEUF","LINKMUN"), ~str_replace_all(., "[^[:alpha:]]", " ")) %>% 
+  mutate_at(c("NOMEUF","LINKMUN"), ~str_to_upper(.)) %>% 
+  mutate(LINKMUN = str_remove_all(LINKMUN, "\\bLPI\\b")) %>% 
+  mutate_at(c("NOMEUF","LINKMUN"), ~str_trim(., side = "both")) %>% 
+  mutate_at(c("NOMEUF","LINKMUN"), ~str_squish(.)) %>% 
+  select(data, everything())
+```
+
+```{r}
+MONITOR_OLDMUN = MONITOR_OLDMUN %>% 
+  left_join(DT_NOMESMUN, by = c("NOMEUF" = "NOMEUF", "LINKMUN" = "LINKMUN")) %>% 
+  mutate(LINKMUN = ifelse(!is.na(NO_CERTO), NO_CERTO, LINKMUN)) %>% 
+  select(-"NO_CERTO")
+```
+
+```{r}
+MONITOR_OLDMUN = DADOSMUNBR %>% 
+  full_join(MONITOR_OLDMUN, by = c("NOMEUF" = "NOMEUF", "LINKMUN" = "LINKMUN"), suffix = c("_Base", "_Atual")) %>% 
+  group_by(CODIGOMUN) %>% 
+  mutate(DUPLICATE = n(),
+         DUPLICATE = if_else(is.na(CODIGOMUN), NA_integer_, DUPLICATE)) %>% 
+  ungroup() %>% 
+  mutate(LINKMUN = if_else(is.na(DUPLICATE), "OUTROS", LINKMUN)) %>% 
+  filter(!is.na(casosAcumulado) | !is.na(obitosAcumulado))
+```
+
+
+#### CHECAR DADOS (CONSISTENCIA TEMPORAL)
+
+```{r}
+CHECAR_UF = MONITOR_MUN %>% 
+  group_by(NOMEUF) %>% 
+  summarise(casosHoje = sum_(casosAcumulado),
+            obitosHoje = sum_(obitosAcumulado)) %>% 
+  full_join(
+    MONITOR_OLDMUN %>% 
+      group_by(NOMEUF) %>% 
+      summarise(casosOntem = sum_(casosAcumulado),
+                obitosOntem = sum_(obitosAcumulado)),
+    by = "NOMEUF") %>% 
+  mutate_if(is.numeric, ~replace_na(.,0)) %>% 
+  mutate(casosDif = casosHoje - casosOntem,
+         obitosDif = obitosHoje - obitosOntem,
+         CHECAR = case_when(casosDif < 0 | obitosDif < 0 ~ 1, TRUE ~ 0)) %>% 
+  select(NOMEUF, casosHoje, casosOntem, casosDif, obitosHoje, obitosOntem, obitosDif, CHECAR) %>% 
+  arrange(-CHECAR)
+```
+
+```{r}
+CHECAR_UF %>% count(CHECAR)
+```
+
+```{r}
+CHECAR_MUN = MONITOR_MUN %>% 
+  group_by(NOMEUF, LINKMUN) %>% 
+  summarise(casosHoje = sum_(casosAcumulado),
+            obitosHoje = sum_(obitosAcumulado)) %>% 
+  full_join(
+    MONITOR_OLDMUN %>% 
+      group_by(NOMEUF, LINKMUN) %>% 
+      summarise(casosOntem = sum_(casosAcumulado),
+                obitosOntem = sum_(obitosAcumulado)),
+    by = c("NOMEUF", "LINKMUN" = "LINKMUN")) %>% 
+  ungroup() %>% 
+  mutate_if(is.numeric, ~replace_na(.,0)) %>% 
+  mutate(casosDif = casosHoje - casosOntem,
+         obitosDif = obitosHoje - obitosOntem,
+         CHECAR = case_when(casosDif < 0 | obitosDif < 0 ~ 1, TRUE ~ 0),
+         CHECAR = case_when(LINKMUN == "OUTROS" ~ 0, TRUE ~ CHECAR)) %>% 
+  select(NOMEUF, LINKMUN, casosHoje, casosOntem, casosDif, obitosHoje, obitosOntem, obitosDif, CHECAR) %>% 
+  arrange(-CHECAR)
+```
+
+```{r}
+CHECAR_MUN %>% count(CHECAR)
+```
+
+```{r}
+CHECAR_MUN %>% count(NOMEUF, CHECAR) %>% spread(key = "CHECAR", value = "n")
+```
+
+
+#### GERAR DADOS DE CONTROLE
+
+```{r}
+DT_COVIDMUN = MONITOR_MUN %>% 
+  select(data, NOMEUF, NOMEMUN_Base, CODIGOMUN, casosAcumulado, obitosAcumulado, LINKMUN) %>% 
+  mutate(casosAcumulado = ifelse(is.na(casosAcumulado), 0, casosAcumulado),
+         obitosAcumulado = ifelse(is.na(obitosAcumulado), 0, obitosAcumulado)) %>% 
+  mutate(NOMEMUN_Base = ifelse(is.na(NOMEMUN_Base), "OUTROS", NOMEMUN_Base)) %>% 
+  filter(data >= "2020-02-25") %>% # filter(casosAcumulado != 0)
+  group_by(NOMEUF, NOMEMUN_Base, LINKMUN) %>% 
+  summarise(data = unique(data),
+            CODIGOMUN = unique(CODIGOMUN),
+            casosAcumulado = sum_(casosAcumulado),
+            obitosAcumulado = sum_(obitosAcumulado)) %>% 
+  ungroup() %>% 
+  rename(Casos = "casosAcumulado",`Óbitos` = "obitosAcumulado") %>% 
+  select("data", everything(), -"LINKMUN")
+```
+
+
+#### SALVAR DADOS
+
+```{r}
+dir.create(paste0(path, "1_Output/Entregas_", format(Sys.Date(), "%d%b%Y")))
+```
+
+```{r}
+write.xlsx(DT_COVIDMUN, file = paste0(path, "1_Data/Dados_Municipio/DT_Monitora_MUN/DT_COVID19BRMUN_", format(Sys.Date(), "%Y-%m-%d"), ".xlsx"), overwrite = T)
+```
+
+```{r}
+write.xlsx(DT_COVIDMUN, paste0(path, "1_Output/Entregas_", format(Sys.Date(), "%d%b%Y"), "/DT_COVID19MUN_", format(Sys.Date(), "%d%b%Y"),".xlsx"), asTable = T, overwrite = T)
+```
+
+```{r}
+write.xlsx(CHECAR_MUN, paste0(path, "1_Output/Entregas_", format(Sys.Date(), "%d%b%Y"), "/CHECAR_MUN_", format(Sys.Date(), "%d%b%Y"),".xlsx"), asTable = T, overwrite = T)
+```

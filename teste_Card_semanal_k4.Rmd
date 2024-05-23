@@ -1,0 +1,479 @@
+---
+title: "cards_semanais"
+author: "Plinio"
+date: "23/02/2023"
+output: html_document
+---
+
+```{r}
+corteSemana = 19 ### ATUALIZAR !!!
+```
+
+```{r}
+url_juh_us = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports_us/5-04-2024.csv" ### ATUALIZAR MM/DD/AAAA!!!
+# https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data
+```
+
+#### CARREGAR PACOTES
+
+```{r warning = F, message = F}
+library(tidyverse)
+library(lubridate)
+library(data.table)
+library(openxlsx)
+library(hablar)
+library(extrafont)
+library(hrbrthemes)
+library(gghighlight)
+library(udunits2)
+library(sf)
+library(brazilmaps) 
+library(geobr)
+library(ggspatial)
+library(ggsn)
+library(ggflags)
+library(ggrepel)
+```
+
+### PARTE 1 - BRASIL
+
+#### IMPORTAR DADOS (BRASIL)
+
+```{r}
+#DT_CONTROL = fread(file = "C:/Users/pbrte/OneDrive - Ministério da Saúde/14. Análises COE-COVID/ROTINAS/1_Data/Dados_Controle/DT_Monitora_COVID_20240105.csv", encoding = "UTF-8") ## ATUALIZAR !!!
+
+DT_CONTROL = fread(file = "C:/Users/audencio.victor/OneDrive - Ministério da Saúde/14. Análises COE-COVID/ROTINAS/1_Data/Dados_Controle/DT_Monitora_COVID_20240511.csv", encoding = "UTF-8") ## ATUALIZAR !!!
+```
+
+```{r}
+#DT_MUN = read.xlsx("C:/Users/pbrte/OneDrive - Ministério da Saúde/14. Análises COE-COVID/ROTINAS/1_Data/DADOSMUNBR_novo.xlsx", sheet = 1)
+
+DT_MUN = read.xlsx("C:/Users/audencio.victor/OneDrive - Ministério da Saúde/14. Análises COE-COVID/ROTINAS/1_Data/DADOSMUNBR_novo.xlsx", sheet = 1)
+```
+
+```{r}
+#dadostcu2019 <- readxl::read_excel("C:/Users/pbrte/OneDrive - Ministério da Saúde/14. Análises COE-COVID/ROTINAS/1_Data/estimativa_TCU_2019_20200427.xls", sheet = 4)
+
+dadostcu2019 <- readxl::read_excel("C:/Users/audencio.victor/OneDrive - Ministério da Saúde/14. Análises COE-COVID/ROTINAS/1_Data/estimativa_TCU_2019_20200427.xls", sheet = 4)
+
+
+
+dadostcu2019 <- dadostcu2019 %>% 
+  #mutate(codigoMUN = str_replace_na("")) %>% 
+  mutate(CODIGOMUN7 = str_c(codigoUF, codigoMUN)) %>% 
+  mutate(CODIGOMUN7 = parse_number(str_sub(CODIGOMUN7, end = 6))) %>% 
+  mutate(CODIGOMUN7 = case_when(is.na(CODIGOMUN7) ~ codigoUF, TRUE ~ CODIGOMUN7)) %>% 
+  select(CODIGOMUN7, POP_TCU2019)
+
+# DT_CONTROL = DT_CONTROL %>% left_join(dadostcu2020, by = c("CODIGOLOCAL" = "CODIGOMUN7"))
+```
+
+#### PREPARAR DADOS
+
+```{r}
+#DT_CONTROL = DT_CONTROL %>% 
+#  filter(data <= "2022-10-15") ## ATUALIZAR !!!
+```
+
+```{r}
+DT_CONTROL = DT_CONTROL %>% 
+  mutate(anoEpi = epiyear(data)) #%>% 
+  #filter(!(anoEpi == 2023 & semanaEpi > corteSemana)) ## ATUALIZAR !!!
+```
+
+```{r}
+DT_MUN = DT_MUN %>% select(CODIGOMUN, LAT, LONG) %>% mutate(CODIGOMUN = parse_number(str_sub(CODIGOMUN, end = 6)))
+```
+
+```{r}
+DT_CONTROL = sjmisc::set_na(DT_CONTROL, na = "")
+```
+
+```{r}
+DT_CONTROL = DT_CONTROL %>% mutate(data = ymd(data)) %>% left_join(DT_MUN, by = c("CODIGOLOCAL" = "CODIGOMUN"))
+```
+
+```{r}
+DT_CONTROL = DT_CONTROL %>% full_join(dadostcu2019, by = c("CODIGOLOCAL" = "CODIGOMUN7"))
+
+DT_CONTROL = DT_CONTROL %>% 
+  rename(POP_TCU2019 = POP_TCU2019.x)
+```
+
+```{r}
+DT_CONTROL = DT_CONTROL %>% 
+  group_by(anoEpi, semanaEpi) %>% 
+  mutate(minData = min_(data)) %>% 
+  ungroup()
+```
+
+#### CHECAR DADOS
+
+```{r}
+DT_CONTROL %>% filter(ABRANGENCIA == 1, data == max(data)) %>% select(NOMELOCAL, data, semanaEpi, casosAcumulado, obitosAcumulado, casosNovos, obitosNovos)
+```
+
+```{r}
+cbind(DT_CONTROL %>% filter(ABRANGENCIA == 7, data == max(data), CODIGOMUN7 != "$0000") %>% summarise(municipioTotal = n_distinct(CODIGOMUN7)),
+                      
+DT_CONTROL %>% filter(ABRANGENCIA == 7, casosAcumulado > 0) %>% filter(data == max(data), CODIGOMUN7 != "$0000") %>% summarise(municipioCasos = n_distinct(CODIGOMUN7)),
+
+DT_CONTROL %>% filter(ABRANGENCIA == 7, obitosAcumulado > 0) %>% filter(data == max(data), CODIGOMUN7 != "$0000") %>% summarise(municipioObitos = n_distinct(CODIGOMUN7)))
+```
+
+##Mapas
+
+```{r}
+tbMapUF = DT_CONTROL %>% 
+  filter(ABRANGENCIA == 3, minData == max(minData) - 7) %>% 
+  select(CODIGOLOCAL, casosNovos, obitosNovos) %>% 
+  group_by(CODIGOLOCAL) %>% 
+  summarise(casosNovosAntes = sum_(casosNovos), obitosNovosAntes = sum_(obitosNovos)) %>%
+  #mutate(casosNovosAntes = case_when(casosNovosAntes <0 ~ 54, TRUE ~ as.numeric(as.character(casosNovosAntes))))%>% 
+  left_join(
+    DT_CONTROL %>% 
+      filter(ABRANGENCIA == 3, minData == max(minData)) %>% 
+      select(CODIGOLOCAL, casosNovos, obitosNovos) %>% 
+      group_by(CODIGOLOCAL) %>% 
+      summarise(casosNovosDepois = sum_(casosNovos), obitosNovosDepois = sum_(obitosNovos)),
+      by = c("CODIGOLOCAL" = "CODIGOLOCAL")) %>%
+      mutate(changeCasosNovos = 
+               round(((casosNovosDepois - casosNovosAntes) / casosNovosAntes) * 100, 0),
+             changeObitosNovos = 
+               round(((obitosNovosDepois - obitosNovosAntes) / obitosNovosAntes) * 100, 
+                     0)) %>% 
+  mutate(catsCasosNovos = case_when(changeCasosNovos < -5 ~ "Redução",
+                               between(changeCasosNovos, -5, 5) ~ "Estabilização",
+                               changeCasosNovos > 5 ~ "Incremento", 
+                               TRUE ~ NA_character_)) %>% 
+  mutate(catsObitosNovos = case_when(changeObitosNovos < -5 ~ "Redução",
+                               between(changeObitosNovos, -5, 5) ~ "Estabilização",
+                               changeObitosNovos > 5 ~ "Incremento", 
+                               TRUE ~ NA_character_))
+
+
+
+tbMapUF = get_brmap("State") %>% inner_join(tbMapUF, c("State" = "CODIGOLOCAL"))
+```
+
+```{r}
+tbMapUF<-tbMapUF %>% 
+  mutate(changeObitosNovos= case_when(changeObitosNovos== Inf ~ 100,
+                                      TRUE ~ changeObitosNovos))
+
+tbMapUF<-tbMapUF %>% 
+  mutate(changeCasosNovos= case_when(changeCasosNovos== Inf ~ 100,
+                                      TRUE ~ changeCasosNovos))
+```
+
+```{r}
+#tbMapUF$changeCasosNovos[1] <- 100
+#tbMapUF$changeCasosNovos[2] <- 100
+#tbMapUF$changeCasosNovos[6] <- 100
+#tbMapUF$changeCasosNovos[9] <- 100
+#tbMapUF$changeCasosNovos[17] <- 100
+#tbMapUF$changeCasosNovos[18] <- 100
+
+#tbMapUF$changeCasosNovos[2] <- 0
+#tbMapUF$changeCasosNovos[17] <- 0
+
+#tbMapUF$catsCasosNovos[2] <- "Estabilização"
+#tbMapUF$catsCasosNovos[17] <- "Estabilização"
+#tbMapUF$catsCasosNovos[24] <- "Estabilização"
+
+#tbMapUF$changeObitosNovos[6] <- -100
+
+#tbMapUF$changeObitosNovos[1] <- 0
+#tbMapUF$changeObitosNovos[2] <- 0
+#tbMapUF$changeObitosNovos[3] <- 0
+#tbMapUF$changeObitosNovos[4] <- 0
+#tbMapUF$changeObitosNovos[5] <- 0
+#tbMapUF$changeObitosNovos[6] <- 0
+#tbMapUF$changeObitosNovos[7] <- 0
+#tbMapUF$changeObitosNovos[8] <- 0
+#tbMapUF$changeObitosNovos[9] <- 0
+#tbMapUF$changeObitosNovos[10] <- 0
+#tbMapUF$changeObitosNovos[12] <- 0
+#tbMapUF$changeObitosNovos[14] <- 0
+#tbMapUF$changeObitosNovos[15] <- 0
+#tbMapUF$changeObitosNovos[16] <- 0
+#tbMapUF$changeObitosNovos[17] <- 0
+#tbMapUF$changeObitosNovos[18] <- 0
+#tbMapUF$changeObitosNovos[19] <- 0
+#tbMapUF$changeObitosNovos[26] <- 0
+
+#tbMapUF$catsObitosNovos[1] <- "Estabilização" 
+#tbMapUF$catsObitosNovos[2] <- "Estabilização"
+#tbMapUF$catsObitosNovos[3] <- "Estabilização"
+#tbMapUF$catsObitosNovos[4] <- "Estabilização" 
+#tbMapUF$catsObitosNovos[6] <- "Estabilização" 
+#tbMapUF$catsObitosNovos[7] <- "Estabilização" 
+#tbMapUF$catsObitosNovos[8] <- "Estabilização" 
+#tbMapUF$catsObitosNovos[9] <- "Estabilização" 
+#tbMapUF$catsObitosNovos[10] <- "Estabilização" 
+#tbMapUF$catsObitosNovos[12] <- "Estabilização" 
+#tbMapUF$catsObitosNovos[14] <- "Estabilização" 
+#tbMapUF$catsObitosNovos[15] <- "Estabilização" 
+#tbMapUF$catsObitosNovos[16] <- "Estabilização" 
+#tbMapUF$catsObitosNovos[17] <- "Estabilização" 
+#tbMapUF$catsObitosNovos[18] <- "Estabilização" 
+#tbMapUF$catsObitosNovos[26] <- "Estabilização" 
+
+#tbMapUF$obitosNovosDepois[6] <- 0
+```
+
+```{r}
+gg15A = ggplot(tbMapUF) + 
+  geom_sf(aes(fill = catsCasosNovos), size = 0.5) + 
+  geom_sf(data = get_brmap("Region"), fill = "transparent", colour = "black", size = .8) + 
+  scale_fill_manual(name = "Casos novos", 
+                    breaks = c("Redução","Estabilização","Incremento"),
+                    values = c("#99d8c9","#f0f0f0","#fc9272"),
+                    labels = c(paste0("Redução ", "(", n_distinct(tbMapUF$State[tbMapUF$catsCasosNovos == "Redução"]), ")"),
+                               paste0("Estabilização ", "(", n_distinct(tbMapUF$State[tbMapUF$catsCasosNovos == "Estabilização"]), ")"),
+                               paste0("Incremento ", "(", n_distinct(tbMapUF$State[tbMapUF$catsCasosNovos == "Incremento"]), ")"))) + 
+  geom_sf_label(data = filter(tbMapUF, !State %in% c(24:28, 53)),
+                aes(label = paste0(changeCasosNovos, "%")), size = 5) + 
+  geom_label_repel(data = filter(tbMapUF, State %in% c(24:28)),
+                   aes(label = paste0(changeCasosNovos, "%"), geometry = geometry), 
+                   size = 5, stat = "sf_coordinates", force = 1, nudge_x = 0.2, 
+                   direction = "x") + 
+  geom_label_repel(data = filter(tbMapUF, State %in% c(53)),
+                   aes(label = paste0(changeCasosNovos, "%"), geometry = geometry), 
+                   size = 5, stat = "sf_coordinates", force = 1, nudge_y = 0.2, 
+                   direction = "y") + 
+  labs(title = "") + 
+  theme_void(base_size = 14) +
+  theme(legend.position = c(0.2, 0.25), axis.text = element_blank(),
+        legend.title = element_text(face = "bold"),
+        plot.tag = element_text(face = "bold")) + 
+  scalebar(tbMapUF, dist = 500, location = "bottomright", transform = T,
+           dist_unit = "km", st.dist = 0.03, st.size = 3, model = "WGS84") #+
+ # north(tbMapUF, symbol = 2, scale = .1)
+```
+
+```{r}
+gg15B = ggplot(tbMapUF) + 
+  geom_sf(aes(fill = catsObitosNovos), size = 0.5) + 
+  geom_sf(data = get_brmap("Region"), fill = "transparent", colour = "black", size = .8) + 
+  scale_fill_manual(name = "Óbitos novos", 
+                    breaks = c("Redução","Estabilização","Incremento"),
+                    values = c("#99d8c9","#f0f0f0","#fc9272"),
+                    labels = c(paste0("Redução ", "(", n_distinct(tbMapUF$State[tbMapUF$catsObitosNovos == "Redução"]), ")"),
+                               paste0("Estabilização ", "(", n_distinct(tbMapUF$State[tbMapUF$catsObitosNovos == "Estabilização"]), ")"),
+                               paste0("Incremento ", "(", n_distinct(tbMapUF$State[tbMapUF$catsObitosNovos == "Incremento"]), ")"))) + 
+  geom_sf_label(data = filter(tbMapUF, !State %in% c(24:28, 53)),
+                aes(label = paste0(changeObitosNovos, "%")), size = 5) + 
+  ggrepel::geom_label_repel(data = filter(tbMapUF, State %in% c(24:28)),
+                            aes(label = paste0(changeObitosNovos, "%"), geometry = geometry),
+                            size = 5, stat = "sf_coordinates", force = 1, nudge_x = 0.2, 
+                            direction = "x") + 
+  geom_label_repel(data = filter(tbMapUF, State %in% c(53)),
+                   aes(label = paste0(changeObitosNovos, "%"), geometry = geometry), 
+                   size = 5, stat = "sf_coordinates", force = 1, nudge_y = 0.2, 
+                   direction = "y") + 
+  labs(title = "") + 
+  theme_void(base_size = 14) +
+  theme(legend.position = c(0.2, 0.25), 
+        axis.text = element_blank(),
+        legend.title = element_text(face = "bold"),
+        plot.tag = element_text(face = "bold")) + 
+  scalebar(tbMapUF, dist = 500, location = "bottomright", transform = T,
+           dist_unit = "km", st.dist = 0.03, st.size = 3, model = "WGS84")# +
+ # north(tbMapUF, symbol = 2, scale = .1)
+```
+
+###salva mapas
+
+```{r}
+#setwd("C:/Users/pbrte/OneDrive - Ministério da Saúde/Área de Trabalho/cards/")
+#setwd("C:/Users/wanderley.junior/OneDrive - Ministério da Saúde/14. Análises COE-COVID/ROTINAS/cards semanal/mapas/SE 13 2024/") ##ATUALIZAR
+
+#setwd("C:/Users/eucil/OneDrive - Ministério da Saúde/14. Análises COE-COVID/ROTINAS/cards semanal/mapas/SE 13 2023/") ##ATUALIZAR
+
+#setwd("C:/Users/pbrte/OneDrive - Ministério da Saúde/14. Análises COE-COVID/ROTINAS/cards semanal/mapas/SE 47 2023/") ##ATUALIZAR
+
+ggsave(gg15A, width = 200, height = 170, units = "mm", file = "Fig_17A.png", dpi = "retina")
+ggsave(gg15B, width = 200, height = 170, units = "mm", file = "Fig_17B.png", dpi = "retina")
+
+tbMapUF$geometry <- NULL
+
+tbMapUF <-  tbMapUF %>%
+  mutate(State = case_when(State == 11 ~ "RO", State == 12 ~ "AC", State == 13 ~ "AM", State == 14 ~ "RR", State == 15 ~ "PA", State == 16 ~ "AP", State == 17 ~ "TO", State == 21 ~ "MA", State == 22 ~ "PI", State == 23 ~ "CE", State == 24 ~ "RN", State == 25 ~ "PB", State == 26 ~ "PE", State == 27 ~ "AL", State == 28 ~ "SE", State == 29 ~ "BA", State == 31 ~ "MG", State == 32 ~ "ES", State == 33 ~ "RJ", State == 35 ~ "SP", State == 41 ~ "PR", State == 42 ~ "SC", State == 43 ~ "RS", State == 50 ~ "MS", State == 51 ~ "MT", State == 52 ~ "GO", State == 53 ~ "DF"))  
+
+tbMapUF_Casos <- tbMapUF %>% 
+  select(State, casosNovosAntes, casosNovosDepois, changeCasosNovos) 
+
+tbMapUF_Obitos <- tbMapUF %>% 
+  select(State, obitosNovosAntes, obitosNovosDepois, changeObitosNovos)
+
+
+write.xlsx(tbMapUF_Casos, file = "C:/Users/audencio.victor/OneDrive - Ministério da Saúde/14. Análises COE-COVID/ROTINAS/cards semanal/mapas/SE 19 2024/tbMapUF_Casos.xlsx", overwrite = T) ###ATUALIZAR
+
+#write.xlsx(tbMapUF_Obitos, file = "C:/Users/wanderley.junior/OneDrive - Ministério da Saúde/14. Análises COE-COVID/ROTINAS/cards semanal/mapas/SE 13 2024/tbMapUF_Obitos.xlsx", overwrite = T) ###ATUALIZAR
+
+write.xlsx(tbMapUF_Obitos, file = "C:/Users/audencio.victor/OneDrive - Ministério da Saúde/14. Análises COE-COVID/ROTINAS/cards semanal/mapas/SE 19 2024/tbMapUF_Obitos.xlsx", overwrite = T) ###ATUALIZAR
+
+#write.xlsx(tbMapUF_Casos, file = "C:/Users/pbrte/OneDrive - Ministério da Saúde/14. Análises COE-COVID/ROTINAS/cards semanal/mapas/SE 47 2023/tbMapUF_Casos.xlsx", overwrite = T) ###ATUALIZAR
+
+#write.xlsx(tbMapUF_Obitos, file = "C:/Users/pbrte/OneDrive - Ministério da Saúde/14. Análises COE-COVID/ROTINAS/cards semanal/mapas/SE 47 2023/tbMapUF_Obitos.xlsx", overwrite = T) ###ATUALIZAR
+#write.xlsx(tbMapUF, file = "tbMapUF.xlsx", overwrite = T)
+
+```
+
+####teste - barras
+
+```{r}
+tbdia <- DT_CONTROL %>%
+  filter(ABRANGENCIA == 1) %>%
+  select(data, casosNovos, obitosNovos) %>%
+  mutate(SE = epiweek(data)) %>% 
+  mutate(anoepi = year(data)) 
+
+#tbdia$obitosNovos[1286] <- 65 ###AJUSTE DE BANCO DE DADOS NOS ÓBITOS DE AP (-205) E PR (-1) EM 02/09/2023 SE 35
+#tbdia$obitosNovos[1293] <- 117 ###AJUSTE BANCO DE DADOS NOS ÓBITOS DE AP (0) E MS (-1) EM 09/09/2023 SE 36
+#tbdia$obitosNovos[1300] <- 356 ###AJUSTE BANCO DE DADOS NOS ÓBITOS DE AP (+205) EM 19/09/2023 SE 37
+```
+
+```{r}
+######UTILIZAR ESSAS LINHAS SOMENTE NA TRANSIÇÃO DOS ANOS!!!
+#
+#tbdia2023 <- tbdia %>% 
+#  #filter(SE >= 10 & anoepi == 2023)
+#
+#tbdia2024 <- tbdia %>% 
+#  filter(anoepi == 2024) 
+#
+#tbdia <- rbind(tbdia2023)#,tbdia2024)
+```
+
+```{r}
+tbdia <- tbdia %>% 
+  group_by(SE,anoepi) %>% 
+  summarize(casosNovos = sum(casosNovos), obitosNovos = sum(obitosNovos)) %>% 
+  mutate(smaCasosNovos = casosNovos/7,)%>% 
+  mutate(smaObitosNovos = obitosNovos/7) 
+```
+
+```{r}
+tbdia$smaCasosNovos <- round(tbdia$smaCasosNovos, 1)
+tbdia$smaObitosNovos <- round(tbdia$smaObitosNovos, 1)
+```
+
+##arquivo de data para padronizar o gráfico e ter label no mesmo
+
+```{r}
+#Data_SE_base<-openxlsx::read.xlsx("C:/Users/pbrte/OneDrive - Ministério da Saúde/14. Análises COE-COVID/ROTINAS/cards semanal/Data_SE_base.xlsx", detectDates = T)
+
+
+#Data_SE_base<-openxlsx::read.xlsx("C:/Users/wanderley.junior/OneDrive - Ministério da Saúde/14. Análises COE-COVID/ROTINAS/cards semanal/Data_SE_base.xlsx", detectDates = T)
+
+
+Data_SE_base<-openxlsx::read.xlsx("C:/Users/audencio.victor/OneDrive - Ministério da Saúde/14. Análises COE-COVID/ROTINAS/cards semanal/Data_SE_base.xlsx", detectDates = T)
+
+
+tbdia<-tbdia %>% 
+  left_join(Data_SE_base, by= c("anoepi","SE"))
+```
+
+###aqui vai ter que filtrar manter só cinco semanas pq os gráficos estão configurados para sete barras ####ATUALIZAR
+
+```{r}
+tbdia <- tbdia %>% 
+  filter(anoepi == 2024) %>% 
+  filter(SE == 15|SE == 16 |SE == 17|SE == 18|SE == 19) ###ATUALIZAR QUANDO VIRAR O ANO E ATUALIZAR AS SEMANAS
+  #filter(anoepi == 2024) ###ATUALIZAR QUANDO VIRAR O ANO
+
+tbdia$minData_n <- as.Date(tbdia$minData_n)
+```
+
+##gráfico casos por SE
+
+```{r}
+Plot_casos_mes<-ggplot(data = tbdia) + 
+  geom_bar(aes(x=minData_n, y=casosNovos), width=6, stat="identity", alpha = 0.5, colour="#0016bf", fill="#010b59")+
+  #geom_line(aes(x=minData_n, y = smaCasosNovos, colour = "#141313"), size = 1.5) +
+  scale_x_date(labels = tbdia$SE, breaks = tbdia$minData_n, expand = c(0, 0),guide = guide_axis(check.overlap = TRUE)) + 
+  scale_y_continuous(limits = c(0, 75000), breaks = seq(0, 75000, 5000), expand = c(0,0), 
+                      labels = scales::label_comma(big.mark = ".", decimal.mark = ","))+
+  #scale_colour_manual(name = "", labels = c("#141313" = "Média por SE"), values = c("#141313" = "#141313")) +
+  geom_text(aes(x=minData_n, y=casosNovos, label = format(casosNovos, big.mark = ".", decimal.mark = ",")), colour = "black", hjust = 0.5, 
+  vjust = -1, fontface = "bold", size=14) +
+  #geom_label(aes(x=minData_n, y=smaCasosNovos, label = format(smaCasosNovos, big.mark = ".", decimal.mark = ",")), colour = "black", hjust = 0.5, vjust = 0.4, fontface = "bold", size=14) +
+  labs(title = "Casos da covid-19 por SE da notificação",
+    x = "Semana epidemiológica", y = "Número de casos novos de covid") + 
+  theme_ipsum(grid = F, base_size = 16, axis_text_size = 30) + 
+  theme(legend.position = "bottom",
+        axis.line.x = element_line(colour = "black"),
+        axis.ticks.x = element_line(colour = "black"),
+        axis.title.x = element_text(size = 30),
+        axis.text.x = element_text(size = 30),
+        axis.title.y = element_text(size = 30),
+        plot.title = element_text(size = 30),
+        legend.text = element_text(size = 30))
+```
+
+##gráfico óbitos por SE
+
+```{r}
+Plot_obitos_mes<-ggplot(data = tbdia) + 
+  geom_bar(aes(x=minData_n, y=obitosNovos), width=6, stat="identity", alpha = 0.5, colour="#d60909", fill="#7d0606")+
+  #geom_line(aes(x=minData_n, y = smaObitosNovos, colour = "#141313"), size = 1.5) +
+  scale_x_date(labels = tbdia$SE, breaks = tbdia$minData_n, expand = c(0, 0),guide = guide_axis(check.overlap = TRUE)) + 
+  scale_y_continuous(limits = c(0, 400), breaks = seq(0, 400, 50), expand = c(0,0), 
+                      labels = scales::label_comma(big.mark = ".", decimal.mark = ","))+
+  #scale_colour_manual(name = "", labels = c("#141313" = "Média por SE"), values = c("#141313" = "#141313")) +
+  geom_text(aes(x=minData_n, y=obitosNovos, label = format(obitosNovos, big.mark = ".", decimal.mark = ",")), colour = "black", hjust = 0.5,
+  vjust = -1, fontface = "bold", size=14) +
+  #geom_label(aes(x=minData_n, y=smaObitosNovos, label = format(smaObitosNovos, big.mark = ".", decimal.mark = ",")), colour = "black", hjust = 0.5, vjust = 0.4, fontface = "bold", size=14) +
+  labs(title = "Óbitos da covid-19 por SE da notificação",
+    x = "Semana epidemiológica", y = "Número de óbitos novos de covid") + 
+  theme_ipsum(grid = F, base_size = 16, axis_text_size = 30) + 
+  theme(legend.position = "bottom",
+        axis.line.x = element_line(colour = "black"),
+        axis.ticks.x = element_line(colour = "black"),
+        axis.title.x = element_text(size = 30),
+        axis.text.x = element_text(size = 30),
+        axis.title.y = element_text(size = 30),
+        plot.title = element_text(size = 30),
+        legend.text = element_text(size = 30))
+```
+
+```{r}
+#setwd("C:/Users/pbrte/OneDrive - Ministério da Saúde/Área de Trabalho/cards/")
+#setwd("C:/Users/wanderley.junior/OneDrive - Ministério da Saúde/14. Análises COE-COVID/ROTINAS/cards semanal/graficos/SE 13 2024/")##ATUALIZAR
+
+setwd("C:/Users/audencio.victor/OneDrive - Ministério da Saúde/14. Análises COE-COVID/ROTINAS/cards semanal/graficos/SE 19 2024/")##ATUALIZAR
+
+
+
+#setwd("C:/Users/pbrte/OneDrive - Ministério da Saúde/14. Análises COE-COVID/ROTINAS/cards semanal/graficos/SE 47 2023/")##ATUALIZAR
+#setwd("C:/Users/pbrte/OneDrive - Ministério da Saúde/")
+
+ggsave(Plot_casos_mes, width = 550, height = 400, units = "mm", file ="casos_SE.png", dpi = "retina")
+ggsave(Plot_obitos_mes, width = 550, height = 400, units = "mm", file ="obitos_SE.png", dpi = "retina")
+
+
+```
+
+```{r}
+#Para preencher as informações do card
+
+#TOTAL DE CASOS
+DT_CONTROL %>% filter(ABRANGENCIA ==1, data==max(data)) %>% select(casosAcumulado)
+```
+
+```{r}
+#TOTAL DE ÓBITOS
+DT_CONTROL %>% filter(ABRANGENCIA ==1, data==max(data)) %>% select(obitosAcumulado)
+```
+
+```{r}
+#TOTAL DE CASOS (por ano)
+DT_CONTROL %>% filter(ABRANGENCIA ==1) %>% mutate(Ano=format(data,"%Y")) %>% group_by(Ano) %>% summarise("Casos por ano"=sum(casosNovos))
+```
+
+```{r}
+#TOTAL DE ÓBITOS (por ano)
+DT_CONTROL %>% filter(ABRANGENCIA ==1) %>% mutate(Ano=format(data,"%Y")) %>% group_by(Ano) %>% summarise("Óbitos por ano"=sum(obitosNovos))
+```

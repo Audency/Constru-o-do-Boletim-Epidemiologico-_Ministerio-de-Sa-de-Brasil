@@ -1,0 +1,201 @@
+---
+title: "Monitoramento da COVID-19"
+subtitle: "Atualização Diária dos Dados das Unidades da Federação"
+author: "Ronaldo Fernandes Santos Alves"
+output: word_document
+---
+
+```{r setup, echo = F}
+knitr::opts_chunk$set(warning = F, message = F)
+```
+
+$~$
+
+#### CARREGAR BIBLIOTECAS
+
+```{r}
+library(tidyverse)
+library(data.table)
+library(lubridate)
+library(openxlsx)
+library(hablar)
+```
+
+$~$
+
+#### CONFIGURAR DIRETÓRIO DO PROJETO
+
+```{r}
+path = "C:/Users/audencio.victor/OneDrive - Ministério da Saúde/14. Análises COE-COVID/ROTINAS/"
+```
+
+$~$
+
+#### IMPORTAR DADOS
+
+```{r}
+DT_FONTEMUN = read.xlsx(paste0(path, "1_Data/Dados_UF/coronavirus_data.xlsx"), sheet = 1, detectDates = T)
+```
+
+$~$
+
+#### CURADORIA DE DADOS
+
+```{r}
+DT_FONTEMUN = DT_FONTEMUN %>% 
+  rename(data = "date", CODIGOUF = "uid", casosAcumulados = "cases", obitosAcumulados = "deaths") %>%
+  filter(data >= "2020-02-25") %>% 
+  select(1:4)
+```
+
+```{r}
+DT_0 =  data.frame(CODIGOUF = c(11:17,21:29,31:33,35,41:43,50:53))
+DT_0 = setDT(DT_0)[, list(data = seq(min(DT_FONTEMUN$data), max(DT_FONTEMUN$data), by = "days")), by = CODIGOUF]
+```
+
+```{r}
+MONITOR_UF = DT_FONTEMUN %>% 
+  full_join(DT_0, by = c("CODIGOUF" = "CODIGOUF", "data" = "data")) %>% 
+  group_by(CODIGOUF, data) %>% 
+  summarise_all(sum_) %>% 
+  ungroup() %>% 
+  arrange(CODIGOUF, data) %>% 
+  mutate_if(is.numeric, ~replace_na(., 0))
+```
+
+```{r}
+MONITOR_UF = MONITOR_UF %>% 
+  group_by(CODIGOUF) %>% 
+  mutate(casosNovos = lag(lead(casosAcumulados) - casosAcumulados),
+         obitosNovos = lag(lead(obitosAcumulados) - obitosAcumulados)) %>% 
+  mutate(casosNovos = replace_na(casosNovos, 0),
+         obitosNovos = replace_na(obitosNovos, 0)) %>% 
+  ungroup()
+```
+
+```{r}
+MONITOR_UF = MONITOR_UF %>% 
+  mutate(id_date = dense_rank(data),
+         anoEpi = epiyear(data),
+         semanaEpi = epiweek(data)) %>% 
+  mutate(regiao = case_when(CODIGOUF %in% c(11:17) ~ "Norte", 
+                            CODIGOUF %in% c(21:29) ~ "Nordeste", 
+                            CODIGOUF %in% c(31:33,35) ~ "Sudeste",
+                            CODIGOUF %in% c(41:43) ~ "Sul", 
+                            CODIGOUF %in% c(50:53) ~ "Centro-Oeste")) %>% 
+  mutate(siglaEstado = case_when(CODIGOUF == 11 ~ "RO", CODIGOUF == 12 ~ "AC", CODIGOUF == 13 ~ "AM", CODIGOUF == 14 ~ "RR",
+                                 CODIGOUF == 15 ~ "PA", CODIGOUF == 16 ~ "AP", CODIGOUF == 17 ~ "TO", CODIGOUF == 21 ~ "MA",
+                                 CODIGOUF == 22 ~ "PI", CODIGOUF == 23 ~ "CE", CODIGOUF == 24 ~ "RN", CODIGOUF == 25 ~ "PB",
+                                 CODIGOUF == 26 ~ "PE", CODIGOUF == 27 ~ "AL", CODIGOUF == 28 ~ "SE", CODIGOUF == 29 ~ "BA",
+                                 CODIGOUF == 31 ~ "MG", CODIGOUF == 32 ~ "ES", CODIGOUF == 33 ~ "RJ", CODIGOUF == 35 ~ "SP",
+                                 CODIGOUF == 41 ~ "PR", CODIGOUF == 42 ~ "SC", CODIGOUF == 43 ~ "RS", CODIGOUF == 50 ~ "MS",
+                                 CODIGOUF == 51 ~ "MT", CODIGOUF == 52 ~ "GO", CODIGOUF == 53 ~ "DF")) %>% 
+  mutate(nomeEstado = case_when(CODIGOUF == 11 ~ "Rondônia", CODIGOUF == 12 ~ "Acre", CODIGOUF == 13 ~ "Amazonas", CODIGOUF == 14 ~ "Roraima",
+                                CODIGOUF == 15 ~ "Pará", CODIGOUF == 16 ~ "Amapá", CODIGOUF == 17 ~ "Tocantins", CODIGOUF == 21 ~ "Maranhão",
+                                CODIGOUF == 22 ~ "Piauí", CODIGOUF == 23 ~ "Ceará", CODIGOUF == 24 ~ "Rio Grande do Norte", CODIGOUF == 25 ~ "Paraíba",
+                                CODIGOUF == 26 ~ "Pernambuco", CODIGOUF == 27 ~ "Alagoas", CODIGOUF == 28 ~ "Sergipe", CODIGOUF == 29 ~ "Bahia",
+                                CODIGOUF == 31 ~ "Minas Gerais", CODIGOUF == 32 ~ "Espírito Santo", CODIGOUF == 33 ~ "Rio de Janeiro", 
+                                CODIGOUF == 35 ~ "São Paulo", CODIGOUF == 41 ~ "Paraná", CODIGOUF == 42 ~ "Santa Catarina", 
+                                CODIGOUF == 43 ~ "Rio Grande do Sul", CODIGOUF == 50 ~ "Mato Grosso do Sul", CODIGOUF == 51 ~ "Mato Grosso", 
+                                CODIGOUF == 52 ~ "Goiás", CODIGOUF == 53 ~ "Distrito Federal")) %>% 
+  select(id_date, regiao, CODIGOUF, siglaEstado, nomeEstado, anoEpi, semanaEpi, data, casosNovos, casosAcumulados, obitosNovos, obitosAcumulados)
+```
+
+$~$
+
+```{r}
+MONITOR_UF = MONITOR_UF %>% 
+  group_by(siglaEstado) %>% 
+  mutate(casosNovosVivos = casosNovos - obitosNovos) %>% 
+  mutate(sma3casosNovosVivos = zoo::rollmean(casosNovosVivos, k = 3, fill = 0, align = "right")) %>% 
+  mutate(casosAcompanhamento = zoo::rollapply(sma3casosNovosVivos, 18, sum, by = 1, align = "right", 
+                                              partial = T)) %>% 
+  ungroup() %>% 
+  mutate(casosAcompanhamento = round(casosAcompanhamento, 0)) %>% 
+  mutate(casosRecuperados = casosAcumulados - obitosAcumulados - casosAcompanhamento)
+```
+
+$~$
+
+#### GERAR DADOS DE CONTROLE
+
+```{r}
+MONITOR_UF2 = MONITOR_UF %>% 
+  select(CODIGOUF, siglaEstado, data, casosAcumulados, casosNovos, obitosAcumulados, obitosNovos,
+         casosAcompanhamento, casosRecuperados) %>%
+  filter(data == max(data))
+```
+
+```{r}
+DT_BRA = MONITOR_UF2 %>% 
+  group_by(data) %>% 
+  summarise(CODIGOUF = 76,
+            siglaEstado = "BRASIL",
+            casosAcumulados = sum_(casosAcumulados),
+            casosNovos = sum_(casosNovos),
+            obitosAcumulados = sum_(obitosAcumulados),
+            obitosNovos = sum_(obitosNovos),
+            casosAcompanhamento = sum_(casosAcompanhamento),
+            casosRecuperados = sum_(casosRecuperados)) %>% 
+  ungroup()
+```
+
+```{r}
+MONITOR_UF2 = DT_BRA %>% bind_rows(MONITOR_UF2)
+```
+
+```{r}
+DT_BRA2 = MONITOR_UF %>% 
+  select(data, casosAcumulados, casosNovos, obitosAcumulados, obitosNovos, casosAcompanhamento, casosRecuperados) %>% 
+  group_by(data) %>% 
+  #summarise_all(., ~sum_(.)) %>% 
+  summarise(casosAcumulados = sum_(casosAcumulados), casosNovos = sum_(casosNovos), 
+            obitosAcumulados = sum_(obitosAcumulados), obitosNovos = sum_(obitosNovos), 
+            casosAcompanhamento = max_(casosAcompanhamento), casosRecuperados = max_(casosRecuperados)) %>% 
+  mutate(id_date = dense_rank(data),
+         epiyear = epiyear(data),
+         epiweek = epiweek(data)) %>% 
+  select(id_date, epiyear, epiweek, data, everything())
+```
+
+
+#### SALVAR DADOS
+
+```{r}
+DT_HOSP = read.xlsx(paste0(path, "1_Data/DADOS_RECUPERADOS.xlsx"), detectDates = T)
+
+DT_HOSP = bind_rows(DT_HOSP, 
+                    DT_BRA %>% 
+                      select(siglaEstado, data, casosAcompanhamento, casosRecuperados) %>% 
+                      rename(NOMELOCAL = "siglaEstado", emAcompanhamentoNovos = "casosAcompanhamento",
+                             Recuperadosnovos = "casosRecuperados") %>% 
+                      mutate(NOMELOCAL = "Brasil")) %>% distinct()
+
+write.xlsx(DT_HOSP, paste0(path, "1_Data/DADOS_RECUPERADOS.xlsx"), asTable = T)
+```
+
+```{r}
+write.xlsx(MONITOR_UF %>% select(-casosAcompanhamento, -casosRecuperados), 
+           paste0(path, "1_Data/Dados_UF/DT_Monitora_UF/DT_COVID19BR_", format(Sys.Date(), "%d-%m-%Y"),".xlsx"))
+```
+
+```{r}
+dir.create(paste0(path, "1_Output/Entregas_", format(Sys.Date(), "%d%b%Y")))
+```
+
+```{r}
+write.xlsx(MONITOR_UF %>% select(-casosAcompanhamento, -casosRecuperados), 
+           paste0(path, "1_Output/Entregas_", format(Sys.Date(), "%d%b%Y"), "/DT_COVID19BR_", format(Sys.Date(), "%d%b%Y"),".xlsx"), asTable = T)
+```
+
+```{r}
+wb = createWorkbook()
+addWorksheet(wb, sheetName = "Overview")
+addWorksheet(wb, sheetName = "Hist_Brasil")
+
+writeData(wb, sheet = "Overview", x = MONITOR_UF2)
+writeData(wb, sheet = "Hist_Brasil", x = DT_BRA2)
+
+saveWorkbook(wb, paste0(path, "1_Output/Entregas_", format(Sys.Date(), "%d%b%Y"), "/TAB_COVID19BR_", format(Sys.Date(), "%d%b%Y"),".xlsx"), overwrite = T)
+```
+
