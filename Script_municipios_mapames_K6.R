@@ -1,3 +1,41 @@
+# ============================================================================
+# SCRIPT K6: MAPAS MENSAIS DE COVID-19 POR MUNICÍPIO
+# ============================================================================
+# Objetivo: Gerar mapas de bolhas dos municípios brasileiros com dados
+# agregados por MÊS (diferente do K5 que é por semana epidemiológica).
+# Inclui mapas de:
+#   1. Casos novos por município no mês
+#   2. Óbitos novos por município no mês
+#   3. Taxa de incidência por 100 mil hab. no mês
+#   4. Taxa de mortalidade por 100 mil hab. no mês
+#   5. Tabelas Excel com dados de incidência e mortalidade
+#
+# Diferenças do K5:
+#   - Agregação mensal em vez de semanal
+#   - Filtro por período de datas (início e fim do mês)
+#   - Usa BAMMtools para classificação por Jenks natural breaks
+#
+# Dependências: Dataset DT_Monitora_COVID gerado pelo Notebook 3
+# ============================================================================
+
+# --- BIBLIOTECAS ---
+# tidyverse    : Manipulação e visualização de dados
+# lubridate    : Manipulação de datas
+# data.table   : Leitura rápida de CSV (fread)
+# openxlsx     : Leitura/escrita de Excel
+# hablar       : Funções sum_(), min_() que tratam NA como 0
+# extrafont    : Fontes tipográficas para gráficos
+# hrbrthemes   : Temas para ggplot2
+# gghighlight  : Destaque condicional em gráficos
+# udunits2     : Conversão de unidades (dependência geoespacial)
+# sf           : Simple Features para dados geoespaciais
+# brazilmaps   : Shapefiles do Brasil
+# ggsn         : Barra de escala e norte para mapas
+# ggflags      : Bandeiras como elementos gráficos
+# ggrepel      : Rótulos sem sobreposição
+# gridExtra    : Arranjo de tabelas (tableGrob)
+# BAMMtools    : Classificação por Jenks natural breaks (getJenksBreaks)
+# maptools     : Ferramentas para manipulação de mapas
 library(tidyverse)
 library(lubridate)
 library(data.table)
@@ -8,7 +46,7 @@ library(hrbrthemes)
 library(gghighlight)
 library(udunits2)
 library(sf)
-library(brazilmaps) 
+library(brazilmaps)
 library(ggsn)
 library(ggflags)
 library(ggrepel)
@@ -16,18 +54,19 @@ library(gridExtra)
 library(BAMMtools)
 library(maptools)
 
-
-
-
+# Permitir sobreposição ilimitada de rótulos nos mapas
 options(ggrepel.max.overlaps = Inf)
 
-#ATUALIZAR
+# --- VARIÁVEL DE CONTROLE: MÊS DE ANÁLISE ---
+# ATUALIZAR com o nome do mês atual (ex: "Abril", "Maio")
 SE="Abril"
 
-#############################################
+# ============================================================================
+# CONFIGURAÇÃO DE DIRETÓRIOS
+# NOTA: Atualizar o caminho conforme o usuário que executa o script
+# ============================================================================
 
-#Pasta para salvar figuras
-
+# Pasta para salvar figuras
 path = paste0("C:/Users/eucilene.santana/OneDrive - Ministério da Saúde/14. Análises COE-COVID/OUTRAS DEMANDAS/NOTIFICAÇÃO DIÁRIA/2024/", SE, " de 2024/")
 
 #Criar pasta para salvar arquivos
@@ -35,10 +74,13 @@ path = paste0("C:/Users/eucilene.santana/OneDrive - Ministério da Saúde/14. An
 dir.create(paste0("C:/Users/eucilene.santana/OneDrive - Ministério da Saúde/14. Análises COE-COVID/OUTRAS DEMANDAS/NOTIFICAÇÃO DIÁRIA/2024/", SE, " de 2024"))
 
 
-#############################################
-
-#ATUALIZAR (com data do ultimo dia da SE em an?lise)
-
+# ============================================================================
+# IMPORTAÇÃO E PREPARAÇÃO DOS DADOS
+# - DT_CONTROL: Dataset consolidado (CSV gerado pelo Notebook 3)
+# - DT_MUN: Base com coordenadas LAT/LONG dos municípios
+# - dadostcu2019: Estimativas populacionais TCU 2019
+# ATUALIZAR: data do arquivo CSV (formato AAAAMMDD)
+# ============================================================================
 
 DT_CONTROL = fread(file = "C:/Users/eucilene.santana/OneDrive - Ministério da Saúde/14. Análises COE-COVID/ROTINAS/1_Data/Dados_Controle/DT_Monitora_COVID_20240504.csv", encoding = "UTF-8") #ATUALIZAR
 
@@ -76,15 +118,19 @@ DT_CONTROL = DT_CONTROL %>%
   ungroup()
 
 
-#######################################################################################################
+# ============================================================================
+# FILTRO POR PERÍODO MENSAL
+# ATUALIZAR: datas de início e fim do mês de análise
+# O filtro seleciona todas as semanas epidemiológicas que compõem o mês
+# ============================================================================
 
-#ATUALIZAR FILTRAR APENAS  AS SEMANAS DO MÊS
-
-
-DT_CONTROL_MES  <- DT_CONTROL %>% 
+DT_CONTROL_MES  <- DT_CONTROL %>%
   filter(data >= as.Date("2024-03-31") & data <= as.Date("2024-05-04"))
 
-######################################################################################################
+# ============================================================================
+# AGREGAÇÃO POR SEMANA EPIDEMIOLÓGICA DENTRO DO MÊS
+# Soma casos e óbitos novos por município dentro de cada SE do período
+# ============================================================================
 
 DT_CONTROL_SE = DT_CONTROL_MES %>% 
   group_by(ABRANGENCIA, CODIGOLOCAL, CODIGOMUN7_2, NOMELOCAL, semanaEpi,anoEpi, mes, minData, LAT, LONG,POP_TCU2019) %>% 
@@ -92,7 +138,12 @@ DT_CONTROL_SE = DT_CONTROL_MES %>%
   ungroup()
 
 
-#Classificando munic?pios pelo n?mero de casos novos novitifados na SE
+# ============================================================================
+# CLASSIFICAÇÃO DOS MUNICÍPIOS (ÚLTIMA SE DO MÊS)
+# Categorias para CASOS: 1(<=0), 2(1-200), 3(201-500), 4(501+)
+# Categorias para ÓBITOS: 1(<=0), 2(1-5), 3(6-10), 4(11+)
+# getJenksBreaks: método de classificação por quebras naturais de Jenks
+# ============================================================================
 tbMapa = DT_CONTROL_SE %>% 
   filter(ABRANGENCIA == 7, minData == max(minData)) %>% 
   select(minData, anoEpi, mes, LONG, LAT, CODIGOLOCAL, CODIGOMUN7_2, casosNovos, obitosNovos,POP_TCU2019) %>% 
@@ -155,7 +206,13 @@ tbMapa<-tbMapa %>%
 
 
 
-#Elaborando figura (n?mero de casos)
+# ============================================================================
+# MAPA DE BOLHAS: CASOS NOVOS POR MUNICÍPIO (PERÍODO MENSAL)
+# - Camada base: limites municipais (cinza) e estaduais (preto)
+# - Pontos: tamanho proporcional ao nº de casos, cor por categoria
+#   Transparente(0), Azul(1-200), Dourado(201-500), Vermelho(501+)
+# - gghighlight: destaca municípios com categorias 3-4
+# ============================================================================
 
 tbMapa$catsCasos2 <- tbMapa$catsCasos
 
@@ -195,6 +252,9 @@ gg13B
 
 
 
+# ============================================================================
+# MAPA DE BOLHAS: ÓBITOS NOVOS POR MUNICÍPIO (PERÍODO MENSAL)
+# ============================================================================
 tbMapa$catsObitos2 <- tbMapa$catsObitos
 
 
@@ -262,10 +322,10 @@ tbMapa_tab<-tbMapa_tab %>%
 write.xlsx(tbMapa_tab, file = "C:/Users/eucilene.santana/OneDrive - Ministério da Saúde/14. Análises COE-COVID/OUTRAS DEMANDAS/NOTIFICAÇÃO DIÁRIA/2024/Março de 2024/tbMapa_tab_obitos.xlsx", overwrite = T)
 
 
-################################################################################
-
-#Elaborando figura (taxa de incid?ncia)
-
+# ============================================================================
+# TAXA DE INCIDÊNCIA (CASOS POR 100 MIL HABITANTES)
+# Calcula a incidência mensal e classifica em 5 categorias
+# ============================================================================
 
 tbMapa$incidencia<-round((tbMapa$casosNovos/tbMapa$POP_TCU2019)*100000,1)
 
@@ -283,7 +343,10 @@ tbMapa_incidencia = tbMapa %>%
 
 table(tbMapa_incidencia$catsincidencia, exclude = F)
 
-#Elaborando figura (taxa de mortalidade)
+# ============================================================================
+# TAXA DE MORTALIDADE (ÓBITOS POR 100 MIL HABITANTES)
+# Calcula a mortalidade mensal e classifica em 5 categorias
+# ============================================================================
 tbMapa$mortalidade<-round((tbMapa$obitosNovos/tbMapa$POP_TCU2019)*100000,1)
 
 #Classificando munic?pios pela taxa de mortalidade na SE
@@ -301,7 +364,11 @@ tbMapa_mortalidade = tbMapa %>%
 table(tbMapa_mortalidade$catsmortalidade, exclude = F)
 
 
-#Elaborando figuras (taxa de incidencia e mortalidade)
+# ============================================================================
+# GERAÇÃO DOS MAPAS DE INCIDÊNCIA E MORTALIDADE
+# 5 categorias de cores: Transparente → Verde → Salmão → Laranja → Vermelho
+# Destaque (gghighlight) para categorias 3+ (incidência/mortalidade elevada)
+# ============================================================================
 
 tbMapa_incidencia$catsincidencia2 <- tbMapa_incidencia$catsincidencia
 
@@ -375,7 +442,12 @@ gg13C_ob = ggplot(filter(tbMapa_mortalidade, !is.na(catsmortalidade), !str_detec
 gg13C_ob 
 
 
-#Salvando imagem
+# ============================================================================
+# EXPORTAÇÃO DOS RESULTADOS
+# - Dados de incidência e mortalidade em Excel para análises complementares
+# - Mapas em PNG de alta resolução (retina = 320 DPI)
+# ATUALIZAR: caminhos das pastas com o mês/SE correto
+# ============================================================================
 
 write.xlsx(tbMapa_incidencia, file = "C:/Users/eucilene.santana/OneDrive - Ministério da Saúde/14. Análises COE-COVID/OUTRAS DEMANDAS/MAPAS KERNEL INC E MORT COVID/2024/Mês/Março/tbMapa_incid_mês.xlsx", overwrite = T) ###ATUALIZAR!!!
 write.xlsx(tbMapa_mortalidade, file = "C:/Users/eucilene.santana/OneDrive - Ministério da Saúde/14. Análises COE-COVID/OUTRAS DEMANDAS/MAPAS KERNEL INC E MORT COVID/2024/Mês/Março/tbMapa_mort_mês.xlsx", overwrite = T) ###ATUALIZAR!!!

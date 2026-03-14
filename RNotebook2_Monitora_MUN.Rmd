@@ -9,6 +9,17 @@ output: word_document
 #### CARREGAR BIBLIOTECAS
 
 ```{r message=FALSE, warning=FALSE}
+# ============================================================================
+# BIBLIOTECAS NECESSÁRIAS
+# ----------------------------------------------------------------------------
+# tidyverse   : Pacotes para manipulação e visualização de dados
+# data.table  : Manipulação eficiente de grandes tabelas de dados
+# lubridate   : Funções para datas e semanas epidemiológicas
+# openxlsx    : Leitura/escrita de arquivos Excel (.xlsx)
+# hablar      : Funções como sum_() que tratam NA como 0
+# abjutils    : Funções utilitárias como rm_accent() para remoção de acentos
+#               (pacote do ABJ - Associação Brasileira de Jurimetria)
+# ============================================================================
 library(tidyverse)
 library(data.table)
 library(lubridate)
@@ -21,6 +32,11 @@ library(abjutils)
 #### CONFIGURAR DIRETÓRIO DO PROJETO
 
 ```{r}
+# ============================================================================
+# DIRETÓRIO BASE DO PROJETO
+# Caminho compartilhado no OneDrive do Ministério da Saúde
+# NOTA: Atualizar conforme o usuário que executa o script
+# ============================================================================
 path = "C:/Users/audencio.victor/OneDrive - Ministério da Saúde/14. Análises COE-COVID/ROTINAS/"
 ```
 
@@ -28,6 +44,17 @@ path = "C:/Users/audencio.victor/OneDrive - Ministério da Saúde/14. Análises 
 #### IMPORTAR DADOS
 
 ```{r}
+# ============================================================================
+# IMPORTAÇÃO DE 4 CONJUNTOS DE DADOS:
+# 1) DADOSMUNBR: Base de referência com todos os municípios brasileiros,
+#    contendo códigos IBGE, nomes, regiões e links de correspondência
+# 2) DT_FONTEMUN: Dados atuais (dia corrente) de casos/óbitos por município,
+#    provenientes da planilha "Confirmados-municipio.xlsx" (aba 1)
+# 3) DT_NOMESMUN: Tabela de de-para para correção de nomes de municípios
+#    que possuem grafias diferentes entre sistemas
+# 4) MONITOR_OLDMUN: Dados do dia anterior (aba 5 da mesma planilha)
+#    usado para validação de consistência temporal
+# ============================================================================
 DADOSMUNBR = read.xlsx(paste0(path, "1_Data/DADOSMUNBR.xlsx"))
 DT_FONTEMUN = read.xlsx(paste0(path, "1_Data/Dados_Municipio/Confirmados-municipio.xlsx"), sheet = 1, cols = c(1,2,3,4))
 DT_NOMESMUN = read.xlsx(paste0(path, "1_Data/Dados_Municipio/DT_NOMESMUN.xlsx"), sheet = 1)
@@ -38,31 +65,50 @@ MONITOR_OLDMUN = read.xlsx(paste0(path, "1_Data/Dados_Municipio/Confirmados-muni
 #### CURADORIA DE DADOS 1
 
 ```{r}
-DADOSMUNBR = DADOSMUNBR %>% 
-  select(NOMEREG, CODIGOUF, SIGLAUF, NOMEUF, CODIGOMUN, NOMEMUN, LINKMUN) %>% 
-  mutate(NOMEUF = rm_accent(NOMEUF)) %>% 
-  mutate(NOMEUF = str_replace_all(NOMEUF, "[^[:alpha:]]", " ")) %>% 
-  mutate(NOMEUF = str_to_upper(NOMEUF)) %>% 
-  mutate(NOMEUF = str_trim(NOMEUF, side = "both")) %>% 
+# ============================================================================
+# PADRONIZAÇÃO DA BASE DE REFERÊNCIA DE MUNICÍPIOS
+# - Seleciona colunas relevantes (região, UF, município, código IBGE, link)
+# - Remove acentos dos nomes de UF com rm_accent()
+# - Remove caracteres especiais (mantém apenas letras)
+# - Converte para MAIÚSCULAS para facilitar a correspondência
+# - Remove espaços extras (trim e squish)
+# Resultado: nomes de UF padronizados para junção com outras bases
+# ============================================================================
+DADOSMUNBR = DADOSMUNBR %>%
+  select(NOMEREG, CODIGOUF, SIGLAUF, NOMEUF, CODIGOMUN, NOMEMUN, LINKMUN) %>%
+  mutate(NOMEUF = rm_accent(NOMEUF)) %>%
+  mutate(NOMEUF = str_replace_all(NOMEUF, "[^[:alpha:]]", " ")) %>%
+  mutate(NOMEUF = str_to_upper(NOMEUF)) %>%
+  mutate(NOMEUF = str_trim(NOMEUF, side = "both")) %>%
   mutate(NOMEUF = str_squish(NOMEUF))
 ```
 
 ```{r}
-DT_FONTEMUN = DT_FONTEMUN %>% 
+# ============================================================================
+# PADRONIZAÇÃO DOS DADOS ATUAIS DE MUNICÍPIOS (DIA CORRENTE)
+# - Renomeia colunas da planilha fonte para o padrão do projeto
+# - Adiciona a data atual (Sys.Date) como coluna
+# - Remove hifens e converte casos/óbitos para número
+# - Cria coluna LINKMUN como cópia do nome do município (para junção)
+# - Aplica mesma padronização de texto: rm_accent, remove especiais,
+#   uppercase, trim, squish
+# - Remove a sigla "LPI" que aparece em alguns nomes de municípios
+# ============================================================================
+DT_FONTEMUN = DT_FONTEMUN %>%
   rename(NOMEUF = "ESTADO",
          NOMEMUN = "Município.de.residência",
          casosAcumulado = "Casos.confirmados",
-         obitosAcumulado = "Óbitos") %>% 
-  mutate(data = format(Sys.Date(), "%Y%m%d")) %>% 
-  mutate(casosAcumulado = parse_number(str_remove_all(casosAcumulado,"-"))) %>% 
-  mutate(obitosAcumulado = parse_number(str_remove_all(obitosAcumulado,"-"))) %>% 
-  mutate(LINKMUN = NOMEMUN) %>% 
-  mutate_at(c("NOMEUF","LINKMUN"), ~rm_accent(.)) %>% 
-  mutate_at(c("NOMEUF","LINKMUN"), ~str_replace_all(., "[^[:alpha:]]", " ")) %>% 
-  mutate_at(c("NOMEUF","LINKMUN"), ~str_to_upper(.)) %>% 
-  mutate(LINKMUN = str_remove_all(LINKMUN, "\\bLPI\\b")) %>% 
-  mutate_at(c("NOMEUF","LINKMUN"), ~str_trim(., side = "both")) %>% 
-  mutate_at(c("NOMEUF","LINKMUN"), ~str_squish(.)) %>% 
+         obitosAcumulado = "Óbitos") %>%
+  mutate(data = format(Sys.Date(), "%Y%m%d")) %>%
+  mutate(casosAcumulado = parse_number(str_remove_all(casosAcumulado,"-"))) %>%
+  mutate(obitosAcumulado = parse_number(str_remove_all(obitosAcumulado,"-"))) %>%
+  mutate(LINKMUN = NOMEMUN) %>%
+  mutate_at(c("NOMEUF","LINKMUN"), ~rm_accent(.)) %>%
+  mutate_at(c("NOMEUF","LINKMUN"), ~str_replace_all(., "[^[:alpha:]]", " ")) %>%
+  mutate_at(c("NOMEUF","LINKMUN"), ~str_to_upper(.)) %>%
+  mutate(LINKMUN = str_remove_all(LINKMUN, "\\bLPI\\b")) %>%
+  mutate_at(c("NOMEUF","LINKMUN"), ~str_trim(., side = "both")) %>%
+  mutate_at(c("NOMEUF","LINKMUN"), ~str_squish(.)) %>%
   select(data, everything())
 ```
 
@@ -70,21 +116,35 @@ DT_FONTEMUN = DT_FONTEMUN %>%
 #### CURADORIA DE DADOS 2
 
 ```{r}
-MONITOR_MUN = DT_FONTEMUN %>% 
-  left_join(DT_NOMESMUN, by = c("NOMEUF" = "NOMEUF", "LINKMUN" = "LINKMUN")) %>% 
-  mutate(LINKMUN = ifelse(!is.na(NO_CERTO), NO_CERTO, LINKMUN)) %>% 
+# ============================================================================
+# CORREÇÃO DE NOMES DE MUNICÍPIOS USANDO TABELA DE-PARA
+# Faz a junção com DT_NOMESMUN para substituir nomes incorretos/divergentes
+# pelo nome correto (NO_CERTO). Se houver correspondência, usa o nome
+# corrigido; caso contrário, mantém o LINKMUN original
+# ============================================================================
+MONITOR_MUN = DT_FONTEMUN %>%
+  left_join(DT_NOMESMUN, by = c("NOMEUF" = "NOMEUF", "LINKMUN" = "LINKMUN")) %>%
+  mutate(LINKMUN = ifelse(!is.na(NO_CERTO), NO_CERTO, LINKMUN)) %>%
   select(-"NO_CERTO")
 ```
 
 ```{r}
-MONITOR_MUN = DADOSMUNBR %>% 
-  full_join(MONITOR_MUN, by = c("NOMEUF" = "NOMEUF", "LINKMUN" = "LINKMUN"), suffix = c("_Base", "_Atual")) %>% 
-  group_by(CODIGOMUN) %>% 
+# ============================================================================
+# VINCULAÇÃO DOS DADOS ATUAIS COM A BASE DE REFERÊNCIA DE MUNICÍPIOS
+# - full_join: vincula dados atuais com base de referência IBGE
+# - DUPLICATE: conta quantos registros existem por código do município
+#   para identificar possíveis duplicatas
+# - Municípios não encontrados na base IBGE recebem LINKMUN = "OUTROS"
+# - Filtra registros que possuem ao menos casos ou óbitos reportados
+# ============================================================================
+MONITOR_MUN = DADOSMUNBR %>%
+  full_join(MONITOR_MUN, by = c("NOMEUF" = "NOMEUF", "LINKMUN" = "LINKMUN"), suffix = c("_Base", "_Atual")) %>%
+  group_by(CODIGOMUN) %>%
   mutate(DUPLICATE = n(),
-         DUPLICATE = if_else(is.na(CODIGOMUN), NA_integer_, DUPLICATE)) %>% 
-  ungroup() %>% 
-  mutate(LINKMUN = if_else(is.na(DUPLICATE), "OUTROS", LINKMUN)) %>% 
-  filter(!is.na(casosAcumulado) | !is.na(obitosAcumulado)) 
+         DUPLICATE = if_else(is.na(CODIGOMUN), NA_integer_, DUPLICATE)) %>%
+  ungroup() %>%
+  mutate(LINKMUN = if_else(is.na(DUPLICATE), "OUTROS", LINKMUN)) %>%
+  filter(!is.na(casosAcumulado) | !is.na(obitosAcumulado))
 # MONITOR_MUN %>% count(LINKMUN == "OUTROS")
 ```
 
@@ -92,39 +152,54 @@ MONITOR_MUN = DADOSMUNBR %>%
 #### CURADORIA DE DADOS 3
 
 ```{r}
-MONITOR_OLDMUN = MONITOR_OLDMUN %>% 
+# ============================================================================
+# PADRONIZAÇÃO DOS DADOS DO DIA ANTERIOR (PARA COMPARAÇÃO)
+# Aplica exatamente o mesmo processamento feito nos dados atuais,
+# mas usa Sys.Date() - 1 (ontem) como data de referência.
+# Este dataset é usado na etapa de checagem de consistência temporal
+# para garantir que os dados acumulados não diminuam de um dia para outro
+# ============================================================================
+MONITOR_OLDMUN = MONITOR_OLDMUN %>%
   rename(NOMEUF = "ESTADO",
          NOMEMUN = "Município.de.residência",
          casosAcumulado = "Casos.confirmados",
-         obitosAcumulado = "Óbitos") %>% 
-  mutate(data = format(Sys.Date() - 1, "%Y%m%d")) %>% 
-  mutate(casosAcumulado = parse_number(str_remove_all(casosAcumulado,"-"))) %>% 
-  mutate(obitosAcumulado = parse_number(str_remove_all(obitosAcumulado,"-"))) %>% 
-  mutate(LINKMUN = NOMEMUN) %>% 
-  mutate_at(c("NOMEUF","LINKMUN"), ~rm_accent(.)) %>% 
-  mutate_at(c("NOMEUF","LINKMUN"), ~str_replace_all(., "[^[:alpha:]]", " ")) %>% 
-  mutate_at(c("NOMEUF","LINKMUN"), ~str_to_upper(.)) %>% 
-  mutate(LINKMUN = str_remove_all(LINKMUN, "\\bLPI\\b")) %>% 
-  mutate_at(c("NOMEUF","LINKMUN"), ~str_trim(., side = "both")) %>% 
-  mutate_at(c("NOMEUF","LINKMUN"), ~str_squish(.)) %>% 
+         obitosAcumulado = "Óbitos") %>%
+  mutate(data = format(Sys.Date() - 1, "%Y%m%d")) %>%
+  mutate(casosAcumulado = parse_number(str_remove_all(casosAcumulado,"-"))) %>%
+  mutate(obitosAcumulado = parse_number(str_remove_all(obitosAcumulado,"-"))) %>%
+  mutate(LINKMUN = NOMEMUN) %>%
+  mutate_at(c("NOMEUF","LINKMUN"), ~rm_accent(.)) %>%
+  mutate_at(c("NOMEUF","LINKMUN"), ~str_replace_all(., "[^[:alpha:]]", " ")) %>%
+  mutate_at(c("NOMEUF","LINKMUN"), ~str_to_upper(.)) %>%
+  mutate(LINKMUN = str_remove_all(LINKMUN, "\\bLPI\\b")) %>%
+  mutate_at(c("NOMEUF","LINKMUN"), ~str_trim(., side = "both")) %>%
+  mutate_at(c("NOMEUF","LINKMUN"), ~str_squish(.)) %>%
   select(data, everything())
 ```
 
 ```{r}
-MONITOR_OLDMUN = MONITOR_OLDMUN %>% 
-  left_join(DT_NOMESMUN, by = c("NOMEUF" = "NOMEUF", "LINKMUN" = "LINKMUN")) %>% 
-  mutate(LINKMUN = ifelse(!is.na(NO_CERTO), NO_CERTO, LINKMUN)) %>% 
+# ============================================================================
+# CORREÇÃO DE NOMES - DADOS DO DIA ANTERIOR
+# Mesma lógica de de-para aplicada aos dados do dia anterior
+# ============================================================================
+MONITOR_OLDMUN = MONITOR_OLDMUN %>%
+  left_join(DT_NOMESMUN, by = c("NOMEUF" = "NOMEUF", "LINKMUN" = "LINKMUN")) %>%
+  mutate(LINKMUN = ifelse(!is.na(NO_CERTO), NO_CERTO, LINKMUN)) %>%
   select(-"NO_CERTO")
 ```
 
 ```{r}
-MONITOR_OLDMUN = DADOSMUNBR %>% 
-  full_join(MONITOR_OLDMUN, by = c("NOMEUF" = "NOMEUF", "LINKMUN" = "LINKMUN"), suffix = c("_Base", "_Atual")) %>% 
-  group_by(CODIGOMUN) %>% 
+# ============================================================================
+# VINCULAÇÃO COM BASE IBGE - DADOS DO DIA ANTERIOR
+# Mesma lógica de junção com a base de referência IBGE
+# ============================================================================
+MONITOR_OLDMUN = DADOSMUNBR %>%
+  full_join(MONITOR_OLDMUN, by = c("NOMEUF" = "NOMEUF", "LINKMUN" = "LINKMUN"), suffix = c("_Base", "_Atual")) %>%
+  group_by(CODIGOMUN) %>%
   mutate(DUPLICATE = n(),
-         DUPLICATE = if_else(is.na(CODIGOMUN), NA_integer_, DUPLICATE)) %>% 
-  ungroup() %>% 
-  mutate(LINKMUN = if_else(is.na(DUPLICATE), "OUTROS", LINKMUN)) %>% 
+         DUPLICATE = if_else(is.na(CODIGOMUN), NA_integer_, DUPLICATE)) %>%
+  ungroup() %>%
+  mutate(LINKMUN = if_else(is.na(DUPLICATE), "OUTROS", LINKMUN)) %>%
   filter(!is.na(casosAcumulado) | !is.na(obitosAcumulado))
 ```
 
@@ -132,54 +207,71 @@ MONITOR_OLDMUN = DADOSMUNBR %>%
 #### CHECAR DADOS (CONSISTENCIA TEMPORAL)
 
 ```{r}
-CHECAR_UF = MONITOR_MUN %>% 
-  group_by(NOMEUF) %>% 
+# ============================================================================
+# CHECAGEM POR UF: COMPARAÇÃO ENTRE HOJE E ONTEM
+# Compara os totais acumulados de hoje vs ontem em nível estadual.
+# - casosDif / obitosDif: diferença entre hoje e ontem
+# - CHECAR = 1: sinaliza inconsistência (diferença negativa indica que
+#   dados acumulados diminuíram, o que não deveria ocorrer)
+# Resultado ordenado com inconsistências no topo (arrange -CHECAR)
+# ============================================================================
+CHECAR_UF = MONITOR_MUN %>%
+  group_by(NOMEUF) %>%
   summarise(casosHoje = sum_(casosAcumulado),
-            obitosHoje = sum_(obitosAcumulado)) %>% 
+            obitosHoje = sum_(obitosAcumulado)) %>%
   full_join(
-    MONITOR_OLDMUN %>% 
-      group_by(NOMEUF) %>% 
+    MONITOR_OLDMUN %>%
+      group_by(NOMEUF) %>%
       summarise(casosOntem = sum_(casosAcumulado),
                 obitosOntem = sum_(obitosAcumulado)),
-    by = "NOMEUF") %>% 
-  mutate_if(is.numeric, ~replace_na(.,0)) %>% 
+    by = "NOMEUF") %>%
+  mutate_if(is.numeric, ~replace_na(.,0)) %>%
   mutate(casosDif = casosHoje - casosOntem,
          obitosDif = obitosHoje - obitosOntem,
-         CHECAR = case_when(casosDif < 0 | obitosDif < 0 ~ 1, TRUE ~ 0)) %>% 
-  select(NOMEUF, casosHoje, casosOntem, casosDif, obitosHoje, obitosOntem, obitosDif, CHECAR) %>% 
+         CHECAR = case_when(casosDif < 0 | obitosDif < 0 ~ 1, TRUE ~ 0)) %>%
+  select(NOMEUF, casosHoje, casosOntem, casosDif, obitosHoje, obitosOntem, obitosDif, CHECAR) %>%
   arrange(-CHECAR)
 ```
 
 ```{r}
+# Contagem de UFs com e sem inconsistências (CHECAR: 0=OK, 1=problema)
 CHECAR_UF %>% count(CHECAR)
 ```
 
 ```{r}
-CHECAR_MUN = MONITOR_MUN %>% 
-  group_by(NOMEUF, LINKMUN) %>% 
+# ============================================================================
+# CHECAGEM POR MUNICÍPIO: COMPARAÇÃO ENTRE HOJE E ONTEM
+# Mesma lógica da checagem por UF, mas no nível municipal.
+# Municípios classificados como "OUTROS" (sem código IBGE) recebem
+# CHECAR = 0 pois suas variações são esperadas (dados em consolidação)
+# ============================================================================
+CHECAR_MUN = MONITOR_MUN %>%
+  group_by(NOMEUF, LINKMUN) %>%
   summarise(casosHoje = sum_(casosAcumulado),
-            obitosHoje = sum_(obitosAcumulado)) %>% 
+            obitosHoje = sum_(obitosAcumulado)) %>%
   full_join(
-    MONITOR_OLDMUN %>% 
-      group_by(NOMEUF, LINKMUN) %>% 
+    MONITOR_OLDMUN %>%
+      group_by(NOMEUF, LINKMUN) %>%
       summarise(casosOntem = sum_(casosAcumulado),
                 obitosOntem = sum_(obitosAcumulado)),
-    by = c("NOMEUF", "LINKMUN" = "LINKMUN")) %>% 
-  ungroup() %>% 
-  mutate_if(is.numeric, ~replace_na(.,0)) %>% 
+    by = c("NOMEUF", "LINKMUN" = "LINKMUN")) %>%
+  ungroup() %>%
+  mutate_if(is.numeric, ~replace_na(.,0)) %>%
   mutate(casosDif = casosHoje - casosOntem,
          obitosDif = obitosHoje - obitosOntem,
          CHECAR = case_when(casosDif < 0 | obitosDif < 0 ~ 1, TRUE ~ 0),
-         CHECAR = case_when(LINKMUN == "OUTROS" ~ 0, TRUE ~ CHECAR)) %>% 
-  select(NOMEUF, LINKMUN, casosHoje, casosOntem, casosDif, obitosHoje, obitosOntem, obitosDif, CHECAR) %>% 
+         CHECAR = case_when(LINKMUN == "OUTROS" ~ 0, TRUE ~ CHECAR)) %>%
+  select(NOMEUF, LINKMUN, casosHoje, casosOntem, casosDif, obitosHoje, obitosOntem, obitosDif, CHECAR) %>%
   arrange(-CHECAR)
 ```
 
 ```{r}
+# Contagem de municípios com e sem inconsistências
 CHECAR_MUN %>% count(CHECAR)
 ```
 
 ```{r}
+# Detalhamento por UF: quantos municípios consistentes (0) e inconsistentes (1) em cada estado
 CHECAR_MUN %>% count(NOMEUF, CHECAR) %>% spread(key = "CHECAR", value = "n")
 ```
 
@@ -187,19 +279,27 @@ CHECAR_MUN %>% count(NOMEUF, CHECAR) %>% spread(key = "CHECAR", value = "n")
 #### GERAR DADOS DE CONTROLE
 
 ```{r}
-DT_COVIDMUN = MONITOR_MUN %>% 
-  select(data, NOMEUF, NOMEMUN_Base, CODIGOMUN, casosAcumulado, obitosAcumulado, LINKMUN) %>% 
+# ============================================================================
+# CONSOLIDAÇÃO FINAL DOS DADOS MUNICIPAIS
+# - Seleciona colunas relevantes para a saída final
+# - Substitui NAs por 0 em dados numéricos e "OUTROS" nos nomes
+# - Filtra dados a partir de 25/02/2020 (início da pandemia no Brasil)
+# - Agrupa por município para evitar duplicatas
+# - Renomeia colunas para o padrão de entrega (Casos, Óbitos)
+# ============================================================================
+DT_COVIDMUN = MONITOR_MUN %>%
+  select(data, NOMEUF, NOMEMUN_Base, CODIGOMUN, casosAcumulado, obitosAcumulado, LINKMUN) %>%
   mutate(casosAcumulado = ifelse(is.na(casosAcumulado), 0, casosAcumulado),
-         obitosAcumulado = ifelse(is.na(obitosAcumulado), 0, obitosAcumulado)) %>% 
-  mutate(NOMEMUN_Base = ifelse(is.na(NOMEMUN_Base), "OUTROS", NOMEMUN_Base)) %>% 
+         obitosAcumulado = ifelse(is.na(obitosAcumulado), 0, obitosAcumulado)) %>%
+  mutate(NOMEMUN_Base = ifelse(is.na(NOMEMUN_Base), "OUTROS", NOMEMUN_Base)) %>%
   filter(data >= "2020-02-25") %>% # filter(casosAcumulado != 0)
-  group_by(NOMEUF, NOMEMUN_Base, LINKMUN) %>% 
+  group_by(NOMEUF, NOMEMUN_Base, LINKMUN) %>%
   summarise(data = unique(data),
             CODIGOMUN = unique(CODIGOMUN),
             casosAcumulado = sum_(casosAcumulado),
-            obitosAcumulado = sum_(obitosAcumulado)) %>% 
-  ungroup() %>% 
-  rename(Casos = "casosAcumulado",`Óbitos` = "obitosAcumulado") %>% 
+            obitosAcumulado = sum_(obitosAcumulado)) %>%
+  ungroup() %>%
+  rename(Casos = "casosAcumulado",`Óbitos` = "obitosAcumulado") %>%
   select("data", everything(), -"LINKMUN")
 ```
 
@@ -207,17 +307,34 @@ DT_COVIDMUN = MONITOR_MUN %>%
 #### SALVAR DADOS
 
 ```{r}
+# ============================================================================
+# CRIAR PASTA DE ENTREGA DO DIA
+# ============================================================================
 dir.create(paste0(path, "1_Output/Entregas_", format(Sys.Date(), "%d%b%Y")))
 ```
 
 ```{r}
+# ============================================================================
+# EXPORTAR DADOS MUNICIPAIS PARA ARQUIVO DE MONITORAMENTO
+# Arquivo de controle interno com versionamento diário
+# Formato: DT_COVID19BRMUN_AAAA-MM-DD.xlsx
+# ============================================================================
 write.xlsx(DT_COVIDMUN, file = paste0(path, "1_Data/Dados_Municipio/DT_Monitora_MUN/DT_COVID19BRMUN_", format(Sys.Date(), "%Y-%m-%d"), ".xlsx"), overwrite = T)
 ```
 
 ```{r}
+# ============================================================================
+# EXPORTAR DADOS MUNICIPAIS PARA PASTA DE ENTREGA
+# Cópia dos dados municipais na pasta de entrega diária
+# ============================================================================
 write.xlsx(DT_COVIDMUN, paste0(path, "1_Output/Entregas_", format(Sys.Date(), "%d%b%Y"), "/DT_COVID19MUN_", format(Sys.Date(), "%d%b%Y"),".xlsx"), asTable = T, overwrite = T)
 ```
 
 ```{r}
+# ============================================================================
+# EXPORTAR RELATÓRIO DE INCONSISTÊNCIAS MUNICIPAIS
+# Arquivo com municípios que apresentaram redução nos dados acumulados
+# (CHECAR = 1), permitindo investigação e correção manual
+# ============================================================================
 write.xlsx(CHECAR_MUN, paste0(path, "1_Output/Entregas_", format(Sys.Date(), "%d%b%Y"), "/CHECAR_MUN_", format(Sys.Date(), "%d%b%Y"),".xlsx"), asTable = T, overwrite = T)
 ```

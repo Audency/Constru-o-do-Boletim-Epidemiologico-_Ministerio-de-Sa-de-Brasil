@@ -6,6 +6,11 @@ output: word_document
 ---
 
 ```{r setup, echo = F}
+# ============================================================================
+# CONFIGURAÇÃO GLOBAL DO NOTEBOOK
+# Desativa mensagens de aviso (warning) e mensagens informativas (message)
+# para manter a saída do relatório limpa
+# ============================================================================
 knitr::opts_chunk$set(warning = F, message = F)
 ```
 
@@ -14,6 +19,18 @@ $~$
 #### CARREGAR BIBLIOTECAS
 
 ```{r}
+# ============================================================================
+# BIBLIOTECAS NECESSÁRIAS
+# ----------------------------------------------------------------------------
+# tidyverse   : Conjunto de pacotes para manipulação e visualização de dados
+#               (dplyr, tidyr, ggplot2, stringr, readr, etc.)
+# data.table  : Manipulação eficiente de grandes volumes de dados tabulares
+# lubridate   : Funções para manipulação de datas e cálculo de semanas
+#               epidemiológicas (epiweek, epiyear)
+# openxlsx    : Leitura e escrita de arquivos Excel (.xlsx)
+# hablar      : Funções auxiliares como sum_() que trata NA como 0
+#               diferente do sum() padrão que retorna NA se houver NA
+# ============================================================================
 library(tidyverse)
 library(data.table)
 library(lubridate)
@@ -26,6 +43,12 @@ $~$
 #### CONFIGURAR DIRETÓRIO DO PROJETO
 
 ```{r}
+# ============================================================================
+# DIRETÓRIO BASE DO PROJETO
+# Caminho do OneDrive compartilhado do Ministério da Saúde onde ficam
+# armazenados os dados brutos (1_Data/) e saídas processadas (1_Output/)
+# NOTA: Atualizar este caminho conforme o usuário que executa o script
+# ============================================================================
 path = "C:/Users/audencio.victor/OneDrive - Ministério da Saúde/14. Análises COE-COVID/ROTINAS/"
 ```
 
@@ -34,6 +57,13 @@ $~$
 #### IMPORTAR DADOS
 
 ```{r}
+# ============================================================================
+# IMPORTAÇÃO DOS DADOS BRUTOS POR UNIDADE DA FEDERAÇÃO (UF)
+# Lê a planilha Excel com os dados consolidados de COVID-19 por estado
+# Campos esperados: date (data), uid (código UF), cases (casos acumulados),
+# deaths (óbitos acumulados)
+# detectDates = T: converte automaticamente colunas de datas do Excel
+# ============================================================================
 DT_FONTEMUN = read.xlsx(paste0(path, "1_Data/Dados_UF/coronavirus_data.xlsx"), sheet = 1, detectDates = T)
 ```
 
@@ -42,76 +72,125 @@ $~$
 #### CURADORIA DE DADOS
 
 ```{r}
-DT_FONTEMUN = DT_FONTEMUN %>% 
+# ============================================================================
+# ETAPA 1: RENOMEAR E FILTRAR COLUNAS
+# - Renomeia colunas do inglês para o padrão brasileiro do projeto
+# - Filtra dados a partir de 25/02/2020 (1º caso confirmado no Brasil)
+# - Seleciona apenas as 4 primeiras colunas relevantes
+# ============================================================================
+DT_FONTEMUN = DT_FONTEMUN %>%
   rename(data = "date", CODIGOUF = "uid", casosAcumulados = "cases", obitosAcumulados = "deaths") %>%
-  filter(data >= "2020-02-25") %>% 
+  filter(data >= "2020-02-25") %>%
   select(1:4)
 ```
 
 ```{r}
+# ============================================================================
+# ETAPA 2: GERAR SEQUÊNCIA COMPLETA DE DATAS POR UF
+# Cria um data.frame com todos os códigos IBGE dos 27 estados brasileiros
+# (11=RO, 12=AC, ..., 53=DF) e para cada estado gera uma sequência diária
+# de datas cobrindo todo o período da pandemia. Isso garante que não haja
+# lacunas de datas mesmo quando um estado não reporta dados em um dia.
+# ============================================================================
 DT_0 =  data.frame(CODIGOUF = c(11:17,21:29,31:33,35,41:43,50:53))
 DT_0 = setDT(DT_0)[, list(data = seq(min(DT_FONTEMUN$data), max(DT_FONTEMUN$data), by = "days")), by = CODIGOUF]
 ```
 
 ```{r}
-MONITOR_UF = DT_FONTEMUN %>% 
-  full_join(DT_0, by = c("CODIGOUF" = "CODIGOUF", "data" = "data")) %>% 
-  group_by(CODIGOUF, data) %>% 
-  summarise_all(sum_) %>% 
-  ungroup() %>% 
-  arrange(CODIGOUF, data) %>% 
+# ============================================================================
+# ETAPA 3: JUNÇÃO DOS DADOS COM A GRADE COMPLETA DE DATAS
+# - full_join: combina os dados reais com a grade de datas completa
+# - group_by + summarise_all(sum_): agrupa duplicatas se houver
+# - arrange: ordena por UF e data cronologicamente
+# - mutate_if: substitui NAs numéricos por 0 (dias sem dados reportados)
+# ============================================================================
+MONITOR_UF = DT_FONTEMUN %>%
+  full_join(DT_0, by = c("CODIGOUF" = "CODIGOUF", "data" = "data")) %>%
+  group_by(CODIGOUF, data) %>%
+  summarise_all(sum_) %>%
+  ungroup() %>%
+  arrange(CODIGOUF, data) %>%
   mutate_if(is.numeric, ~replace_na(., 0))
 ```
 
 ```{r}
-MONITOR_UF = MONITOR_UF %>% 
-  group_by(CODIGOUF) %>% 
+# ============================================================================
+# ETAPA 4: CÁLCULO DE CASOS E ÓBITOS NOVOS DIÁRIOS
+# Utiliza lag(lead(...) - ...) para calcular a diferença entre o dia seguinte
+# e o dia atual, atribuindo o resultado ao dia atual.
+# Esta técnica calcula os incrementos diários a partir dos dados acumulados.
+# NAs resultantes (primeiro e último dia) são substituídos por 0.
+# ============================================================================
+MONITOR_UF = MONITOR_UF %>%
+  group_by(CODIGOUF) %>%
   mutate(casosNovos = lag(lead(casosAcumulados) - casosAcumulados),
-         obitosNovos = lag(lead(obitosAcumulados) - obitosAcumulados)) %>% 
+         obitosNovos = lag(lead(obitosAcumulados) - obitosAcumulados)) %>%
   mutate(casosNovos = replace_na(casosNovos, 0),
-         obitosNovos = replace_na(obitosNovos, 0)) %>% 
+         obitosNovos = replace_na(obitosNovos, 0)) %>%
   ungroup()
 ```
 
 ```{r}
-MONITOR_UF = MONITOR_UF %>% 
+# ============================================================================
+# ETAPA 5: ENRIQUECIMENTO DOS DADOS COM VARIÁVEIS EPIDEMIOLÓGICAS E GEOGRÁFICAS
+# - id_date: identificador sequencial das datas
+# - anoEpi: ano epidemiológico (pode diferir do ano calendário na virada do ano)
+# - semanaEpi: semana epidemiológica (1-53)
+# - regiao: macro-região geográfica (Norte, Nordeste, Sudeste, Sul, Centro-Oeste)
+#   classificada pelo primeiro dígito do código IBGE da UF
+# - siglaEstado: sigla de 2 letras do estado (RO, AC, AM, etc.)
+# - nomeEstado: nome completo do estado
+# Ao final, reorganiza as colunas na ordem padrão do projeto
+# ============================================================================
+MONITOR_UF = MONITOR_UF %>%
   mutate(id_date = dense_rank(data),
          anoEpi = epiyear(data),
-         semanaEpi = epiweek(data)) %>% 
-  mutate(regiao = case_when(CODIGOUF %in% c(11:17) ~ "Norte", 
-                            CODIGOUF %in% c(21:29) ~ "Nordeste", 
+         semanaEpi = epiweek(data)) %>%
+  mutate(regiao = case_when(CODIGOUF %in% c(11:17) ~ "Norte",
+                            CODIGOUF %in% c(21:29) ~ "Nordeste",
                             CODIGOUF %in% c(31:33,35) ~ "Sudeste",
-                            CODIGOUF %in% c(41:43) ~ "Sul", 
-                            CODIGOUF %in% c(50:53) ~ "Centro-Oeste")) %>% 
+                            CODIGOUF %in% c(41:43) ~ "Sul",
+                            CODIGOUF %in% c(50:53) ~ "Centro-Oeste")) %>%
   mutate(siglaEstado = case_when(CODIGOUF == 11 ~ "RO", CODIGOUF == 12 ~ "AC", CODIGOUF == 13 ~ "AM", CODIGOUF == 14 ~ "RR",
                                  CODIGOUF == 15 ~ "PA", CODIGOUF == 16 ~ "AP", CODIGOUF == 17 ~ "TO", CODIGOUF == 21 ~ "MA",
                                  CODIGOUF == 22 ~ "PI", CODIGOUF == 23 ~ "CE", CODIGOUF == 24 ~ "RN", CODIGOUF == 25 ~ "PB",
                                  CODIGOUF == 26 ~ "PE", CODIGOUF == 27 ~ "AL", CODIGOUF == 28 ~ "SE", CODIGOUF == 29 ~ "BA",
                                  CODIGOUF == 31 ~ "MG", CODIGOUF == 32 ~ "ES", CODIGOUF == 33 ~ "RJ", CODIGOUF == 35 ~ "SP",
                                  CODIGOUF == 41 ~ "PR", CODIGOUF == 42 ~ "SC", CODIGOUF == 43 ~ "RS", CODIGOUF == 50 ~ "MS",
-                                 CODIGOUF == 51 ~ "MT", CODIGOUF == 52 ~ "GO", CODIGOUF == 53 ~ "DF")) %>% 
+                                 CODIGOUF == 51 ~ "MT", CODIGOUF == 52 ~ "GO", CODIGOUF == 53 ~ "DF")) %>%
   mutate(nomeEstado = case_when(CODIGOUF == 11 ~ "Rondônia", CODIGOUF == 12 ~ "Acre", CODIGOUF == 13 ~ "Amazonas", CODIGOUF == 14 ~ "Roraima",
                                 CODIGOUF == 15 ~ "Pará", CODIGOUF == 16 ~ "Amapá", CODIGOUF == 17 ~ "Tocantins", CODIGOUF == 21 ~ "Maranhão",
                                 CODIGOUF == 22 ~ "Piauí", CODIGOUF == 23 ~ "Ceará", CODIGOUF == 24 ~ "Rio Grande do Norte", CODIGOUF == 25 ~ "Paraíba",
                                 CODIGOUF == 26 ~ "Pernambuco", CODIGOUF == 27 ~ "Alagoas", CODIGOUF == 28 ~ "Sergipe", CODIGOUF == 29 ~ "Bahia",
-                                CODIGOUF == 31 ~ "Minas Gerais", CODIGOUF == 32 ~ "Espírito Santo", CODIGOUF == 33 ~ "Rio de Janeiro", 
-                                CODIGOUF == 35 ~ "São Paulo", CODIGOUF == 41 ~ "Paraná", CODIGOUF == 42 ~ "Santa Catarina", 
-                                CODIGOUF == 43 ~ "Rio Grande do Sul", CODIGOUF == 50 ~ "Mato Grosso do Sul", CODIGOUF == 51 ~ "Mato Grosso", 
-                                CODIGOUF == 52 ~ "Goiás", CODIGOUF == 53 ~ "Distrito Federal")) %>% 
+                                CODIGOUF == 31 ~ "Minas Gerais", CODIGOUF == 32 ~ "Espírito Santo", CODIGOUF == 33 ~ "Rio de Janeiro",
+                                CODIGOUF == 35 ~ "São Paulo", CODIGOUF == 41 ~ "Paraná", CODIGOUF == 42 ~ "Santa Catarina",
+                                CODIGOUF == 43 ~ "Rio Grande do Sul", CODIGOUF == 50 ~ "Mato Grosso do Sul", CODIGOUF == 51 ~ "Mato Grosso",
+                                CODIGOUF == 52 ~ "Goiás", CODIGOUF == 53 ~ "Distrito Federal")) %>%
   select(id_date, regiao, CODIGOUF, siglaEstado, nomeEstado, anoEpi, semanaEpi, data, casosNovos, casosAcumulados, obitosNovos, obitosAcumulados)
 ```
 
 $~$
 
 ```{r}
-MONITOR_UF = MONITOR_UF %>% 
-  group_by(siglaEstado) %>% 
-  mutate(casosNovosVivos = casosNovos - obitosNovos) %>% 
-  mutate(sma3casosNovosVivos = zoo::rollmean(casosNovosVivos, k = 3, fill = 0, align = "right")) %>% 
-  mutate(casosAcompanhamento = zoo::rollapply(sma3casosNovosVivos, 18, sum, by = 1, align = "right", 
-                                              partial = T)) %>% 
-  ungroup() %>% 
-  mutate(casosAcompanhamento = round(casosAcompanhamento, 0)) %>% 
+# ============================================================================
+# ETAPA 6: CÁLCULO DE INDICADORES DE ACOMPANHAMENTO E RECUPERAÇÃO
+# - casosNovosVivos: casos novos descontando óbitos (sobreviventes)
+# - sma3casosNovosVivos: média móvel de 3 dias (suavização da série)
+# - casosAcompanhamento: soma dos últimos 18 dias da média móvel
+#   (estimativa de casos ainda em período de acompanhamento/ativos)
+# - casosRecuperados: casos acumulados - óbitos - em acompanhamento
+#   (estimativa de pacientes já recuperados)
+# Nota: O período de 18 dias representa o tempo médio estimado de
+# acompanhamento clínico de um caso de COVID-19
+# ============================================================================
+MONITOR_UF = MONITOR_UF %>%
+  group_by(siglaEstado) %>%
+  mutate(casosNovosVivos = casosNovos - obitosNovos) %>%
+  mutate(sma3casosNovosVivos = zoo::rollmean(casosNovosVivos, k = 3, fill = 0, align = "right")) %>%
+  mutate(casosAcompanhamento = zoo::rollapply(sma3casosNovosVivos, 18, sum, by = 1, align = "right",
+                                              partial = T)) %>%
+  ungroup() %>%
+  mutate(casosAcompanhamento = round(casosAcompanhamento, 0)) %>%
   mutate(casosRecuperados = casosAcumulados - obitosAcumulados - casosAcompanhamento)
 ```
 
@@ -120,15 +199,25 @@ $~$
 #### GERAR DADOS DE CONTROLE
 
 ```{r}
-MONITOR_UF2 = MONITOR_UF %>% 
+# ============================================================================
+# SNAPSHOT DO DIA ATUAL POR UF
+# Seleciona apenas os dados do último dia disponível para cada estado,
+# gerando um resumo do dia mais recente para controle e verificação
+# ============================================================================
+MONITOR_UF2 = MONITOR_UF %>%
   select(CODIGOUF, siglaEstado, data, casosAcumulados, casosNovos, obitosAcumulados, obitosNovos,
          casosAcompanhamento, casosRecuperados) %>%
   filter(data == max(data))
 ```
 
 ```{r}
-DT_BRA = MONITOR_UF2 %>% 
-  group_by(data) %>% 
+# ============================================================================
+# AGREGAÇÃO NACIONAL (BRASIL)
+# Soma os dados de todos os estados para gerar o total nacional,
+# atribuindo código 76 (código ISO do Brasil) e sigla "BRASIL"
+# ============================================================================
+DT_BRA = MONITOR_UF2 %>%
+  group_by(data) %>%
   summarise(CODIGOUF = 76,
             siglaEstado = "BRASIL",
             casosAcumulados = sum_(casosAcumulados),
@@ -136,25 +225,38 @@ DT_BRA = MONITOR_UF2 %>%
             obitosAcumulados = sum_(obitosAcumulados),
             obitosNovos = sum_(obitosNovos),
             casosAcompanhamento = sum_(casosAcompanhamento),
-            casosRecuperados = sum_(casosRecuperados)) %>% 
+            casosRecuperados = sum_(casosRecuperados)) %>%
   ungroup()
 ```
 
 ```{r}
+# ============================================================================
+# COMBINAR DADOS NACIONAIS COM ESTADUAIS
+# Adiciona a linha do Brasil ao topo do dataset de estados
+# ============================================================================
 MONITOR_UF2 = DT_BRA %>% bind_rows(MONITOR_UF2)
 ```
 
 ```{r}
-DT_BRA2 = MONITOR_UF %>% 
-  select(data, casosAcumulados, casosNovos, obitosAcumulados, obitosNovos, casosAcompanhamento, casosRecuperados) %>% 
-  group_by(data) %>% 
-  #summarise_all(., ~sum_(.)) %>% 
-  summarise(casosAcumulados = sum_(casosAcumulados), casosNovos = sum_(casosNovos), 
-            obitosAcumulados = sum_(obitosAcumulados), obitosNovos = sum_(obitosNovos), 
-            casosAcompanhamento = max_(casosAcompanhamento), casosRecuperados = max_(casosRecuperados)) %>% 
+# ============================================================================
+# SÉRIE HISTÓRICA NACIONAL (BRASIL)
+# Agrega todos os dias para criar a série temporal completa do Brasil,
+# com indicadores diários: casos/óbitos acumulados e novos,
+# acompanhamento e recuperados. Adiciona variáveis temporais
+# (id_date, epiyear, epiweek) para análises por semana epidemiológica.
+# Nota: casosAcompanhamento e casosRecuperados usam max_() em vez de
+# sum_() para evitar dupla contagem entre estados
+# ============================================================================
+DT_BRA2 = MONITOR_UF %>%
+  select(data, casosAcumulados, casosNovos, obitosAcumulados, obitosNovos, casosAcompanhamento, casosRecuperados) %>%
+  group_by(data) %>%
+  #summarise_all(., ~sum_(.)) %>%
+  summarise(casosAcumulados = sum_(casosAcumulados), casosNovos = sum_(casosNovos),
+            obitosAcumulados = sum_(obitosAcumulados), obitosNovos = sum_(obitosNovos),
+            casosAcompanhamento = max_(casosAcompanhamento), casosRecuperados = max_(casosRecuperados)) %>%
   mutate(id_date = dense_rank(data),
          epiyear = epiyear(data),
-         epiweek = epiweek(data)) %>% 
+         epiweek = epiweek(data)) %>%
   select(id_date, epiyear, epiweek, data, everything())
 ```
 
@@ -162,33 +264,60 @@ DT_BRA2 = MONITOR_UF %>%
 #### SALVAR DADOS
 
 ```{r}
+# ============================================================================
+# ATUALIZAÇÃO DO HISTÓRICO DE DADOS DE RECUPERADOS
+# Lê o arquivo existente de recuperados, adiciona o novo registro do Brasil
+# do dia atual e salva de volta, mantendo registros únicos (distinct)
+# ============================================================================
 DT_HOSP = read.xlsx(paste0(path, "1_Data/DADOS_RECUPERADOS.xlsx"), detectDates = T)
 
-DT_HOSP = bind_rows(DT_HOSP, 
-                    DT_BRA %>% 
-                      select(siglaEstado, data, casosAcompanhamento, casosRecuperados) %>% 
+DT_HOSP = bind_rows(DT_HOSP,
+                    DT_BRA %>%
+                      select(siglaEstado, data, casosAcompanhamento, casosRecuperados) %>%
                       rename(NOMELOCAL = "siglaEstado", emAcompanhamentoNovos = "casosAcompanhamento",
-                             Recuperadosnovos = "casosRecuperados") %>% 
+                             Recuperadosnovos = "casosRecuperados") %>%
                       mutate(NOMELOCAL = "Brasil")) %>% distinct()
 
 write.xlsx(DT_HOSP, paste0(path, "1_Data/DADOS_RECUPERADOS.xlsx"), asTable = T)
 ```
 
 ```{r}
-write.xlsx(MONITOR_UF %>% select(-casosAcompanhamento, -casosRecuperados), 
+# ============================================================================
+# EXPORTAR SÉRIE HISTÓRICA POR UF
+# Salva os dados diários de todas as UFs (sem colunas de acompanhamento/
+# recuperados) em arquivo Excel com data no nome para versionamento diário
+# Formato: DT_COVID19BR_DD-MM-AAAA.xlsx
+# ============================================================================
+write.xlsx(MONITOR_UF %>% select(-casosAcompanhamento, -casosRecuperados),
            paste0(path, "1_Data/Dados_UF/DT_Monitora_UF/DT_COVID19BR_", format(Sys.Date(), "%d-%m-%Y"),".xlsx"))
 ```
 
 ```{r}
+# ============================================================================
+# CRIAR PASTA DE ENTREGA DO DIA
+# Cria um diretório nomeado com a data atual para organizar as entregas
+# Formato: Entregas_DDMesAAAA (ex: Entregas_14Mar2024)
+# ============================================================================
 dir.create(paste0(path, "1_Output/Entregas_", format(Sys.Date(), "%d%b%Y")))
 ```
 
 ```{r}
-write.xlsx(MONITOR_UF %>% select(-casosAcompanhamento, -casosRecuperados), 
+# ============================================================================
+# EXPORTAR DADOS PARA ENTREGA
+# Copia os dados das UFs para a pasta de entrega do dia
+# ============================================================================
+write.xlsx(MONITOR_UF %>% select(-casosAcompanhamento, -casosRecuperados),
            paste0(path, "1_Output/Entregas_", format(Sys.Date(), "%d%b%Y"), "/DT_COVID19BR_", format(Sys.Date(), "%d%b%Y"),".xlsx"), asTable = T)
 ```
 
 ```{r}
+# ============================================================================
+# EXPORTAR WORKBOOK COM MÚLTIPLAS ABAS
+# Cria arquivo Excel com duas abas:
+# - "Overview": resumo do dia atual por UF (MONITOR_UF2)
+# - "Hist_Brasil": série histórica completa do Brasil (DT_BRA2)
+# Formato: TAB_COVID19BR_DDMesAAAA.xlsx
+# ============================================================================
 wb = createWorkbook()
 addWorksheet(wb, sheetName = "Overview")
 addWorksheet(wb, sheetName = "Hist_Brasil")
@@ -198,4 +327,3 @@ writeData(wb, sheet = "Hist_Brasil", x = DT_BRA2)
 
 saveWorkbook(wb, paste0(path, "1_Output/Entregas_", format(Sys.Date(), "%d%b%Y"), "/TAB_COVID19BR_", format(Sys.Date(), "%d%b%Y"),".xlsx"), overwrite = T)
 ```
-
