@@ -1,3 +1,37 @@
+# ============================================================================
+# SCRIPT K5: MAPAS MUNICIPAIS DE COVID-19 POR SEMANA EPIDEMIOLÓGICA
+# ============================================================================
+# Objetivo: Gerar mapas de bolhas (bubble maps) dos municípios brasileiros
+# mostrando a distribuição geográfica de casos novos, óbitos novos,
+# taxa de incidência e taxa de mortalidade por COVID-19.
+#
+# Saídas geradas:
+#   1. Mapa de casos novos por município (FIG_CASOS_MUN.png)
+#   2. Mapa de óbitos novos por município (FIG_ÓBITOS_MUN.png)
+#   3. Mapa de taxa de incidência por município (FIG_INCIDENCIA_MUN.png)
+#   4. Mapa de taxa de mortalidade por município (FIG_MORTALIDADE_MUN.png)
+#   5. Tabelas com ranking de municípios (TABELA_*_MUNICIPIOS.png)
+#   6. Dados de incidência/mortalidade em Excel para análises adicionais
+#
+# Dependências: Dataset DT_Monitora_COVID gerado pelo Notebook 3
+# ============================================================================
+
+# --- BIBLIOTECAS ---
+# tidyverse    : Manipulação e visualização de dados
+# lubridate    : Manipulação de datas e semanas epidemiológicas
+# data.table   : Leitura rápida de CSV (fread)
+# openxlsx     : Leitura/escrita de Excel
+# hablar       : Funções sum_(), min_() que tratam NA como 0
+# extrafont    : Fontes tipográficas para gráficos
+# hrbrthemes   : Temas para ggplot2 (theme_ipsum)
+# gghighlight  : Destaque condicional em gráficos
+# udunits2     : Conversão de unidades (dependência geoespacial)
+# sf           : Simple Features para dados geoespaciais
+# brazilmaps   : Shapefiles do Brasil (estados, municípios, regiões)
+# ggsn         : Barra de escala e norte para mapas
+# ggflags      : Bandeiras como elementos gráficos
+# ggrepel      : Rótulos sem sobreposição
+# gridExtra    : Arranjo de múltiplos gráficos e tabelas (tableGrob)
 library(tidyverse)
 library(lubridate)
 library(data.table)
@@ -8,21 +42,25 @@ library(hrbrthemes)
 library(gghighlight)
 library(udunits2)
 library(sf)
-library(brazilmaps) 
+library(brazilmaps)
 library(ggsn)
 library(ggflags)
 library(ggrepel)
 library(gridExtra)
 
-
+# Permitir sobreposição ilimitada de rótulos nos mapas
 options(ggrepel.max.overlaps = Inf)
 
-#ATUALIZAR
+# --- VARIÁVEL DE CONTROLE: SEMANA EPIDEMIOLÓGICA ---
+# ATUALIZAR a cada nova SE com o formato "SE XX"
 SE="SE 18"
 
-#############################################
+# ============================================================================
+# CONFIGURAÇÃO DE DIRETÓRIOS E IMPORTAÇÃO DE DADOS
+# NOTA: Descomente o caminho correspondente ao seu usuário
+# ============================================================================
 
-#Pasta para salvar figuras
+# Pasta para salvar figuras
 #LINDINHO
 path = paste0("C:/Users/eucilene.santana/OneDrive - Ministério da Saúde/14. Análises COE-COVID/OUTRAS DEMANDAS/NOTIFICAÇÃO DIÁRIA/2024/", SE, " de 2024/")
 
@@ -50,9 +88,13 @@ dir.create(paste0("C:/Users/eucilene.santana/OneDrive - Ministério da Saúde/14
 #dir.create(paste0("C:/Users/pbrte/OneDrive - Minist?rio da Sa?de/14. An?lises COE-COVID/OUTRAS DEMANDAS/NOTIFICA??O DI?RIA/", SE, " de 2023"))
 
 
-#############################################
-
-#ATUALIZAR (com data do ultimo dia da SE em an?lise)
+# ============================================================================
+# IMPORTAÇÃO DOS DADOS
+# - DT_CONTROL: Dataset consolidado com todos os níveis hierárquicos
+# - DT_MUN: Base de municípios com coordenadas LAT/LONG
+# - dadostcu2019: Estimativas populacionais TCU 2019
+# ATUALIZAR: data do arquivo CSV e caminho do usuário
+# ============================================================================
 
 #LINDINHO
 DT_CONTROL = fread(file = "C:/Users/eucilene.santana/OneDrive - Ministério da Saúde/14. Análises COE-COVID/ROTINAS/1_Data/Dados_Controle/DT_Monitora_COVID_20240504.csv", encoding = "UTF-8") #ATUALIZAR
@@ -70,39 +112,57 @@ dadostcu2019 <- readxl::read_excel("C:/Users/eucilene.santana/OneDrive - Minist�
 #dadostcu2019 <- readxl::read_excel("C:/Users/pbrte/OneDrive - Minist?rio da Sa?de/14. An?lises COE-COVID/ROTINAS/1_Data/estimativa_TCU_2019_20200427.xls", sheet = 4)
 
 
-#########
+# ============================================================================
+# PREPARAÇÃO E ENRIQUECIMENTO DOS DADOS
+# - Cria código IBGE de 6 e 7 dígitos para municípios
+# - Adiciona ano epidemiológico, coordenadas geográficas e população
+# - Calcula data mínima por semana epidemiológica
+# ============================================================================
 dadostcu2019 <- dadostcu2019 %>%
-  mutate(CODIGOMUN7 = str_c(codigoUF, codigoMUN)) %>% 
+  mutate(CODIGOMUN7 = str_c(codigoUF, codigoMUN)) %>%
   mutate(CODIGOMUN7_2 = parse_number(str_sub(CODIGOMUN7, end = 7))) %>%
   mutate(CODIGOMUN7 = parse_number(str_sub(CODIGOMUN7, end = 6))) %>%
-  mutate(CODIGOMUN7 = case_when(is.na(CODIGOMUN7) ~ codigoUF, TRUE ~ CODIGOMUN7)) %>% 
+  mutate(CODIGOMUN7 = case_when(is.na(CODIGOMUN7) ~ codigoUF, TRUE ~ CODIGOMUN7)) %>%
   select(CODIGOMUN7, POP_TCU2019, CODIGOMUN7_2)
 
-DT_CONTROL = DT_CONTROL %>% 
+DT_CONTROL = DT_CONTROL %>%
   mutate(anoEpi = epiyear(data))
 
 DT_MUN = DT_MUN %>% select(CODIGOMUN, LAT, LONG) %>% mutate(CODIGOMUN = parse_number(str_sub(CODIGOMUN, end = 6)))
 
+# Converter strings vazias para NA
 DT_CONTROL = sjmisc::set_na(DT_CONTROL, na = "")
 
+# Converter data e vincular coordenadas geográficas
 DT_CONTROL = DT_CONTROL %>% mutate(data = ymd(data)) %>% left_join(DT_MUN, by = c("CODIGOLOCAL" = "CODIGOMUN"))
 
+# Vincular população TCU 2019
 DT_CONTROL = DT_CONTROL %>% full_join(dadostcu2019, by = c("CODIGOLOCAL" = "CODIGOMUN7"))
 
-DT_CONTROL = DT_CONTROL %>% 
+DT_CONTROL = DT_CONTROL %>%
   rename(POP_TCU2019 = POP_TCU2019.x)
 
-DT_CONTROL = DT_CONTROL %>% 
-  group_by(anoEpi, semanaEpi) %>% 
+# Calcular primeiro dia de cada semana epidemiológica
+DT_CONTROL = DT_CONTROL %>%
+  group_by(anoEpi, semanaEpi) %>%
   mutate(minData = min_(data)) %>%
   ungroup()
 
-DT_CONTROL_SE = DT_CONTROL %>% 
-  group_by(ABRANGENCIA, CODIGOLOCAL, CODIGOMUN7_2, NOMELOCAL, anoEpi, semanaEpi, minData, LAT, LONG) %>% 
-  summarise(casosNovos=sum(casosNovos), obitosNovos=sum(obitosNovos)) %>% 
+# ============================================================================
+# AGREGAÇÃO SEMANAL POR MUNICÍPIO
+# Soma casos e óbitos novos de cada município dentro de cada SE
+# ============================================================================
+DT_CONTROL_SE = DT_CONTROL %>%
+  group_by(ABRANGENCIA, CODIGOLOCAL, CODIGOMUN7_2, NOMELOCAL, anoEpi, semanaEpi, minData, LAT, LONG) %>%
+  summarise(casosNovos=sum(casosNovos), obitosNovos=sum(obitosNovos)) %>%
   ungroup()
 
-#Classificando munic?pios pelo n?mero de casos novos novitifados na SE
+# ============================================================================
+# CLASSIFICAÇÃO DOS MUNICÍPIOS POR NÚMERO DE CASOS/ÓBITOS NOVOS
+# Categorias para CASOS: 1(0), 2(1-200), 3(201-500), 4(501+)
+# Categorias para ÓBITOS: 1(0), 2(1-5), 3(6-10), 4(11+)
+# Filtra apenas a última SE disponível e municípios válidos
+# ============================================================================
 tbMapa = DT_CONTROL_SE %>% 
   filter(ABRANGENCIA == 7, minData == max(minData)) %>% 
   select(minData, anoEpi, semanaEpi, LONG, LAT, CODIGOLOCAL, CODIGOMUN7_2, casosNovos, obitosNovos) %>% 
@@ -193,6 +253,15 @@ tbMapa<-tbMapa %>%
 #           transform = T, dist_unit = "km", st.dist = 0.03, st.size = 3, model = "WGS84")
 
 
+# ============================================================================
+# MAPA DE BOLHAS: CASOS NOVOS POR MUNICÍPIO
+# - Camada base: limites municipais (cinza claro) e estaduais (preto)
+# - Pontos: tamanho proporcional ao nº de casos, cor por categoria
+#   Transparente(0), Azul(1-200), Dourado(201-500), Vermelho(501+)
+# - gghighlight: destaca municípios com categorias 3-4 (alto nº de casos)
+# - Camada adicional: pontos azuis para categoria 2 (1-200 casos)
+# - Escala de 500km no canto inferior direito
+# ============================================================================
 tbMapa$catsCasos2 <- tbMapa$catsCasos
 
 
@@ -279,6 +348,11 @@ gg13B = ggplot(filter(tbMapa, !is.na(catsCasos), !str_detect(CODIGOLOCAL, "0000$
 #  scalebar(filter(tbMapa, !is.na(catsObitos), !str_detect(CODIGOLOCAL, "0000$")), dist = 500, location = "bottomright", 
 #           transform = T, dist_unit = "km", st.dist = 0.03, st.size = 3, model = "WGS84")
 
+# ============================================================================
+# MAPA DE BOLHAS: ÓBITOS NOVOS POR MUNICÍPIO
+# Mesma estrutura do mapa de casos, mas para óbitos.
+# Categorias: Transparente(0), Azul(1-10), Dourado(11-20), Vermelho(21+)
+# ============================================================================
 tbMapa$catsObitos2 <- tbMapa$catsObitos
 
 
@@ -311,13 +385,15 @@ gg13_ob = ggplot(filter(tbMapa, !is.na(catsObitos), !str_detect(CODIGOLOCAL, "00
            transform = T, dist_unit = "km", st.dist = 0.03, st.size = 3, model = "WGS84")
 
 
-#Salvando imagem
+# Salvando mapas de casos e óbitos como PNG em alta resolução
 ggsave(gg13B, width = 300, height = 200, units = "mm", file = paste0(path,"FIG_CASOS_MUN.png"), dpi = "retina")
 ggsave(gg13_ob, width = 300, height = 200, units = "mm", file = paste0(path,"FIG_ÓBITOS_MUN.png"), dpi = "retina")
 
-################################################################################
-
-#Criar figura de casos com a tabela dos munic?pios com classifica??o 3 e 4
+# ============================================================================
+# TABELAS DE RANKING: MUNICÍPIOS COM MAIOR Nº DE CASOS (CATEGORIAS 3-4)
+# Filtra municípios com 201+ casos novos na SE, ordena por volume
+# e exporta como imagem PNG usando tableGrob do gridExtra
+# ============================================================================
 
 tbMapa_tab<-tbMapa %>% 
   filter(catsCasos>=3)
@@ -354,9 +430,12 @@ grid.arrange(p)
 dev.off()
 
 
-#Criar figura de ?bitos com a tabela dos munic?pios com classifica??o 3 e 4
+# ============================================================================
+# TABELAS DE RANKING: MUNICÍPIOS COM MAIOR Nº DE ÓBITOS (CATEGORIAS 3-4)
+# Mesma lógica da tabela de casos, mas para óbitos (6+ óbitos novos)
+# ============================================================================
 
-tbMapa_tab<-tbMapa %>% 
+tbMapa_tab<-tbMapa %>%
   filter(catsObitos>=3)
 
 #LINDINHO
@@ -388,14 +467,17 @@ p<-tableGrob(tbMapa_tab)
 grid.arrange(p)
 dev.off()
 
-################################################################################
-
-#Elaborando figura (taxa de incid?ncia)
+# ============================================================================
+# MAPA DE TAXA DE INCIDÊNCIA (CASOS POR 100 MIL HABITANTES)
+# Vincula população TCU 2019 e calcula: (casosNovos / POP) * 100.000
+# Classificação em 5 categorias baseadas em quintis/Jenks
+# Cores: Transparente → Verde → Salmão → Laranja → Vermelho
+# ============================================================================
 tbMapa = tbMapa  %>% full_join(dadostcu2019, by = c("CODIGOLOCAL" = "CODIGOMUN7"))
 
 tbMapa$incidencia<-round((tbMapa$casosNovos/tbMapa$POP_TCU2019)*100000,1)
 
-#Classificando munic?pios pela taxa de incidencia na SE
+# Resumo estatístico para definir pontos de corte das categorias
 summary(tbMapa$incidencia)
 
 #tbMapa_incidencia = tbMapa %>% 
@@ -424,10 +506,14 @@ tbMapa_incidencia = tbMapa %>%
 
 table(tbMapa_incidencia$catsincidencia, exclude = F)
 
-#Elaborando figura (taxa de mortalidade)
+# ============================================================================
+# MAPA DE TAXA DE MORTALIDADE (ÓBITOS POR 100 MIL HABITANTES)
+# Calcula: (obitosNovos / POP) * 100.000
+# Classificação em 5 categorias baseadas em quintis/Jenks
+# ============================================================================
 tbMapa$mortalidade<-round((tbMapa$obitosNovos/tbMapa$POP_TCU2019)*100000,1)
 
-#Classificando munic?pios pela taxa de mortalidade na SE
+# Resumo estatístico para definir pontos de corte
 summary(tbMapa$mortalidade)
 
 #tbMapa_mortalidade = tbMapa %>% 
@@ -457,7 +543,10 @@ tbMapa_mortalidade = tbMapa %>%
 table(tbMapa_mortalidade$catsmortalidade, exclude = F)
 
 
-#Elaborando figuras (taxa de incidencia e mortalidade)
+# ============================================================================
+# GERAÇÃO DOS MAPAS DE INCIDÊNCIA E MORTALIDADE
+# Mesma estrutura dos mapas de casos/óbitos, mas usando taxas por 100mil hab.
+# ============================================================================
 
 #gg13C = ggplot(filter(tbMapa_incidencia, !is.na(catsincidencia), !str_detect(CODIGOLOCAL, "0000$"))) + 
 #  geom_sf(data = get_brmap("State"), fill = "transparent", colour = "#252525", size = .5) + 
@@ -591,7 +680,10 @@ ggsave(gg13C_ob, width = 300, height = 200, units = "mm", file = paste0(path,"FI
 
 ################################################################################
 
-#Criar figura com incid?ncia dos munic?pios com classifica??o 4 e 5 (incidencia)
+# ============================================================================
+# TABELA DE RANKING: MUNICÍPIOS COM MAIOR TAXA DE INCIDÊNCIA (CATEGORIAS 4-5)
+# Filtra municípios com incidência acima do 4º quintil
+# ============================================================================
 
 tbMapa_tab_incidencia<-tbMapa_incidencia %>% 
   filter(catsincidencia>=4)
@@ -630,7 +722,9 @@ grid.arrange(p)
 dev.off()
 
 
-#Criar figura com mortalidade dos munic?pios com classifica??o 4 e 5 (incidencia)
+# ============================================================================
+# TABELA DE RANKING: MUNICÍPIOS COM MAIOR TAXA DE MORTALIDADE (CATEGORIAS 4-5)
+# ============================================================================
 
 tbMapa_tab_mortalidade<-tbMapa_mortalidade %>% 
   filter(catsmortalidade>=4)
@@ -666,13 +760,14 @@ p<-tableGrob(tbMapa_tab_mortalidade)
 grid.arrange(p)
 dev.off()
 
-################################################################################
+# ============================================================================
+# SEÇÃO DESATIVADA: GRÁFICOS DE MÉDIA MÓVEL DIÁRIA
+# Blocos comentados abaixo geravam gráficos de barras diárias com linha
+# de média móvel de 7 dias para casos e óbitos. Foram substituídos pelos
+# gráficos semanais do script K4 (teste_Card_semanal_k4.Rmd)
+# ============================================================================
 
-################################################################################
-
-################################################################################
-
-#Figura de casos di?rios (dados de ontem)
+# Figura de casos diários (dados de ontem)
 
 #LINDINHO
 #DT_CONTROL = fread(file = "C:/Users/eucilene.santana/OneDrive - Minist?rio da Sa?de/14. An?lises COE-COVID/ROTINAS/1_Data/Dados_Controle/DT_Monitora_COVID_20230212.csv", encoding = "UTF-8") #ATUALIZAR

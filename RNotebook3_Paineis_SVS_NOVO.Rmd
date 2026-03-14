@@ -8,6 +8,17 @@ output: word_document
 #### CARREGAR PACOTES
 
 ```{r message=FALSE, warning=FALSE}
+# ============================================================================
+# BIBLIOTECAS NECESSÁRIAS
+# ----------------------------------------------------------------------------
+# tidyverse   : Pacotes para manipulação e visualização de dados
+# data.table  : Manipulação eficiente de grandes volumes de dados;
+#               inclui fread() para leitura rápida de CSV e rbindlist()
+# lubridate   : Manipulação de datas e cálculo de semanas epidemiológicas
+# hablar      : Funções sum_(), max_(), min_() que tratam NA como 0
+#               e retype() para inferir tipos de colunas automaticamente
+# openxlsx    : Leitura e escrita de arquivos Excel (.xlsx)
+# ============================================================================
 library(tidyverse)
 library(data.table)
 library(lubridate)
@@ -18,12 +29,24 @@ library(openxlsx)
 #### CONFIGURAR DIRETÓRIO
 
 ```{r}
+# ============================================================================
+# DIRETÓRIO BASE DO PROJETO
+# Caminho compartilhado no OneDrive do Ministério da Saúde
+# NOTA: Atualizar conforme o usuário que executa o script
+# ============================================================================
 path = "C:/Users/audencio.victor/OneDrive - Ministério da Saúde/14. Análises COE-COVID/ROTINAS/"
 ```
 
 #### IMPORTAR DADOS 1
 
 ```{r}
+# ============================================================================
+# IMPORTAÇÃO DO HISTÓRICO MUNICIPAL COMPLETO
+# Lê TODOS os arquivos .xlsx da pasta DT_Monitora_MUN (um arquivo por dia),
+# combina todos em um único data.frame usando rbindlist() do data.table.
+# fill = T: preenche colunas ausentes com NA em vez de gerar erro
+# Após a importação, limpa as variáveis temporárias da memória
+# ============================================================================
 list_files = list.files(path = paste0(path, "1_Data/Dados_Municipio/DT_Monitora_MUN"), full.names = T, ignore.case = T, pattern = ".xlsx")
 all_files = lapply(list_files, read.xlsx, detectDates = F)
 MONITOR_MUN = rbindlist(all_files, use.names = T, fill = T)
@@ -33,9 +56,19 @@ rm(list_files, all_files)
 #### IMPORTAR DADOS 2
 
 ```{r}
+# ============================================================================
+# IMPORTAÇÃO DE DADOS COMPLEMENTARES
+# - DT_MUN: Base de referência com todos os municípios brasileiros e
+#   seus atributos (código IBGE, região de saúde, população, etc.)
+# - MONITOR_UF: Dados consolidados por UF gerados pelo Notebook 1
+#   (do dia atual, pasta de entregas)
+# - POP_UF: Estimativas populacionais TCU 2019 por UF
+# - POP_REG: Estimativas populacionais TCU 2019 por macro-região
+# - DT_HOSP: Dados de recuperados e em acompanhamento
+# ============================================================================
 DT_MUN = read.xlsx(paste0(path, "1_Data/DADOSMUNBR.xlsx"), sheet = 1)
 MONITOR_UF = read.xlsx(paste0(path, "1_Output/Entregas_", format(Sys.Date(), "%d%b%Y"), "/DT_COVID19BR_", format(Sys.Date(), "%d%b%Y"),".xlsx"), detectDates = T)
-POP_UF =  readxl::read_excel(paste0(path, "1_Data/estimativa_TCU_2019_20200427.xls"), sheet = 2) 
+POP_UF =  readxl::read_excel(paste0(path, "1_Data/estimativa_TCU_2019_20200427.xls"), sheet = 2)
 POP_UF = POP_UF %>% select(CODIGOUF, POP_TCU2019)
 POP_REG =  readxl::read_excel(paste0(path, "1_Data/estimativa_TCU_2019_20200427.xls"), sheet = 3)
 POP_REG = POP_REG %>% select(CODIGOREG, POP_TCU2019)
@@ -45,19 +78,34 @@ DT_HOSP = read.xlsx(paste0(path, "1_Data/DADOS_RECUPERADOS.xlsx"), detectDates =
 #### CURADORIA DE DADOS 1
 
 ```{r message = F}
-MONITOR_MUN = MONITOR_MUN %>% 
-  group_by(NOMEUF, NOMEMUN_Base, CODIGOMUN, data) %>% 
-  summarise(Casos = sum_(Casos), `Óbitos` = sum_(`Óbitos`)) %>% 
+# ============================================================================
+# AGREGAÇÃO DOS DADOS MUNICIPAIS
+# Consolida os dados municipais agrupando por UF, nome do município,
+# código IBGE e data, somando casos e óbitos. Isso elimina possíveis
+# duplicatas vindas de diferentes arquivos diários
+# ============================================================================
+MONITOR_MUN = MONITOR_MUN %>%
+  group_by(NOMEUF, NOMEMUN_Base, CODIGOMUN, data) %>%
+  summarise(Casos = sum_(Casos), `Óbitos` = sum_(`Óbitos`)) %>%
   ungroup()
 ```
 
 ```{r}
-MONITOR_MUN = MONITOR_MUN %>% 
-  select("NOMEUF","CODIGOMUN", "Casos", "Óbitos", "data") %>% 
+# ============================================================================
+# PADRONIZAÇÃO DOS DADOS MUNICIPAIS
+# - Renomeia colunas para padrão interno (casosAcumulado, obitosAcumulado)
+# - Converte datas de texto para formato Date (ymd)
+# - Trunca código do município para 6 dígitos (sem dígito verificador)
+# - Cria CODIGOUF extraindo os 2 primeiros dígitos do nome da UF
+#   usando case_when para mapear cada estado ao seu código IBGE
+# - Municípios sem código IBGE recebem código genérico: CODIGOUF + "0000"
+# ============================================================================
+MONITOR_MUN = MONITOR_MUN %>%
+  select("NOMEUF","CODIGOMUN", "Casos", "Óbitos", "data") %>%
   rename(casosAcumulado = "Casos",
-         obitosAcumulado = "Óbitos") %>% 
-  mutate(data = ymd(data)) %>% 
-  mutate(CODIGOMUN = str_sub(CODIGOMUN, end = 6)) %>% 
+         obitosAcumulado = "Óbitos") %>%
+  mutate(data = ymd(data)) %>%
+  mutate(CODIGOMUN = str_sub(CODIGOMUN, end = 6)) %>%
   mutate(CODIGOUF = case_when(
     NOMEUF == "ACRE" ~ "12",NOMEUF == "ALAGOAS" ~ "27",NOMEUF == "AMAPA" ~ "16",NOMEUF == "AMAZONAS" ~ "13",NOMEUF == "BAHIA" ~ "29",
     NOMEUF == "CEARA" ~ "23",NOMEUF == "DISTRITO FEDERAL" ~ "53",NOMEUF == "ESPIRITO SANTO" ~ "32",NOMEUF == "GOIAS" ~ "52",
@@ -65,233 +113,330 @@ MONITOR_MUN = MONITOR_MUN %>%
     NOMEUF == "PARA" ~ "15",NOMEUF == "PARAIBA" ~ "25",NOMEUF == "PARANA" ~ "41",NOMEUF == "PERNAMBUCO" ~ "26",NOMEUF == "PIAUI" ~ "22",
     NOMEUF == "RIO DE JANEIRO" ~ "33",NOMEUF == "RIO GRANDE DO NORTE" ~ "24",NOMEUF == "RIO GRANDE DO SUL" ~ "43",NOMEUF == "RONDONIA" ~ "11",
     NOMEUF == "RORAIMA" ~ "14",NOMEUF == "SANTA CATARINA" ~ "42",NOMEUF == "SAO PAULO" ~ "35",NOMEUF == "SERGIPE" ~ "28",
-    NOMEUF == "TOCANTINS" ~ "17")) %>% 
-  mutate(CODIGOMUN = case_when(is.na(CODIGOMUN) ~ paste0(CODIGOUF,"0000"), TRUE ~ CODIGOMUN)) %>% 
+    NOMEUF == "TOCANTINS" ~ "17")) %>%
+  mutate(CODIGOMUN = case_when(is.na(CODIGOMUN) ~ paste0(CODIGOUF,"0000"), TRUE ~ CODIGOMUN)) %>%
   select("CODIGOUF","CODIGOMUN","casosAcumulado","obitosAcumulado","data")
 ```
 
 #### CURADORIA DE DADOS 2
 
 ```{r}
+# ============================================================================
+# GERAR GRADE COMPLETA DE DATAS POR MUNICÍPIO
+# Cria sequência diária contínua de 27/03/2020 até a data mais recente
+# para TODOS os municípios, garantindo que não haja lacunas temporais.
+# Cada município terá um registro para cada dia do período
+# ============================================================================
 DT_0 =  data.frame(CODIGOMUN = c(unique(MONITOR_MUN$CODIGOMUN)))
 DT_0 = setDT(DT_0)[, list(data = seq(as_date("2020-03-27"), max(MONITOR_MUN$data), by = "days")), by = CODIGOMUN]
-DT_0 = DT_0 %>% mutate(CODIGOUF = str_sub(CODIGOMUN, end = 2), CODIGOMUN = as.character(CODIGOMUN)) 
+DT_0 = DT_0 %>% mutate(CODIGOUF = str_sub(CODIGOMUN, end = 2), CODIGOMUN = as.character(CODIGOMUN))
 ```
 
 ```{r}
-MONITOR_MUN = MONITOR_MUN %>% 
-  full_join(DT_0, by = c("CODIGOUF" = "CODIGOUF", "CODIGOMUN" = "CODIGOMUN", "data" = "data")) %>% 
-  group_by(CODIGOUF, CODIGOMUN, data) %>% 
-  summarise_all(sum_) %>% 
-  ungroup() %>% 
-  arrange(CODIGOMUN, data) %>% 
+# ============================================================================
+# JUNÇÃO DOS DADOS MUNICIPAIS COM A GRADE COMPLETA
+# - full_join: garante que todos os dias e municípios estejam presentes
+# - summarise_all(sum_): consolida duplicatas se houver
+# - arrange: ordena por município e data
+# - replace_na: dias sem dados reportados recebem 0
+# ============================================================================
+MONITOR_MUN = MONITOR_MUN %>%
+  full_join(DT_0, by = c("CODIGOUF" = "CODIGOUF", "CODIGOMUN" = "CODIGOMUN", "data" = "data")) %>%
+  group_by(CODIGOUF, CODIGOMUN, data) %>%
+  summarise_all(sum_) %>%
+  ungroup() %>%
+  arrange(CODIGOMUN, data) %>%
   mutate_if(is.numeric, ~replace_na(., 0))
 ```
 
 #### CURADORIA DE DADOS 3
 
 ```{r}
-INFO_MUN0 = DT_MUN %>% 
-  select("CODIGOMUN","CODIGOMUN7") %>% 
-  mutate_all(., ~as.numeric(.)) %>% 
+# ============================================================================
+# PREPARAR TABELAS DE INFORMAÇÕES DOS MUNICÍPIOS
+# INFO_MUN0: Mapeamento de código de 6 dígitos para 7 dígitos (IBGE)
+# INFO_MUN1: Informações da UF (código região, nome região, sigla UF)
+# INFO_MUN2: Informações do município (nome, CIR/região de saúde,
+#            população TCU 2019, classificação interior/metropolitana)
+# ============================================================================
+INFO_MUN0 = DT_MUN %>%
+  select("CODIGOMUN","CODIGOMUN7") %>%
+  mutate_all(., ~as.numeric(.)) %>%
   distinct()
 ```
 
 ```{r}
-INFO_MUN1 = DT_MUN %>% 
-  select("CODIGOREG","NOMEREG","SIGLAUF","CODIGOUF") %>% 
+INFO_MUN1 = DT_MUN %>%
+  select("CODIGOREG","NOMEREG","SIGLAUF","CODIGOUF") %>%
   distinct()
 ```
 
 ```{r}
-INFO_MUN2 = DT_MUN %>% 
-  mutate(CODIGOMUN = str_sub(CODIGOMUN, end = 6)) %>% 
+INFO_MUN2 = DT_MUN %>%
+  mutate(CODIGOMUN = str_sub(CODIGOMUN, end = 6)) %>%
   select("CODIGOMUN","NOMEMUN","CODIGOCIR","NOMECIR","POP_TCU2019","interior/metropolitana")
 ```
 
 ```{r}
-MONITOR_MUN = MONITOR_MUN %>% 
-  left_join(INFO_MUN1, by = c("CODIGOUF" = "CODIGOUF")) %>% 
-  left_join(INFO_MUN2, by = c("CODIGOMUN" = "CODIGOMUN")) %>% 
+# ============================================================================
+# ENRIQUECIMENTO DOS DADOS MUNICIPAIS
+# Vincula informações de região, UF, nome do município, região de saúde
+# e população aos dados de monitoramento
+# ============================================================================
+MONITOR_MUN = MONITOR_MUN %>%
+  left_join(INFO_MUN1, by = c("CODIGOUF" = "CODIGOUF")) %>%
+  left_join(INFO_MUN2, by = c("CODIGOMUN" = "CODIGOMUN")) %>%
   select("CODIGOREG","NOMEREG","CODIGOUF","SIGLAUF","CODIGOMUN","NOMEMUN","CODIGOCIR","NOMECIR",
          "data","casosAcumulado","obitosAcumulado","POP_TCU2019","interior/metropolitana")
 ```
 
 ```{r}
-MONITOR_UF = MONITOR_UF %>% 
-  rename(NOMEREG = "regiao", SIGLAUF = "siglaEstado", casosAcumulado = "casosAcumulados", obitosAcumulado = "obitosAcumulados") %>% 
+# ============================================================================
+# PREPARAÇÃO DOS DADOS POR UF COM CÓDIGO DE REGIÃO E POPULAÇÃO
+# Renomeia colunas para o padrão unificado e vincula populações TCU
+# ============================================================================
+MONITOR_UF = MONITOR_UF %>%
+  rename(NOMEREG = "regiao", SIGLAUF = "siglaEstado", casosAcumulado = "casosAcumulados", obitosAcumulado = "obitosAcumulados") %>%
   mutate(CODIGOREG = case_when(NOMEREG == "Norte" ~ 1,
                                NOMEREG == "Nordeste" ~ 2,
                                NOMEREG == "Sudeste" ~ 3,
                                NOMEREG == "Sul" ~ 4,
-                               NOMEREG == "Centro-Oeste" ~ 5)) %>% 
-  select("CODIGOREG","NOMEREG","CODIGOUF","SIGLAUF","data","casosAcumulado","obitosAcumulado") %>% 
+                               NOMEREG == "Centro-Oeste" ~ 5)) %>%
+  select("CODIGOREG","NOMEREG","CODIGOUF","SIGLAUF","data","casosAcumulado","obitosAcumulado") %>%
   left_join(POP_UF, by = c("CODIGOUF" = "CODIGOUF"))
 ```
 
 ```{r message = F}
-MONITOR_REG = MONITOR_UF %>% 
-  group_by(CODIGOREG, NOMEREG, data) %>% 
+# ============================================================================
+# AGREGAÇÃO POR MACRO-REGIÃO
+# Soma os dados de todos os estados de cada região e vincula a população
+# ============================================================================
+MONITOR_REG = MONITOR_UF %>%
+  group_by(CODIGOREG, NOMEREG, data) %>%
   summarise(casosAcumulado = sum_(casosAcumulado),
-            obitosAcumulado = sum_(obitosAcumulado)) %>% 
-  ungroup() %>% 
+            obitosAcumulado = sum_(obitosAcumulado)) %>%
+  ungroup() %>%
   left_join(POP_REG, by = c("CODIGOREG" = "CODIGOREG"))
 ```
 
 ```{r message = F}
-DT_BRA = MONITOR_UF %>% 
-  group_by(data) %>% 
+# ============================================================================
+# AGREGAÇÃO NACIONAL (BRASIL)
+# Soma total de todos os estados. Código 76 = Brasil (ISO).
+# População total: 210.147.125 (estimativa TCU 2019).
+# Vincula dados de recuperados/acompanhamento do arquivo DT_HOSP
+# ============================================================================
+DT_BRA = MONITOR_UF %>%
+  group_by(data) %>%
   summarise(casosAcumulado = sum_(casosAcumulado),
-            obitosAcumulado = sum_(obitosAcumulado)) %>% 
-  ungroup() %>% 
+            obitosAcumulado = sum_(obitosAcumulado)) %>%
+  ungroup() %>%
   mutate(ABRANGENCIA = 1,
          CODIGOLOCAL = 76,
          NOMELOCAL = "Brasil",
-         POP_TCU2019 = 210147125) %>% 
-  select("ABRANGENCIA","CODIGOLOCAL","NOMELOCAL","data","casosAcumulado","obitosAcumulado","POP_TCU2019") %>% 
-  left_join(DT_HOSP, by = c("NOMELOCAL" = "NOMELOCAL", "data" = "data")) %>% 
+         POP_TCU2019 = 210147125) %>%
+  select("ABRANGENCIA","CODIGOLOCAL","NOMELOCAL","data","casosAcumulado","obitosAcumulado","POP_TCU2019") %>%
+  left_join(DT_HOSP, by = c("NOMELOCAL" = "NOMELOCAL", "data" = "data")) %>%
   mutate_all(., ~as.character(.))
 ```
 
 ```{r}
+# Limpar variáveis intermediárias da memória
 rm(DT_0, DT_MUN,DT_HOSP,INFO_MUN1,INFO_MUN2,POP_UF,POP_REG)
 ```
 
 #### CURADORIA DE DADOS 4
 
 ```{r}
-DT_REG = MONITOR_REG %>% 
-  mutate(ABRANGENCIA = 2) %>% 
+# ============================================================================
+# ESTRUTURA HIERÁRQUICA UNIFICADA - NÍVEIS DE ABRANGÊNCIA
+# Cada nível recebe um código de ABRANGENCIA para identificação:
+# - ABRANGENCIA = 1: Brasil (nível nacional)
+# - ABRANGENCIA = 2: Regiões (Norte, Nordeste, Sudeste, Sul, Centro-Oeste)
+# - ABRANGENCIA = 3: Unidades da Federação (27 estados + DF)
+# - ABRANGENCIA = 7: Municípios (5.570+ municípios)
+# Todas as tabelas são convertidas para character antes da união
+# para evitar conflitos de tipos
+# ============================================================================
+DT_REG = MONITOR_REG %>%
+  mutate(ABRANGENCIA = 2) %>%
   rename(CODIGOLOCAL = "CODIGOREG",
-         NOMELOCAL = "NOMEREG") %>% 
-  select("ABRANGENCIA","CODIGOLOCAL","NOMELOCAL","data","casosAcumulado","obitosAcumulado","POP_TCU2019") %>% 
+         NOMELOCAL = "NOMEREG") %>%
+  select("ABRANGENCIA","CODIGOLOCAL","NOMELOCAL","data","casosAcumulado","obitosAcumulado","POP_TCU2019") %>%
   mutate_all(., ~as.character(.))
 ```
 
 ```{r}
-DT_UF = MONITOR_UF %>% 
-  mutate(ABRANGENCIA = 3) %>% 
+DT_UF = MONITOR_UF %>%
+  mutate(ABRANGENCIA = 3) %>%
   rename(CODIGOLOCAL = "CODIGOUF",
-         NOMELOCAL = "SIGLAUF") %>% 
-  select("ABRANGENCIA","CODIGOLOCAL","NOMELOCAL","data","casosAcumulado","obitosAcumulado","POP_TCU2019") %>% 
+         NOMELOCAL = "SIGLAUF") %>%
+  select("ABRANGENCIA","CODIGOLOCAL","NOMELOCAL","data","casosAcumulado","obitosAcumulado","POP_TCU2019") %>%
   mutate_all(., ~as.character(.))
 ```
 
 ```{r}
-DT_MUN = MONITOR_MUN %>% 
-  mutate(ABRANGENCIA = 7) %>% 
+DT_MUN = MONITOR_MUN %>%
+  mutate(ABRANGENCIA = 7) %>%
   rename(CODIGOLOCAL = "CODIGOMUN",
-         NOMELOCAL = "NOMEMUN") %>% 
-  select("ABRANGENCIA","CODIGOLOCAL","NOMELOCAL","CODIGOCIR","NOMECIR","data","casosAcumulado","obitosAcumulado","POP_TCU2019","interior/metropolitana") %>% 
+         NOMELOCAL = "NOMEMUN") %>%
+  select("ABRANGENCIA","CODIGOLOCAL","NOMELOCAL","CODIGOCIR","NOMECIR","data","casosAcumulado","obitosAcumulado","POP_TCU2019","interior/metropolitana") %>%
   mutate_all(., ~as.character(.))
 ```
 
 #### GERAR DADOS DE CONTROLE - FINAL
 
 ```{r}
-DT_CONTROL = DT_BRA %>% 
-  bind_rows(DT_REG) %>% 
-  bind_rows(DT_UF) %>% 
-  bind_rows(DT_MUN) %>% 
-  filter(data >= "2020-02-25") %>% 
-  mutate(semanaEpi = epiweek(data)) %>% 
-  arrange(ABRANGENCIA, CODIGOLOCAL, data) %>% 
+# ============================================================================
+# CONSOLIDAÇÃO DO DATASET PRINCIPAL (DT_CONTROL)
+# Une todas as abrangências (Brasil, Regiões, UFs, Municípios) em um
+# único dataset hierárquico. Filtra a partir de 25/02/2020.
+# Adiciona semana epidemiológica e ordena por abrangência e localidade.
+# retype(): infere automaticamente os tipos corretos das colunas
+# (que foram convertidas para character na etapa anterior)
+# ============================================================================
+DT_CONTROL = DT_BRA %>%
+  bind_rows(DT_REG) %>%
+  bind_rows(DT_UF) %>%
+  bind_rows(DT_MUN) %>%
+  filter(data >= "2020-02-25") %>%
+  mutate(semanaEpi = epiweek(data)) %>%
+  arrange(ABRANGENCIA, CODIGOLOCAL, data) %>%
   retype()
 ```
 
 ```{r}
-DT_CONTROL = DT_CONTROL %>% 
-  group_by(ABRANGENCIA, CODIGOLOCAL) %>% 
+# ============================================================================
+# CÁLCULO DE CASOS E ÓBITOS NOVOS DIÁRIOS
+# Utiliza lag(lead(...) - ...) para calcular incrementos diários
+# a partir dos dados acumulados, agrupando por localidade.
+# NAs são substituídos por 0. Reorganiza colunas na ordem final.
+# ============================================================================
+DT_CONTROL = DT_CONTROL %>%
+  group_by(ABRANGENCIA, CODIGOLOCAL) %>%
   mutate(casosNovos = lag(lead(casosAcumulado) - casosAcumulado),
-         obitosNovos = lag(lead(obitosAcumulado) - obitosAcumulado)) %>% 
-  ungroup() %>% 
+         obitosNovos = lag(lead(obitosAcumulado) - obitosAcumulado)) %>%
+  ungroup() %>%
   mutate(casosNovos = replace_na(casosNovos, 0),
-         obitosNovos = replace_na(obitosNovos, 0)) %>% 
+         obitosNovos = replace_na(obitosNovos, 0)) %>%
   #mutate(casosNovos = if_else(str_detect(CODIGOLOCAL, "0000$"), 0, casosNovos),
-  #       obitosNovos = if_else(str_detect(CODIGOLOCAL, "0000$"), 0, obitosNovos)) %>% 
-  #mutate(casosNovos = case_when(casosNovos < 1 ~ 0, TRUE ~ casosNovos), 
-  #       obitosNovos = case_when(obitosNovos < 1 ~ 0, TRUE ~ obitosNovos)) %>% 
+  #       obitosNovos = if_else(str_detect(CODIGOLOCAL, "0000$"), 0, obitosNovos)) %>%
+  #mutate(casosNovos = case_when(casosNovos < 1 ~ 0, TRUE ~ casosNovos),
+  #       obitosNovos = case_when(obitosNovos < 1 ~ 0, TRUE ~ obitosNovos)) %>%
   select("ABRANGENCIA","CODIGOLOCAL","NOMELOCAL","CODIGOCIR","NOMECIR","semanaEpi","data",
          "casosNovos","obitosNovos","casosAcumulado","obitosAcumulado",
          "emAcompanhamentoNovos","Recuperadosnovos","POP_TCU2019","interior/metropolitana")
 ```
 
 ```{r}
-DT_CONTROL = DT_CONTROL %>% 
-  left_join(INFO_MUN0, by = c("CODIGOLOCAL" = "CODIGOMUN")) %>% 
+# ============================================================================
+# VINCULAR CÓDIGO IBGE DE 7 DÍGITOS
+# Adiciona o CODIGOMUN7 (código IBGE completo com dígito verificador)
+# para cada município, necessário para junção com bases externas
+# ============================================================================
+DT_CONTROL = DT_CONTROL %>%
+  left_join(INFO_MUN0, by = c("CODIGOLOCAL" = "CODIGOMUN")) %>%
   select("ABRANGENCIA","CODIGOLOCAL","CODIGOMUN7", everything())
 ```
 
 ```{r}
-DT_CONTROL = DT_CONTROL %>% 
-  group_by(ABRANGENCIA, CODIGOLOCAL) %>% 
-  mutate(idTime = dense_rank(data)) %>% 
+# ============================================================================
+# AJUSTES FINAIS
+# - idTime: ranking temporal dentro de cada localidade (dia 1, 2, 3...)
+# - Converte acumulados para numérico explicitamente
+# - Linhas comentadas: opções para tratar o primeiro dia e filtrar zeros
+# ============================================================================
+DT_CONTROL = DT_CONTROL %>%
+  group_by(ABRANGENCIA, CODIGOLOCAL) %>%
+  mutate(idTime = dense_rank(data)) %>%
   mutate(casosAcumulado = as.numeric(casosAcumulado),
-         obitosAcumulado = as.numeric(obitosAcumulado)) %>% 
+         obitosAcumulado = as.numeric(obitosAcumulado)) %>%
 #  mutate(casosNovos = case_when(idTime == 1 ~ casosAcumulado, TRUE ~ casosNovos),
-#         obitosNovos = case_when(idTime == 1 ~ obitosAcumulado, TRUE ~ obitosNovos)) %>% 
+#         obitosNovos = case_when(idTime == 1 ~ obitosAcumulado, TRUE ~ obitosNovos)) %>%
   ungroup() #%>% filter(casosAcumulado > 0)
 ```
 
 ```{r}
-rm(DT_BRA,DT_REG,DT_UF,DT_MUN,MONITOR_REG,MONITOR_UF,MONITOR_MUN) 
+# Limpar variáveis intermediárias
+rm(DT_BRA,DT_REG,DT_UF,DT_MUN,MONITOR_REG,MONITOR_UF,MONITOR_MUN)
 ```
 
 #### GERAR DADOS - PAINEL COVID
 
 ```{r}
-DT_COVIDHIST = DT_CONTROL %>% 
-  filter(ABRANGENCIA %in% c(1,3,7)) %>% 
+# ============================================================================
+# PREPARAÇÃO DOS DADOS PARA O PAINEL COVID (PAINEL CORONAVÍRUS BRASIL)
+# Filtra apenas abrangências 1 (Brasil), 3 (UF) e 7 (Município).
+# Adiciona variáveis descritivas: região, estado (sigla), município,
+# código UF e código município. Renomeia colunas para padrão do painel.
+# Seleciona colunas na ordem requerida pela interface do painel público.
+# ============================================================================
+DT_COVIDHIST = DT_CONTROL %>%
+  filter(ABRANGENCIA %in% c(1,3,7)) %>%
   mutate(coduf = str_sub(CODIGOLOCAL, end = 2),
          regiao = case_when(coduf == "76" ~ "Brasil",
-                            coduf %in% c(11:17) ~ "Norte", coduf %in% c(21:29) ~ "Nordeste", 
-                            coduf %in% c(31:33, 35) ~ "Sudeste", coduf %in% c(41:43) ~ "Sul", 
-                            coduf %in% c(50:53) ~ "Centro-Oeste")) %>% 
+                            coduf %in% c(11:17) ~ "Norte", coduf %in% c(21:29) ~ "Nordeste",
+                            coduf %in% c(31:33, 35) ~ "Sudeste", coduf %in% c(41:43) ~ "Sul",
+                            coduf %in% c(50:53) ~ "Centro-Oeste")) %>%
   mutate(estado = case_when(
-           coduf == "12" ~ "AC", coduf == "27" ~ "AL", coduf == "16" ~ "AP", 
-           coduf == "13" ~ "AM", coduf == "29" ~ "BA", coduf == "23" ~ "CE", 
+           coduf == "12" ~ "AC", coduf == "27" ~ "AL", coduf == "16" ~ "AP",
+           coduf == "13" ~ "AM", coduf == "29" ~ "BA", coduf == "23" ~ "CE",
            coduf == "53" ~ "DF", coduf == "32" ~ "ES", coduf == "52" ~ "GO",
-           coduf == "21" ~ "MA", coduf == "51" ~ "MT", coduf == "50" ~ "MS", 
+           coduf == "21" ~ "MA", coduf == "51" ~ "MT", coduf == "50" ~ "MS",
            coduf == "31" ~ "MG", coduf == "15" ~ "PA", coduf == "25" ~ "PB",
            coduf == "41" ~ "PR", coduf == "26" ~ "PE", coduf == "22" ~ "PI",
-           coduf == "33" ~ "RJ", coduf == "24" ~ "RN", coduf == "43" ~ "RS", 
+           coduf == "33" ~ "RJ", coduf == "24" ~ "RN", coduf == "43" ~ "RS",
            coduf == "11" ~ "RO", coduf == "14" ~ "RR", coduf == "42" ~ "SC",
            coduf == "35" ~ "SP", coduf == "28" ~ "SE", coduf == "17" ~ "TO",
-           TRUE ~ NA_character_)) %>% 
-  mutate(municipio = case_when(ABRANGENCIA == "7" ~ NOMELOCAL, TRUE ~ NA_character_)) %>% 
-  mutate(codmun = case_when(ABRANGENCIA == "7" ~ CODIGOLOCAL, TRUE ~ NA_real_)) %>% 
-  rename(codRegiaoSaude = "CODIGOCIR", nomeRegiaoSaude = "NOMECIR", populacaoTCU2019 = "POP_TCU2019") %>% 
+           TRUE ~ NA_character_)) %>%
+  mutate(municipio = case_when(ABRANGENCIA == "7" ~ NOMELOCAL, TRUE ~ NA_character_)) %>%
+  mutate(codmun = case_when(ABRANGENCIA == "7" ~ CODIGOLOCAL, TRUE ~ NA_real_)) %>%
+  rename(codRegiaoSaude = "CODIGOCIR", nomeRegiaoSaude = "NOMECIR", populacaoTCU2019 = "POP_TCU2019") %>%
   select("regiao","estado","municipio","coduf","codmun","codRegiaoSaude","nomeRegiaoSaude",
          "data","semanaEpi","populacaoTCU2019","casosAcumulado","casosNovos","obitosAcumulado","obitosNovos",
          "Recuperadosnovos","emAcompanhamentoNovos","interior/metropolitana")
 ```
 
 ```{r}
+# ============================================================================
+# SNAPSHOT DO DIA ATUAL PARA O PAINEL COVID
+# Dados mais recentes sem colunas de incremento diário (casosNovos/obitosNovos)
+# ============================================================================
 DT_COVIDHJ = DT_COVIDHIST %>% filter(data == max(data)) %>% select(-"casosNovos",-"obitosNovos") %>% mutate_all(., ~as.character(.))
 ```
 
 #### GERAR DADOS - PAINEL IVIS
 
 ```{r warning = F}
-#DT_IVISHIST = DT_CONTROL %>% 
+# ============================================================================
+# PAINEL IVIS (DESATIVADO)
+# Bloco comentado que preparava dados para o painel IVIS (Sistema de
+# Informação de Vigilância), incluindo cálculos de:
+# - casosIncremento: taxa de incremento diário de casos (%)
+# - obitosIncremento: taxa de incremento diário de óbitos (%)
+# - casosIncidencia: taxa de incidência por 100 mil habitantes
+# - obitosMortalidade: taxa de mortalidade por 100 mil habitantes
+# - obitosLetalidade: taxa de letalidade (óbitos/casos * 100)
+# ============================================================================
+#DT_IVISHIST = DT_CONTROL %>%
  # rename(abrangencia = "ABRANGENCIA",
   #       localidade = "CODIGOLOCAL",
    #      casosAcompanhamento = "emAcompanhamentoNovos",
     #     casosRecuperados = "Recuperadosnovos",
-     #    populacaoTCU2019 = "POP_TCU2019") %>% 
+     #    populacaoTCU2019 = "POP_TCU2019") %>%
   #mutate(populacaoTCU2019 = as.numeric(populacaoTCU2019),
    #      casosIncremento = round((casosNovos/(casosAcumulado-casosNovos)) * 100, 2),
     #     obitosIncremento = round((obitosNovos/(obitosAcumulado-obitosNovos)) * 100, 2),
      #    casosIncidencia = round((casosAcumulado / populacaoTCU2019) * 100000, 2),
       #   obitosMortalidade = round((obitosAcumulado / populacaoTCU2019) * 100000, 2),
-       #  obitosLetalidade = round((obitosAcumulado / casosAcumulado) * 100, 2)) %>% 
+       #  obitosLetalidade = round((obitosAcumulado / casosAcumulado) * 100, 2)) %>%
   #mutate_at(c("casosIncremento","obitosIncremento","casosIncidencia","obitosMortalidade",
-   #           "obitosLetalidade","casosAcompanhamento","casosRecuperados"), ~replace_na(., 0)) %>% 
+   #           "obitosLetalidade","casosAcompanhamento","casosRecuperados"), ~replace_na(., 0)) %>%
   #select("abrangencia","localidade","casosAcumulado","casosNovos","casosIncremento",
    #      "casosIncidencia","casosAcompanhamento","casosRecuperados","obitosAcumulado",
-    #     "obitosNovos","obitosIncremento","obitosMortalidade","obitosLetalidade","data") %>% 
-  #arrange(abrangencia, localidade) %>% 
-  #rationalize() 
+    #     "obitosNovos","obitosIncremento","obitosMortalidade","obitosLetalidade","data") %>%
+  #arrange(abrangencia, localidade) %>%
+  #rationalize()
 ```
 
 ```{r}
@@ -301,11 +446,18 @@ DT_COVIDHJ = DT_COVIDHIST %>% filter(data == max(data)) %>% select(-"casosNovos"
 #### SUMARIO FINAL
 
 ```{r}
+# ============================================================================
+# VERIFICAÇÕES FINAIS
+# Exibe resumos dos dados para conferência antes da exportação:
+# 1) Totais nacionais do dia mais recente
+# 2) Soma dos municípios para o dia mais recente (deve bater com o nacional)
+# 3) Dados do painel COVID para o Brasil
+# ============================================================================
 DT_CONTROL %>% filter(ABRANGENCIA == 1, data == max(data)) %>% select(data,casosAcumulado,obitosAcumulado,casosNovos,obitosNovos,semanaEpi)
 ```
 
 ```{r}
-DT_CONTROL %>% filter(ABRANGENCIA == 7, data == max(data)) %>% 
+DT_CONTROL %>% filter(ABRANGENCIA == 7, data == max(data)) %>%
   summarise(casosAcumulado = sum_(casosAcumulado), obitosAcumulado = sum_(obitosAcumulado),
             casosNovos = sum_(casosNovos), obitosNovos = sum_(obitosNovos))
 ```
@@ -319,23 +471,33 @@ DT_COVIDHJ %>% filter(regiao == "Brasil") %>% select(regiao, data, semanaEpi, ca
 ```
 
 ```{r}
+# ============================================================================
+# DEDUPLICAÇÃO DO REGISTRO NACIONAL (BRASIL)
+# Remove duplicatas do registro nacional (ABRANGENCIA == 1) que podem
+# surgir ao combinar dados de diferentes fontes. Usa distinct() para
+# manter apenas um registro por data, depois recombina com os demais
+# ============================================================================
 teste<-DT_COVIDHIST %>%
-  filter(regiao=="Brasil") %>% 
+  filter(regiao=="Brasil") %>%
   distinct(data, .keep_all= T)
 
 teste2<-DT_COVIDHIST %>%
-  filter(regiao!="Brasil")   
+  filter(regiao!="Brasil")
 
 DT_COVIDHIST<-rbind(teste, teste2)
 ```
 
 ```{r}
+# ============================================================================
+# DEDUPLICAÇÃO DO DT_CONTROL NACIONAL
+# Mesma lógica de deduplicação aplicada ao dataset de controle
+# ============================================================================
 teste3<-DT_CONTROL %>%
-  filter(ABRANGENCIA==1) %>% 
+  filter(ABRANGENCIA==1) %>%
   distinct(data, .keep_all= T)
 
 teste4<-DT_CONTROL %>%
-  filter(ABRANGENCIA!=1)   
+  filter(ABRANGENCIA!=1)
 
 DT_CONTROL<-rbind(teste3, teste4)
 ```
@@ -343,6 +505,12 @@ DT_CONTROL<-rbind(teste3, teste4)
 #### SALVAR DADOS
 
 ```{r}
+# ============================================================================
+# EXPORTAR DATASET DE CONTROLE CONSOLIDADO (CSV)
+# Arquivo principal com todos os níveis hierárquicos, usado como entrada
+# para os scripts de visualização (K4, K5, K6)
+# Formato: DT_Monitora_COVID_AAAAMMDD.csv (separador: ";", decimal: ".")
+# ============================================================================
 fwrite(DT_CONTROL, file = paste0(path, "1_Data/Dados_Controle/DT_Monitora_COVID_", format(Sys.Date(), "%Y%m%d"), ".csv"), sep = ";", dec = ".")
 ```
 
@@ -351,31 +519,42 @@ fwrite(DT_CONTROL, file = paste0(path, "1_Data/Dados_Controle/DT_Monitora_COVID_
 ```
 
 ```{r}
-DT_COVIDHIST_Parte1<-DT_COVIDHIST %>% 
+# ============================================================================
+# EXPORTAÇÃO DO HISTÓRICO DO PAINEL COVID EM PARTES
+# Devido ao volume de dados (milhões de registros), o histórico é particionado
+# em 9 partes por semestre para facilitar download e processamento:
+# Parte 1: Jan-Jul 2020    Parte 2: Ago-Dez 2020
+# Parte 3: Jan-Jun 2021    Parte 4: Jul-Dez 2021
+# Parte 5: Jan-Jun 2022    Parte 6: Jul-Dez 2022
+# Parte 7: Jan-Jun 2023    Parte 8: Jul-Dez 2023
+# Parte 9: Jan-Jun 2024
+# Formato CSV com separador ";" e decimal "."
+# ============================================================================
+DT_COVIDHIST_Parte1<-DT_COVIDHIST %>%
   filter(data<="2020-07-31")
 
-DT_COVIDHIST_Parte2<-DT_COVIDHIST %>% 
+DT_COVIDHIST_Parte2<-DT_COVIDHIST %>%
   filter(data>"2020-07-31", data<="2020-12-31")
 
-DT_COVIDHIST_Parte3<-DT_COVIDHIST %>% 
+DT_COVIDHIST_Parte3<-DT_COVIDHIST %>%
   filter(data>"2020-12-31", data<="2021-06-30")
-    
-DT_COVIDHIST_Parte4<-DT_COVIDHIST %>% 
+
+DT_COVIDHIST_Parte4<-DT_COVIDHIST %>%
   filter(data>"2021-06-30", data<="2021-12-31")
 
-DT_COVIDHIST_Parte5<-DT_COVIDHIST %>% 
+DT_COVIDHIST_Parte5<-DT_COVIDHIST %>%
   filter(data>"2021-12-31", data<="2022-06-30")
 
-DT_COVIDHIST_Parte6<-DT_COVIDHIST %>% 
+DT_COVIDHIST_Parte6<-DT_COVIDHIST %>%
   filter(data>"2022-06-30", data<="2022-12-31")
 
-DT_COVIDHIST_Parte7<-DT_COVIDHIST %>% 
+DT_COVIDHIST_Parte7<-DT_COVIDHIST %>%
   filter(data>"2022-12-31", data<="2023-06-30")
 
-DT_COVIDHIST_Parte8<-DT_COVIDHIST %>% 
+DT_COVIDHIST_Parte8<-DT_COVIDHIST %>%
   filter(data>"2023-06-30", data<="2023-12-31")
 
-DT_COVIDHIST_Parte9<-DT_COVIDHIST %>% 
+DT_COVIDHIST_Parte9<-DT_COVIDHIST %>%
   filter(data>"2023-12-31", data<="2024-06-30")
 
 fwrite(DT_COVIDHIST_Parte1, paste0(path, "1_Output/Entregas_", format(Sys.Date(), "%d%b%Y"),"/HIST_PAINEL_COVIDBR_2020_Parte1_", format(Sys.Date(), "%d%b%Y"),".csv"), sep = ";", dec = ".")
@@ -398,6 +577,10 @@ fwrite(DT_COVIDHIST_Parte9, paste0(path, "1_Output/Entregas_", format(Sys.Date()
 ```
 
 ```{r}
+# ============================================================================
+# EXPORTAR SNAPSHOT DO DIA ATUAL DO PAINEL COVID
+# Dados do último dia disponível em formato Excel para entrega
+# ============================================================================
 write.xlsx(DT_COVIDHJ, paste0(path, "1_Output/Entregas_", format(Sys.Date(), "%d%b%Y"), "/HOJE_PAINEL_COVIDBR_", format(Sys.Date(), "%d%b%Y"),".xlsx"))
 ```
 
@@ -406,5 +589,10 @@ write.xlsx(DT_COVIDHJ, paste0(path, "1_Output/Entregas_", format(Sys.Date(), "%d
 ```
 
 ```{r}
+# ============================================================================
+# EXPORTAR HISTÓRICO COMPLETO PARA ARQUIVO CONSOLIDADO
+# Arquivo único com todo o histórico de casos e óbitos do Brasil,
+# usado como backup e para alimentação de dashboards
+# ============================================================================
 fwrite(DT_COVIDHIST, file = "C:/Users/audencio.victor/OneDrive - Ministério da Saúde/COVID/COVID19_CasosEObitos.csv", sep = ";", dec = ".")
 ```
