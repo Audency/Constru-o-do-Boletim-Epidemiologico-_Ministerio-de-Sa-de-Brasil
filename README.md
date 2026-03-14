@@ -141,7 +141,7 @@ O fluxo de trabalho segue uma ordem sequencial de execução:
    - Filtros de período
 
 ## Autores
-
+- **Audencio Victors** - All
 - **Ronaldo Fernandes Santos Alves** - Notebooks 1, 2 e 3
 - **Plínio** - Cards semanais (K4)
 - **Equipe COE-COVID/SVS** - Scripts de mapas (K5, K6)
