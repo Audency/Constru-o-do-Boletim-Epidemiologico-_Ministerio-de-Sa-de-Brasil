@@ -1,0 +1,67 @@
+cod_subgrupo,nome_subgrupo,grupo_did,periodo,qtd_media_mensal,valor_total_real_M
+0201,Anatomia patol<c3><b3>gica,controle,COVID,1681021,521.9
+0201,Anatomia patol<c3><b3>gica,controle,P<c3><b3>s-recomp. 2023,2522371,568.7
+0201,Anatomia patol<c3><b3>gica,controle,P<c3><b3>s-recomp. 2024+,2663092,753.2
+0201,Anatomia patol<c3><b3>gica,controle,Pr<c3><a9>-COVID,2265614,1206.4
+0201,Anatomia patol<c3><b3>gica,controle,Recupera<c3><a7><c3><a3>o,2424437,741.5
+0202,Diag. biom<c3><a9>dico,controle,COVID,6444348,1131.8
+0202,Diag. biom<c3><a9>dico,controle,P<c3><b3>s-recomp. 2023,9704608,1240.7
+0202,Diag. biom<c3><a9>dico,controle,P<c3><b3>s-recomp. 2024+,10206550,1649.8
+0202,Anatomia patol<c3><b3>,controle,Pr<c3><a9>-COVID,8737798,104
+0202,Diag. biom<c3><a9>dico,controle,Pr<c3><a9>-COVID,8714533,2583.4
+0202,Diag. biom<c3><a9>dico,controle,Recupera<c3><a7><c3><a3>o,9309361,1604.8
+0203,Endoscopia,controle,COVID,267193,465.3
+0203,Endoscopia,controle,P<c3><b3>s-recomp. 2023,392556,502.4
+0203,Endoscopia,controle,P<c3><b3>s-recomp. 2024+,421382,677.2
+0203,Endoscopia,controle,Pr<c3><a9>-COVID,360120,1095.5
+0203,Endoscopia,controle,Recupera<c3><a7><c3><a3>o,386043,670.5
+0204,Radiologia,controle,COVID,2435736,1258.5
+0204,Radiologia,controle,P<c3><b3>s-recomp. 2023,3647992,1335.6
+0204,Radiologia,controle,P<c3><b3>s-recomp. 2024+,3824158,1801.7
+0204,Radiologia,controle,Pr<c3><a9>-COVID,3300607,2908.8
+0204,Radiologia,controle,Recupera<c3><a7><c3><a3>o,3534108,1779
+0205,Ultrasonografia,controle,COVID,2127675,1315.6
+0205,Ultrasonografia,controle,P<c3><b3>s-recomp. 2023,3145131,1396.8
+0205,Ultrasonografia,controle,P<c3><b3>s-recomp. 2024+,3394374,1932.7
+0205,Ultrasonografia,controle,Pr<c3><a9>-COVID,2879109,3084.2
+0205,Ultrasonografia,controle,Recupera<c3><a7><c3><a3>o,3090325,1907.7
+0301,Consultas espec.,controle,COVID,11368953,2310.4
+0301,Consultas espec.,controle,P<c3><b3>s-recomp. 2023,16973359,2501.9
+0301,Consultas espec.,controle,P<c3><b3>s-recomp. 2024+,18026944,3400.2
+0301,Consultas espec.,controle,Pr<c3><a9>-COVID,15432784,5532.7
+0301,Consultas espec.,controle,Recupera<c3><a7><c3><a3>o,16557830,3432.5
+0302,Fisioterapia,controle,COVID,4181659,472.7
+0302,Fisioterapia,controle,P<c3><b3>s-recomp. 2023,6183605,514.3
+0302,Fisioterapia,controle,P<c3><b3>s-recomp. 2024+,6658543,692.2
+0302,Fisioterapia,controle,Pr<c3><a9>-COVID,5629336,1137.6
+0302,Fisioterapia,controle,Recupera<c3><a7><c3><a3>o,6090941,692.6
+0303,Trat. cl<c3><ad>nicos,controle,COVID,2418798,1072
+0303,Trat. cl<c3><ad>nicos,controle,P<c3><b3>s-recomp. 2023,3624081,1167.4
+0303,Trat. cl<c3><ad>nicos,controle,P<c3><b3>s-recomp. 2024+,3843893,1577.1
+0303,Trat. cl<c3><ad>nicos,controle,Pr<c3><a9>-COVID,3293014,2613.4
+0303,Trat. cl<c3><ad>nicos,controle,Recupera<c3><a7><c3><a3>o,3550346,1601.6
+0304,Oncologia amb.,tratamento_2023,COVID,500132,4628.2
+0304,Oncologia amb.,tratamento_2023,P<c3><b3>s-recomp. 2023,795176,5389.8
+0304,Oncologia amb.,tratamento_2023,P<c3><b3>s-recomp. 2024+,841330,7175.4
+0304,Oncologia amb.,tratamento_2023,Pr<c3><a9>-COVID,665023,10723
+0304,Oncologia amb.,tratamento_2023,Recupera<c3><a7><c3><a3>o,716710,6706
+0305,Nefrologia amb.,tratamento_2023,COVID,843163,3105.3
+0305,Nefrologia amb.,tratamento_2023,P<c3><b3>s-recomp. 2023,1349312,3636.9
+0305,Nefrologia amb.,tratamento_2023,P<c3><b3>s-recomp. 2024+,1426634,4883.8
+0305,Nefrologia amb.,tratamento_2023,Pr<c3><a9>-COVID,1128351,7296.4
+0305,Nefrologia amb.,tratamento_2023,Recupera<c3><a7><c3><a3>o,1206318,4508.7
+0206,Tomografia,tratamento_2024,COVID,682242,1891.7
+0206,Tomografia,tratamento_2024,P<c3><b3>s-recomp. 2023,1078064,2146.8
+0206,Tomografia,tratamento_2024,P<c3><b3>s-recomp. 2024+,1258486,3197.5
+0206,Tomografia,tratamento_2024,Pr<c3><a9>-COVID,915644,4426.3
+0206,Tomografia,tratamento_2024,Recupera<c3><a7><c3><a3>o,1019713,2802.3
+0207,Resson<c3><a2>ncia magn<c3><a9>tica,tratamento_2024,COVID,345037,1881
+0207,Resson<c3><a2>ncia magn<c3><a9>tica,tratamento_2024,P<c3><b3>s-recomp. 2023,538981,2160
+0207,Resson<c3><a2>ncia magn<c3><a9>tica,tratamento_2024,P<c3><b3>s-recomp. 2024+,630735,3184.7
+0207,Resson<c3><a2>ncia magn<c3><a9>tica,tratamento_2024,Pr<c3><a9>-COVID,459588,4368.3
+0207,Resson<c3><a2>ncia magn<c3><a9>tica,tratamento_2024,Recupera<c3><a7><c3><a3>o,502871,2725.1
+0208,Medicina nuclear,tratamento_2024,COVID,64745,473.6
+0208,Medicina nuclear,tratamento_2024,P<c3><b3>s-recomp. 2023,96521,497.9
+0208,Medicina nuclear,tratamento_2024,P<c3><b3>s-recomp. 2024+,111648,743
+0208,Medicina nuclear,tratamento_2024,Pr<c3><a9>-COVID,87710,1113.8
+0208,Medicina nuclear,tratamento_2024,Recupera<c3><a7><c3><a3>o,93516,667

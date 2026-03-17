@@ -1,0 +1,3907 @@
+competencia,uf,tipo_estabelecimento,natureza_juridica,qtd_estabelecimentos
+2018-01,BR,Hospital Geral,P<c3><ba>blico,1097
+2018-01,SP,Hospital Geral,P<c3><ba>blico,248
+2018-01,RJ,Hospital Geral,P<c3><ba>blico,102
+2018-01,MG,Hospital Geral,P<c3><ba>blico,109
+2018-01,BA,Hospital Geral,P<c3><ba>blico,77
+2018-01,RS,Hospital Geral,P<c3><ba>blico,66
+2018-01,BR,Hospital Geral,Filantr<c3><b3>pico,707
+2018-01,SP,Hospital Geral,Filantr<c3><b3>pico,154
+2018-01,RJ,Hospital Geral,Filantr<c3><b3>pico,63
+2018-01,MG,Hospital Geral,Filantr<c3><b3>pico,70
+2018-01,BA,Hospital Geral,Filantr<c3><b3>pico,48
+2018-01,RS,Hospital Geral,Filantr<c3><b3>pico,42
+2018-01,BR,Hospital Geral,Privado,994
+2018-01,SP,Hospital Geral,Privado,220
+2018-01,RJ,Hospital Geral,Privado,86
+2018-01,MG,Hospital Geral,Privado,100
+2018-01,BA,Hospital Geral,Privado,70
+2018-01,RS,Hospital Geral,Privado,59
+2018-04,BR,Hospital Geral,P<c3><ba>blico,1162
+2018-04,SP,Hospital Geral,P<c3><ba>blico,253
+2018-04,RJ,Hospital Geral,P<c3><ba>blico,100
+2018-04,MG,Hospital Geral,P<c3><ba>blico,109
+2018-04,BA,Hospital Geral,P<c3><ba>blico,77
+2018-04,RS,Hospital Geral,P<c3><ba>blico,67
+2018-04,BR,Hospital Geral,Filantr<c3><b3>pico,702
+2018-04,SP,Hospital Geral,Filantr<c3><b3>pico,157
+2018-04,RJ,Hospital Geral,Filantr<c3><b3>pico,62
+2018-04,MG,Hospital Geral,Filantr<c3><b3>pico,69
+2018-04,BA,Hospital Geral,Filantr<c3><b3>pico,50
+2018-04,RS,Hospital Geral,Filantr<c3><b3>pico,41
+2018-04,BR,Hospital Geral,Privado,975
+2018-04,SP,Hospital Geral,Privado,214
+2018-04,RJ,Hospital Geral,Privado,85
+2018-04,MG,Hospital Geral,Privado,98
+2018-04,BA,Hospital Geral,Privado,69
+2018-04,RS,Hospital Geral,Privado,60
+2018-07,BR,Hospital Geral,P<c3><ba>blico,1117
+2018-07,SP,Hospital Geral,P<c3><ba>blico,247
+2018-07,RJ,Hospital Geral,P<c3><ba>blico,100
+2018-07,MG,Hospital Geral,P<c3><ba>blico,112
+2018-07,BA,Hospital Geral,P<c3><ba>blico,78
+2018-07,RS,Hospital Geral,P<c3><ba>blico,68
+2018-07,BR,Hospital Geral,Filantr<c3><b3>pico,702
+2018-07,SP,Hospital Geral,Filantr<c3><b3>pico,155
+2018-07,RJ,Hospital Geral,Filantr<c3><b3>pico,65
+2018-07,MG,Hospital Geral,Filantr<c3><b3>pico,70
+2018-07,BA,Hospital Geral,Filantr<c3><b3>pico,49
+2018-07,RS,Hospital Geral,Filantr<c3><b3>pico,42
+2018-07,BR,Hospital Geral,Privado,969
+2018-07,SP,Hospital Geral,Privado,218
+2018-07,RJ,Hospital Geral,Privado,87
+2018-07,MG,Hospital Geral,Privado,98
+2018-07,BA,Hospital Geral,Privado,69
+2018-07,RS,Hospital Geral,Privado,60
+2018-10,BR,Hospital Geral,P<c3><ba>blico,1143
+2018-10,SP,Hospital Geral,P<c3><ba>blico,251
+2018-10,RJ,Hospital Geral,P<c3><ba>blico,101
+2018-10,MG,Hospital Geral,P<c3><ba>blico,115
+2018-10,BA,Hospital Geral,P<c3><ba>blico,79
+2018-10,RS,Hospital Geral,P<c3><ba>blico,68
+2018-10,BR,Hospital Geral,Filantr<c3><b3>pico,683
+2018-10,SP,Hospital Geral,Filantr<c3><b3>pico,153
+2018-10,RJ,Hospital Geral,Filantr<c3><b3>pico,63
+2018-10,MG,Hospital Geral,Filantr<c3><b3>pico,71
+2018-10,BA,Hospital Geral,Filantr<c3><b3>pico,49
+2018-10,RS,Hospital Geral,Filantr<c3><b3>pico,43
+2018-10,BR,Hospital Geral,Privado,1014
+2018-10,SP,Hospital Geral,Privado,213
+2018-10,RJ,Hospital Geral,Privado,88
+2018-10,MG,Hospital Geral,Privado,97
+2018-10,BA,Hospital Geral,Privado,69
+2018-10,RS,Hospital Geral,Privado,59
+2019-01,BR,Hospital Geral,P<c3><ba>blico,1107
+2019-01,SP,Hospital Geral,P<c3><ba>blico,255
+2019-01,RJ,Hospital Geral,P<c3><ba>blico,102
+2019-01,MG,Hospital Geral,P<c3><ba>blico,114
+2019-01,BA,Hospital Geral,P<c3><ba>blico,79
+2019-01,RS,Hospital Geral,P<c3><ba>blico,67
+2019-01,BR,Hospital Geral,Filantr<c3><b3>pico,699
+2019-01,SP,Hospital Geral,Filantr<c3><b3>pico,156
+2019-01,RJ,Hospital Geral,Filantr<c3><b3>pico,62
+2019-01,MG,Hospital Geral,Filantr<c3><b3>pico,70
+2019-01,BA,Hospital Geral,Filantr<c3><b3>pico,51
+2019-01,RS,Hospital Geral,Filantr<c3><b3>pico,42
+2019-01,BR,Hospital Geral,Privado,1005
+2019-01,SP,Hospital Geral,Privado,221
+2019-01,RJ,Hospital Geral,Privado,87
+2019-01,MG,Hospital Geral,Privado,100
+2019-01,BA,Hospital Geral,Privado,69
+2019-01,RS,Hospital Geral,Privado,59
+2019-04,BR,Hospital Geral,P<c3><ba>blico,1132
+2019-04,SP,Hospital Geral,P<c3><ba>blico,248
+2019-04,RJ,Hospital Geral,P<c3><ba>blico,104
+2019-04,MG,Hospital Geral,P<c3><ba>blico,116
+2019-04,BA,Hospital Geral,P<c3><ba>blico,78
+2019-04,RS,Hospital Geral,P<c3><ba>blico,68
+2019-04,BR,Hospital Geral,Filantr<c3><b3>pico,721
+2019-04,SP,Hospital Geral,Filantr<c3><b3>pico,158
+2019-04,RJ,Hospital Geral,Filantr<c3><b3>pico,65
+2019-04,MG,Hospital Geral,Filantr<c3><b3>pico,71
+2019-04,BA,Hospital Geral,Filantr<c3><b3>pico,50
+2019-04,RS,Hospital Geral,Filantr<c3><b3>pico,43
+2019-04,BR,Hospital Geral,Privado,996
+2019-04,SP,Hospital Geral,Privado,219
+2019-04,RJ,Hospital Geral,Privado,87
+2019-04,MG,Hospital Geral,Privado,101
+2019-04,BA,Hospital Geral,Privado,68
+2019-04,RS,Hospital Geral,Privado,59
+2019-07,BR,Hospital Geral,P<c3><ba>blico,1138
+2019-07,SP,Hospital Geral,P<c3><ba>blico,253
+2019-07,RJ,Hospital Geral,P<c3><ba>blico,101
+2019-07,MG,Hospital Geral,P<c3><ba>blico,114
+2019-07,BA,Hospital Geral,P<c3><ba>blico,78
+2019-07,RS,Hospital Geral,P<c3><ba>blico,68
+2019-07,BR,Hospital Geral,Filantr<c3><b3>pico,724
+2019-07,SP,Hospital Geral,Filantr<c3><b3>pico,159
+2019-07,RJ,Hospital Geral,Filantr<c3><b3>pico,65
+2019-07,MG,Hospital Geral,Filantr<c3><b3>pico,72
+2019-07,BA,Hospital Geral,Filantr<c3><b3>pico,49
+2019-07,RS,Hospital Geral,Filantr<c3><b3>pico,42
+2019-07,BR,Hospital Geral,Privado,997
+2019-07,SP,Hospital Geral,Privado,218
+2019-07,RJ,Hospital Geral,Privado,91
+2019-07,MG,Hospital Geral,Privado,100
+2019-07,BA,Hospital Geral,Privado,71
+2019-07,RS,Hospital Geral,Privado,59
+2019-10,BR,Hospital Geral,P<c3><ba>blico,1153
+2019-10,SP,Hospital Geral,P<c3><ba>blico,248
+2019-10,RJ,Hospital Geral,P<c3><ba>blico,103
+2019-10,MG,Hospital Geral,P<c3><ba>blico,115
+2019-10,BA,Hospital Geral,P<c3><ba>blico,80
+2019-10,RS,Hospital Geral,P<c3><ba>blico,70
+2019-10,BR,Hospital Geral,Filantr<c3><b3>pico,713
+2019-10,SP,Hospital Geral,Filantr<c3><b3>pico,156
+2019-10,RJ,Hospital Geral,Filantr<c3><b3>pico,63
+2019-10,MG,Hospital Geral,Filantr<c3><b3>pico,70
+2019-10,BA,Hospital Geral,Filantr<c3><b3>pico,48
+2019-10,RS,Hospital Geral,Filantr<c3><b3>pico,42
+2019-10,BR,Hospital Geral,Privado,994
+2019-10,SP,Hospital Geral,Privado,220
+2019-10,RJ,Hospital Geral,Privado,89
+2019-10,MG,Hospital Geral,Privado,100
+2019-10,BA,Hospital Geral,Privado,71
+2019-10,RS,Hospital Geral,Privado,61
+2020-01,BR,Hospital Geral,P<c3><ba>blico,1133
+2020-01,SP,Hospital Geral,P<c3><ba>blico,256
+2020-01,RJ,Hospital Geral,P<c3><ba>blico,106
+2020-01,MG,Hospital Geral,P<c3><ba>blico,112
+2020-01,BA,Hospital Geral,P<c3><ba>blico,82
+2020-01,RS,Hospital Geral,P<c3><ba>blico,68
+2020-01,BR,Hospital Geral,Filantr<c3><b3>pico,733
+2020-01,SP,Hospital Geral,Filantr<c3><b3>pico,158
+2020-01,RJ,Hospital Geral,Filantr<c3><b3>pico,64
+2020-01,MG,Hospital Geral,Filantr<c3><b3>pico,70
+2020-01,BA,Hospital Geral,Filantr<c3><b3>pico,50
+2020-01,RS,Hospital Geral,Filantr<c3><b3>pico,42
+2020-01,BR,Hospital Geral,Privado,1027
+2020-01,SP,Hospital Geral,Privado,222
+2020-01,RJ,Hospital Geral,Privado,89
+2020-01,MG,Hospital Geral,Privado,101
+2020-01,BA,Hospital Geral,Privado,70
+2020-01,RS,Hospital Geral,Privado,59
+2020-04,BR,Hospital Geral,P<c3><ba>blico,1139
+2020-04,SP,Hospital Geral,P<c3><ba>blico,255
+2020-04,RJ,Hospital Geral,P<c3><ba>blico,105
+2020-04,MG,Hospital Geral,P<c3><ba>blico,113
+2020-04,BA,Hospital Geral,P<c3><ba>blico,83
+2020-04,RS,Hospital Geral,P<c3><ba>blico,69
+2020-04,BR,Hospital Geral,Filantr<c3><b3>pico,698
+2020-04,SP,Hospital Geral,Filantr<c3><b3>pico,159
+2020-04,RJ,Hospital Geral,Filantr<c3><b3>pico,64
+2020-04,MG,Hospital Geral,Filantr<c3><b3>pico,73
+2020-04,BA,Hospital Geral,Filantr<c3><b3>pico,51
+2020-04,RS,Hospital Geral,Filantr<c3><b3>pico,43
+2020-04,BR,Hospital Geral,Privado,989
+2020-04,SP,Hospital Geral,Privado,221
+2020-04,RJ,Hospital Geral,Privado,89
+2020-04,MG,Hospital Geral,Privado,99
+2020-04,BA,Hospital Geral,Privado,68
+2020-04,RS,Hospital Geral,Privado,61
+2020-07,BR,Hospital Geral,P<c3><ba>blico,1137
+2020-07,SP,Hospital Geral,P<c3><ba>blico,253
+2020-07,RJ,Hospital Geral,P<c3><ba>blico,105
+2020-07,MG,Hospital Geral,P<c3><ba>blico,115
+2020-07,BA,Hospital Geral,P<c3><ba>blico,82
+2020-07,RS,Hospital Geral,P<c3><ba>blico,69
+2020-07,BR,Hospital Geral,Filantr<c3><b3>pico,737
+2020-07,SP,Hospital Geral,Filantr<c3><b3>pico,162
+2020-07,RJ,Hospital Geral,Filantr<c3><b3>pico,65
+2020-07,MG,Hospital Geral,Filantr<c3><b3>pico,73
+2020-07,BA,Hospital Geral,Filantr<c3><b3>pico,50
+2020-07,RS,Hospital Geral,Filantr<c3><b3>pico,44
+2020-07,BR,Hospital Geral,Privado,1035
+2020-07,SP,Hospital Geral,Privado,226
+2020-07,RJ,Hospital Geral,Privado,90
+2020-07,MG,Hospital Geral,Privado,103
+2020-07,BA,Hospital Geral,Privado,70
+2020-07,RS,Hospital Geral,Privado,60
+2020-10,BR,Hospital Geral,P<c3><ba>blico,1170
+2020-10,SP,Hospital Geral,P<c3><ba>blico,254
+2020-10,RJ,Hospital Geral,P<c3><ba>blico,105
+2020-10,MG,Hospital Geral,P<c3><ba>blico,118
+2020-10,BA,Hospital Geral,P<c3><ba>blico,81
+2020-10,RS,Hospital Geral,P<c3><ba>blico,69
+2020-10,BR,Hospital Geral,Filantr<c3><b3>pico,727
+2020-10,SP,Hospital Geral,Filantr<c3><b3>pico,157
+2020-10,RJ,Hospital Geral,Filantr<c3><b3>pico,65
+2020-10,MG,Hospital Geral,Filantr<c3><b3>pico,73
+2020-10,BA,Hospital Geral,Filantr<c3><b3>pico,51
+2020-10,RS,Hospital Geral,Filantr<c3><b3>pico,44
+2020-10,BR,Hospital Geral,Privado,1038
+2020-10,SP,Hospital Geral,Privado,226
+2020-10,RJ,Hospital Geral,Privado,92
+2020-10,MG,Hospital Geral,Privado,101
+2020-10,BA,Hospital Geral,Privado,71
+2020-10,RS,Hospital Geral,Privado,62
+2021-01,BR,Hospital Geral,P<c3><ba>blico,1187
+2021-01,SP,Hospital Geral,P<c3><ba>blico,259
+2021-01,RJ,Hospital Geral,P<c3><ba>blico,105
+2021-01,MG,Hospital Geral,P<c3><ba>blico,118
+2021-01,BA,Hospital Geral,P<c3><ba>blico,79
+2021-01,RS,Hospital Geral,P<c3><ba>blico,71
+2021-01,BR,Hospital Geral,Filantr<c3><b3>pico,726
+2021-01,SP,Hospital Geral,Filantr<c3><b3>pico,158
+2021-01,RJ,Hospital Geral,Filantr<c3><b3>pico,65
+2021-01,MG,Hospital Geral,Filantr<c3><b3>pico,73
+2021-01,BA,Hospital Geral,Filantr<c3><b3>pico,51
+2021-01,RS,Hospital Geral,Filantr<c3><b3>pico,42
+2021-01,BR,Hospital Geral,Privado,1044
+2021-01,SP,Hospital Geral,Privado,227
+2021-01,RJ,Hospital Geral,Privado,94
+2021-01,MG,Hospital Geral,Privado,101
+2021-01,BA,Hospital Geral,Privado,72
+2021-01,RS,Hospital Geral,Privado,61
+2021-04,BR,Hospital Geral,P<c3><ba>blico,1171
+2021-04,SP,Hospital Geral,P<c3><ba>blico,260
+2021-04,RJ,Hospital Geral,P<c3><ba>blico,104
+2021-04,MG,Hospital Geral,P<c3><ba>blico,118
+2021-04,BA,Hospital Geral,P<c3><ba>blico,84
+2021-04,RS,Hospital Geral,P<c3><ba>blico,69
+2021-04,BR,Hospital Geral,Filantr<c3><b3>pico,754
+2021-04,SP,Hospital Geral,Filantr<c3><b3>pico,159
+2021-04,RJ,Hospital Geral,Filantr<c3><b3>pico,65
+2021-04,MG,Hospital Geral,Filantr<c3><b3>pico,74
+2021-04,BA,Hospital Geral,Filantr<c3><b3>pico,50
+2021-04,RS,Hospital Geral,Filantr<c3><b3>pico,42
+2021-04,BR,Hospital Geral,Privado,1043
+2021-04,SP,Hospital Geral,Privado,227
+2021-04,RJ,Hospital Geral,Privado,91
+2021-04,MG,Hospital Geral,Privado,103
+2021-04,BA,Hospital Geral,Privado,71
+2021-04,RS,Hospital Geral,Privado,61
+2021-07,BR,Hospital Geral,P<c3><ba>blico,1183
+2021-07,SP,Hospital Geral,P<c3><ba>blico,254
+2021-07,RJ,Hospital Geral,P<c3><ba>blico,105
+2021-07,MG,Hospital Geral,P<c3><ba>blico,117
+2021-07,BA,Hospital Geral,P<c3><ba>blico,80
+2021-07,RS,Hospital Geral,P<c3><ba>blico,70
+2021-07,BR,Hospital Geral,Filantr<c3><b3>pico,731
+2021-07,SP,Hospital Geral,Filantr<c3><b3>pico,162
+2021-07,RJ,Hospital Geral,Filantr<c3><b3>pico,67
+2021-07,MG,Hospital Geral,Filantr<c3><b3>pico,73
+2021-07,BA,Hospital Geral,Filantr<c3><b3>pico,51
+2021-07,RS,Hospital Geral,Filantr<c3><b3>pico,45
+2021-07,BR,Hospital Geral,Privado,1045
+2021-07,SP,Hospital Geral,Privado,226
+2021-07,RJ,Hospital Geral,Privado,91
+2021-07,MG,Hospital Geral,Privado,105
+2021-07,BA,Hospital Geral,Privado,72
+2021-07,RS,Hospital Geral,Privado,62
+2021-10,BR,Hospital Geral,P<c3><ba>blico,1140
+2021-10,SP,Hospital Geral,P<c3><ba>blico,260
+2021-10,RJ,Hospital Geral,P<c3><ba>blico,103
+2021-10,MG,Hospital Geral,P<c3><ba>blico,121
+2021-10,BA,Hospital Geral,P<c3><ba>blico,83
+2021-10,RS,Hospital Geral,P<c3><ba>blico,70
+2021-10,BR,Hospital Geral,Filantr<c3><b3>pico,748
+2021-10,SP,Hospital Geral,Filantr<c3><b3>pico,162
+2021-10,RJ,Hospital Geral,Filantr<c3><b3>pico,65
+2021-10,MG,Hospital Geral,Filantr<c3><b3>pico,73
+2021-10,BA,Hospital Geral,Filantr<c3><b3>pico,52
+2021-10,RS,Hospital Geral,Filantr<c3><b3>pico,44
+2021-10,BR,Hospital Geral,Privado,1062
+2021-10,SP,Hospital Geral,Privado,228
+2021-10,RJ,Hospital Geral,Privado,96
+2021-10,MG,Hospital Geral,Privado,102
+2021-10,BA,Hospital Geral,Privado,71
+2021-10,RS,Hospital Geral,Privado,62
+2022-01,BR,Hospital Geral,P<c3><ba>blico,1169
+2022-01,SP,Hospital Geral,P<c3><ba>blico,258
+2022-01,RJ,Hospital Geral,P<c3><ba>blico,105
+2022-01,MG,Hospital Geral,P<c3><ba>blico,119
+2022-01,BA,Hospital Geral,P<c3><ba>blico,84
+2022-01,RS,Hospital Geral,P<c3><ba>blico,71
+2022-01,BR,Hospital Geral,Filantr<c3><b3>pico,733
+2022-01,SP,Hospital Geral,Filantr<c3><b3>pico,164
+2022-01,RJ,Hospital Geral,Filantr<c3><b3>pico,66
+2022-01,MG,Hospital Geral,Filantr<c3><b3>pico,73
+2022-01,BA,Hospital Geral,Filantr<c3><b3>pico,51
+2022-01,RS,Hospital Geral,Filantr<c3><b3>pico,45
+2022-01,BR,Hospital Geral,Privado,1021
+2022-01,SP,Hospital Geral,Privado,229
+2022-01,RJ,Hospital Geral,Privado,92
+2022-01,MG,Hospital Geral,Privado,107
+2022-01,BA,Hospital Geral,Privado,72
+2022-01,RS,Hospital Geral,Privado,62
+2022-04,BR,Hospital Geral,P<c3><ba>blico,1172
+2022-04,SP,Hospital Geral,P<c3><ba>blico,256
+2022-04,RJ,Hospital Geral,P<c3><ba>blico,109
+2022-04,MG,Hospital Geral,P<c3><ba>blico,118
+2022-04,BA,Hospital Geral,P<c3><ba>blico,83
+2022-04,RS,Hospital Geral,P<c3><ba>blico,72
+2022-04,BR,Hospital Geral,Filantr<c3><b3>pico,746
+2022-04,SP,Hospital Geral,Filantr<c3><b3>pico,164
+2022-04,RJ,Hospital Geral,Filantr<c3><b3>pico,67
+2022-04,MG,Hospital Geral,Filantr<c3><b3>pico,74
+2022-04,BA,Hospital Geral,Filantr<c3><b3>pico,52
+2022-04,RS,Hospital Geral,Filantr<c3><b3>pico,44
+2022-04,BR,Hospital Geral,Privado,1054
+2022-04,SP,Hospital Geral,Privado,235
+2022-04,RJ,Hospital Geral,Privado,93
+2022-04,MG,Hospital Geral,Privado,103
+2022-04,BA,Hospital Geral,Privado,73
+2022-04,RS,Hospital Geral,Privado,62
+2022-07,BR,Hospital Geral,P<c3><ba>blico,1218
+2022-07,SP,Hospital Geral,P<c3><ba>blico,263
+2022-07,RJ,Hospital Geral,P<c3><ba>blico,106
+2022-07,MG,Hospital Geral,P<c3><ba>blico,119
+2022-07,BA,Hospital Geral,P<c3><ba>blico,84
+2022-07,RS,Hospital Geral,P<c3><ba>blico,72
+2022-07,BR,Hospital Geral,Filantr<c3><b3>pico,759
+2022-07,SP,Hospital Geral,Filantr<c3><b3>pico,163
+2022-07,RJ,Hospital Geral,Filantr<c3><b3>pico,68
+2022-07,MG,Hospital Geral,Filantr<c3><b3>pico,73
+2022-07,BA,Hospital Geral,Filantr<c3><b3>pico,53
+2022-07,RS,Hospital Geral,Filantr<c3><b3>pico,44
+2022-07,BR,Hospital Geral,Privado,1077
+2022-07,SP,Hospital Geral,Privado,231
+2022-07,RJ,Hospital Geral,Privado,92
+2022-07,MG,Hospital Geral,Privado,104
+2022-07,BA,Hospital Geral,Privado,73
+2022-07,RS,Hospital Geral,Privado,62
+2022-10,BR,Hospital Geral,P<c3><ba>blico,1188
+2022-10,SP,Hospital Geral,P<c3><ba>blico,269
+2022-10,RJ,Hospital Geral,P<c3><ba>blico,105
+2022-10,MG,Hospital Geral,P<c3><ba>blico,119
+2022-10,BA,Hospital Geral,P<c3><ba>blico,84
+2022-10,RS,Hospital Geral,P<c3><ba>blico,71
+2022-10,BR,Hospital Geral,Filantr<c3><b3>pico,753
+2022-10,SP,Hospital Geral,Filantr<c3><b3>pico,165
+2022-10,RJ,Hospital Geral,Filantr<c3><b3>pico,69
+2022-10,MG,Hospital Geral,Filantr<c3><b3>pico,75
+2022-10,BA,Hospital Geral,Filantr<c3><b3>pico,52
+2022-10,RS,Hospital Geral,Filantr<c3><b3>pico,45
+2022-10,BR,Hospital Geral,Privado,1072
+2022-10,SP,Hospital Geral,Privado,232
+2022-10,RJ,Hospital Geral,Privado,95
+2022-10,MG,Hospital Geral,Privado,106
+2022-10,BA,Hospital Geral,Privado,74
+2022-10,RS,Hospital Geral,Privado,63
+2023-01,BR,Hospital Geral,P<c3><ba>blico,1218
+2023-01,SP,Hospital Geral,P<c3><ba>blico,268
+2023-01,RJ,Hospital Geral,P<c3><ba>blico,107
+2023-01,MG,Hospital Geral,P<c3><ba>blico,121
+2023-01,BA,Hospital Geral,P<c3><ba>blico,85
+2023-01,RS,Hospital Geral,P<c3><ba>blico,71
+2023-01,BR,Hospital Geral,Filantr<c3><b3>pico,752
+2023-01,SP,Hospital Geral,Filantr<c3><b3>pico,164
+2023-01,RJ,Hospital Geral,Filantr<c3><b3>pico,67
+2023-01,MG,Hospital Geral,Filantr<c3><b3>pico,73
+2023-01,BA,Hospital Geral,Filantr<c3><b3>pico,52
+2023-01,RS,Hospital Geral,Filantr<c3><b3>pico,43
+2023-01,BR,Hospital Geral,Privado,1065
+2023-01,SP,Hospital Geral,Privado,238
+2023-01,RJ,Hospital Geral,Privado,94
+2023-01,MG,Hospital Geral,Privado,105
+2023-01,BA,Hospital Geral,Privado,74
+2023-01,RS,Hospital Geral,Privado,62
+2023-04,BR,Hospital Geral,P<c3><ba>blico,1212
+2023-04,SP,Hospital Geral,P<c3><ba>blico,267
+2023-04,RJ,Hospital Geral,P<c3><ba>blico,106
+2023-04,MG,Hospital Geral,P<c3><ba>blico,123
+2023-04,BA,Hospital Geral,P<c3><ba>blico,84
+2023-04,RS,Hospital Geral,P<c3><ba>blico,71
+2023-04,BR,Hospital Geral,Filantr<c3><b3>pico,758
+2023-04,SP,Hospital Geral,Filantr<c3><b3>pico,165
+2023-04,RJ,Hospital Geral,Filantr<c3><b3>pico,68
+2023-04,MG,Hospital Geral,Filantr<c3><b3>pico,76
+2023-04,BA,Hospital Geral,Filantr<c3><b3>pico,52
+2023-04,RS,Hospital Geral,Filantr<c3><b3>pico,44
+2023-04,BR,Hospital Geral,Privado,1041
+2023-04,SP,Hospital Geral,Privado,229
+2023-04,RJ,Hospital Geral,Privado,95
+2023-04,MG,Hospital Geral,Privado,103
+2023-04,BA,Hospital Geral,Privado,75
+2023-04,RS,Hospital Geral,Privado,63
+2023-07,BR,Hospital Geral,P<c3><ba>blico,1196
+2023-07,SP,Hospital Geral,P<c3><ba>blico,268
+2023-07,RJ,Hospital Geral,P<c3><ba>blico,109
+2023-07,MG,Hospital Geral,P<c3><ba>blico,118
+2023-07,BA,Hospital Geral,P<c3><ba>blico,85
+2023-07,RS,Hospital Geral,P<c3><ba>blico,72
+2023-07,BR,Hospital Geral,Filantr<c3><b3>pico,757
+2023-07,SP,Hospital Geral,Filantr<c3><b3>pico,164
+2023-07,RJ,Hospital Geral,Filantr<c3><b3>pico,68
+2023-07,MG,Hospital Geral,Filantr<c3><b3>pico,77
+2023-07,BA,Hospital Geral,Filantr<c3><b3>pico,53
+2023-07,RS,Hospital Geral,Filantr<c3><b3>pico,46
+2023-07,BR,Hospital Geral,Privado,1086
+2023-07,SP,Hospital Geral,Privado,236
+2023-07,RJ,Hospital Geral,Privado,93
+2023-07,MG,Hospital Geral,Privado,108
+2023-07,BA,Hospital Geral,Privado,76
+2023-07,RS,Hospital Geral,Privado,63
+2023-10,BR,Hospital Geral,P<c3><ba>blico,1262
+2023-10,SP,Hospital Geral,P<c3><ba>blico,268
+2023-10,RJ,Hospital Geral,P<c3><ba>blico,110
+2023-10,MG,Hospital Geral,P<c3><ba>blico,117
+2023-10,BA,Hospital Geral,P<c3><ba>blico,83
+2023-10,RS,Hospital Geral,P<c3><ba>blico,72
+2023-10,BR,Hospital Geral,Filantr<c3><b3>pico,755
+2023-10,SP,Hospital Geral,Filantr<c3><b3>pico,165
+2023-10,RJ,Hospital Geral,Filantr<c3><b3>pico,68
+2023-10,MG,Hospital Geral,Filantr<c3><b3>pico,75
+2023-10,BA,Hospital Geral,Filantr<c3><b3>pico,53
+2023-10,RS,Hospital Geral,Filantr<c3><b3>pico,45
+2023-10,BR,Hospital Geral,Privado,1052
+2023-10,SP,Hospital Geral,Privado,235
+2023-10,RJ,Hospital Geral,Privado,96
+2023-10,MG,Hospital Geral,Privado,104
+2023-10,BA,Hospital Geral,Privado,75
+2023-10,RS,Hospital Geral,Privado,65
+2024-01,BR,Hospital Geral,P<c3><ba>blico,1239
+2024-01,SP,Hospital Geral,P<c3><ba>blico,274
+2024-01,RJ,Hospital Geral,P<c3><ba>blico,111
+2024-01,MG,Hospital Geral,P<c3><ba>blico,123
+2024-01,BA,Hospital Geral,P<c3><ba>blico,85
+2024-01,RS,Hospital Geral,P<c3><ba>blico,73
+2024-01,BR,Hospital Geral,Filantr<c3><b3>pico,763
+2024-01,SP,Hospital Geral,Filantr<c3><b3>pico,167
+2024-01,RJ,Hospital Geral,Filantr<c3><b3>pico,70
+2024-01,MG,Hospital Geral,Filantr<c3><b3>pico,76
+2024-01,BA,Hospital Geral,Filantr<c3><b3>pico,53
+2024-01,RS,Hospital Geral,Filantr<c3><b3>pico,45
+2024-01,BR,Hospital Geral,Privado,1070
+2024-01,SP,Hospital Geral,Privado,239
+2024-01,RJ,Hospital Geral,Privado,98
+2024-01,MG,Hospital Geral,Privado,106
+2024-01,BA,Hospital Geral,Privado,74
+2024-01,RS,Hospital Geral,Privado,65
+2024-04,BR,Hospital Geral,P<c3><ba>blico,1213
+2024-04,SP,Hospital Geral,P<c3><ba>blico,273
+2024-04,RJ,Hospital Geral,P<c3><ba>blico,110
+2024-04,MG,Hospital Geral,P<c3><ba>blico,121
+2024-04,BA,Hospital Geral,P<c3><ba>blico,85
+2024-04,RS,Hospital Geral,P<c3><ba>blico,73
+2024-04,BR,Hospital Geral,Filantr<c3><b3>pico,771
+2024-04,SP,Hospital Geral,Filantr<c3><b3>pico,168
+2024-04,RJ,Hospital Geral,Filantr<c3><b3>pico,69
+2024-04,MG,Hospital Geral,Filantr<c3><b3>pico,76
+2024-04,BA,Hospital Geral,Filantr<c3><b3>pico,54
+2024-04,RS,Hospital Geral,Filantr<c3><b3>pico,48
+2024-04,BR,Hospital Geral,Privado,1093
+2024-04,SP,Hospital Geral,Privado,233
+2024-04,RJ,Hospital Geral,Privado,95
+2024-04,MG,Hospital Geral,Privado,106
+2024-04,BA,Hospital Geral,Privado,76
+2024-04,RS,Hospital Geral,Privado,66
+2024-07,BR,Hospital Geral,P<c3><ba>blico,1271
+2024-07,SP,Hospital Geral,P<c3><ba>blico,264
+2024-07,RJ,Hospital Geral,P<c3><ba>blico,108
+2024-07,MG,Hospital Geral,P<c3><ba>blico,123
+2024-07,BA,Hospital Geral,P<c3><ba>blico,84
+2024-07,RS,Hospital Geral,P<c3><ba>blico,73
+2024-07,BR,Hospital Geral,Filantr<c3><b3>pico,774
+2024-07,SP,Hospital Geral,Filantr<c3><b3>pico,172
+2024-07,RJ,Hospital Geral,Filantr<c3><b3>pico,69
+2024-07,MG,Hospital Geral,Filantr<c3><b3>pico,75
+2024-07,BA,Hospital Geral,Filantr<c3><b3>pico,52
+2024-07,RS,Hospital Geral,Filantr<c3><b3>pico,47
+2024-07,BR,Hospital Geral,Privado,1095
+2024-07,SP,Hospital Geral,Privado,238
+2024-07,RJ,Hospital Geral,Privado,93
+2024-07,MG,Hospital Geral,Privado,108
+2024-07,BA,Hospital Geral,Privado,74
+2024-07,RS,Hospital Geral,Privado,64
+2024-10,BR,Hospital Geral,P<c3><ba>blico,1248
+2024-10,SP,Hospital Geral,P<c3><ba>blico,271
+2024-10,RJ,Hospital Geral,P<c3><ba>blico,110
+2024-10,MG,Hospital Geral,P<c3><ba>blico,122
+2024-10,BA,Hospital Geral,P<c3><ba>blico,85
+2024-10,RS,Hospital Geral,P<c3><ba>blico,72
+2024-10,BR,Hospital Geral,Filantr<c3><b3>pico,764
+2024-10,SP,Hospital Geral,Filantr<c3><b3>pico,171
+2024-10,RJ,Hospital Geral,Filantr<c3><b3>pico,69
+2024-10,MG,Hospital Geral,Filantr<c3><b3>pico,76
+2024-10,BA,Hospital Geral,Filantr<c3><b3>pico,55
+2024-10,RS,Hospital Geral,Filantr<c3><b3>pico,46
+2024-10,BR,Hospital Geral,Privado,1070
+2024-10,SP,Hospital Geral,Privado,236
+2024-10,RJ,Hospital Geral,Privado,97
+2024-10,MG,Hospital Geral,Privado,107
+2024-10,BA,Hospital Geral,Privado,74
+2024-10,RS,Hospital Geral,Privado,65
+2025-01,BR,Hospital Geral,P<c3><ba>blico,1214
+2025-01,SP,Hospital Geral,P<c3><ba>blico,267
+2025-01,RJ,Hospital Geral,P<c3><ba>blico,110
+2025-01,MG,Hospital Geral,P<c3><ba>blico,124
+2025-01,BA,Hospital Geral,P<c3><ba>blico,84
+2025-01,RS,Hospital Geral,P<c3><ba>blico,75
+2025-01,BR,Hospital Geral,Filantr<c3><b3>pico,773
+2025-01,SP,Hospital Geral,Filantr<c3><b3>pico,167
+2025-01,RJ,Hospital Geral,Filantr<c3><b3>pico,69
+2025-01,MG,Hospital Geral,Filantr<c3><b3>pico,76
+2025-01,BA,Hospital Geral,Filantr<c3><b3>pico,55
+2025-01,RS,Hospital Geral,Filantr<c3><b3>pico,47
+2025-01,BR,Hospital Geral,Privado,1066
+2025-01,SP,Hospital Geral,Privado,227
+2025-01,RJ,Hospital Geral,Privado,97
+2025-01,MG,Hospital Geral,Privado,106
+2025-01,BA,Hospital Geral,Privado,77
+2025-01,RS,Hospital Geral,Privado,66
+2025-04,BR,Hospital Geral,P<c3><ba>blico,1226
+2025-04,SP,Hospital Geral,P<c3><ba>blico,274
+2025-04,RJ,Hospital Geral,P<c3><ba>blico,113
+2025-04,MG,Hospital Geral,P<c3><ba>blico,126
+2025-04,BA,Hospital Geral,P<c3><ba>blico,87
+2025-04,RS,Hospital Geral,P<c3><ba>blico,76
+2025-04,BR,Hospital Geral,Filantr<c3><b3>pico,782
+2025-04,SP,Hospital Geral,Filantr<c3><b3>pico,165
+2025-04,RJ,Hospital Geral,Filantr<c3><b3>pico,70
+2025-04,MG,Hospital Geral,Filantr<c3><b3>pico,78
+2025-04,BA,Hospital Geral,Filantr<c3><b3>pico,54
+2025-04,RS,Hospital Geral,Filantr<c3><b3>pico,46
+2025-04,BR,Hospital Geral,Privado,1078
+2025-04,SP,Hospital Geral,Privado,238
+2025-04,RJ,Hospital Geral,Privado,99
+2025-04,MG,Hospital Geral,Privado,106
+2025-04,BA,Hospital Geral,Privado,76
+2025-04,RS,Hospital Geral,Privado,63
+2025-07,BR,Hospital Geral,P<c3><ba>blico,1248
+2025-07,SP,Hospital Geral,P<c3><ba>blico,278
+2025-07,RJ,Hospital Geral,P<c3><ba>blico,111
+2025-07,MG,Hospital Geral,P<c3><ba>blico,123
+2025-07,BA,Hospital Geral,P<c3><ba>blico,86
+2025-07,RS,Hospital Geral,P<c3><ba>blico,75
+2025-07,BR,Hospital Geral,Filantr<c3><b3>pico,777
+2025-07,SP,Hospital Geral,Filantr<c3><b3>pico,171
+2025-07,RJ,Hospital Geral,Filantr<c3><b3>pico,68
+2025-07,MG,Hospital Geral,Filantr<c3><b3>pico,76
+2025-07,BA,Hospital Geral,Filantr<c3><b3>pico,55
+2025-07,RS,Hospital Geral,Filantr<c3><b3>pico,46
+2025-07,BR,Hospital Geral,Privado,1109
+2025-07,SP,Hospital Geral,Privado,240
+2025-07,RJ,Hospital Geral,Privado,99
+2025-07,MG,Hospital Geral,Privado,108
+2025-07,BA,Hospital Geral,Privado,73
+2025-07,RS,Hospital Geral,Privado,65
+2018-01,BR,Hospital Especializado,P<c3><ba>blico,264
+2018-01,SP,Hospital Especializado,P<c3><ba>blico,58
+2018-01,RJ,Hospital Especializado,P<c3><ba>blico,23
+2018-01,MG,Hospital Especializado,P<c3><ba>blico,25
+2018-01,BA,Hospital Especializado,P<c3><ba>blico,18
+2018-01,RS,Hospital Especializado,P<c3><ba>blico,15
+2018-01,BR,Hospital Especializado,Filantr<c3><b3>pico,163
+2018-01,SP,Hospital Especializado,Filantr<c3><b3>pico,35
+2018-01,RJ,Hospital Especializado,Filantr<c3><b3>pico,14
+2018-01,MG,Hospital Especializado,Filantr<c3><b3>pico,16
+2018-01,BA,Hospital Especializado,Filantr<c3><b3>pico,11
+2018-01,RS,Hospital Especializado,Filantr<c3><b3>pico,9
+2018-01,BR,Hospital Especializado,Privado,223
+2018-01,SP,Hospital Especializado,Privado,49
+2018-01,RJ,Hospital Especializado,Privado,20
+2018-01,MG,Hospital Especializado,Privado,22
+2018-01,BA,Hospital Especializado,Privado,16
+2018-01,RS,Hospital Especializado,Privado,13
+2018-04,BR,Hospital Especializado,P<c3><ba>blico,258
+2018-04,SP,Hospital Especializado,P<c3><ba>blico,57
+2018-04,RJ,Hospital Especializado,P<c3><ba>blico,23
+2018-04,MG,Hospital Especializado,P<c3><ba>blico,25
+2018-04,BA,Hospital Especializado,P<c3><ba>blico,18
+2018-04,RS,Hospital Especializado,P<c3><ba>blico,15
+2018-04,BR,Hospital Especializado,Filantr<c3><b3>pico,162
+2018-04,SP,Hospital Especializado,Filantr<c3><b3>pico,35
+2018-04,RJ,Hospital Especializado,Filantr<c3><b3>pico,14
+2018-04,MG,Hospital Especializado,Filantr<c3><b3>pico,16
+2018-04,BA,Hospital Especializado,Filantr<c3><b3>pico,11
+2018-04,RS,Hospital Especializado,Filantr<c3><b3>pico,9
+2018-04,BR,Hospital Especializado,Privado,232
+2018-04,SP,Hospital Especializado,Privado,50
+2018-04,RJ,Hospital Especializado,Privado,20
+2018-04,MG,Hospital Especializado,Privado,22
+2018-04,BA,Hospital Especializado,Privado,16
+2018-04,RS,Hospital Especializado,Privado,13
+2018-07,BR,Hospital Especializado,P<c3><ba>blico,265
+2018-07,SP,Hospital Especializado,P<c3><ba>blico,59
+2018-07,RJ,Hospital Especializado,P<c3><ba>blico,24
+2018-07,MG,Hospital Especializado,P<c3><ba>blico,26
+2018-07,BA,Hospital Especializado,P<c3><ba>blico,18
+2018-07,RS,Hospital Especializado,P<c3><ba>blico,15
+2018-07,BR,Hospital Especializado,Filantr<c3><b3>pico,163
+2018-07,SP,Hospital Especializado,Filantr<c3><b3>pico,36
+2018-07,RJ,Hospital Especializado,Filantr<c3><b3>pico,14
+2018-07,MG,Hospital Especializado,Filantr<c3><b3>pico,16
+2018-07,BA,Hospital Especializado,Filantr<c3><b3>pico,11
+2018-07,RS,Hospital Especializado,Filantr<c3><b3>pico,9
+2018-07,BR,Hospital Especializado,Privado,227
+2018-07,SP,Hospital Especializado,Privado,52
+2018-07,RJ,Hospital Especializado,Privado,20
+2018-07,MG,Hospital Especializado,Privado,22
+2018-07,BA,Hospital Especializado,Privado,16
+2018-07,RS,Hospital Especializado,Privado,13
+2018-10,BR,Hospital Especializado,P<c3><ba>blico,263
+2018-10,SP,Hospital Especializado,P<c3><ba>blico,57
+2018-10,RJ,Hospital Especializado,P<c3><ba>blico,23
+2018-10,MG,Hospital Especializado,P<c3><ba>blico,26
+2018-10,BA,Hospital Especializado,P<c3><ba>blico,18
+2018-10,RS,Hospital Especializado,P<c3><ba>blico,16
+2018-10,BR,Hospital Especializado,Filantr<c3><b3>pico,163
+2018-10,SP,Hospital Especializado,Filantr<c3><b3>pico,35
+2018-10,RJ,Hospital Especializado,Filantr<c3><b3>pico,14
+2018-10,MG,Hospital Especializado,Filantr<c3><b3>pico,16
+2018-10,BA,Hospital Especializado,Filantr<c3><b3>pico,11
+2018-10,RS,Hospital Especializado,Filantr<c3><b3>pico,10
+2018-10,BR,Hospital Especializado,Privado,230
+2018-10,SP,Hospital Especializado,Privado,50
+2018-10,RJ,Hospital Especializado,Privado,20
+2018-10,MG,Hospital Especializado,Privado,22
+2018-10,BA,Hospital Especializado,Privado,16
+2018-10,RS,Hospital Especializado,Privado,13
+2019-01,BR,Hospital Especializado,P<c3><ba>blico,256
+2019-01,SP,Hospital Especializado,P<c3><ba>blico,57
+2019-01,RJ,Hospital Especializado,P<c3><ba>blico,23
+2019-01,MG,Hospital Especializado,P<c3><ba>blico,26
+2019-01,BA,Hospital Especializado,P<c3><ba>blico,18
+2019-01,RS,Hospital Especializado,P<c3><ba>blico,16
+2019-01,BR,Hospital Especializado,Filantr<c3><b3>pico,159
+2019-01,SP,Hospital Especializado,Filantr<c3><b3>pico,35
+2019-01,RJ,Hospital Especializado,Filantr<c3><b3>pico,14
+2019-01,MG,Hospital Especializado,Filantr<c3><b3>pico,16
+2019-01,BA,Hospital Especializado,Filantr<c3><b3>pico,11
+2019-01,RS,Hospital Especializado,Filantr<c3><b3>pico,9
+2019-01,BR,Hospital Especializado,Privado,229
+2019-01,SP,Hospital Especializado,Privado,50
+2019-01,RJ,Hospital Especializado,Privado,21
+2019-01,MG,Hospital Especializado,Privado,22
+2019-01,BA,Hospital Especializado,Privado,16
+2019-01,RS,Hospital Especializado,Privado,13
+2019-04,BR,Hospital Especializado,P<c3><ba>blico,266
+2019-04,SP,Hospital Especializado,P<c3><ba>blico,58
+2019-04,RJ,Hospital Especializado,P<c3><ba>blico,24
+2019-04,MG,Hospital Especializado,P<c3><ba>blico,26
+2019-04,BA,Hospital Especializado,P<c3><ba>blico,18
+2019-04,RS,Hospital Especializado,P<c3><ba>blico,16
+2019-04,BR,Hospital Especializado,Filantr<c3><b3>pico,166
+2019-04,SP,Hospital Especializado,Filantr<c3><b3>pico,37
+2019-04,RJ,Hospital Especializado,Filantr<c3><b3>pico,14
+2019-04,MG,Hospital Especializado,Filantr<c3><b3>pico,16
+2019-04,BA,Hospital Especializado,Filantr<c3><b3>pico,11
+2019-04,RS,Hospital Especializado,Filantr<c3><b3>pico,10
+2019-04,BR,Hospital Especializado,Privado,228
+2019-04,SP,Hospital Especializado,Privado,51
+2019-04,RJ,Hospital Especializado,Privado,20
+2019-04,MG,Hospital Especializado,Privado,22
+2019-04,BA,Hospital Especializado,Privado,15
+2019-04,RS,Hospital Especializado,Privado,14
+2019-07,BR,Hospital Especializado,P<c3><ba>blico,267
+2019-07,SP,Hospital Especializado,P<c3><ba>blico,57
+2019-07,RJ,Hospital Especializado,P<c3><ba>blico,24
+2019-07,MG,Hospital Especializado,P<c3><ba>blico,26
+2019-07,BA,Hospital Especializado,P<c3><ba>blico,18
+2019-07,RS,Hospital Especializado,P<c3><ba>blico,15
+2019-07,BR,Hospital Especializado,Filantr<c3><b3>pico,162
+2019-07,SP,Hospital Especializado,Filantr<c3><b3>pico,36
+2019-07,RJ,Hospital Especializado,Filantr<c3><b3>pico,14
+2019-07,MG,Hospital Especializado,Filantr<c3><b3>pico,16
+2019-07,BA,Hospital Especializado,Filantr<c3><b3>pico,12
+2019-07,RS,Hospital Especializado,Filantr<c3><b3>pico,10
+2019-07,BR,Hospital Especializado,Privado,235
+2019-07,SP,Hospital Especializado,Privado,51
+2019-07,RJ,Hospital Especializado,Privado,20
+2019-07,MG,Hospital Especializado,Privado,22
+2019-07,BA,Hospital Especializado,Privado,16
+2019-07,RS,Hospital Especializado,Privado,14
+2019-10,BR,Hospital Especializado,P<c3><ba>blico,261
+2019-10,SP,Hospital Especializado,P<c3><ba>blico,57
+2019-10,RJ,Hospital Especializado,P<c3><ba>blico,23
+2019-10,MG,Hospital Especializado,P<c3><ba>blico,26
+2019-10,BA,Hospital Especializado,P<c3><ba>blico,18
+2019-10,RS,Hospital Especializado,P<c3><ba>blico,15
+2019-10,BR,Hospital Especializado,Filantr<c3><b3>pico,166
+2019-10,SP,Hospital Especializado,Filantr<c3><b3>pico,36
+2019-10,RJ,Hospital Especializado,Filantr<c3><b3>pico,14
+2019-10,MG,Hospital Especializado,Filantr<c3><b3>pico,16
+2019-10,BA,Hospital Especializado,Filantr<c3><b3>pico,11
+2019-10,RS,Hospital Especializado,Filantr<c3><b3>pico,9
+2019-10,BR,Hospital Especializado,Privado,234
+2019-10,SP,Hospital Especializado,Privado,51
+2019-10,RJ,Hospital Especializado,Privado,20
+2019-10,MG,Hospital Especializado,Privado,23
+2019-10,BA,Hospital Especializado,Privado,16
+2019-10,RS,Hospital Especializado,Privado,13
+2020-01,BR,Hospital Especializado,P<c3><ba>blico,264
+2020-01,SP,Hospital Especializado,P<c3><ba>blico,61
+2020-01,RJ,Hospital Especializado,P<c3><ba>blico,24
+2020-01,MG,Hospital Especializado,P<c3><ba>blico,26
+2020-01,BA,Hospital Especializado,P<c3><ba>blico,18
+2020-01,RS,Hospital Especializado,P<c3><ba>blico,15
+2020-01,BR,Hospital Especializado,Filantr<c3><b3>pico,166
+2020-01,SP,Hospital Especializado,Filantr<c3><b3>pico,37
+2020-01,RJ,Hospital Especializado,Filantr<c3><b3>pico,15
+2020-01,MG,Hospital Especializado,Filantr<c3><b3>pico,16
+2020-01,BA,Hospital Especializado,Filantr<c3><b3>pico,11
+2020-01,RS,Hospital Especializado,Filantr<c3><b3>pico,10
+2020-01,BR,Hospital Especializado,Privado,236
+2020-01,SP,Hospital Especializado,Privado,51
+2020-01,RJ,Hospital Especializado,Privado,20
+2020-01,MG,Hospital Especializado,Privado,23
+2020-01,BA,Hospital Especializado,Privado,16
+2020-01,RS,Hospital Especializado,Privado,13
+2020-04,BR,Hospital Especializado,P<c3><ba>blico,266
+2020-04,SP,Hospital Especializado,P<c3><ba>blico,59
+2020-04,RJ,Hospital Especializado,P<c3><ba>blico,24
+2020-04,MG,Hospital Especializado,P<c3><ba>blico,26
+2020-04,BA,Hospital Especializado,P<c3><ba>blico,19
+2020-04,RS,Hospital Especializado,P<c3><ba>blico,16
+2020-04,BR,Hospital Especializado,Filantr<c3><b3>pico,165
+2020-04,SP,Hospital Especializado,Filantr<c3><b3>pico,37
+2020-04,RJ,Hospital Especializado,Filantr<c3><b3>pico,15
+2020-04,MG,Hospital Especializado,Filantr<c3><b3>pico,16
+2020-04,BA,Hospital Especializado,Filantr<c3><b3>pico,11
+2020-04,RS,Hospital Especializado,Filantr<c3><b3>pico,10
+2020-04,BR,Hospital Especializado,Privado,234
+2020-04,SP,Hospital Especializado,Privado,51
+2020-04,RJ,Hospital Especializado,Privado,21
+2020-04,MG,Hospital Especializado,Privado,23
+2020-04,BA,Hospital Especializado,Privado,16
+2020-04,RS,Hospital Especializado,Privado,14
+2020-07,BR,Hospital Especializado,P<c3><ba>blico,273
+2020-07,SP,Hospital Especializado,P<c3><ba>blico,59
+2020-07,RJ,Hospital Especializado,P<c3><ba>blico,24
+2020-07,MG,Hospital Especializado,P<c3><ba>blico,26
+2020-07,BA,Hospital Especializado,P<c3><ba>blico,19
+2020-07,RS,Hospital Especializado,P<c3><ba>blico,15
+2020-07,BR,Hospital Especializado,Filantr<c3><b3>pico,166
+2020-07,SP,Hospital Especializado,Filantr<c3><b3>pico,38
+2020-07,RJ,Hospital Especializado,Filantr<c3><b3>pico,14
+2020-07,MG,Hospital Especializado,Filantr<c3><b3>pico,16
+2020-07,BA,Hospital Especializado,Filantr<c3><b3>pico,11
+2020-07,RS,Hospital Especializado,Filantr<c3><b3>pico,10
+2020-07,BR,Hospital Especializado,Privado,235
+2020-07,SP,Hospital Especializado,Privado,52
+2020-07,RJ,Hospital Especializado,Privado,20
+2020-07,MG,Hospital Especializado,Privado,23
+2020-07,BA,Hospital Especializado,Privado,16
+2020-07,RS,Hospital Especializado,Privado,13
+2020-10,BR,Hospital Especializado,P<c3><ba>blico,274
+2020-10,SP,Hospital Especializado,P<c3><ba>blico,59
+2020-10,RJ,Hospital Especializado,P<c3><ba>blico,24
+2020-10,MG,Hospital Especializado,P<c3><ba>blico,26
+2020-10,BA,Hospital Especializado,P<c3><ba>blico,19
+2020-10,RS,Hospital Especializado,P<c3><ba>blico,16
+2020-10,BR,Hospital Especializado,Filantr<c3><b3>pico,170
+2020-10,SP,Hospital Especializado,Filantr<c3><b3>pico,38
+2020-10,RJ,Hospital Especializado,Filantr<c3><b3>pico,15
+2020-10,MG,Hospital Especializado,Filantr<c3><b3>pico,17
+2020-10,BA,Hospital Especializado,Filantr<c3><b3>pico,12
+2020-10,RS,Hospital Especializado,Filantr<c3><b3>pico,9
+2020-10,BR,Hospital Especializado,Privado,235
+2020-10,SP,Hospital Especializado,Privado,52
+2020-10,RJ,Hospital Especializado,Privado,22
+2020-10,MG,Hospital Especializado,Privado,23
+2020-10,BA,Hospital Especializado,Privado,16
+2020-10,RS,Hospital Especializado,Privado,14
+2021-01,BR,Hospital Especializado,P<c3><ba>blico,277
+2021-01,SP,Hospital Especializado,P<c3><ba>blico,59
+2021-01,RJ,Hospital Especializado,P<c3><ba>blico,25
+2021-01,MG,Hospital Especializado,P<c3><ba>blico,27
+2021-01,BA,Hospital Especializado,P<c3><ba>blico,18
+2021-01,RS,Hospital Especializado,P<c3><ba>blico,16
+2021-01,BR,Hospital Especializado,Filantr<c3><b3>pico,168
+2021-01,SP,Hospital Especializado,Filantr<c3><b3>pico,38
+2021-01,RJ,Hospital Especializado,Filantr<c3><b3>pico,15
+2021-01,MG,Hospital Especializado,Filantr<c3><b3>pico,17
+2021-01,BA,Hospital Especializado,Filantr<c3><b3>pico,11
+2021-01,RS,Hospital Especializado,Filantr<c3><b3>pico,10
+2021-01,BR,Hospital Especializado,Privado,238
+2021-01,SP,Hospital Especializado,Privado,52
+2021-01,RJ,Hospital Especializado,Privado,21
+2021-01,MG,Hospital Especializado,Privado,23
+2021-01,BA,Hospital Especializado,Privado,16
+2021-01,RS,Hospital Especializado,Privado,14
+2021-04,BR,Hospital Especializado,P<c3><ba>blico,270
+2021-04,SP,Hospital Especializado,P<c3><ba>blico,58
+2021-04,RJ,Hospital Especializado,P<c3><ba>blico,25
+2021-04,MG,Hospital Especializado,P<c3><ba>blico,27
+2021-04,BA,Hospital Especializado,P<c3><ba>blico,18
+2021-04,RS,Hospital Especializado,P<c3><ba>blico,16
+2021-04,BR,Hospital Especializado,Filantr<c3><b3>pico,170
+2021-04,SP,Hospital Especializado,Filantr<c3><b3>pico,36
+2021-04,RJ,Hospital Especializado,Filantr<c3><b3>pico,15
+2021-04,MG,Hospital Especializado,Filantr<c3><b3>pico,17
+2021-04,BA,Hospital Especializado,Filantr<c3><b3>pico,12
+2021-04,RS,Hospital Especializado,Filantr<c3><b3>pico,10
+2021-04,BR,Hospital Especializado,Privado,238
+2021-04,SP,Hospital Especializado,Privado,52
+2021-04,RJ,Hospital Especializado,Privado,21
+2021-04,MG,Hospital Especializado,Privado,23
+2021-04,BA,Hospital Especializado,Privado,17
+2021-04,RS,Hospital Especializado,Privado,14
+2021-07,BR,Hospital Especializado,P<c3><ba>blico,278
+2021-07,SP,Hospital Especializado,P<c3><ba>blico,60
+2021-07,RJ,Hospital Especializado,P<c3><ba>blico,24
+2021-07,MG,Hospital Especializado,P<c3><ba>blico,26
+2021-07,BA,Hospital Especializado,P<c3><ba>blico,19
+2021-07,RS,Hospital Especializado,P<c3><ba>blico,16
+2021-07,BR,Hospital Especializado,Filantr<c3><b3>pico,170
+2021-07,SP,Hospital Especializado,Filantr<c3><b3>pico,37
+2021-07,RJ,Hospital Especializado,Filantr<c3><b3>pico,15
+2021-07,MG,Hospital Especializado,Filantr<c3><b3>pico,17
+2021-07,BA,Hospital Especializado,Filantr<c3><b3>pico,12
+2021-07,RS,Hospital Especializado,Filantr<c3><b3>pico,10
+2021-07,BR,Hospital Especializado,Privado,237
+2021-07,SP,Hospital Especializado,Privado,53
+2021-07,RJ,Hospital Especializado,Privado,21
+2021-07,MG,Hospital Especializado,Privado,24
+2021-07,BA,Hospital Especializado,Privado,17
+2021-07,RS,Hospital Especializado,Privado,13
+2021-10,BR,Hospital Especializado,P<c3><ba>blico,274
+2021-10,SP,Hospital Especializado,P<c3><ba>blico,60
+2021-10,RJ,Hospital Especializado,P<c3><ba>blico,24
+2021-10,MG,Hospital Especializado,P<c3><ba>blico,27
+2021-10,BA,Hospital Especializado,P<c3><ba>blico,18
+2021-10,RS,Hospital Especializado,P<c3><ba>blico,16
+2021-10,BR,Hospital Especializado,Filantr<c3><b3>pico,172
+2021-10,SP,Hospital Especializado,Filantr<c3><b3>pico,39
+2021-10,RJ,Hospital Especializado,Filantr<c3><b3>pico,15
+2021-10,MG,Hospital Especializado,Filantr<c3><b3>pico,17
+2021-10,BA,Hospital Especializado,Filantr<c3><b3>pico,12
+2021-10,RS,Hospital Especializado,Filantr<c3><b3>pico,10
+2021-10,BR,Hospital Especializado,Privado,234
+2021-10,SP,Hospital Especializado,Privado,52
+2021-10,RJ,Hospital Especializado,Privado,21
+2021-10,MG,Hospital Especializado,Privado,24
+2021-10,BA,Hospital Especializado,Privado,16
+2021-10,RS,Hospital Especializado,Privado,14
+2022-01,BR,Hospital Especializado,P<c3><ba>blico,277
+2022-01,SP,Hospital Especializado,P<c3><ba>blico,60
+2022-01,RJ,Hospital Especializado,P<c3><ba>blico,25
+2022-01,MG,Hospital Especializado,P<c3><ba>blico,28
+2022-01,BA,Hospital Especializado,P<c3><ba>blico,20
+2022-01,RS,Hospital Especializado,P<c3><ba>blico,16
+2022-01,BR,Hospital Especializado,Filantr<c3><b3>pico,167
+2022-01,SP,Hospital Especializado,Filantr<c3><b3>pico,38
+2022-01,RJ,Hospital Especializado,Filantr<c3><b3>pico,15
+2022-01,MG,Hospital Especializado,Filantr<c3><b3>pico,16
+2022-01,BA,Hospital Especializado,Filantr<c3><b3>pico,11
+2022-01,RS,Hospital Especializado,Filantr<c3><b3>pico,10
+2022-01,BR,Hospital Especializado,Privado,237
+2022-01,SP,Hospital Especializado,Privado,52
+2022-01,RJ,Hospital Especializado,Privado,21
+2022-01,MG,Hospital Especializado,Privado,23
+2022-01,BA,Hospital Especializado,Privado,16
+2022-01,RS,Hospital Especializado,Privado,13
+2022-04,BR,Hospital Especializado,P<c3><ba>blico,275
+2022-04,SP,Hospital Especializado,P<c3><ba>blico,62
+2022-04,RJ,Hospital Especializado,P<c3><ba>blico,25
+2022-04,MG,Hospital Especializado,P<c3><ba>blico,28
+2022-04,BA,Hospital Especializado,P<c3><ba>blico,19
+2022-04,RS,Hospital Especializado,P<c3><ba>blico,16
+2022-04,BR,Hospital Especializado,Filantr<c3><b3>pico,173
+2022-04,SP,Hospital Especializado,Filantr<c3><b3>pico,38
+2022-04,RJ,Hospital Especializado,Filantr<c3><b3>pico,15
+2022-04,MG,Hospital Especializado,Filantr<c3><b3>pico,16
+2022-04,BA,Hospital Especializado,Filantr<c3><b3>pico,11
+2022-04,RS,Hospital Especializado,Filantr<c3><b3>pico,10
+2022-04,BR,Hospital Especializado,Privado,240
+2022-04,SP,Hospital Especializado,Privado,53
+2022-04,RJ,Hospital Especializado,Privado,21
+2022-04,MG,Hospital Especializado,Privado,23
+2022-04,BA,Hospital Especializado,Privado,17
+2022-04,RS,Hospital Especializado,Privado,14
+2022-07,BR,Hospital Especializado,P<c3><ba>blico,274
+2022-07,SP,Hospital Especializado,P<c3><ba>blico,59
+2022-07,RJ,Hospital Especializado,P<c3><ba>blico,24
+2022-07,MG,Hospital Especializado,P<c3><ba>blico,27
+2022-07,BA,Hospital Especializado,P<c3><ba>blico,19
+2022-07,RS,Hospital Especializado,P<c3><ba>blico,16
+2022-07,BR,Hospital Especializado,Filantr<c3><b3>pico,173
+2022-07,SP,Hospital Especializado,Filantr<c3><b3>pico,38
+2022-07,RJ,Hospital Especializado,Filantr<c3><b3>pico,16
+2022-07,MG,Hospital Especializado,Filantr<c3><b3>pico,17
+2022-07,BA,Hospital Especializado,Filantr<c3><b3>pico,12
+2022-07,RS,Hospital Especializado,Filantr<c3><b3>pico,10
+2022-07,BR,Hospital Especializado,Privado,249
+2022-07,SP,Hospital Especializado,Privado,52
+2022-07,RJ,Hospital Especializado,Privado,21
+2022-07,MG,Hospital Especializado,Privado,24
+2022-07,BA,Hospital Especializado,Privado,17
+2022-07,RS,Hospital Especializado,Privado,14
+2022-10,BR,Hospital Especializado,P<c3><ba>blico,275
+2022-10,SP,Hospital Especializado,P<c3><ba>blico,59
+2022-10,RJ,Hospital Especializado,P<c3><ba>blico,25
+2022-10,MG,Hospital Especializado,P<c3><ba>blico,27
+2022-10,BA,Hospital Especializado,P<c3><ba>blico,19
+2022-10,RS,Hospital Especializado,P<c3><ba>blico,16
+2022-10,BR,Hospital Especializado,Filantr<c3><b3>pico,176
+2022-10,SP,Hospital Especializado,Filantr<c3><b3>pico,38
+2022-10,RJ,Hospital Especializado,Filantr<c3><b3>pico,15
+2022-10,MG,Hospital Especializado,Filantr<c3><b3>pico,17
+2022-10,BA,Hospital Especializado,Filantr<c3><b3>pico,11
+2022-10,RS,Hospital Especializado,Filantr<c3><b3>pico,10
+2022-10,BR,Hospital Especializado,Privado,244
+2022-10,SP,Hospital Especializado,Privado,53
+2022-10,RJ,Hospital Especializado,Privado,21
+2022-10,MG,Hospital Especializado,Privado,24
+2022-10,BA,Hospital Especializado,Privado,17
+2022-10,RS,Hospital Especializado,Privado,14
+2023-01,BR,Hospital Especializado,P<c3><ba>blico,274
+2023-01,SP,Hospital Especializado,P<c3><ba>blico,61
+2023-01,RJ,Hospital Especializado,P<c3><ba>blico,25
+2023-01,MG,Hospital Especializado,P<c3><ba>blico,27
+2023-01,BA,Hospital Especializado,P<c3><ba>blico,19
+2023-01,RS,Hospital Especializado,P<c3><ba>blico,16
+2023-01,BR,Hospital Especializado,Filantr<c3><b3>pico,174
+2023-01,SP,Hospital Especializado,Filantr<c3><b3>pico,39
+2023-01,RJ,Hospital Especializado,Filantr<c3><b3>pico,15
+2023-01,MG,Hospital Especializado,Filantr<c3><b3>pico,17
+2023-01,BA,Hospital Especializado,Filantr<c3><b3>pico,11
+2023-01,RS,Hospital Especializado,Filantr<c3><b3>pico,10
+2023-01,BR,Hospital Especializado,Privado,247
+2023-01,SP,Hospital Especializado,Privado,53
+2023-01,RJ,Hospital Especializado,Privado,22
+2023-01,MG,Hospital Especializado,Privado,24
+2023-01,BA,Hospital Especializado,Privado,17
+2023-01,RS,Hospital Especializado,Privado,14
+2023-04,BR,Hospital Especializado,P<c3><ba>blico,282
+2023-04,SP,Hospital Especializado,P<c3><ba>blico,61
+2023-04,RJ,Hospital Especializado,P<c3><ba>blico,25
+2023-04,MG,Hospital Especializado,P<c3><ba>blico,28
+2023-04,BA,Hospital Especializado,P<c3><ba>blico,19
+2023-04,RS,Hospital Especializado,P<c3><ba>blico,17
+2023-04,BR,Hospital Especializado,Filantr<c3><b3>pico,178
+2023-04,SP,Hospital Especializado,Filantr<c3><b3>pico,38
+2023-04,RJ,Hospital Especializado,Filantr<c3><b3>pico,15
+2023-04,MG,Hospital Especializado,Filantr<c3><b3>pico,17
+2023-04,BA,Hospital Especializado,Filantr<c3><b3>pico,12
+2023-04,RS,Hospital Especializado,Filantr<c3><b3>pico,10
+2023-04,BR,Hospital Especializado,Privado,244
+2023-04,SP,Hospital Especializado,Privado,53
+2023-04,RJ,Hospital Especializado,Privado,22
+2023-04,MG,Hospital Especializado,Privado,24
+2023-04,BA,Hospital Especializado,Privado,17
+2023-04,RS,Hospital Especializado,Privado,15
+2023-07,BR,Hospital Especializado,P<c3><ba>blico,280
+2023-07,SP,Hospital Especializado,P<c3><ba>blico,61
+2023-07,RJ,Hospital Especializado,P<c3><ba>blico,25
+2023-07,MG,Hospital Especializado,P<c3><ba>blico,27
+2023-07,BA,Hospital Especializado,P<c3><ba>blico,19
+2023-07,RS,Hospital Especializado,P<c3><ba>blico,16
+2023-07,BR,Hospital Especializado,Filantr<c3><b3>pico,173
+2023-07,SP,Hospital Especializado,Filantr<c3><b3>pico,39
+2023-07,RJ,Hospital Especializado,Filantr<c3><b3>pico,15
+2023-07,MG,Hospital Especializado,Filantr<c3><b3>pico,17
+2023-07,BA,Hospital Especializado,Filantr<c3><b3>pico,12
+2023-07,RS,Hospital Especializado,Filantr<c3><b3>pico,10
+2023-07,BR,Hospital Especializado,Privado,243
+2023-07,SP,Hospital Especializado,Privado,53
+2023-07,RJ,Hospital Especializado,Privado,21
+2023-07,MG,Hospital Especializado,Privado,24
+2023-07,BA,Hospital Especializado,Privado,17
+2023-07,RS,Hospital Especializado,Privado,15
+2023-10,BR,Hospital Especializado,P<c3><ba>blico,284
+2023-10,SP,Hospital Especializado,P<c3><ba>blico,60
+2023-10,RJ,Hospital Especializado,P<c3><ba>blico,24
+2023-10,MG,Hospital Especializado,P<c3><ba>blico,28
+2023-10,BA,Hospital Especializado,P<c3><ba>blico,19
+2023-10,RS,Hospital Especializado,P<c3><ba>blico,17
+2023-10,BR,Hospital Especializado,Filantr<c3><b3>pico,177
+2023-10,SP,Hospital Especializado,Filantr<c3><b3>pico,38
+2023-10,RJ,Hospital Especializado,Filantr<c3><b3>pico,16
+2023-10,MG,Hospital Especializado,Filantr<c3><b3>pico,17
+2023-10,BA,Hospital Especializado,Filantr<c3><b3>pico,12
+2023-10,RS,Hospital Especializado,Filantr<c3><b3>pico,10
+2023-10,BR,Hospital Especializado,Privado,247
+2023-10,SP,Hospital Especializado,Privado,54
+2023-10,RJ,Hospital Especializado,Privado,22
+2023-10,MG,Hospital Especializado,Privado,24
+2023-10,BA,Hospital Especializado,Privado,17
+2023-10,RS,Hospital Especializado,Privado,14
+2024-01,BR,Hospital Especializado,P<c3><ba>blico,285
+2024-01,SP,Hospital Especializado,P<c3><ba>blico,62
+2024-01,RJ,Hospital Especializado,P<c3><ba>blico,26
+2024-01,MG,Hospital Especializado,P<c3><ba>blico,28
+2024-01,BA,Hospital Especializado,P<c3><ba>blico,19
+2024-01,RS,Hospital Especializado,P<c3><ba>blico,16
+2024-01,BR,Hospital Especializado,Filantr<c3><b3>pico,181
+2024-01,SP,Hospital Especializado,Filantr<c3><b3>pico,38
+2024-01,RJ,Hospital Especializado,Filantr<c3><b3>pico,16
+2024-01,MG,Hospital Especializado,Filantr<c3><b3>pico,18
+2024-01,BA,Hospital Especializado,Filantr<c3><b3>pico,12
+2024-01,RS,Hospital Especializado,Filantr<c3><b3>pico,10
+2024-01,BR,Hospital Especializado,Privado,249
+2024-01,SP,Hospital Especializado,Privado,53
+2024-01,RJ,Hospital Especializado,Privado,23
+2024-01,MG,Hospital Especializado,Privado,24
+2024-01,BA,Hospital Especializado,Privado,17
+2024-01,RS,Hospital Especializado,Privado,14
+2024-04,BR,Hospital Especializado,P<c3><ba>blico,287
+2024-04,SP,Hospital Especializado,P<c3><ba>blico,63
+2024-04,RJ,Hospital Especializado,P<c3><ba>blico,25
+2024-04,MG,Hospital Especializado,P<c3><ba>blico,28
+2024-04,BA,Hospital Especializado,P<c3><ba>blico,20
+2024-04,RS,Hospital Especializado,P<c3><ba>blico,16
+2024-04,BR,Hospital Especializado,Filantr<c3><b3>pico,182
+2024-04,SP,Hospital Especializado,Filantr<c3><b3>pico,39
+2024-04,RJ,Hospital Especializado,Filantr<c3><b3>pico,15
+2024-04,MG,Hospital Especializado,Filantr<c3><b3>pico,17
+2024-04,BA,Hospital Especializado,Filantr<c3><b3>pico,12
+2024-04,RS,Hospital Especializado,Filantr<c3><b3>pico,10
+2024-04,BR,Hospital Especializado,Privado,242
+2024-04,SP,Hospital Especializado,Privado,53
+2024-04,RJ,Hospital Especializado,Privado,22
+2024-04,MG,Hospital Especializado,Privado,24
+2024-04,BA,Hospital Especializado,Privado,17
+2024-04,RS,Hospital Especializado,Privado,14
+2024-07,BR,Hospital Especializado,P<c3><ba>blico,288
+2024-07,SP,Hospital Especializado,P<c3><ba>blico,63
+2024-07,RJ,Hospital Especializado,P<c3><ba>blico,25
+2024-07,MG,Hospital Especializado,P<c3><ba>blico,28
+2024-07,BA,Hospital Especializado,P<c3><ba>blico,20
+2024-07,RS,Hospital Especializado,P<c3><ba>blico,16
+2024-07,BR,Hospital Especializado,Filantr<c3><b3>pico,181
+2024-07,SP,Hospital Especializado,Filantr<c3><b3>pico,39
+2024-07,RJ,Hospital Especializado,Filantr<c3><b3>pico,15
+2024-07,MG,Hospital Especializado,Filantr<c3><b3>pico,18
+2024-07,BA,Hospital Especializado,Filantr<c3><b3>pico,12
+2024-07,RS,Hospital Especializado,Filantr<c3><b3>pico,10
+2024-07,BR,Hospital Especializado,Privado,258
+2024-07,SP,Hospital Especializado,Privado,55
+2024-07,RJ,Hospital Especializado,Privado,22
+2024-07,MG,Hospital Especializado,Privado,24
+2024-07,BA,Hospital Especializado,Privado,17
+2024-07,RS,Hospital Especializado,Privado,15
+2024-10,BR,Hospital Especializado,P<c3><ba>blico,281
+2024-10,SP,Hospital Especializado,P<c3><ba>blico,62
+2024-10,RJ,Hospital Especializado,P<c3><ba>blico,25
+2024-10,MG,Hospital Especializado,P<c3><ba>blico,28
+2024-10,BA,Hospital Especializado,P<c3><ba>blico,20
+2024-10,RS,Hospital Especializado,P<c3><ba>blico,17
+2024-10,BR,Hospital Especializado,Filantr<c3><b3>pico,182
+2024-10,SP,Hospital Especializado,Filantr<c3><b3>pico,39
+2024-10,RJ,Hospital Especializado,Filantr<c3><b3>pico,16
+2024-10,MG,Hospital Especializado,Filantr<c3><b3>pico,18
+2024-10,BA,Hospital Especializado,Filantr<c3><b3>pico,12
+2024-10,RS,Hospital Especializado,Filantr<c3><b3>pico,10
+2024-10,BR,Hospital Especializado,Privado,248
+2024-10,SP,Hospital Especializado,Privado,56
+2024-10,RJ,Hospital Especializado,Privado,22
+2024-10,MG,Hospital Especializado,Privado,25
+2024-10,BA,Hospital Especializado,Privado,17
+2024-10,RS,Hospital Especializado,Privado,15
+2025-01,BR,Hospital Especializado,P<c3><ba>blico,283
+2025-01,SP,Hospital Especializado,P<c3><ba>blico,62
+2025-01,RJ,Hospital Especializado,P<c3><ba>blico,26
+2025-01,MG,Hospital Especializado,P<c3><ba>blico,28
+2025-01,BA,Hospital Especializado,P<c3><ba>blico,20
+2025-01,RS,Hospital Especializado,P<c3><ba>blico,16
+2025-01,BR,Hospital Especializado,Filantr<c3><b3>pico,185
+2025-01,SP,Hospital Especializado,Filantr<c3><b3>pico,39
+2025-01,RJ,Hospital Especializado,Filantr<c3><b3>pico,16
+2025-01,MG,Hospital Especializado,Filantr<c3><b3>pico,17
+2025-01,BA,Hospital Especializado,Filantr<c3><b3>pico,12
+2025-01,RS,Hospital Especializado,Filantr<c3><b3>pico,11
+2025-01,BR,Hospital Especializado,Privado,257
+2025-01,SP,Hospital Especializado,Privado,56
+2025-01,RJ,Hospital Especializado,Privado,22
+2025-01,MG,Hospital Especializado,Privado,25
+2025-01,BA,Hospital Especializado,Privado,17
+2025-01,RS,Hospital Especializado,Privado,15
+2025-04,BR,Hospital Especializado,P<c3><ba>blico,296
+2025-04,SP,Hospital Especializado,P<c3><ba>blico,64
+2025-04,RJ,Hospital Especializado,P<c3><ba>blico,26
+2025-04,MG,Hospital Especializado,P<c3><ba>blico,28
+2025-04,BA,Hospital Especializado,P<c3><ba>blico,20
+2025-04,RS,Hospital Especializado,P<c3><ba>blico,17
+2025-04,BR,Hospital Especializado,Filantr<c3><b3>pico,179
+2025-04,SP,Hospital Especializado,Filantr<c3><b3>pico,40
+2025-04,RJ,Hospital Especializado,Filantr<c3><b3>pico,16
+2025-04,MG,Hospital Especializado,Filantr<c3><b3>pico,18
+2025-04,BA,Hospital Especializado,Filantr<c3><b3>pico,12
+2025-04,RS,Hospital Especializado,Filantr<c3><b3>pico,11
+2025-04,BR,Hospital Especializado,Privado,252
+2025-04,SP,Hospital Especializado,Privado,55
+2025-04,RJ,Hospital Especializado,Privado,22
+2025-04,MG,Hospital Especializado,Privado,25
+2025-04,BA,Hospital Especializado,Privado,17
+2025-04,RS,Hospital Especializado,Privado,14
+2025-07,BR,Hospital Especializado,P<c3><ba>blico,293
+2025-07,SP,Hospital Especializado,P<c3><ba>blico,63
+2025-07,RJ,Hospital Especializado,P<c3><ba>blico,26
+2025-07,MG,Hospital Especializado,P<c3><ba>blico,29
+2025-07,BA,Hospital Especializado,P<c3><ba>blico,20
+2025-07,RS,Hospital Especializado,P<c3><ba>blico,17
+2025-07,BR,Hospital Especializado,Filantr<c3><b3>pico,179
+2025-07,SP,Hospital Especializado,Filantr<c3><b3>pico,40
+2025-07,RJ,Hospital Especializado,Filantr<c3><b3>pico,16
+2025-07,MG,Hospital Especializado,Filantr<c3><b3>pico,17
+2025-07,BA,Hospital Especializado,Filantr<c3><b3>pico,12
+2025-07,RS,Hospital Especializado,Filantr<c3><b3>pico,10
+2025-07,BR,Hospital Especializado,Privado,251
+2025-07,SP,Hospital Especializado,Privado,55
+2025-07,RJ,Hospital Especializado,Privado,22
+2025-07,MG,Hospital Especializado,Privado,25
+2025-07,BA,Hospital Especializado,Privado,17
+2025-07,RS,Hospital Especializado,Privado,15
+2018-01,BR,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,4803
+2018-01,SP,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,1034
+2018-01,RJ,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,427
+2018-01,MG,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,474
+2018-01,BA,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,338
+2018-01,RS,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,287
+2018-01,BR,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,2951
+2018-01,SP,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,666
+2018-01,RJ,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,269
+2018-01,MG,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,301
+2018-01,BA,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,209
+2018-01,RS,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,180
+2018-01,BR,Cl<c3><ad>nica/Centro Especialidade,Privado,4309
+2018-01,SP,Cl<c3><ad>nica/Centro Especialidade,Privado,945
+2018-01,RJ,Cl<c3><ad>nica/Centro Especialidade,Privado,384
+2018-01,MG,Cl<c3><ad>nica/Centro Especialidade,Privado,426
+2018-01,BA,Cl<c3><ad>nica/Centro Especialidade,Privado,301
+2018-01,RS,Cl<c3><ad>nica/Centro Especialidade,Privado,255
+2018-04,BR,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,4779
+2018-04,SP,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,1057
+2018-04,RJ,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,428
+2018-04,MG,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,480
+2018-04,BA,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,333
+2018-04,RS,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,292
+2018-04,BR,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,3043
+2018-04,SP,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,660
+2018-04,RJ,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,276
+2018-04,MG,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,301
+2018-04,BA,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,210
+2018-04,RS,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,183
+2018-04,BR,Cl<c3><ad>nica/Centro Especialidade,Privado,4119
+2018-04,SP,Cl<c3><ad>nica/Centro Especialidade,Privado,946
+2018-04,RJ,Cl<c3><ad>nica/Centro Especialidade,Privado,379
+2018-04,MG,Cl<c3><ad>nica/Centro Especialidade,Privado,414
+2018-04,BA,Cl<c3><ad>nica/Centro Especialidade,Privado,296
+2018-04,RS,Cl<c3><ad>nica/Centro Especialidade,Privado,254
+2018-07,BR,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,4756
+2018-07,SP,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,1052
+2018-07,RJ,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,434
+2018-07,MG,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,485
+2018-07,BA,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,334
+2018-07,RS,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,287
+2018-07,BR,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,3105
+2018-07,SP,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,659
+2018-07,RJ,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,272
+2018-07,MG,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,300
+2018-07,BA,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,208
+2018-07,RS,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,182
+2018-07,BR,Cl<c3><ad>nica/Centro Especialidade,Privado,4224
+2018-07,SP,Cl<c3><ad>nica/Centro Especialidade,Privado,909
+2018-07,RJ,Cl<c3><ad>nica/Centro Especialidade,Privado,377
+2018-07,MG,Cl<c3><ad>nica/Centro Especialidade,Privado,417
+2018-07,BA,Cl<c3><ad>nica/Centro Especialidade,Privado,292
+2018-07,RS,Cl<c3><ad>nica/Centro Especialidade,Privado,257
+2018-10,BR,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,4980
+2018-10,SP,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,1061
+2018-10,RJ,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,434
+2018-10,MG,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,486
+2018-10,BA,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,345
+2018-10,RS,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,286
+2018-10,BR,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,3032
+2018-10,SP,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,669
+2018-10,RJ,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,268
+2018-10,MG,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,303
+2018-10,BA,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,211
+2018-10,RS,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,182
+2018-10,BR,Cl<c3><ad>nica/Centro Especialidade,Privado,4259
+2018-10,SP,Cl<c3><ad>nica/Centro Especialidade,Privado,921
+2018-10,RJ,Cl<c3><ad>nica/Centro Especialidade,Privado,389
+2018-10,MG,Cl<c3><ad>nica/Centro Especialidade,Privado,417
+2018-10,BA,Cl<c3><ad>nica/Centro Especialidade,Privado,292
+2018-10,RS,Cl<c3><ad>nica/Centro Especialidade,Privado,257
+2019-01,BR,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,4917
+2019-01,SP,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,1074
+2019-01,RJ,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,426
+2019-01,MG,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,496
+2019-01,BA,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,348
+2019-01,RS,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,289
+2019-01,BR,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,2994
+2019-01,SP,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,673
+2019-01,RJ,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,277
+2019-01,MG,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,297
+2019-01,BA,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,207
+2019-01,RS,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,181
+2019-01,BR,Cl<c3><ad>nica/Centro Especialidade,Privado,4240
+2019-01,SP,Cl<c3><ad>nica/Centro Especialidade,Privado,952
+2019-01,RJ,Cl<c3><ad>nica/Centro Especialidade,Privado,383
+2019-01,MG,Cl<c3><ad>nica/Centro Especialidade,Privado,429
+2019-01,BA,Cl<c3><ad>nica/Centro Especialidade,Privado,309
+2019-01,RS,Cl<c3><ad>nica/Centro Especialidade,Privado,257
+2019-04,BR,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,4932
+2019-04,SP,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,1063
+2019-04,RJ,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,442
+2019-04,MG,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,487
+2019-04,BA,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,348
+2019-04,RS,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,301
+2019-04,BR,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,3025
+2019-04,SP,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,670
+2019-04,RJ,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,275
+2019-04,MG,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,305
+2019-04,BA,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,211
+2019-04,RS,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,184
+2019-04,BR,Cl<c3><ad>nica/Centro Especialidade,Privado,4240
+2019-04,SP,Cl<c3><ad>nica/Centro Especialidade,Privado,934
+2019-04,RJ,Cl<c3><ad>nica/Centro Especialidade,Privado,380
+2019-04,MG,Cl<c3><ad>nica/Centro Especialidade,Privado,418
+2019-04,BA,Cl<c3><ad>nica/Centro Especialidade,Privado,299
+2019-04,RS,Cl<c3><ad>nica/Centro Especialidade,Privado,257
+2019-07,BR,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,4882
+2019-07,SP,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,1082
+2019-07,RJ,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,442
+2019-07,MG,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,494
+2019-07,BA,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,343
+2019-07,RS,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,293
+2019-07,BR,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,3090
+2019-07,SP,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,682
+2019-07,RJ,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,281
+2019-07,MG,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,304
+2019-07,BA,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,217
+2019-07,RS,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,179
+2019-07,BR,Cl<c3><ad>nica/Centro Especialidade,Privado,4281
+2019-07,SP,Cl<c3><ad>nica/Centro Especialidade,Privado,938
+2019-07,RJ,Cl<c3><ad>nica/Centro Especialidade,Privado,384
+2019-07,MG,Cl<c3><ad>nica/Centro Especialidade,Privado,427
+2019-07,BA,Cl<c3><ad>nica/Centro Especialidade,Privado,302
+2019-07,RS,Cl<c3><ad>nica/Centro Especialidade,Privado,260
+2019-10,BR,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,4846
+2019-10,SP,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,1078
+2019-10,RJ,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,434
+2019-10,MG,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,488
+2019-10,BA,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,343
+2019-10,RS,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,293
+2019-10,BR,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,3137
+2019-10,SP,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,666
+2019-10,RJ,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,282
+2019-10,MG,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,309
+2019-10,BA,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,216
+2019-10,RS,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,187
+2019-10,BR,Cl<c3><ad>nica/Centro Especialidade,Privado,4380
+2019-10,SP,Cl<c3><ad>nica/Centro Especialidade,Privado,964
+2019-10,RJ,Cl<c3><ad>nica/Centro Especialidade,Privado,393
+2019-10,MG,Cl<c3><ad>nica/Centro Especialidade,Privado,423
+2019-10,BA,Cl<c3><ad>nica/Centro Especialidade,Privado,302
+2019-10,RS,Cl<c3><ad>nica/Centro Especialidade,Privado,260
+2020-01,BR,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,4975
+2020-01,SP,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,1094
+2020-01,RJ,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,442
+2020-01,MG,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,499
+2020-01,BA,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,336
+2020-01,RS,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,293
+2020-01,BR,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,3094
+2020-01,SP,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,670
+2020-01,RJ,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,282
+2020-01,MG,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,320
+2020-01,BA,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,210
+2020-01,RS,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,187
+2020-01,BR,Cl<c3><ad>nica/Centro Especialidade,Privado,4434
+2020-01,SP,Cl<c3><ad>nica/Centro Especialidade,Privado,924
+2020-01,RJ,Cl<c3><ad>nica/Centro Especialidade,Privado,381
+2020-01,MG,Cl<c3><ad>nica/Centro Especialidade,Privado,426
+2020-01,BA,Cl<c3><ad>nica/Centro Especialidade,Privado,303
+2020-01,RS,Cl<c3><ad>nica/Centro Especialidade,Privado,261
+2020-04,BR,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,4899
+2020-04,SP,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,1105
+2020-04,RJ,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,438
+2020-04,MG,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,502
+2020-04,BA,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,352
+2020-04,RS,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,293
+2020-04,BR,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,3050
+2020-04,SP,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,687
+2020-04,RJ,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,279
+2020-04,MG,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,308
+2020-04,BA,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,220
+2020-04,RS,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,184
+2020-04,BR,Cl<c3><ad>nica/Centro Especialidade,Privado,4370
+2020-04,SP,Cl<c3><ad>nica/Centro Especialidade,Privado,947
+2020-04,RJ,Cl<c3><ad>nica/Centro Especialidade,Privado,391
+2020-04,MG,Cl<c3><ad>nica/Centro Especialidade,Privado,424
+2020-04,BA,Cl<c3><ad>nica/Centro Especialidade,Privado,309
+2020-04,RS,Cl<c3><ad>nica/Centro Especialidade,Privado,261
+2020-07,BR,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,4827
+2020-07,SP,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,1081
+2020-07,RJ,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,454
+2020-07,MG,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,507
+2020-07,BA,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,352
+2020-07,RS,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,298
+2020-07,BR,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,3155
+2020-07,SP,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,690
+2020-07,RJ,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,274
+2020-07,MG,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,311
+2020-07,BA,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,214
+2020-07,RS,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,188
+2020-07,BR,Cl<c3><ad>nica/Centro Especialidade,Privado,4277
+2020-07,SP,Cl<c3><ad>nica/Centro Especialidade,Privado,981
+2020-07,RJ,Cl<c3><ad>nica/Centro Especialidade,Privado,391
+2020-07,MG,Cl<c3><ad>nica/Centro Especialidade,Privado,428
+2020-07,BA,Cl<c3><ad>nica/Centro Especialidade,Privado,308
+2020-07,RS,Cl<c3><ad>nica/Centro Especialidade,Privado,262
+2020-10,BR,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,4890
+2020-10,SP,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,1104
+2020-10,RJ,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,457
+2020-10,MG,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,504
+2020-10,BA,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,354
+2020-10,RS,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,298
+2020-10,BR,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,3135
+2020-10,SP,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,693
+2020-10,RJ,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,276
+2020-10,MG,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,308
+2020-10,BA,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,221
+2020-10,RS,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,186
+2020-10,BR,Cl<c3><ad>nica/Centro Especialidade,Privado,4421
+2020-10,SP,Cl<c3><ad>nica/Centro Especialidade,Privado,1002
+2020-10,RJ,Cl<c3><ad>nica/Centro Especialidade,Privado,391
+2020-10,MG,Cl<c3><ad>nica/Centro Especialidade,Privado,438
+2020-10,BA,Cl<c3><ad>nica/Centro Especialidade,Privado,306
+2020-10,RS,Cl<c3><ad>nica/Centro Especialidade,Privado,260
+2021-01,BR,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,5012
+2021-01,SP,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,1099
+2021-01,RJ,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,462
+2021-01,MG,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,507
+2021-01,BA,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,349
+2021-01,RS,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,309
+2021-01,BR,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,3200
+2021-01,SP,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,705
+2021-01,RJ,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,286
+2021-01,MG,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,309
+2021-01,BA,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,220
+2021-01,RS,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,191
+2021-01,BR,Cl<c3><ad>nica/Centro Especialidade,Privado,4364
+2021-01,SP,Cl<c3><ad>nica/Centro Especialidade,Privado,945
+2021-01,RJ,Cl<c3><ad>nica/Centro Especialidade,Privado,392
+2021-01,MG,Cl<c3><ad>nica/Centro Especialidade,Privado,430
+2021-01,BA,Cl<c3><ad>nica/Centro Especialidade,Privado,312
+2021-01,RS,Cl<c3><ad>nica/Centro Especialidade,Privado,262
+2021-04,BR,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,5026
+2021-04,SP,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,1090
+2021-04,RJ,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,453
+2021-04,MG,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,505
+2021-04,BA,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,354
+2021-04,RS,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,300
+2021-04,BR,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,3073
+2021-04,SP,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,685
+2021-04,RJ,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,285
+2021-04,MG,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,316
+2021-04,BA,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,222
+2021-04,RS,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,190
+2021-04,BR,Cl<c3><ad>nica/Centro Especialidade,Privado,4374
+2021-04,SP,Cl<c3><ad>nica/Centro Especialidade,Privado,973
+2021-04,RJ,Cl<c3><ad>nica/Centro Especialidade,Privado,395
+2021-04,MG,Cl<c3><ad>nica/Centro Especialidade,Privado,440
+2021-04,BA,Cl<c3><ad>nica/Centro Especialidade,Privado,302
+2021-04,RS,Cl<c3><ad>nica/Centro Especialidade,Privado,270
+2021-07,BR,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,5023
+2021-07,SP,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,1114
+2021-07,RJ,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,463
+2021-07,MG,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,527
+2021-07,BA,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,350
+2021-07,RS,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,305
+2021-07,BR,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,3200
+2021-07,SP,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,718
+2021-07,RJ,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,275
+2021-07,MG,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,324
+2021-07,BA,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,221
+2021-07,RS,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,188
+2021-07,BR,Cl<c3><ad>nica/Centro Especialidade,Privado,4393
+2021-07,SP,Cl<c3><ad>nica/Centro Especialidade,Privado,964
+2021-07,RJ,Cl<c3><ad>nica/Centro Especialidade,Privado,399
+2021-07,MG,Cl<c3><ad>nica/Centro Especialidade,Privado,439
+2021-07,BA,Cl<c3><ad>nica/Centro Especialidade,Privado,317
+2021-07,RS,Cl<c3><ad>nica/Centro Especialidade,Privado,264
+2021-10,BR,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,5029
+2021-10,SP,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,1096
+2021-10,RJ,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,474
+2021-10,MG,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,494
+2021-10,BA,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,360
+2021-10,RS,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,309
+2021-10,BR,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,3152
+2021-10,SP,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,693
+2021-10,RJ,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,286
+2021-10,MG,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,318
+2021-10,BA,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,214
+2021-10,RS,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,187
+2021-10,BR,Cl<c3><ad>nica/Centro Especialidade,Privado,4297
+2021-10,SP,Cl<c3><ad>nica/Centro Especialidade,Privado,981
+2021-10,RJ,Cl<c3><ad>nica/Centro Especialidade,Privado,410
+2021-10,MG,Cl<c3><ad>nica/Centro Especialidade,Privado,441
+2021-10,BA,Cl<c3><ad>nica/Centro Especialidade,Privado,309
+2021-10,RS,Cl<c3><ad>nica/Centro Especialidade,Privado,263
+2022-01,BR,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,4971
+2022-01,SP,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,1095
+2022-01,RJ,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,451
+2022-01,MG,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,501
+2022-01,BA,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,356
+2022-01,RS,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,307
+2022-01,BR,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,3198
+2022-01,SP,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,701
+2022-01,RJ,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,290
+2022-01,MG,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,330
+2022-01,BA,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,220
+2022-01,RS,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,191
+2022-01,BR,Cl<c3><ad>nica/Centro Especialidade,Privado,4575
+2022-01,SP,Cl<c3><ad>nica/Centro Especialidade,Privado,958
+2022-01,RJ,Cl<c3><ad>nica/Centro Especialidade,Privado,406
+2022-01,MG,Cl<c3><ad>nica/Centro Especialidade,Privado,434
+2022-01,BA,Cl<c3><ad>nica/Centro Especialidade,Privado,306
+2022-01,RS,Cl<c3><ad>nica/Centro Especialidade,Privado,260
+2022-04,BR,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,5074
+2022-04,SP,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,1134
+2022-04,RJ,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,461
+2022-04,MG,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,505
+2022-04,BA,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,359
+2022-04,RS,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,297
+2022-04,BR,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,3175
+2022-04,SP,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,707
+2022-04,RJ,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,285
+2022-04,MG,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,320
+2022-04,BA,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,225
+2022-04,RS,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,195
+2022-04,BR,Cl<c3><ad>nica/Centro Especialidade,Privado,4456
+2022-04,SP,Cl<c3><ad>nica/Centro Especialidade,Privado,998
+2022-04,RJ,Cl<c3><ad>nica/Centro Especialidade,Privado,410
+2022-04,MG,Cl<c3><ad>nica/Centro Especialidade,Privado,444
+2022-04,BA,Cl<c3><ad>nica/Centro Especialidade,Privado,305
+2022-04,RS,Cl<c3><ad>nica/Centro Especialidade,Privado,257
+2022-07,BR,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,5147
+2022-07,SP,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,1094
+2022-07,RJ,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,467
+2022-07,MG,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,517
+2022-07,BA,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,358
+2022-07,RS,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,303
+2022-07,BR,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,3227
+2022-07,SP,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,691
+2022-07,RJ,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,291
+2022-07,MG,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,319
+2022-07,BA,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,225
+2022-07,RS,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,193
+2022-07,BR,Cl<c3><ad>nica/Centro Especialidade,Privado,4456
+2022-07,SP,Cl<c3><ad>nica/Centro Especialidade,Privado,976
+2022-07,RJ,Cl<c3><ad>nica/Centro Especialidade,Privado,408
+2022-07,MG,Cl<c3><ad>nica/Centro Especialidade,Privado,455
+2022-07,BA,Cl<c3><ad>nica/Centro Especialidade,Privado,320
+2022-07,RS,Cl<c3><ad>nica/Centro Especialidade,Privado,271
+2022-10,BR,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,5131
+2022-10,SP,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,1126
+2022-10,RJ,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,460
+2022-10,MG,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,512
+2022-10,BA,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,352
+2022-10,RS,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,315
+2022-10,BR,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,3236
+2022-10,SP,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,715
+2022-10,RJ,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,288
+2022-10,MG,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,319
+2022-10,BA,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,224
+2022-10,RS,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,199
+2022-10,BR,Cl<c3><ad>nica/Centro Especialidade,Privado,4572
+2022-10,SP,Cl<c3><ad>nica/Centro Especialidade,Privado,983
+2022-10,RJ,Cl<c3><ad>nica/Centro Especialidade,Privado,400
+2022-10,MG,Cl<c3><ad>nica/Centro Especialidade,Privado,456
+2022-10,BA,Cl<c3><ad>nica/Centro Especialidade,Privado,308
+2022-10,RS,Cl<c3><ad>nica/Centro Especialidade,Privado,273
+2023-01,BR,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,5227
+2023-01,SP,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,1124
+2023-01,RJ,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,463
+2023-01,MG,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,522
+2023-01,BA,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,363
+2023-01,RS,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,315
+2023-01,BR,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,3211
+2023-01,SP,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,690
+2023-01,RJ,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,293
+2023-01,MG,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,316
+2023-01,BA,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,231
+2023-01,RS,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,197
+2023-01,BR,Cl<c3><ad>nica/Centro Especialidade,Privado,4397
+2023-01,SP,Cl<c3><ad>nica/Centro Especialidade,Privado,976
+2023-01,RJ,Cl<c3><ad>nica/Centro Especialidade,Privado,404
+2023-01,MG,Cl<c3><ad>nica/Centro Especialidade,Privado,442
+2023-01,BA,Cl<c3><ad>nica/Centro Especialidade,Privado,305
+2023-01,RS,Cl<c3><ad>nica/Centro Especialidade,Privado,272
+2023-04,BR,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,5180
+2023-04,SP,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,1185
+2023-04,RJ,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,450
+2023-04,MG,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,515
+2023-04,BA,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,361
+2023-04,RS,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,303
+2023-04,BR,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,3187
+2023-04,SP,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,719
+2023-04,RJ,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,290
+2023-04,MG,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,321
+2023-04,BA,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,223
+2023-04,RS,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,195
+2023-04,BR,Cl<c3><ad>nica/Centro Especialidade,Privado,4586
+2023-04,SP,Cl<c3><ad>nica/Centro Especialidade,Privado,1009
+2023-04,RJ,Cl<c3><ad>nica/Centro Especialidade,Privado,410
+2023-04,MG,Cl<c3><ad>nica/Centro Especialidade,Privado,460
+2023-04,BA,Cl<c3><ad>nica/Centro Especialidade,Privado,321
+2023-04,RS,Cl<c3><ad>nica/Centro Especialidade,Privado,270
+2023-07,BR,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,5256
+2023-07,SP,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,1128
+2023-07,RJ,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,467
+2023-07,MG,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,529
+2023-07,BA,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,363
+2023-07,RS,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,314
+2023-07,BR,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,3247
+2023-07,SP,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,724
+2023-07,RJ,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,293
+2023-07,MG,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,327
+2023-07,BA,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,223
+2023-07,RS,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,195
+2023-07,BR,Cl<c3><ad>nica/Centro Especialidade,Privado,4501
+2023-07,SP,Cl<c3><ad>nica/Centro Especialidade,Privado,993
+2023-07,RJ,Cl<c3><ad>nica/Centro Especialidade,Privado,413
+2023-07,MG,Cl<c3><ad>nica/Centro Especialidade,Privado,453
+2023-07,BA,Cl<c3><ad>nica/Centro Especialidade,Privado,321
+2023-07,RS,Cl<c3><ad>nica/Centro Especialidade,Privado,271
+2023-10,BR,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,5182
+2023-10,SP,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,1125
+2023-10,RJ,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,471
+2023-10,MG,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,525
+2023-10,BA,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,362
+2023-10,RS,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,317
+2023-10,BR,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,3349
+2023-10,SP,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,714
+2023-10,RJ,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,288
+2023-10,MG,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,322
+2023-10,BA,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,229
+2023-10,RS,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,194
+2023-10,BR,Cl<c3><ad>nica/Centro Especialidade,Privado,4502
+2023-10,SP,Cl<c3><ad>nica/Centro Especialidade,Privado,993
+2023-10,RJ,Cl<c3><ad>nica/Centro Especialidade,Privado,412
+2023-10,MG,Cl<c3><ad>nica/Centro Especialidade,Privado,454
+2023-10,BA,Cl<c3><ad>nica/Centro Especialidade,Privado,317
+2023-10,RS,Cl<c3><ad>nica/Centro Especialidade,Privado,270
+2024-01,BR,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,5422
+2024-01,SP,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,1171
+2024-01,RJ,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,468
+2024-01,MG,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,519
+2024-01,BA,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,366
+2024-01,RS,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,319
+2024-01,BR,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,3384
+2024-01,SP,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,715
+2024-01,RJ,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,298
+2024-01,MG,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,330
+2024-01,BA,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,226
+2024-01,RS,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,203
+2024-01,BR,Cl<c3><ad>nica/Centro Especialidade,Privado,4518
+2024-01,SP,Cl<c3><ad>nica/Centro Especialidade,Privado,1018
+2024-01,RJ,Cl<c3><ad>nica/Centro Especialidade,Privado,410
+2024-01,MG,Cl<c3><ad>nica/Centro Especialidade,Privado,458
+2024-01,BA,Cl<c3><ad>nica/Centro Especialidade,Privado,312
+2024-01,RS,Cl<c3><ad>nica/Centro Especialidade,Privado,272
+2024-04,BR,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,5309
+2024-04,SP,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,1186
+2024-04,RJ,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,482
+2024-04,MG,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,543
+2024-04,BA,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,377
+2024-04,RS,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,325
+2024-04,BR,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,3333
+2024-04,SP,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,752
+2024-04,RJ,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,303
+2024-04,MG,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,334
+2024-04,BA,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,238
+2024-04,RS,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,203
+2024-04,BR,Cl<c3><ad>nica/Centro Especialidade,Privado,4923
+2024-04,SP,Cl<c3><ad>nica/Centro Especialidade,Privado,1060
+2024-04,RJ,Cl<c3><ad>nica/Centro Especialidade,Privado,443
+2024-04,MG,Cl<c3><ad>nica/Centro Especialidade,Privado,474
+2024-04,BA,Cl<c3><ad>nica/Centro Especialidade,Privado,334
+2024-04,RS,Cl<c3><ad>nica/Centro Especialidade,Privado,291
+2024-07,BR,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,5495
+2024-07,SP,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,1167
+2024-07,RJ,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,479
+2024-07,MG,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,548
+2024-07,BA,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,377
+2024-07,RS,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,325
+2024-07,BR,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,3456
+2024-07,SP,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,740
+2024-07,RJ,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,312
+2024-07,MG,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,343
+2024-07,BA,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,243
+2024-07,RS,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,201
+2024-07,BR,Cl<c3><ad>nica/Centro Especialidade,Privado,4933
+2024-07,SP,Cl<c3><ad>nica/Centro Especialidade,Privado,1064
+2024-07,RJ,Cl<c3><ad>nica/Centro Especialidade,Privado,415
+2024-07,MG,Cl<c3><ad>nica/Centro Especialidade,Privado,478
+2024-07,BA,Cl<c3><ad>nica/Centro Especialidade,Privado,337
+2024-07,RS,Cl<c3><ad>nica/Centro Especialidade,Privado,290
+2024-10,BR,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,5576
+2024-10,SP,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,1233
+2024-10,RJ,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,505
+2024-10,MG,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,550
+2024-10,BA,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,389
+2024-10,RS,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,320
+2024-10,BR,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,3411
+2024-10,SP,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,731
+2024-10,RJ,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,300
+2024-10,MG,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,345
+2024-10,BA,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,242
+2024-10,RS,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,205
+2024-10,BR,Cl<c3><ad>nica/Centro Especialidade,Privado,4852
+2024-10,SP,Cl<c3><ad>nica/Centro Especialidade,Privado,1080
+2024-10,RJ,Cl<c3><ad>nica/Centro Especialidade,Privado,421
+2024-10,MG,Cl<c3><ad>nica/Centro Especialidade,Privado,490
+2024-10,BA,Cl<c3><ad>nica/Centro Especialidade,Privado,338
+2024-10,RS,Cl<c3><ad>nica/Centro Especialidade,Privado,281
+2025-01,BR,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,5593
+2025-01,SP,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,1218
+2025-01,RJ,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,503
+2025-01,MG,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,562
+2025-01,BA,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,387
+2025-01,RS,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,337
+2025-01,BR,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,3476
+2025-01,SP,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,767
+2025-01,RJ,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,321
+2025-01,MG,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,350
+2025-01,BA,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,249
+2025-01,RS,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,206
+2025-01,BR,Cl<c3><ad>nica/Centro Especialidade,Privado,5057
+2025-01,SP,Cl<c3><ad>nica/Centro Especialidade,Privado,1089
+2025-01,RJ,Cl<c3><ad>nica/Centro Especialidade,Privado,436
+2025-01,MG,Cl<c3><ad>nica/Centro Especialidade,Privado,504
+2025-01,BA,Cl<c3><ad>nica/Centro Especialidade,Privado,341
+2025-01,RS,Cl<c3><ad>nica/Centro Especialidade,Privado,295
+2025-04,BR,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,5504
+2025-04,SP,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,1228
+2025-04,RJ,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,497
+2025-04,MG,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,551
+2025-04,BA,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,393
+2025-04,RS,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,344
+2025-04,BR,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,3538
+2025-04,SP,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,773
+2025-04,RJ,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,321
+2025-04,MG,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,362
+2025-04,BA,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,245
+2025-04,RS,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,212
+2025-04,BR,Cl<c3><ad>nica/Centro Especialidade,Privado,5012
+2025-04,SP,Cl<c3><ad>nica/Centro Especialidade,Privado,1090
+2025-04,RJ,Cl<c3><ad>nica/Centro Especialidade,Privado,447
+2025-04,MG,Cl<c3><ad>nica/Centro Especialidade,Privado,500
+2025-04,BA,Cl<c3><ad>nica/Centro Especialidade,Privado,346
+2025-04,RS,Cl<c3><ad>nica/Centro Especialidade,Privado,303
+2025-07,BR,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,5751
+2025-07,SP,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,1228
+2025-07,RJ,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,520
+2025-07,MG,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,568
+2025-07,BA,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,387
+2025-07,RS,Cl<c3><ad>nica/Centro Especialidade,P<c3><ba>blico,337
+2025-07,BR,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,3594
+2025-07,SP,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,791
+2025-07,RJ,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,318
+2025-07,MG,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,352
+2025-07,BA,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,248
+2025-07,RS,Cl<c3><ad>nica/Centro Especialidade,Filantr<c3><b3>pico,213
+2025-07,BR,Cl<c3><ad>nica/Centro Especialidade,Privado,4988
+2025-07,SP,Cl<c3><ad>nica/Centro Especialidade,Privado,1106
+2025-07,RJ,Cl<c3><ad>nica/Centro Especialidade,Privado,440
+2025-07,MG,Cl<c3><ad>nica/Centro Especialidade,Privado,492
+2025-07,BA,Cl<c3><ad>nica/Centro Especialidade,Privado,341
+2025-07,RS,Cl<c3><ad>nica/Centro Especialidade,Privado,292
+2018-01,BR,SADT,P<c3><ba>blico,7098
+2018-01,SP,SADT,P<c3><ba>blico,1609
+2018-01,RJ,SADT,P<c3><ba>blico,644
+2018-01,MG,SADT,P<c3><ba>blico,710
+2018-01,BA,SADT,P<c3><ba>blico,497
+2018-01,RS,SADT,P<c3><ba>blico,436
+2018-01,BR,SADT,Filantr<c3><b3>pico,4442
+2018-01,SP,SADT,Filantr<c3><b3>pico,990
+2018-01,RJ,SADT,Filantr<c3><b3>pico,400
+2018-01,MG,SADT,Filantr<c3><b3>pico,448
+2018-01,BA,SADT,Filantr<c3><b3>pico,312
+2018-01,RS,SADT,Filantr<c3><b3>pico,271
+2018-01,BR,SADT,Privado,6311
+2018-01,SP,SADT,Privado,1390
+2018-01,RJ,SADT,Privado,579
+2018-01,MG,SADT,Privado,626
+2018-01,BA,SADT,Privado,439
+2018-01,RS,SADT,Privado,391
+2018-04,BR,SADT,P<c3><ba>blico,7160
+2018-04,SP,SADT,P<c3><ba>blico,1579
+2018-04,RJ,SADT,P<c3><ba>blico,655
+2018-04,MG,SADT,P<c3><ba>blico,718
+2018-04,BA,SADT,P<c3><ba>blico,509
+2018-04,RS,SADT,P<c3><ba>blico,427
+2018-04,BR,SADT,Filantr<c3><b3>pico,4634
+2018-04,SP,SADT,Filantr<c3><b3>pico,1030
+2018-04,RJ,SADT,Filantr<c3><b3>pico,409
+2018-04,MG,SADT,Filantr<c3><b3>pico,456
+2018-04,BA,SADT,Filantr<c3><b3>pico,319
+2018-04,RS,SADT,Filantr<c3><b3>pico,274
+2018-04,BR,SADT,Privado,6199
+2018-04,SP,SADT,Privado,1386
+2018-04,RJ,SADT,Privado,569
+2018-04,MG,SADT,Privado,646
+2018-04,BA,SADT,Privado,446
+2018-04,RS,SADT,Privado,378
+2018-07,BR,SADT,P<c3><ba>blico,7259
+2018-07,SP,SADT,P<c3><ba>blico,1567
+2018-07,RJ,SADT,P<c3><ba>blico,658
+2018-07,MG,SADT,P<c3><ba>blico,726
+2018-07,BA,SADT,P<c3><ba>blico,518
+2018-07,RS,SADT,P<c3><ba>blico,432
+2018-07,BR,SADT,Filantr<c3><b3>pico,4528
+2018-07,SP,SADT,Filantr<c3><b3>pico,992
+2018-07,RJ,SADT,Filantr<c3><b3>pico,418
+2018-07,MG,SADT,Filantr<c3><b3>pico,455
+2018-07,BA,SADT,Filantr<c3><b3>pico,316
+2018-07,RS,SADT,Filantr<c3><b3>pico,282
+2018-07,BR,SADT,Privado,6317
+2018-07,SP,SADT,Privado,1429
+2018-07,RJ,SADT,Privado,560
+2018-07,MG,SADT,Privado,632
+2018-07,BA,SADT,Privado,434
+2018-07,RS,SADT,Privado,380
+2018-10,BR,SADT,P<c3><ba>blico,7280
+2018-10,SP,SADT,P<c3><ba>blico,1613
+2018-10,RJ,SADT,P<c3><ba>blico,659
+2018-10,MG,SADT,P<c3><ba>blico,724
+2018-10,BA,SADT,P<c3><ba>blico,508
+2018-10,RS,SADT,P<c3><ba>blico,438
+2018-10,BR,SADT,Filantr<c3><b3>pico,4517
+2018-10,SP,SADT,Filantr<c3><b3>pico,981
+2018-10,RJ,SADT,Filantr<c3><b3>pico,417
+2018-10,MG,SADT,Filantr<c3><b3>pico,453
+2018-10,BA,SADT,Filantr<c3><b3>pico,319
+2018-10,RS,SADT,Filantr<c3><b3>pico,272
+2018-10,BR,SADT,Privado,6356
+2018-10,SP,SADT,Privado,1432
+2018-10,RJ,SADT,Privado,564
+2018-10,MG,SADT,Privado,638
+2018-10,BA,SADT,Privado,450
+2018-10,RS,SADT,Privado,380
+2019-01,BR,SADT,P<c3><ba>blico,7258
+2019-01,SP,SADT,P<c3><ba>blico,1573
+2019-01,RJ,SADT,P<c3><ba>blico,657
+2019-01,MG,SADT,P<c3><ba>blico,743
+2019-01,BA,SADT,P<c3><ba>blico,518
+2019-01,RS,SADT,P<c3><ba>blico,434
+2019-01,BR,SADT,Filantr<c3><b3>pico,4529
+2019-01,SP,SADT,Filantr<c3><b3>pico,1012
+2019-01,RJ,SADT,Filantr<c3><b3>pico,420
+2019-01,MG,SADT,Filantr<c3><b3>pico,469
+2019-01,BA,SADT,Filantr<c3><b3>pico,320
+2019-01,RS,SADT,Filantr<c3><b3>pico,271
+2019-01,BR,SADT,Privado,6443
+2019-01,SP,SADT,Privado,1372
+2019-01,RJ,SADT,Privado,581
+2019-01,MG,SADT,Privado,616
+2019-01,BA,SADT,Privado,446
+2019-01,RS,SADT,Privado,386
+2019-04,BR,SADT,P<c3><ba>blico,7076
+2019-04,SP,SADT,P<c3><ba>blico,1605
+2019-04,RJ,SADT,P<c3><ba>blico,667
+2019-04,MG,SADT,P<c3><ba>blico,723
+2019-04,BA,SADT,P<c3><ba>blico,516
+2019-04,RS,SADT,P<c3><ba>blico,440
+2019-04,BR,SADT,Filantr<c3><b3>pico,4633
+2019-04,SP,SADT,Filantr<c3><b3>pico,1010
+2019-04,RJ,SADT,Filantr<c3><b3>pico,414
+2019-04,MG,SADT,Filantr<c3><b3>pico,472
+2019-04,BA,SADT,Filantr<c3><b3>pico,319
+2019-04,RS,SADT,Filantr<c3><b3>pico,271
+2019-04,BR,SADT,Privado,6389
+2019-04,SP,SADT,Privado,1409
+2019-04,RJ,SADT,Privado,572
+2019-04,MG,SADT,Privado,638
+2019-04,BA,SADT,Privado,444
+2019-04,RS,SADT,Privado,387
+2019-07,BR,SADT,P<c3><ba>blico,7344
+2019-07,SP,SADT,P<c3><ba>blico,1588
+2019-07,RJ,SADT,P<c3><ba>blico,679
+2019-07,MG,SADT,P<c3><ba>blico,742
+2019-07,BA,SADT,P<c3><ba>blico,516
+2019-07,RS,SADT,P<c3><ba>blico,434
+2019-07,BR,SADT,Filantr<c3><b3>pico,4708
+2019-07,SP,SADT,Filantr<c3><b3>pico,1007
+2019-07,RJ,SADT,Filantr<c3><b3>pico,422
+2019-07,MG,SADT,Filantr<c3><b3>pico,460
+2019-07,BA,SADT,Filantr<c3><b3>pico,327
+2019-07,RS,SADT,Filantr<c3><b3>pico,278
+2019-07,BR,SADT,Privado,6594
+2019-07,SP,SADT,Privado,1423
+2019-07,RJ,SADT,Privado,585
+2019-07,MG,SADT,Privado,633
+2019-07,BA,SADT,Privado,453
+2019-07,RS,SADT,Privado,399
+2019-10,BR,SADT,P<c3><ba>blico,7358
+2019-10,SP,SADT,P<c3><ba>blico,1647
+2019-10,RJ,SADT,P<c3><ba>blico,653
+2019-10,MG,SADT,P<c3><ba>blico,733
+2019-10,BA,SADT,P<c3><ba>blico,521
+2019-10,RS,SADT,P<c3><ba>blico,459
+2019-10,BR,SADT,Filantr<c3><b3>pico,4713
+2019-10,SP,SADT,Filantr<c3><b3>pico,1016
+2019-10,RJ,SADT,Filantr<c3><b3>pico,416
+2019-10,MG,SADT,Filantr<c3><b3>pico,466
+2019-10,BA,SADT,Filantr<c3><b3>pico,327
+2019-10,RS,SADT,Filantr<c3><b3>pico,281
+2019-10,BR,SADT,Privado,6391
+2019-10,SP,SADT,Privado,1414
+2019-10,RJ,SADT,Privado,588
+2019-10,MG,SADT,Privado,652
+2019-10,BA,SADT,Privado,450
+2019-10,RS,SADT,Privado,389
+2020-01,BR,SADT,P<c3><ba>blico,7392
+2020-01,SP,SADT,P<c3><ba>blico,1602
+2020-01,RJ,SADT,P<c3><ba>blico,671
+2020-01,MG,SADT,P<c3><ba>blico,753
+2020-01,BA,SADT,P<c3><ba>blico,531
+2020-01,RS,SADT,P<c3><ba>blico,450
+2020-01,BR,SADT,Filantr<c3><b3>pico,4668
+2020-01,SP,SADT,Filantr<c3><b3>pico,1026
+2020-01,RJ,SADT,Filantr<c3><b3>pico,404
+2020-01,MG,SADT,Filantr<c3><b3>pico,458
+2020-01,BA,SADT,Filantr<c3><b3>pico,319
+2020-01,RS,SADT,Filantr<c3><b3>pico,275
+2020-01,BR,SADT,Privado,6324
+2020-01,SP,SADT,Privado,1423
+2020-01,RJ,SADT,Privado,578
+2020-01,MG,SADT,Privado,656
+2020-01,BA,SADT,Privado,459
+2020-01,RS,SADT,Privado,383
+2020-04,BR,SADT,P<c3><ba>blico,7233
+2020-04,SP,SADT,P<c3><ba>blico,1667
+2020-04,RJ,SADT,P<c3><ba>blico,669
+2020-04,MG,SADT,P<c3><ba>blico,763
+2020-04,BA,SADT,P<c3><ba>blico,523
+2020-04,RS,SADT,P<c3><ba>blico,459
+2020-04,BR,SADT,Filantr<c3><b3>pico,4753
+2020-04,SP,SADT,Filantr<c3><b3>pico,1044
+2020-04,RJ,SADT,Filantr<c3><b3>pico,423
+2020-04,MG,SADT,Filantr<c3><b3>pico,471
+2020-04,BA,SADT,Filantr<c3><b3>pico,327
+2020-04,RS,SADT,Filantr<c3><b3>pico,283
+2020-04,BR,SADT,Privado,6603
+2020-04,SP,SADT,Privado,1412
+2020-04,RJ,SADT,Privado,577
+2020-04,MG,SADT,Privado,651
+2020-04,BA,SADT,Privado,451
+2020-04,RS,SADT,Privado,390
+2020-07,BR,SADT,P<c3><ba>blico,7581
+2020-07,SP,SADT,P<c3><ba>blico,1670
+2020-07,RJ,SADT,P<c3><ba>blico,662
+2020-07,MG,SADT,P<c3><ba>blico,741
+2020-07,BA,SADT,P<c3><ba>blico,523
+2020-07,RS,SADT,P<c3><ba>blico,451
+2020-07,BR,SADT,Filantr<c3><b3>pico,4646
+2020-07,SP,SADT,Filantr<c3><b3>pico,1022
+2020-07,RJ,SADT,Filantr<c3><b3>pico,423
+2020-07,MG,SADT,Filantr<c3><b3>pico,479
+2020-07,BA,SADT,Filantr<c3><b3>pico,327
+2020-07,RS,SADT,Filantr<c3><b3>pico,282
+2020-07,BR,SADT,Privado,6538
+2020-07,SP,SADT,Privado,1446
+2020-07,RJ,SADT,Privado,575
+2020-07,MG,SADT,Privado,667
+2020-07,BA,SADT,Privado,442
+2020-07,RS,SADT,Privado,392
+2020-10,BR,SADT,P<c3><ba>blico,7599
+2020-10,SP,SADT,P<c3><ba>blico,1597
+2020-10,RJ,SADT,P<c3><ba>blico,663
+2020-10,MG,SADT,P<c3><ba>blico,743
+2020-10,BA,SADT,P<c3><ba>blico,535
+2020-10,RS,SADT,P<c3><ba>blico,455
+2020-10,BR,SADT,Filantr<c3><b3>pico,4676
+2020-10,SP,SADT,Filantr<c3><b3>pico,1031
+2020-10,RJ,SADT,Filantr<c3><b3>pico,427
+2020-10,MG,SADT,Filantr<c3><b3>pico,457
+2020-10,BA,SADT,Filantr<c3><b3>pico,322
+2020-10,RS,SADT,Filantr<c3><b3>pico,276
+2020-10,BR,SADT,Privado,6656
+2020-10,SP,SADT,Privado,1454
+2020-10,RJ,SADT,Privado,588
+2020-10,MG,SADT,Privado,656
+2020-10,BA,SADT,Privado,450
+2020-10,RS,SADT,Privado,390
+2021-01,BR,SADT,P<c3><ba>blico,7434
+2021-01,SP,SADT,P<c3><ba>blico,1648
+2021-01,RJ,SADT,P<c3><ba>blico,690
+2021-01,MG,SADT,P<c3><ba>blico,730
+2021-01,BA,SADT,P<c3><ba>blico,535
+2021-01,RS,SADT,P<c3><ba>blico,455
+2021-01,BR,SADT,Filantr<c3><b3>pico,4677
+2021-01,SP,SADT,Filantr<c3><b3>pico,1054
+2021-01,RJ,SADT,Filantr<c3><b3>pico,424
+2021-01,MG,SADT,Filantr<c3><b3>pico,464
+2021-01,BA,SADT,Filantr<c3><b3>pico,326
+2021-01,RS,SADT,Filantr<c3><b3>pico,286
+2021-01,BR,SADT,Privado,6626
+2021-01,SP,SADT,Privado,1430
+2021-01,RJ,SADT,Privado,591
+2021-01,MG,SADT,Privado,663
+2021-01,BA,SADT,Privado,465
+2021-01,RS,SADT,Privado,402
+2021-04,BR,SADT,P<c3><ba>blico,7376
+2021-04,SP,SADT,P<c3><ba>blico,1651
+2021-04,RJ,SADT,P<c3><ba>blico,685
+2021-04,MG,SADT,P<c3><ba>blico,770
+2021-04,BA,SADT,P<c3><ba>blico,526
+2021-04,RS,SADT,P<c3><ba>blico,459
+2021-04,BR,SADT,Filantr<c3><b3>pico,4631
+2021-04,SP,SADT,Filantr<c3><b3>pico,1047
+2021-04,RJ,SADT,Filantr<c3><b3>pico,425
+2021-04,MG,SADT,Filantr<c3><b3>pico,467
+2021-04,BA,SADT,Filantr<c3><b3>pico,337
+2021-04,RS,SADT,Filantr<c3><b3>pico,284
+2021-04,BR,SADT,Privado,6571
+2021-04,SP,SADT,Privado,1487
+2021-04,RJ,SADT,Privado,591
+2021-04,MG,SADT,Privado,660
+2021-04,BA,SADT,Privado,459
+2021-04,RS,SADT,Privado,390
+2021-07,BR,SADT,P<c3><ba>blico,7707
+2021-07,SP,SADT,P<c3><ba>blico,1695
+2021-07,RJ,SADT,P<c3><ba>blico,681
+2021-07,MG,SADT,P<c3><ba>blico,770
+2021-07,BA,SADT,P<c3><ba>blico,528
+2021-07,RS,SADT,P<c3><ba>blico,459
+2021-07,BR,SADT,Filantr<c3><b3>pico,4668
+2021-07,SP,SADT,Filantr<c3><b3>pico,1062
+2021-07,RJ,SADT,Filantr<c3><b3>pico,427
+2021-07,MG,SADT,Filantr<c3><b3>pico,487
+2021-07,BA,SADT,Filantr<c3><b3>pico,322
+2021-07,RS,SADT,Filantr<c3><b3>pico,281
+2021-07,BR,SADT,Privado,6541
+2021-07,SP,SADT,Privado,1401
+2021-07,RJ,SADT,Privado,588
+2021-07,MG,SADT,Privado,655
+2021-07,BA,SADT,Privado,466
+2021-07,RS,SADT,Privado,389
+2021-10,BR,SADT,P<c3><ba>blico,7717
+2021-10,SP,SADT,P<c3><ba>blico,1667
+2021-10,RJ,SADT,P<c3><ba>blico,695
+2021-10,MG,SADT,P<c3><ba>blico,770
+2021-10,BA,SADT,P<c3><ba>blico,531
+2021-10,RS,SADT,P<c3><ba>blico,470
+2021-10,BR,SADT,Filantr<c3><b3>pico,4716
+2021-10,SP,SADT,Filantr<c3><b3>pico,1042
+2021-10,RJ,SADT,Filantr<c3><b3>pico,444
+2021-10,MG,SADT,Filantr<c3><b3>pico,479
+2021-10,BA,SADT,Filantr<c3><b3>pico,337
+2021-10,RS,SADT,Filantr<c3><b3>pico,284
+2021-10,BR,SADT,Privado,6692
+2021-10,SP,SADT,Privado,1422
+2021-10,RJ,SADT,Privado,573
+2021-10,MG,SADT,Privado,679
+2021-10,BA,SADT,Privado,457
+2021-10,RS,SADT,Privado,392
+2022-01,BR,SADT,P<c3><ba>blico,7668
+2022-01,SP,SADT,P<c3><ba>blico,1671
+2022-01,RJ,SADT,P<c3><ba>blico,685
+2022-01,MG,SADT,P<c3><ba>blico,759
+2022-01,BA,SADT,P<c3><ba>blico,513
+2022-01,RS,SADT,P<c3><ba>blico,460
+2022-01,BR,SADT,Filantr<c3><b3>pico,4718
+2022-01,SP,SADT,Filantr<c3><b3>pico,1032
+2022-01,RJ,SADT,Filantr<c3><b3>pico,422
+2022-01,MG,SADT,Filantr<c3><b3>pico,493
+2022-01,BA,SADT,Filantr<c3><b3>pico,331
+2022-01,RS,SADT,Filantr<c3><b3>pico,293
+2022-01,BR,SADT,Privado,6853
+2022-01,SP,SADT,Privado,1458
+2022-01,RJ,SADT,Privado,605
+2022-01,MG,SADT,Privado,658
+2022-01,BA,SADT,Privado,460
+2022-01,RS,SADT,Privado,410
+2022-04,BR,SADT,P<c3><ba>blico,7865
+2022-04,SP,SADT,P<c3><ba>blico,1642
+2022-04,RJ,SADT,P<c3><ba>blico,687
+2022-04,MG,SADT,P<c3><ba>blico,768
+2022-04,BA,SADT,P<c3><ba>blico,532
+2022-04,RS,SADT,P<c3><ba>blico,462
+2022-04,BR,SADT,Filantr<c3><b3>pico,4864
+2022-04,SP,SADT,Filantr<c3><b3>pico,1066
+2022-04,RJ,SADT,Filantr<c3><b3>pico,424
+2022-04,MG,SADT,Filantr<c3><b3>pico,482
+2022-04,BA,SADT,Filantr<c3><b3>pico,340
+2022-04,RS,SADT,Filantr<c3><b3>pico,284
+2022-04,BR,SADT,Privado,6605
+2022-04,SP,SADT,Privado,1513
+2022-04,RJ,SADT,Privado,602
+2022-04,MG,SADT,Privado,685
+2022-04,BA,SADT,Privado,468
+2022-04,RS,SADT,Privado,395
+2022-07,BR,SADT,P<c3><ba>blico,7588
+2022-07,SP,SADT,P<c3><ba>blico,1675
+2022-07,RJ,SADT,P<c3><ba>blico,687
+2022-07,MG,SADT,P<c3><ba>blico,765
+2022-07,BA,SADT,P<c3><ba>blico,541
+2022-07,RS,SADT,P<c3><ba>blico,464
+2022-07,BR,SADT,Filantr<c3><b3>pico,4772
+2022-07,SP,SADT,Filantr<c3><b3>pico,1078
+2022-07,RJ,SADT,Filantr<c3><b3>pico,429
+2022-07,MG,SADT,Filantr<c3><b3>pico,480
+2022-07,BA,SADT,Filantr<c3><b3>pico,338
+2022-07,RS,SADT,Filantr<c3><b3>pico,290
+2022-07,BR,SADT,Privado,6688
+2022-07,SP,SADT,Privado,1468
+2022-07,RJ,SADT,Privado,595
+2022-07,MG,SADT,Privado,675
+2022-07,BA,SADT,Privado,462
+2022-07,RS,SADT,Privado,398
+2022-10,BR,SADT,P<c3><ba>blico,7882
+2022-10,SP,SADT,P<c3><ba>blico,1672
+2022-10,RJ,SADT,P<c3><ba>blico,690
+2022-10,MG,SADT,P<c3><ba>blico,773
+2022-10,BA,SADT,P<c3><ba>blico,533
+2022-10,RS,SADT,P<c3><ba>blico,464
+2022-10,BR,SADT,Filantr<c3><b3>pico,4772
+2022-10,SP,SADT,Filantr<c3><b3>pico,1066
+2022-10,RJ,SADT,Filantr<c3><b3>pico,432
+2022-10,MG,SADT,Filantr<c3><b3>pico,479
+2022-10,BA,SADT,Filantr<c3><b3>pico,338
+2022-10,RS,SADT,Filantr<c3><b3>pico,286
+2022-10,BR,SADT,Privado,6718
+2022-10,SP,SADT,Privado,1462
+2022-10,RJ,SADT,Privado,605
+2022-10,MG,SADT,Privado,675
+2022-10,BA,SADT,Privado,473
+2022-10,RS,SADT,Privado,400
+2023-01,BR,SADT,P<c3><ba>blico,7802
+2023-01,SP,SADT,P<c3><ba>blico,1683
+2023-01,RJ,SADT,P<c3><ba>blico,684
+2023-01,MG,SADT,P<c3><ba>blico,786
+2023-01,BA,SADT,P<c3><ba>blico,552
+2023-01,RS,SADT,P<c3><ba>blico,476
+2023-01,BR,SADT,Filantr<c3><b3>pico,4771
+2023-01,SP,SADT,Filantr<c3><b3>pico,1023
+2023-01,RJ,SADT,Filantr<c3><b3>pico,436
+2023-01,MG,SADT,Filantr<c3><b3>pico,476
+2023-01,BA,SADT,Filantr<c3><b3>pico,334
+2023-01,RS,SADT,Filantr<c3><b3>pico,284
+2023-01,BR,SADT,Privado,6665
+2023-01,SP,SADT,Privado,1508
+2023-01,RJ,SADT,Privado,606
+2023-01,MG,SADT,Privado,669
+2023-01,BA,SADT,Privado,480
+2023-01,RS,SADT,Privado,406
+2023-04,BR,SADT,P<c3><ba>blico,7975
+2023-04,SP,SADT,P<c3><ba>blico,1712
+2023-04,RJ,SADT,P<c3><ba>blico,702
+2023-04,MG,SADT,P<c3><ba>blico,784
+2023-04,BA,SADT,P<c3><ba>blico,552
+2023-04,RS,SADT,P<c3><ba>blico,460
+2023-04,BR,SADT,Filantr<c3><b3>pico,4828
+2023-04,SP,SADT,Filantr<c3><b3>pico,1057
+2023-04,RJ,SADT,Filantr<c3><b3>pico,435
+2023-04,MG,SADT,Filantr<c3><b3>pico,480
+2023-04,BA,SADT,Filantr<c3><b3>pico,335
+2023-04,RS,SADT,Filantr<c3><b3>pico,285
+2023-04,BR,SADT,Privado,6750
+2023-04,SP,SADT,Privado,1510
+2023-04,RJ,SADT,Privado,604
+2023-04,MG,SADT,Privado,673
+2023-04,BA,SADT,Privado,484
+2023-04,RS,SADT,Privado,394
+2023-07,BR,SADT,P<c3><ba>blico,7736
+2023-07,SP,SADT,P<c3><ba>blico,1727
+2023-07,RJ,SADT,P<c3><ba>blico,706
+2023-07,MG,SADT,P<c3><ba>blico,778
+2023-07,BA,SADT,P<c3><ba>blico,536
+2023-07,RS,SADT,P<c3><ba>blico,474
+2023-07,BR,SADT,Filantr<c3><b3>pico,4823
+2023-07,SP,SADT,Filantr<c3><b3>pico,1037
+2023-07,RJ,SADT,Filantr<c3><b3>pico,438
+2023-07,MG,SADT,Filantr<c3><b3>pico,472
+2023-07,BA,SADT,Filantr<c3><b3>pico,337
+2023-07,RS,SADT,Filantr<c3><b3>pico,290
+2023-07,BR,SADT,Privado,6751
+2023-07,SP,SADT,Privado,1507
+2023-07,RJ,SADT,Privado,609
+2023-07,MG,SADT,Privado,666
+2023-07,BA,SADT,Privado,476
+2023-07,RS,SADT,Privado,413
+2023-10,BR,SADT,P<c3><ba>blico,7721
+2023-10,SP,SADT,P<c3><ba>blico,1707
+2023-10,RJ,SADT,P<c3><ba>blico,706
+2023-10,MG,SADT,P<c3><ba>blico,778
+2023-10,BA,SADT,P<c3><ba>blico,545
+2023-10,RS,SADT,P<c3><ba>blico,470
+2023-10,BR,SADT,Filantr<c3><b3>pico,4847
+2023-10,SP,SADT,Filantr<c3><b3>pico,1066
+2023-10,RJ,SADT,Filantr<c3><b3>pico,446
+2023-10,MG,SADT,Filantr<c3><b3>pico,487
+2023-10,BA,SADT,Filantr<c3><b3>pico,335
+2023-10,RS,SADT,Filantr<c3><b3>pico,296
+2023-10,BR,SADT,Privado,6867
+2023-10,SP,SADT,Privado,1492
+2023-10,RJ,SADT,Privado,621
+2023-10,MG,SADT,Privado,696
+2023-10,BA,SADT,Privado,485
+2023-10,RS,SADT,Privado,413
+2024-01,BR,SADT,P<c3><ba>blico,7749
+2024-01,SP,SADT,P<c3><ba>blico,1701
+2024-01,RJ,SADT,P<c3><ba>blico,715
+2024-01,MG,SADT,P<c3><ba>blico,798
+2024-01,BA,SADT,P<c3><ba>blico,551
+2024-01,RS,SADT,P<c3><ba>blico,478
+2024-01,BR,SADT,Filantr<c3><b3>pico,4916
+2024-01,SP,SADT,Filantr<c3><b3>pico,1054
+2024-01,RJ,SADT,Filantr<c3><b3>pico,440
+2024-01,MG,SADT,Filantr<c3><b3>pico,484
+2024-01,BA,SADT,Filantr<c3><b3>pico,342
+2024-01,RS,SADT,Filantr<c3><b3>pico,290
+2024-01,BR,SADT,Privado,7022
+2024-01,SP,SADT,Privado,1510
+2024-01,RJ,SADT,Privado,617
+2024-01,MG,SADT,Privado,692
+2024-01,BA,SADT,Privado,480
+2024-01,RS,SADT,Privado,400
+2024-04,BR,SADT,P<c3><ba>blico,8184
+2024-04,SP,SADT,P<c3><ba>blico,1804
+2024-04,RJ,SADT,P<c3><ba>blico,738
+2024-04,MG,SADT,P<c3><ba>blico,824
+2024-04,BA,SADT,P<c3><ba>blico,557
+2024-04,RS,SADT,P<c3><ba>blico,485
+2024-04,BR,SADT,Filantr<c3><b3>pico,5169
+2024-04,SP,SADT,Filantr<c3><b3>pico,1134
+2024-04,RJ,SADT,Filantr<c3><b3>pico,461
+2024-04,MG,SADT,Filantr<c3><b3>pico,508
+2024-04,BA,SADT,Filantr<c3><b3>pico,362
+2024-04,RS,SADT,Filantr<c3><b3>pico,316
+2024-04,BR,SADT,Privado,7165
+2024-04,SP,SADT,Privado,1576
+2024-04,RJ,SADT,Privado,638
+2024-04,MG,SADT,Privado,720
+2024-04,BA,SADT,Privado,513
+2024-04,RS,SADT,Privado,437
+2024-07,BR,SADT,P<c3><ba>blico,8324
+2024-07,SP,SADT,P<c3><ba>blico,1805
+2024-07,RJ,SADT,P<c3><ba>blico,750
+2024-07,MG,SADT,P<c3><ba>blico,821
+2024-07,BA,SADT,P<c3><ba>blico,584
+2024-07,RS,SADT,P<c3><ba>blico,501
+2024-07,BR,SADT,Filantr<c3><b3>pico,5019
+2024-07,SP,SADT,Filantr<c3><b3>pico,1133
+2024-07,RJ,SADT,Filantr<c3><b3>pico,455
+2024-07,MG,SADT,Filantr<c3><b3>pico,519
+2024-07,BA,SADT,Filantr<c3><b3>pico,356
+2024-07,RS,SADT,Filantr<c3><b3>pico,311
+2024-07,BR,SADT,Privado,7074
+2024-07,SP,SADT,Privado,1543
+2024-07,RJ,SADT,Privado,641
+2024-07,MG,SADT,Privado,730
+2024-07,BA,SADT,Privado,510
+2024-07,RS,SADT,Privado,423
+2024-10,BR,SADT,P<c3><ba>blico,8345
+2024-10,SP,SADT,P<c3><ba>blico,1821
+2024-10,RJ,SADT,P<c3><ba>blico,743
+2024-10,MG,SADT,P<c3><ba>blico,810
+2024-10,BA,SADT,P<c3><ba>blico,575
+2024-10,RS,SADT,P<c3><ba>blico,488
+2024-10,BR,SADT,Filantr<c3><b3>pico,5069
+2024-10,SP,SADT,Filantr<c3><b3>pico,1134
+2024-10,RJ,SADT,Filantr<c3><b3>pico,451
+2024-10,MG,SADT,Filantr<c3><b3>pico,512
+2024-10,BA,SADT,Filantr<c3><b3>pico,361
+2024-10,RS,SADT,Filantr<c3><b3>pico,300
+2024-10,BR,SADT,Privado,7165
+2024-10,SP,SADT,Privado,1593
+2024-10,RJ,SADT,Privado,645
+2024-10,MG,SADT,Privado,722
+2024-10,BA,SADT,Privado,504
+2024-10,RS,SADT,Privado,425
+2025-01,BR,SADT,P<c3><ba>blico,8225
+2025-01,SP,SADT,P<c3><ba>blico,1888
+2025-01,RJ,SADT,P<c3><ba>blico,752
+2025-01,MG,SADT,P<c3><ba>blico,840
+2025-01,BA,SADT,P<c3><ba>blico,593
+2025-01,RS,SADT,P<c3><ba>blico,511
+2025-01,BR,SADT,Filantr<c3><b3>pico,5410
+2025-01,SP,SADT,Filantr<c3><b3>pico,1172
+2025-01,RJ,SADT,Filantr<c3><b3>pico,473
+2025-01,MG,SADT,Filantr<c3><b3>pico,537
+2025-01,BA,SADT,Filantr<c3><b3>pico,372
+2025-01,RS,SADT,Filantr<c3><b3>pico,315
+2025-01,BR,SADT,Privado,7422
+2025-01,SP,SADT,Privado,1576
+2025-01,RJ,SADT,Privado,674
+2025-01,MG,SADT,Privado,734
+2025-01,BA,SADT,Privado,520
+2025-01,RS,SADT,Privado,449
+2025-04,BR,SADT,P<c3><ba>blico,8596
+2025-04,SP,SADT,P<c3><ba>blico,1836
+2025-04,RJ,SADT,P<c3><ba>blico,755
+2025-04,MG,SADT,P<c3><ba>blico,824
+2025-04,BA,SADT,P<c3><ba>blico,593
+2025-04,RS,SADT,P<c3><ba>blico,505
+2025-04,BR,SADT,Filantr<c3><b3>pico,5245
+2025-04,SP,SADT,Filantr<c3><b3>pico,1195
+2025-04,RJ,SADT,Filantr<c3><b3>pico,483
+2025-04,MG,SADT,Filantr<c3><b3>pico,530
+2025-04,BA,SADT,Filantr<c3><b3>pico,367
+2025-04,RS,SADT,Filantr<c3><b3>pico,317
+2025-04,BR,SADT,Privado,7581
+2025-04,SP,SADT,Privado,1633
+2025-04,RJ,SADT,Privado,673
+2025-04,MG,SADT,Privado,750
+2025-04,BA,SADT,Privado,513
+2025-04,RS,SADT,Privado,441
+2025-07,BR,SADT,P<c3><ba>blico,8387
+2025-07,SP,SADT,P<c3><ba>blico,1913
+2025-07,RJ,SADT,P<c3><ba>blico,760
+2025-07,MG,SADT,P<c3><ba>blico,835
+2025-07,BA,SADT,P<c3><ba>blico,599
+2025-07,RS,SADT,P<c3><ba>blico,511
+2025-07,BR,SADT,Filantr<c3><b3>pico,5142
+2025-07,SP,SADT,Filantr<c3><b3>pico,1150
+2025-07,RJ,SADT,Filantr<c3><b3>pico,469
+2025-07,MG,SADT,Filantr<c3><b3>pico,516
+2025-07,BA,SADT,Filantr<c3><b3>pico,365
+2025-07,RS,SADT,Filantr<c3><b3>pico,313
+2025-07,BR,SADT,Privado,7493
+2025-07,SP,SADT,Privado,1661
+2025-07,RJ,SADT,Privado,656
+2025-07,MG,SADT,Privado,760
+2025-07,BA,SADT,Privado,524
+2025-07,RS,SADT,Privado,461
+2018-01,BR,Pronto Socorro,P<c3><ba>blico,341
+2018-01,SP,Pronto Socorro,P<c3><ba>blico,72
+2018-01,RJ,Pronto Socorro,P<c3><ba>blico,29
+2018-01,MG,Pronto Socorro,P<c3><ba>blico,34
+2018-01,BA,Pronto Socorro,P<c3><ba>blico,23
+2018-01,RS,Pronto Socorro,P<c3><ba>blico,20
+2018-01,BR,Pronto Socorro,Filantr<c3><b3>pico,211
+2018-01,SP,Pronto Socorro,Filantr<c3><b3>pico,47
+2018-01,RJ,Pronto Socorro,Filantr<c3><b3>pico,19
+2018-01,MG,Pronto Socorro,Filantr<c3><b3>pico,21
+2018-01,BA,Pronto Socorro,Filantr<c3><b3>pico,14
+2018-01,RS,Pronto Socorro,Filantr<c3><b3>pico,12
+2018-01,BR,Pronto Socorro,Privado,304
+2018-01,SP,Pronto Socorro,Privado,64
+2018-01,RJ,Pronto Socorro,Privado,27
+2018-01,MG,Pronto Socorro,Privado,29
+2018-01,BA,Pronto Socorro,Privado,20
+2018-01,RS,Pronto Socorro,Privado,17
+2018-04,BR,Pronto Socorro,P<c3><ba>blico,333
+2018-04,SP,Pronto Socorro,P<c3><ba>blico,74
+2018-04,RJ,Pronto Socorro,P<c3><ba>blico,30
+2018-04,MG,Pronto Socorro,P<c3><ba>blico,34
+2018-04,BA,Pronto Socorro,P<c3><ba>blico,23
+2018-04,RS,Pronto Socorro,P<c3><ba>blico,20
+2018-04,BR,Pronto Socorro,Filantr<c3><b3>pico,210
+2018-04,SP,Pronto Socorro,Filantr<c3><b3>pico,47
+2018-04,RJ,Pronto Socorro,Filantr<c3><b3>pico,19
+2018-04,MG,Pronto Socorro,Filantr<c3><b3>pico,21
+2018-04,BA,Pronto Socorro,Filantr<c3><b3>pico,14
+2018-04,RS,Pronto Socorro,Filantr<c3><b3>pico,12
+2018-04,BR,Pronto Socorro,Privado,301
+2018-04,SP,Pronto Socorro,Privado,65
+2018-04,RJ,Pronto Socorro,Privado,27
+2018-04,MG,Pronto Socorro,Privado,30
+2018-04,BA,Pronto Socorro,Privado,20
+2018-04,RS,Pronto Socorro,Privado,17
+2018-07,BR,Pronto Socorro,P<c3><ba>blico,343
+2018-07,SP,Pronto Socorro,P<c3><ba>blico,74
+2018-07,RJ,Pronto Socorro,P<c3><ba>blico,30
+2018-07,MG,Pronto Socorro,P<c3><ba>blico,35
+2018-07,BA,Pronto Socorro,P<c3><ba>blico,24
+2018-07,RS,Pronto Socorro,P<c3><ba>blico,20
+2018-07,BR,Pronto Socorro,Filantr<c3><b3>pico,212
+2018-07,SP,Pronto Socorro,Filantr<c3><b3>pico,48
+2018-07,RJ,Pronto Socorro,Filantr<c3><b3>pico,19
+2018-07,MG,Pronto Socorro,Filantr<c3><b3>pico,21
+2018-07,BA,Pronto Socorro,Filantr<c3><b3>pico,15
+2018-07,RS,Pronto Socorro,Filantr<c3><b3>pico,12
+2018-07,BR,Pronto Socorro,Privado,298
+2018-07,SP,Pronto Socorro,Privado,66
+2018-07,RJ,Pronto Socorro,Privado,27
+2018-07,MG,Pronto Socorro,Privado,29
+2018-07,BA,Pronto Socorro,Privado,20
+2018-07,RS,Pronto Socorro,Privado,18
+2018-10,BR,Pronto Socorro,P<c3><ba>blico,341
+2018-10,SP,Pronto Socorro,P<c3><ba>blico,77
+2018-10,RJ,Pronto Socorro,P<c3><ba>blico,30
+2018-10,MG,Pronto Socorro,P<c3><ba>blico,34
+2018-10,BA,Pronto Socorro,P<c3><ba>blico,23
+2018-10,RS,Pronto Socorro,P<c3><ba>blico,20
+2018-10,BR,Pronto Socorro,Filantr<c3><b3>pico,212
+2018-10,SP,Pronto Socorro,Filantr<c3><b3>pico,46
+2018-10,RJ,Pronto Socorro,Filantr<c3><b3>pico,19
+2018-10,MG,Pronto Socorro,Filantr<c3><b3>pico,21
+2018-10,BA,Pronto Socorro,Filantr<c3><b3>pico,14
+2018-10,RS,Pronto Socorro,Filantr<c3><b3>pico,12
+2018-10,BR,Pronto Socorro,Privado,303
+2018-10,SP,Pronto Socorro,Privado,67
+2018-10,RJ,Pronto Socorro,Privado,27
+2018-10,MG,Pronto Socorro,Privado,29
+2018-10,BA,Pronto Socorro,Privado,21
+2018-10,RS,Pronto Socorro,Privado,17
+2019-01,BR,Pronto Socorro,P<c3><ba>blico,350
+2019-01,SP,Pronto Socorro,P<c3><ba>blico,74
+2019-01,RJ,Pronto Socorro,P<c3><ba>blico,30
+2019-01,MG,Pronto Socorro,P<c3><ba>blico,33
+2019-01,BA,Pronto Socorro,P<c3><ba>blico,24
+2019-01,RS,Pronto Socorro,P<c3><ba>blico,20
+2019-01,BR,Pronto Socorro,Filantr<c3><b3>pico,215
+2019-01,SP,Pronto Socorro,Filantr<c3><b3>pico,47
+2019-01,RJ,Pronto Socorro,Filantr<c3><b3>pico,19
+2019-01,MG,Pronto Socorro,Filantr<c3><b3>pico,21
+2019-01,BA,Pronto Socorro,Filantr<c3><b3>pico,15
+2019-01,RS,Pronto Socorro,Filantr<c3><b3>pico,12
+2019-01,BR,Pronto Socorro,Privado,304
+2019-01,SP,Pronto Socorro,Privado,66
+2019-01,RJ,Pronto Socorro,Privado,27
+2019-01,MG,Pronto Socorro,Privado,29
+2019-01,BA,Pronto Socorro,Privado,21
+2019-01,RS,Pronto Socorro,Privado,18
+2019-04,BR,Pronto Socorro,P<c3><ba>blico,347
+2019-04,SP,Pronto Socorro,P<c3><ba>blico,73
+2019-04,RJ,Pronto Socorro,P<c3><ba>blico,31
+2019-04,MG,Pronto Socorro,P<c3><ba>blico,34
+2019-04,BA,Pronto Socorro,P<c3><ba>blico,23
+2019-04,RS,Pronto Socorro,P<c3><ba>blico,21
+2019-04,BR,Pronto Socorro,Filantr<c3><b3>pico,220
+2019-04,SP,Pronto Socorro,Filantr<c3><b3>pico,47
+2019-04,RJ,Pronto Socorro,Filantr<c3><b3>pico,19
+2019-04,MG,Pronto Socorro,Filantr<c3><b3>pico,21
+2019-04,BA,Pronto Socorro,Filantr<c3><b3>pico,15
+2019-04,RS,Pronto Socorro,Filantr<c3><b3>pico,12
+2019-04,BR,Pronto Socorro,Privado,303
+2019-04,SP,Pronto Socorro,Privado,67
+2019-04,RJ,Pronto Socorro,Privado,26
+2019-04,MG,Pronto Socorro,Privado,30
+2019-04,BA,Pronto Socorro,Privado,21
+2019-04,RS,Pronto Socorro,Privado,18
+2019-07,BR,Pronto Socorro,P<c3><ba>blico,348
+2019-07,SP,Pronto Socorro,P<c3><ba>blico,74
+2019-07,RJ,Pronto Socorro,P<c3><ba>blico,31
+2019-07,MG,Pronto Socorro,P<c3><ba>blico,34
+2019-07,BA,Pronto Socorro,P<c3><ba>blico,24
+2019-07,RS,Pronto Socorro,P<c3><ba>blico,21
+2019-07,BR,Pronto Socorro,Filantr<c3><b3>pico,217
+2019-07,SP,Pronto Socorro,Filantr<c3><b3>pico,47
+2019-07,RJ,Pronto Socorro,Filantr<c3><b3>pico,19
+2019-07,MG,Pronto Socorro,Filantr<c3><b3>pico,21
+2019-07,BA,Pronto Socorro,Filantr<c3><b3>pico,15
+2019-07,RS,Pronto Socorro,Filantr<c3><b3>pico,12
+2019-07,BR,Pronto Socorro,Privado,300
+2019-07,SP,Pronto Socorro,Privado,65
+2019-07,RJ,Pronto Socorro,Privado,27
+2019-07,MG,Pronto Socorro,Privado,30
+2019-07,BA,Pronto Socorro,Privado,20
+2019-07,RS,Pronto Socorro,Privado,18
+2019-10,BR,Pronto Socorro,P<c3><ba>blico,345
+2019-10,SP,Pronto Socorro,P<c3><ba>blico,75
+2019-10,RJ,Pronto Socorro,P<c3><ba>blico,31
+2019-10,MG,Pronto Socorro,P<c3><ba>blico,34
+2019-10,BA,Pronto Socorro,P<c3><ba>blico,23
+2019-10,RS,Pronto Socorro,P<c3><ba>blico,21
+2019-10,BR,Pronto Socorro,Filantr<c3><b3>pico,217
+2019-10,SP,Pronto Socorro,Filantr<c3><b3>pico,48
+2019-10,RJ,Pronto Socorro,Filantr<c3><b3>pico,19
+2019-10,MG,Pronto Socorro,Filantr<c3><b3>pico,21
+2019-10,BA,Pronto Socorro,Filantr<c3><b3>pico,15
+2019-10,RS,Pronto Socorro,Filantr<c3><b3>pico,13
+2019-10,BR,Pronto Socorro,Privado,303
+2019-10,SP,Pronto Socorro,Privado,66
+2019-10,RJ,Pronto Socorro,Privado,27
+2019-10,MG,Pronto Socorro,Privado,30
+2019-10,BA,Pronto Socorro,Privado,21
+2019-10,RS,Pronto Socorro,Privado,18
+2020-01,BR,Pronto Socorro,P<c3><ba>blico,351
+2020-01,SP,Pronto Socorro,P<c3><ba>blico,77
+2020-01,RJ,Pronto Socorro,P<c3><ba>blico,31
+2020-01,MG,Pronto Socorro,P<c3><ba>blico,34
+2020-01,BA,Pronto Socorro,P<c3><ba>blico,24
+2020-01,RS,Pronto Socorro,P<c3><ba>blico,20
+2020-01,BR,Pronto Socorro,Filantr<c3><b3>pico,214
+2020-01,SP,Pronto Socorro,Filantr<c3><b3>pico,47
+2020-01,RJ,Pronto Socorro,Filantr<c3><b3>pico,19
+2020-01,MG,Pronto Socorro,Filantr<c3><b3>pico,21
+2020-01,BA,Pronto Socorro,Filantr<c3><b3>pico,14
+2020-01,RS,Pronto Socorro,Filantr<c3><b3>pico,13
+2020-01,BR,Pronto Socorro,Privado,302
+2020-01,SP,Pronto Socorro,Privado,66
+2020-01,RJ,Pronto Socorro,Privado,27
+2020-01,MG,Pronto Socorro,Privado,30
+2020-01,BA,Pronto Socorro,Privado,20
+2020-01,RS,Pronto Socorro,Privado,18
+2020-04,BR,Pronto Socorro,P<c3><ba>blico,347
+2020-04,SP,Pronto Socorro,P<c3><ba>blico,76
+2020-04,RJ,Pronto Socorro,P<c3><ba>blico,31
+2020-04,MG,Pronto Socorro,P<c3><ba>blico,35
+2020-04,BA,Pronto Socorro,P<c3><ba>blico,23
+2020-04,RS,Pronto Socorro,P<c3><ba>blico,21
+2020-04,BR,Pronto Socorro,Filantr<c3><b3>pico,222
+2020-04,SP,Pronto Socorro,Filantr<c3><b3>pico,47
+2020-04,RJ,Pronto Socorro,Filantr<c3><b3>pico,19
+2020-04,MG,Pronto Socorro,Filantr<c3><b3>pico,21
+2020-04,BA,Pronto Socorro,Filantr<c3><b3>pico,15
+2020-04,RS,Pronto Socorro,Filantr<c3><b3>pico,13
+2020-04,BR,Pronto Socorro,Privado,307
+2020-04,SP,Pronto Socorro,Privado,69
+2020-04,RJ,Pronto Socorro,Privado,27
+2020-04,MG,Pronto Socorro,Privado,30
+2020-04,BA,Pronto Socorro,Privado,21
+2020-04,RS,Pronto Socorro,Privado,18
+2020-07,BR,Pronto Socorro,P<c3><ba>blico,355
+2020-07,SP,Pronto Socorro,P<c3><ba>blico,78
+2020-07,RJ,Pronto Socorro,P<c3><ba>blico,32
+2020-07,MG,Pronto Socorro,P<c3><ba>blico,34
+2020-07,BA,Pronto Socorro,P<c3><ba>blico,24
+2020-07,RS,Pronto Socorro,P<c3><ba>blico,21
+2020-07,BR,Pronto Socorro,Filantr<c3><b3>pico,218
+2020-07,SP,Pronto Socorro,Filantr<c3><b3>pico,49
+2020-07,RJ,Pronto Socorro,Filantr<c3><b3>pico,19
+2020-07,MG,Pronto Socorro,Filantr<c3><b3>pico,20
+2020-07,BA,Pronto Socorro,Filantr<c3><b3>pico,15
+2020-07,RS,Pronto Socorro,Filantr<c3><b3>pico,13
+2020-07,BR,Pronto Socorro,Privado,313
+2020-07,SP,Pronto Socorro,Privado,67
+2020-07,RJ,Pronto Socorro,Privado,28
+2020-07,MG,Pronto Socorro,Privado,30
+2020-07,BA,Pronto Socorro,Privado,21
+2020-07,RS,Pronto Socorro,Privado,18
+2020-10,BR,Pronto Socorro,P<c3><ba>blico,355
+2020-10,SP,Pronto Socorro,P<c3><ba>blico,76
+2020-10,RJ,Pronto Socorro,P<c3><ba>blico,32
+2020-10,MG,Pronto Socorro,P<c3><ba>blico,35
+2020-10,BA,Pronto Socorro,P<c3><ba>blico,24
+2020-10,RS,Pronto Socorro,P<c3><ba>blico,21
+2020-10,BR,Pronto Socorro,Filantr<c3><b3>pico,223
+2020-10,SP,Pronto Socorro,Filantr<c3><b3>pico,49
+2020-10,RJ,Pronto Socorro,Filantr<c3><b3>pico,19
+2020-10,MG,Pronto Socorro,Filantr<c3><b3>pico,22
+2020-10,BA,Pronto Socorro,Filantr<c3><b3>pico,15
+2020-10,RS,Pronto Socorro,Filantr<c3><b3>pico,13
+2020-10,BR,Pronto Socorro,Privado,309
+2020-10,SP,Pronto Socorro,Privado,70
+2020-10,RJ,Pronto Socorro,Privado,27
+2020-10,MG,Pronto Socorro,Privado,31
+2020-10,BA,Pronto Socorro,Privado,22
+2020-10,RS,Pronto Socorro,Privado,18
+2021-01,BR,Pronto Socorro,P<c3><ba>blico,352
+2021-01,SP,Pronto Socorro,P<c3><ba>blico,79
+2021-01,RJ,Pronto Socorro,P<c3><ba>blico,31
+2021-01,MG,Pronto Socorro,P<c3><ba>blico,36
+2021-01,BA,Pronto Socorro,P<c3><ba>blico,24
+2021-01,RS,Pronto Socorro,P<c3><ba>blico,21
+2021-01,BR,Pronto Socorro,Filantr<c3><b3>pico,221
+2021-01,SP,Pronto Socorro,Filantr<c3><b3>pico,48
+2021-01,RJ,Pronto Socorro,Filantr<c3><b3>pico,19
+2021-01,MG,Pronto Socorro,Filantr<c3><b3>pico,22
+2021-01,BA,Pronto Socorro,Filantr<c3><b3>pico,15
+2021-01,RS,Pronto Socorro,Filantr<c3><b3>pico,13
+2021-01,BR,Pronto Socorro,Privado,307
+2021-01,SP,Pronto Socorro,Privado,69
+2021-01,RJ,Pronto Socorro,Privado,27
+2021-01,MG,Pronto Socorro,Privado,31
+2021-01,BA,Pronto Socorro,Privado,21
+2021-01,RS,Pronto Socorro,Privado,18
+2021-04,BR,Pronto Socorro,P<c3><ba>blico,371
+2021-04,SP,Pronto Socorro,P<c3><ba>blico,77
+2021-04,RJ,Pronto Socorro,P<c3><ba>blico,32
+2021-04,MG,Pronto Socorro,P<c3><ba>blico,34
+2021-04,BA,Pronto Socorro,P<c3><ba>blico,24
+2021-04,RS,Pronto Socorro,P<c3><ba>blico,21
+2021-04,BR,Pronto Socorro,Filantr<c3><b3>pico,223
+2021-04,SP,Pronto Socorro,Filantr<c3><b3>pico,49
+2021-04,RJ,Pronto Socorro,Filantr<c3><b3>pico,19
+2021-04,MG,Pronto Socorro,Filantr<c3><b3>pico,22
+2021-04,BA,Pronto Socorro,Filantr<c3><b3>pico,15
+2021-04,RS,Pronto Socorro,Filantr<c3><b3>pico,13
+2021-04,BR,Pronto Socorro,Privado,315
+2021-04,SP,Pronto Socorro,Privado,68
+2021-04,RJ,Pronto Socorro,Privado,28
+2021-04,MG,Pronto Socorro,Privado,30
+2021-04,BA,Pronto Socorro,Privado,22
+2021-04,RS,Pronto Socorro,Privado,18
+2021-07,BR,Pronto Socorro,P<c3><ba>blico,351
+2021-07,SP,Pronto Socorro,P<c3><ba>blico,78
+2021-07,RJ,Pronto Socorro,P<c3><ba>blico,32
+2021-07,MG,Pronto Socorro,P<c3><ba>blico,35
+2021-07,BA,Pronto Socorro,P<c3><ba>blico,24
+2021-07,RS,Pronto Socorro,P<c3><ba>blico,21
+2021-07,BR,Pronto Socorro,Filantr<c3><b3>pico,228
+2021-07,SP,Pronto Socorro,Filantr<c3><b3>pico,49
+2021-07,RJ,Pronto Socorro,Filantr<c3><b3>pico,19
+2021-07,MG,Pronto Socorro,Filantr<c3><b3>pico,22
+2021-07,BA,Pronto Socorro,Filantr<c3><b3>pico,15
+2021-07,RS,Pronto Socorro,Filantr<c3><b3>pico,13
+2021-07,BR,Pronto Socorro,Privado,305
+2021-07,SP,Pronto Socorro,Privado,68
+2021-07,RJ,Pronto Socorro,Privado,28
+2021-07,MG,Pronto Socorro,Privado,31
+2021-07,BA,Pronto Socorro,Privado,22
+2021-07,RS,Pronto Socorro,Privado,18
+2021-10,BR,Pronto Socorro,P<c3><ba>blico,368
+2021-10,SP,Pronto Socorro,P<c3><ba>blico,78
+2021-10,RJ,Pronto Socorro,P<c3><ba>blico,31
+2021-10,MG,Pronto Socorro,P<c3><ba>blico,36
+2021-10,BA,Pronto Socorro,P<c3><ba>blico,24
+2021-10,RS,Pronto Socorro,P<c3><ba>blico,21
+2021-10,BR,Pronto Socorro,Filantr<c3><b3>pico,228
+2021-10,SP,Pronto Socorro,Filantr<c3><b3>pico,49
+2021-10,RJ,Pronto Socorro,Filantr<c3><b3>pico,20
+2021-10,MG,Pronto Socorro,Filantr<c3><b3>pico,22
+2021-10,BA,Pronto Socorro,Filantr<c3><b3>pico,15
+2021-10,RS,Pronto Socorro,Filantr<c3><b3>pico,13
+2021-10,BR,Pronto Socorro,Privado,317
+2021-10,SP,Pronto Socorro,Privado,67
+2021-10,RJ,Pronto Socorro,Privado,28
+2021-10,MG,Pronto Socorro,Privado,31
+2021-10,BA,Pronto Socorro,Privado,21
+2021-10,RS,Pronto Socorro,Privado,18
+2022-01,BR,Pronto Socorro,P<c3><ba>blico,361
+2022-01,SP,Pronto Socorro,P<c3><ba>blico,79
+2022-01,RJ,Pronto Socorro,P<c3><ba>blico,32
+2022-01,MG,Pronto Socorro,P<c3><ba>blico,37
+2022-01,BA,Pronto Socorro,P<c3><ba>blico,25
+2022-01,RS,Pronto Socorro,P<c3><ba>blico,21
+2022-01,BR,Pronto Socorro,Filantr<c3><b3>pico,226
+2022-01,SP,Pronto Socorro,Filantr<c3><b3>pico,49
+2022-01,RJ,Pronto Socorro,Filantr<c3><b3>pico,19
+2022-01,MG,Pronto Socorro,Filantr<c3><b3>pico,22
+2022-01,BA,Pronto Socorro,Filantr<c3><b3>pico,16
+2022-01,RS,Pronto Socorro,Filantr<c3><b3>pico,13
+2022-01,BR,Pronto Socorro,Privado,318
+2022-01,SP,Pronto Socorro,Privado,70
+2022-01,RJ,Pronto Socorro,Privado,28
+2022-01,MG,Pronto Socorro,Privado,31
+2022-01,BA,Pronto Socorro,Privado,22
+2022-01,RS,Pronto Socorro,Privado,19
+2022-04,BR,Pronto Socorro,P<c3><ba>blico,363
+2022-04,SP,Pronto Socorro,P<c3><ba>blico,80
+2022-04,RJ,Pronto Socorro,P<c3><ba>blico,31
+2022-04,MG,Pronto Socorro,P<c3><ba>blico,35
+2022-04,BA,Pronto Socorro,P<c3><ba>blico,24
+2022-04,RS,Pronto Socorro,P<c3><ba>blico,21
+2022-04,BR,Pronto Socorro,Filantr<c3><b3>pico,222
+2022-04,SP,Pronto Socorro,Filantr<c3><b3>pico,50
+2022-04,RJ,Pronto Socorro,Filantr<c3><b3>pico,20
+2022-04,MG,Pronto Socorro,Filantr<c3><b3>pico,23
+2022-04,BA,Pronto Socorro,Filantr<c3><b3>pico,15
+2022-04,RS,Pronto Socorro,Filantr<c3><b3>pico,13
+2022-04,BR,Pronto Socorro,Privado,322
+2022-04,SP,Pronto Socorro,Privado,69
+2022-04,RJ,Pronto Socorro,Privado,28
+2022-04,MG,Pronto Socorro,Privado,31
+2022-04,BA,Pronto Socorro,Privado,21
+2022-04,RS,Pronto Socorro,Privado,19
+2022-07,BR,Pronto Socorro,P<c3><ba>blico,356
+2022-07,SP,Pronto Socorro,P<c3><ba>blico,79
+2022-07,RJ,Pronto Socorro,P<c3><ba>blico,32
+2022-07,MG,Pronto Socorro,P<c3><ba>blico,36
+2022-07,BA,Pronto Socorro,P<c3><ba>blico,25
+2022-07,RS,Pronto Socorro,P<c3><ba>blico,21
+2022-07,BR,Pronto Socorro,Filantr<c3><b3>pico,224
+2022-07,SP,Pronto Socorro,Filantr<c3><b3>pico,49
+2022-07,RJ,Pronto Socorro,Filantr<c3><b3>pico,20
+2022-07,MG,Pronto Socorro,Filantr<c3><b3>pico,23
+2022-07,BA,Pronto Socorro,Filantr<c3><b3>pico,16
+2022-07,RS,Pronto Socorro,Filantr<c3><b3>pico,13
+2022-07,BR,Pronto Socorro,Privado,319
+2022-07,SP,Pronto Socorro,Privado,71
+2022-07,RJ,Pronto Socorro,Privado,28
+2022-07,MG,Pronto Socorro,Privado,31
+2022-07,BA,Pronto Socorro,Privado,22
+2022-07,RS,Pronto Socorro,Privado,18
+2022-10,BR,Pronto Socorro,P<c3><ba>blico,364
+2022-10,SP,Pronto Socorro,P<c3><ba>blico,80
+2022-10,RJ,Pronto Socorro,P<c3><ba>blico,33
+2022-10,MG,Pronto Socorro,P<c3><ba>blico,37
+2022-10,BA,Pronto Socorro,P<c3><ba>blico,25
+2022-10,RS,Pronto Socorro,P<c3><ba>blico,22
+2022-10,BR,Pronto Socorro,Filantr<c3><b3>pico,226
+2022-10,SP,Pronto Socorro,Filantr<c3><b3>pico,48
+2022-10,RJ,Pronto Socorro,Filantr<c3><b3>pico,21
+2022-10,MG,Pronto Socorro,Filantr<c3><b3>pico,23
+2022-10,BA,Pronto Socorro,Filantr<c3><b3>pico,15
+2022-10,RS,Pronto Socorro,Filantr<c3><b3>pico,13
+2022-10,BR,Pronto Socorro,Privado,317
+2022-10,SP,Pronto Socorro,Privado,71
+2022-10,RJ,Pronto Socorro,Privado,28
+2022-10,MG,Pronto Socorro,Privado,31
+2022-10,BA,Pronto Socorro,Privado,22
+2022-10,RS,Pronto Socorro,Privado,18
+2023-01,BR,Pronto Socorro,P<c3><ba>blico,367
+2023-01,SP,Pronto Socorro,P<c3><ba>blico,79
+2023-01,RJ,Pronto Socorro,P<c3><ba>blico,32
+2023-01,MG,Pronto Socorro,P<c3><ba>blico,36
+2023-01,BA,Pronto Socorro,P<c3><ba>blico,25
+2023-01,RS,Pronto Socorro,P<c3><ba>blico,22
+2023-01,BR,Pronto Socorro,Filantr<c3><b3>pico,224
+2023-01,SP,Pronto Socorro,Filantr<c3><b3>pico,50
+2023-01,RJ,Pronto Socorro,Filantr<c3><b3>pico,20
+2023-01,MG,Pronto Socorro,Filantr<c3><b3>pico,22
+2023-01,BA,Pronto Socorro,Filantr<c3><b3>pico,16
+2023-01,RS,Pronto Socorro,Filantr<c3><b3>pico,13
+2023-01,BR,Pronto Socorro,Privado,320
+2023-01,SP,Pronto Socorro,Privado,71
+2023-01,RJ,Pronto Socorro,Privado,28
+2023-01,MG,Pronto Socorro,Privado,32
+2023-01,BA,Pronto Socorro,Privado,22
+2023-01,RS,Pronto Socorro,Privado,19
+2023-04,BR,Pronto Socorro,P<c3><ba>blico,369
+2023-04,SP,Pronto Socorro,P<c3><ba>blico,82
+2023-04,RJ,Pronto Socorro,P<c3><ba>blico,34
+2023-04,MG,Pronto Socorro,P<c3><ba>blico,36
+2023-04,BA,Pronto Socorro,P<c3><ba>blico,25
+2023-04,RS,Pronto Socorro,P<c3><ba>blico,22
+2023-04,BR,Pronto Socorro,Filantr<c3><b3>pico,234
+2023-04,SP,Pronto Socorro,Filantr<c3><b3>pico,50
+2023-04,RJ,Pronto Socorro,Filantr<c3><b3>pico,21
+2023-04,MG,Pronto Socorro,Filantr<c3><b3>pico,23
+2023-04,BA,Pronto Socorro,Filantr<c3><b3>pico,15
+2023-04,RS,Pronto Socorro,Filantr<c3><b3>pico,13
+2023-04,BR,Pronto Socorro,Privado,314
+2023-04,SP,Pronto Socorro,Privado,69
+2023-04,RJ,Pronto Socorro,Privado,27
+2023-04,MG,Pronto Socorro,Privado,32
+2023-04,BA,Pronto Socorro,Privado,22
+2023-04,RS,Pronto Socorro,Privado,19
+2023-07,BR,Pronto Socorro,P<c3><ba>blico,365
+2023-07,SP,Pronto Socorro,P<c3><ba>blico,82
+2023-07,RJ,Pronto Socorro,P<c3><ba>blico,33
+2023-07,MG,Pronto Socorro,P<c3><ba>blico,36
+2023-07,BA,Pronto Socorro,P<c3><ba>blico,25
+2023-07,RS,Pronto Socorro,P<c3><ba>blico,22
+2023-07,BR,Pronto Socorro,Filantr<c3><b3>pico,224
+2023-07,SP,Pronto Socorro,Filantr<c3><b3>pico,50
+2023-07,RJ,Pronto Socorro,Filantr<c3><b3>pico,20
+2023-07,MG,Pronto Socorro,Filantr<c3><b3>pico,22
+2023-07,BA,Pronto Socorro,Filantr<c3><b3>pico,15
+2023-07,RS,Pronto Socorro,Filantr<c3><b3>pico,13
+2023-07,BR,Pronto Socorro,Privado,316
+2023-07,SP,Pronto Socorro,Privado,72
+2023-07,RJ,Pronto Socorro,Privado,29
+2023-07,MG,Pronto Socorro,Privado,31
+2023-07,BA,Pronto Socorro,Privado,22
+2023-07,RS,Pronto Socorro,Privado,19
+2023-10,BR,Pronto Socorro,P<c3><ba>blico,372
+2023-10,SP,Pronto Socorro,P<c3><ba>blico,81
+2023-10,RJ,Pronto Socorro,P<c3><ba>blico,33
+2023-10,MG,Pronto Socorro,P<c3><ba>blico,37
+2023-10,BA,Pronto Socorro,P<c3><ba>blico,25
+2023-10,RS,Pronto Socorro,P<c3><ba>blico,22
+2023-10,BR,Pronto Socorro,Filantr<c3><b3>pico,230
+2023-10,SP,Pronto Socorro,Filantr<c3><b3>pico,51
+2023-10,RJ,Pronto Socorro,Filantr<c3><b3>pico,20
+2023-10,MG,Pronto Socorro,Filantr<c3><b3>pico,22
+2023-10,BA,Pronto Socorro,Filantr<c3><b3>pico,15
+2023-10,RS,Pronto Socorro,Filantr<c3><b3>pico,13
+2023-10,BR,Pronto Socorro,Privado,322
+2023-10,SP,Pronto Socorro,Privado,71
+2023-10,RJ,Pronto Socorro,Privado,29
+2023-10,MG,Pronto Socorro,Privado,32
+2023-10,BA,Pronto Socorro,Privado,22
+2023-10,RS,Pronto Socorro,Privado,19
+2024-01,BR,Pronto Socorro,P<c3><ba>blico,360
+2024-01,SP,Pronto Socorro,P<c3><ba>blico,81
+2024-01,RJ,Pronto Socorro,P<c3><ba>blico,34
+2024-01,MG,Pronto Socorro,P<c3><ba>blico,37
+2024-01,BA,Pronto Socorro,P<c3><ba>blico,25
+2024-01,RS,Pronto Socorro,P<c3><ba>blico,22
+2024-01,BR,Pronto Socorro,Filantr<c3><b3>pico,228
+2024-01,SP,Pronto Socorro,Filantr<c3><b3>pico,50
+2024-01,RJ,Pronto Socorro,Filantr<c3><b3>pico,20
+2024-01,MG,Pronto Socorro,Filantr<c3><b3>pico,23
+2024-01,BA,Pronto Socorro,Filantr<c3><b3>pico,16
+2024-01,RS,Pronto Socorro,Filantr<c3><b3>pico,13
+2024-01,BR,Pronto Socorro,Privado,324
+2024-01,SP,Pronto Socorro,Privado,70
+2024-01,RJ,Pronto Socorro,Privado,29
+2024-01,MG,Pronto Socorro,Privado,32
+2024-01,BA,Pronto Socorro,Privado,22
+2024-01,RS,Pronto Socorro,Privado,19
+2024-04,BR,Pronto Socorro,P<c3><ba>blico,375
+2024-04,SP,Pronto Socorro,P<c3><ba>blico,81
+2024-04,RJ,Pronto Socorro,P<c3><ba>blico,33
+2024-04,MG,Pronto Socorro,P<c3><ba>blico,37
+2024-04,BA,Pronto Socorro,P<c3><ba>blico,26
+2024-04,RS,Pronto Socorro,P<c3><ba>blico,22
+2024-04,BR,Pronto Socorro,Filantr<c3><b3>pico,234
+2024-04,SP,Pronto Socorro,Filantr<c3><b3>pico,51
+2024-04,RJ,Pronto Socorro,Filantr<c3><b3>pico,21
+2024-04,MG,Pronto Socorro,Filantr<c3><b3>pico,23
+2024-04,BA,Pronto Socorro,Filantr<c3><b3>pico,16
+2024-04,RS,Pronto Socorro,Filantr<c3><b3>pico,14
+2024-04,BR,Pronto Socorro,Privado,317
+2024-04,SP,Pronto Socorro,Privado,73
+2024-04,RJ,Pronto Socorro,Privado,28
+2024-04,MG,Pronto Socorro,Privado,32
+2024-04,BA,Pronto Socorro,Privado,22
+2024-04,RS,Pronto Socorro,Privado,20
+2024-07,BR,Pronto Socorro,P<c3><ba>blico,364
+2024-07,SP,Pronto Socorro,P<c3><ba>blico,83
+2024-07,RJ,Pronto Socorro,P<c3><ba>blico,32
+2024-07,MG,Pronto Socorro,P<c3><ba>blico,36
+2024-07,BA,Pronto Socorro,P<c3><ba>blico,26
+2024-07,RS,Pronto Socorro,P<c3><ba>blico,22
+2024-07,BR,Pronto Socorro,Filantr<c3><b3>pico,231
+2024-07,SP,Pronto Socorro,Filantr<c3><b3>pico,50
+2024-07,RJ,Pronto Socorro,Filantr<c3><b3>pico,21
+2024-07,MG,Pronto Socorro,Filantr<c3><b3>pico,23
+2024-07,BA,Pronto Socorro,Filantr<c3><b3>pico,16
+2024-07,RS,Pronto Socorro,Filantr<c3><b3>pico,14
+2024-07,BR,Pronto Socorro,Privado,328
+2024-07,SP,Pronto Socorro,Privado,75
+2024-07,RJ,Pronto Socorro,Privado,29
+2024-07,MG,Pronto Socorro,Privado,32
+2024-07,BA,Pronto Socorro,Privado,22
+2024-07,RS,Pronto Socorro,Privado,19
+2024-10,BR,Pronto Socorro,P<c3><ba>blico,376
+2024-10,SP,Pronto Socorro,P<c3><ba>blico,82
+2024-10,RJ,Pronto Socorro,P<c3><ba>blico,34
+2024-10,MG,Pronto Socorro,P<c3><ba>blico,36
+2024-10,BA,Pronto Socorro,P<c3><ba>blico,25
+2024-10,RS,Pronto Socorro,P<c3><ba>blico,22
+2024-10,BR,Pronto Socorro,Filantr<c3><b3>pico,229
+2024-10,SP,Pronto Socorro,Filantr<c3><b3>pico,51
+2024-10,RJ,Pronto Socorro,Filantr<c3><b3>pico,21
+2024-10,MG,Pronto Socorro,Filantr<c3><b3>pico,23
+2024-10,BA,Pronto Socorro,Filantr<c3><b3>pico,16
+2024-10,RS,Pronto Socorro,Filantr<c3><b3>pico,13
+2024-10,BR,Pronto Socorro,Privado,322
+2024-10,SP,Pronto Socorro,Privado,70
+2024-10,RJ,Pronto Socorro,Privado,29
+2024-10,MG,Pronto Socorro,Privado,32
+2024-10,BA,Pronto Socorro,Privado,22
+2024-10,RS,Pronto Socorro,Privado,19
+2025-01,BR,Pronto Socorro,P<c3><ba>blico,370
+2025-01,SP,Pronto Socorro,P<c3><ba>blico,84
+2025-01,RJ,Pronto Socorro,P<c3><ba>blico,33
+2025-01,MG,Pronto Socorro,P<c3><ba>blico,37
+2025-01,BA,Pronto Socorro,P<c3><ba>blico,26
+2025-01,RS,Pronto Socorro,P<c3><ba>blico,22
+2025-01,BR,Pronto Socorro,Filantr<c3><b3>pico,235
+2025-01,SP,Pronto Socorro,Filantr<c3><b3>pico,51
+2025-01,RJ,Pronto Socorro,Filantr<c3><b3>pico,20
+2025-01,MG,Pronto Socorro,Filantr<c3><b3>pico,23
+2025-01,BA,Pronto Socorro,Filantr<c3><b3>pico,16
+2025-01,RS,Pronto Socorro,Filantr<c3><b3>pico,13
+2025-01,BR,Pronto Socorro,Privado,327
+2025-01,SP,Pronto Socorro,Privado,71
+2025-01,RJ,Pronto Socorro,Privado,29
+2025-01,MG,Pronto Socorro,Privado,33
+2025-01,BA,Pronto Socorro,Privado,22
+2025-01,RS,Pronto Socorro,Privado,19
+2025-04,BR,Pronto Socorro,P<c3><ba>blico,371
+2025-04,SP,Pronto Socorro,P<c3><ba>blico,79
+2025-04,RJ,Pronto Socorro,P<c3><ba>blico,35
+2025-04,MG,Pronto Socorro,P<c3><ba>blico,38
+2025-04,BA,Pronto Socorro,P<c3><ba>blico,26
+2025-04,RS,Pronto Socorro,P<c3><ba>blico,22
+2025-04,BR,Pronto Socorro,Filantr<c3><b3>pico,231
+2025-04,SP,Pronto Socorro,Filantr<c3><b3>pico,51
+2025-04,RJ,Pronto Socorro,Filantr<c3><b3>pico,21
+2025-04,MG,Pronto Socorro,Filantr<c3><b3>pico,23
+2025-04,BA,Pronto Socorro,Filantr<c3><b3>pico,16
+2025-04,RS,Pronto Socorro,Filantr<c3><b3>pico,13
+2025-04,BR,Pronto Socorro,Privado,333
+2025-04,SP,Pronto Socorro,Privado,72
+2025-04,RJ,Pronto Socorro,Privado,29
+2025-04,MG,Pronto Socorro,Privado,33
+2025-04,BA,Pronto Socorro,Privado,23
+2025-04,RS,Pronto Socorro,Privado,19
+2025-07,BR,Pronto Socorro,P<c3><ba>blico,372
+2025-07,SP,Pronto Socorro,P<c3><ba>blico,80
+2025-07,RJ,Pronto Socorro,P<c3><ba>blico,34
+2025-07,MG,Pronto Socorro,P<c3><ba>blico,38
+2025-07,BA,Pronto Socorro,P<c3><ba>blico,27
+2025-07,RS,Pronto Socorro,P<c3><ba>blico,22
+2025-07,BR,Pronto Socorro,Filantr<c3><b3>pico,235
+2025-07,SP,Pronto Socorro,Filantr<c3><b3>pico,52
+2025-07,RJ,Pronto Socorro,Filantr<c3><b3>pico,20
+2025-07,MG,Pronto Socorro,Filantr<c3><b3>pico,24
+2025-07,BA,Pronto Socorro,Filantr<c3><b3>pico,16
+2025-07,RS,Pronto Socorro,Filantr<c3><b3>pico,14
+2025-07,BR,Pronto Socorro,Privado,338
+2025-07,SP,Pronto Socorro,Privado,71
+2025-07,RJ,Pronto Socorro,Privado,29
+2025-07,MG,Pronto Socorro,Privado,32
+2025-07,BA,Pronto Socorro,Privado,23
+2025-07,RS,Pronto Socorro,Privado,19
+2018-01,BR,CAPS,P<c3><ba>blico,1080
+2018-01,SP,CAPS,P<c3><ba>blico,239
+2018-01,RJ,CAPS,P<c3><ba>blico,98
+2018-01,MG,CAPS,P<c3><ba>blico,107
+2018-01,BA,CAPS,P<c3><ba>blico,75
+2018-01,RS,CAPS,P<c3><ba>blico,65
+2018-01,BR,CAPS,Filantr<c3><b3>pico,675
+2018-01,SP,CAPS,Filantr<c3><b3>pico,144
+2018-01,RJ,CAPS,Filantr<c3><b3>pico,61
+2018-01,MG,CAPS,Filantr<c3><b3>pico,66
+2018-01,BA,CAPS,Filantr<c3><b3>pico,47
+2018-01,RS,CAPS,Filantr<c3><b3>pico,40
+2018-01,BR,CAPS,Privado,951
+2018-01,SP,CAPS,Privado,204
+2018-01,RJ,CAPS,Privado,83
+2018-01,MG,CAPS,Privado,94
+2018-01,BA,CAPS,Privado,66
+2018-01,RS,CAPS,Privado,55
+2018-04,BR,CAPS,P<c3><ba>blico,1098
+2018-04,SP,CAPS,P<c3><ba>blico,240
+2018-04,RJ,CAPS,P<c3><ba>blico,95
+2018-04,MG,CAPS,P<c3><ba>blico,106
+2018-04,BA,CAPS,P<c3><ba>blico,77
+2018-04,RS,CAPS,P<c3><ba>blico,64
+2018-04,BR,CAPS,Filantr<c3><b3>pico,676
+2018-04,SP,CAPS,Filantr<c3><b3>pico,150
+2018-04,RJ,CAPS,Filantr<c3><b3>pico,61
+2018-04,MG,CAPS,Filantr<c3><b3>pico,67
+2018-04,BA,CAPS,Filantr<c3><b3>pico,46
+2018-04,RS,CAPS,Filantr<c3><b3>pico,40
+2018-04,BR,CAPS,Privado,954
+2018-04,SP,CAPS,Privado,206
+2018-04,RJ,CAPS,Privado,86
+2018-04,MG,CAPS,Privado,95
+2018-04,BA,CAPS,Privado,67
+2018-04,RS,CAPS,Privado,56
+2018-07,BR,CAPS,P<c3><ba>blico,1108
+2018-07,SP,CAPS,P<c3><ba>blico,241
+2018-07,RJ,CAPS,P<c3><ba>blico,99
+2018-07,MG,CAPS,P<c3><ba>blico,111
+2018-07,BA,CAPS,P<c3><ba>blico,74
+2018-07,RS,CAPS,P<c3><ba>blico,65
+2018-07,BR,CAPS,Filantr<c3><b3>pico,675
+2018-07,SP,CAPS,Filantr<c3><b3>pico,152
+2018-07,RJ,CAPS,Filantr<c3><b3>pico,60
+2018-07,MG,CAPS,Filantr<c3><b3>pico,67
+2018-07,BA,CAPS,Filantr<c3><b3>pico,45
+2018-07,RS,CAPS,Filantr<c3><b3>pico,40
+2018-07,BR,CAPS,Privado,977
+2018-07,SP,CAPS,Privado,210
+2018-07,RJ,CAPS,Privado,82
+2018-07,MG,CAPS,Privado,96
+2018-07,BA,CAPS,Privado,65
+2018-07,RS,CAPS,Privado,56
+2018-10,BR,CAPS,P<c3><ba>blico,1092
+2018-10,SP,CAPS,P<c3><ba>blico,239
+2018-10,RJ,CAPS,P<c3><ba>blico,98
+2018-10,MG,CAPS,P<c3><ba>blico,106
+2018-10,BA,CAPS,P<c3><ba>blico,75
+2018-10,RS,CAPS,P<c3><ba>blico,66
+2018-10,BR,CAPS,Filantr<c3><b3>pico,683
+2018-10,SP,CAPS,Filantr<c3><b3>pico,147
+2018-10,RJ,CAPS,Filantr<c3><b3>pico,62
+2018-10,MG,CAPS,Filantr<c3><b3>pico,67
+2018-10,BA,CAPS,Filantr<c3><b3>pico,47
+2018-10,RS,CAPS,Filantr<c3><b3>pico,41
+2018-10,BR,CAPS,Privado,940
+2018-10,SP,CAPS,Privado,212
+2018-10,RJ,CAPS,Privado,86
+2018-10,MG,CAPS,Privado,97
+2018-10,BA,CAPS,Privado,65
+2018-10,RS,CAPS,Privado,56
+2019-01,BR,CAPS,P<c3><ba>blico,1126
+2019-01,SP,CAPS,P<c3><ba>blico,239
+2019-01,RJ,CAPS,P<c3><ba>blico,98
+2019-01,MG,CAPS,P<c3><ba>blico,108
+2019-01,BA,CAPS,P<c3><ba>blico,76
+2019-01,RS,CAPS,P<c3><ba>blico,66
+2019-01,BR,CAPS,Filantr<c3><b3>pico,696
+2019-01,SP,CAPS,Filantr<c3><b3>pico,148
+2019-01,RJ,CAPS,Filantr<c3><b3>pico,62
+2019-01,MG,CAPS,Filantr<c3><b3>pico,68
+2019-01,BA,CAPS,Filantr<c3><b3>pico,46
+2019-01,RS,CAPS,Filantr<c3><b3>pico,41
+2019-01,BR,CAPS,Privado,951
+2019-01,SP,CAPS,Privado,211
+2019-01,RJ,CAPS,Privado,84
+2019-01,MG,CAPS,Privado,97
+2019-01,BA,CAPS,Privado,66
+2019-01,RS,CAPS,Privado,60
+2019-04,BR,CAPS,P<c3><ba>blico,1135
+2019-04,SP,CAPS,P<c3><ba>blico,248
+2019-04,RJ,CAPS,P<c3><ba>blico,97
+2019-04,MG,CAPS,P<c3><ba>blico,110
+2019-04,BA,CAPS,P<c3><ba>blico,77
+2019-04,RS,CAPS,P<c3><ba>blico,66
+2019-04,BR,CAPS,Filantr<c3><b3>pico,686
+2019-04,SP,CAPS,Filantr<c3><b3>pico,150
+2019-04,RJ,CAPS,Filantr<c3><b3>pico,63
+2019-04,MG,CAPS,Filantr<c3><b3>pico,69
+2019-04,BA,CAPS,Filantr<c3><b3>pico,48
+2019-04,RS,CAPS,Filantr<c3><b3>pico,41
+2019-04,BR,CAPS,Privado,973
+2019-04,SP,CAPS,Privado,207
+2019-04,RJ,CAPS,Privado,86
+2019-04,MG,CAPS,Privado,94
+2019-04,BA,CAPS,Privado,68
+2019-04,RS,CAPS,Privado,57
+2019-07,BR,CAPS,P<c3><ba>blico,1072
+2019-07,SP,CAPS,P<c3><ba>blico,237
+2019-07,RJ,CAPS,P<c3><ba>blico,100
+2019-07,MG,CAPS,P<c3><ba>blico,108
+2019-07,BA,CAPS,P<c3><ba>blico,77
+2019-07,RS,CAPS,P<c3><ba>blico,66
+2019-07,BR,CAPS,Filantr<c3><b3>pico,688
+2019-07,SP,CAPS,Filantr<c3><b3>pico,154
+2019-07,RJ,CAPS,Filantr<c3><b3>pico,61
+2019-07,MG,CAPS,Filantr<c3><b3>pico,67
+2019-07,BA,CAPS,Filantr<c3><b3>pico,47
+2019-07,RS,CAPS,Filantr<c3><b3>pico,40
+2019-07,BR,CAPS,Privado,961
+2019-07,SP,CAPS,Privado,208
+2019-07,RJ,CAPS,Privado,86
+2019-07,MG,CAPS,Privado,96
+2019-07,BA,CAPS,Privado,66
+2019-07,RS,CAPS,Privado,57
+2019-10,BR,CAPS,P<c3><ba>blico,1127
+2019-10,SP,CAPS,P<c3><ba>blico,239
+2019-10,RJ,CAPS,P<c3><ba>blico,99
+2019-10,MG,CAPS,P<c3><ba>blico,109
+2019-10,BA,CAPS,P<c3><ba>blico,77
+2019-10,RS,CAPS,P<c3><ba>blico,67
+2019-10,BR,CAPS,Filantr<c3><b3>pico,694
+2019-10,SP,CAPS,Filantr<c3><b3>pico,148
+2019-10,RJ,CAPS,Filantr<c3><b3>pico,62
+2019-10,MG,CAPS,Filantr<c3><b3>pico,68
+2019-10,BA,CAPS,Filantr<c3><b3>pico,50
+2019-10,RS,CAPS,Filantr<c3><b3>pico,42
+2019-10,BR,CAPS,Privado,973
+2019-10,SP,CAPS,Privado,215
+2019-10,RJ,CAPS,Privado,86
+2019-10,MG,CAPS,Privado,97
+2019-10,BA,CAPS,Privado,67
+2019-10,RS,CAPS,Privado,56
+2020-01,BR,CAPS,P<c3><ba>blico,1112
+2020-01,SP,CAPS,P<c3><ba>blico,244
+2020-01,RJ,CAPS,P<c3><ba>blico,101
+2020-01,MG,CAPS,P<c3><ba>blico,111
+2020-01,BA,CAPS,P<c3><ba>blico,76
+2020-01,RS,CAPS,P<c3><ba>blico,66
+2020-01,BR,CAPS,Filantr<c3><b3>pico,697
+2020-01,SP,CAPS,Filantr<c3><b3>pico,150
+2020-01,RJ,CAPS,Filantr<c3><b3>pico,62
+2020-01,MG,CAPS,Filantr<c3><b3>pico,69
+2020-01,BA,CAPS,Filantr<c3><b3>pico,48
+2020-01,RS,CAPS,Filantr<c3><b3>pico,42
+2020-01,BR,CAPS,Privado,977
+2020-01,SP,CAPS,Privado,210
+2020-01,RJ,CAPS,Privado,87
+2020-01,MG,CAPS,Privado,98
+2020-01,BA,CAPS,Privado,67
+2020-01,RS,CAPS,Privado,57
+2020-04,BR,CAPS,P<c3><ba>blico,1135
+2020-04,SP,CAPS,P<c3><ba>blico,246
+2020-04,RJ,CAPS,P<c3><ba>blico,100
+2020-04,MG,CAPS,P<c3><ba>blico,110
+2020-04,BA,CAPS,P<c3><ba>blico,77
+2020-04,RS,CAPS,P<c3><ba>blico,66
+2020-04,BR,CAPS,Filantr<c3><b3>pico,679
+2020-04,SP,CAPS,Filantr<c3><b3>pico,154
+2020-04,RJ,CAPS,Filantr<c3><b3>pico,63
+2020-04,MG,CAPS,Filantr<c3><b3>pico,68
+2020-04,BA,CAPS,Filantr<c3><b3>pico,48
+2020-04,RS,CAPS,Filantr<c3><b3>pico,42
+2020-04,BR,CAPS,Privado,957
+2020-04,SP,CAPS,Privado,213
+2020-04,RJ,CAPS,Privado,87
+2020-04,MG,CAPS,Privado,98
+2020-04,BA,CAPS,Privado,68
+2020-04,RS,CAPS,Privado,59
+2020-07,BR,CAPS,P<c3><ba>blico,1131
+2020-07,SP,CAPS,P<c3><ba>blico,248
+2020-07,RJ,CAPS,P<c3><ba>blico,102
+2020-07,MG,CAPS,P<c3><ba>blico,112
+2020-07,BA,CAPS,P<c3><ba>blico,77
+2020-07,RS,CAPS,P<c3><ba>blico,68
+2020-07,BR,CAPS,Filantr<c3><b3>pico,710
+2020-07,SP,CAPS,Filantr<c3><b3>pico,154
+2020-07,RJ,CAPS,Filantr<c3><b3>pico,62
+2020-07,MG,CAPS,Filantr<c3><b3>pico,70
+2020-07,BA,CAPS,Filantr<c3><b3>pico,48
+2020-07,RS,CAPS,Filantr<c3><b3>pico,42
+2020-07,BR,CAPS,Privado,980
+2020-07,SP,CAPS,Privado,212
+2020-07,RJ,CAPS,Privado,89
+2020-07,MG,CAPS,Privado,96
+2020-07,BA,CAPS,Privado,69
+2020-07,RS,CAPS,Privado,58
+2020-10,BR,CAPS,P<c3><ba>blico,1136
+2020-10,SP,CAPS,P<c3><ba>blico,240
+2020-10,RJ,CAPS,P<c3><ba>blico,99
+2020-10,MG,CAPS,P<c3><ba>blico,110
+2020-10,BA,CAPS,P<c3><ba>blico,79
+2020-10,RS,CAPS,P<c3><ba>blico,68
+2020-10,BR,CAPS,Filantr<c3><b3>pico,699
+2020-10,SP,CAPS,Filantr<c3><b3>pico,154
+2020-10,RJ,CAPS,Filantr<c3><b3>pico,62
+2020-10,MG,CAPS,Filantr<c3><b3>pico,71
+2020-10,BA,CAPS,Filantr<c3><b3>pico,49
+2020-10,RS,CAPS,Filantr<c3><b3>pico,41
+2020-10,BR,CAPS,Privado,984
+2020-10,SP,CAPS,Privado,216
+2020-10,RJ,CAPS,Privado,88
+2020-10,MG,CAPS,Privado,97
+2020-10,BA,CAPS,Privado,69
+2020-10,RS,CAPS,Privado,58
+2021-01,BR,CAPS,P<c3><ba>blico,1131
+2021-01,SP,CAPS,P<c3><ba>blico,245
+2021-01,RJ,CAPS,P<c3><ba>blico,102
+2021-01,MG,CAPS,P<c3><ba>blico,112
+2021-01,BA,CAPS,P<c3><ba>blico,79
+2021-01,RS,CAPS,P<c3><ba>blico,67
+2021-01,BR,CAPS,Filantr<c3><b3>pico,709
+2021-01,SP,CAPS,Filantr<c3><b3>pico,157
+2021-01,RJ,CAPS,Filantr<c3><b3>pico,62
+2021-01,MG,CAPS,Filantr<c3><b3>pico,71
+2021-01,BA,CAPS,Filantr<c3><b3>pico,49
+2021-01,RS,CAPS,Filantr<c3><b3>pico,41
+2021-01,BR,CAPS,Privado,978
+2021-01,SP,CAPS,Privado,215
+2021-01,RJ,CAPS,Privado,88
+2021-01,MG,CAPS,Privado,97
+2021-01,BA,CAPS,Privado,68
+2021-01,RS,CAPS,Privado,60
+2021-04,BR,CAPS,P<c3><ba>blico,1148
+2021-04,SP,CAPS,P<c3><ba>blico,250
+2021-04,RJ,CAPS,P<c3><ba>blico,101
+2021-04,MG,CAPS,P<c3><ba>blico,115
+2021-04,BA,CAPS,P<c3><ba>blico,78
+2021-04,RS,CAPS,P<c3><ba>blico,69
+2021-04,BR,CAPS,Filantr<c3><b3>pico,709
+2021-04,SP,CAPS,Filantr<c3><b3>pico,155
+2021-04,RJ,CAPS,Filantr<c3><b3>pico,63
+2021-04,MG,CAPS,Filantr<c3><b3>pico,70
+2021-04,BA,CAPS,Filantr<c3><b3>pico,51
+2021-04,RS,CAPS,Filantr<c3><b3>pico,42
+2021-04,BR,CAPS,Privado,966
+2021-04,SP,CAPS,Privado,219
+2021-04,RJ,CAPS,Privado,89
+2021-04,MG,CAPS,Privado,100
+2021-04,BA,CAPS,Privado,70
+2021-04,RS,CAPS,Privado,59
+2021-07,BR,CAPS,P<c3><ba>blico,1155
+2021-07,SP,CAPS,P<c3><ba>blico,248
+2021-07,RJ,CAPS,P<c3><ba>blico,103
+2021-07,MG,CAPS,P<c3><ba>blico,112
+2021-07,BA,CAPS,P<c3><ba>blico,79
+2021-07,RS,CAPS,P<c3><ba>blico,67
+2021-07,BR,CAPS,Filantr<c3><b3>pico,702
+2021-07,SP,CAPS,Filantr<c3><b3>pico,156
+2021-07,RJ,CAPS,Filantr<c3><b3>pico,63
+2021-07,MG,CAPS,Filantr<c3><b3>pico,71
+2021-07,BA,CAPS,Filantr<c3><b3>pico,49
+2021-07,RS,CAPS,Filantr<c3><b3>pico,42
+2021-07,BR,CAPS,Privado,1008
+2021-07,SP,CAPS,Privado,215
+2021-07,RJ,CAPS,Privado,91
+2021-07,MG,CAPS,Privado,99
+2021-07,BA,CAPS,Privado,70
+2021-07,RS,CAPS,Privado,59
+2021-10,BR,CAPS,P<c3><ba>blico,1132
+2021-10,SP,CAPS,P<c3><ba>blico,247
+2021-10,RJ,CAPS,P<c3><ba>blico,101
+2021-10,MG,CAPS,P<c3><ba>blico,112
+2021-10,BA,CAPS,P<c3><ba>blico,80
+2021-10,RS,CAPS,P<c3><ba>blico,67
+2021-10,BR,CAPS,Filantr<c3><b3>pico,712
+2021-10,SP,CAPS,Filantr<c3><b3>pico,155
+2021-10,RJ,CAPS,Filantr<c3><b3>pico,64
+2021-10,MG,CAPS,Filantr<c3><b3>pico,71
+2021-10,BA,CAPS,Filantr<c3><b3>pico,49
+2021-10,RS,CAPS,Filantr<c3><b3>pico,43
+2021-10,BR,CAPS,Privado,1002
+2021-10,SP,CAPS,Privado,218
+2021-10,RJ,CAPS,Privado,89
+2021-10,MG,CAPS,Privado,99
+2021-10,BA,CAPS,Privado,70
+2021-10,RS,CAPS,Privado,59
+2022-01,BR,CAPS,P<c3><ba>blico,1161
+2022-01,SP,CAPS,P<c3><ba>blico,247
+2022-01,RJ,CAPS,P<c3><ba>blico,104
+2022-01,MG,CAPS,P<c3><ba>blico,113
+2022-01,BA,CAPS,P<c3><ba>blico,79
+2022-01,RS,CAPS,P<c3><ba>blico,68
+2022-01,BR,CAPS,Filantr<c3><b3>pico,719
+2022-01,SP,CAPS,Filantr<c3><b3>pico,157
+2022-01,RJ,CAPS,Filantr<c3><b3>pico,63
+2022-01,MG,CAPS,Filantr<c3><b3>pico,70
+2022-01,BA,CAPS,Filantr<c3><b3>pico,50
+2022-01,RS,CAPS,Filantr<c3><b3>pico,42
+2022-01,BR,CAPS,Privado,1036
+2022-01,SP,CAPS,Privado,221
+2022-01,RJ,CAPS,Privado,90
+2022-01,MG,CAPS,Privado,99
+2022-01,BA,CAPS,Privado,71
+2022-01,RS,CAPS,Privado,61
+2022-04,BR,CAPS,P<c3><ba>blico,1146
+2022-04,SP,CAPS,P<c3><ba>blico,253
+2022-04,RJ,CAPS,P<c3><ba>blico,100
+2022-04,MG,CAPS,P<c3><ba>blico,115
+2022-04,BA,CAPS,P<c3><ba>blico,80
+2022-04,RS,CAPS,P<c3><ba>blico,68
+2022-04,BR,CAPS,Filantr<c3><b3>pico,722
+2022-04,SP,CAPS,Filantr<c3><b3>pico,158
+2022-04,RJ,CAPS,Filantr<c3><b3>pico,64
+2022-04,MG,CAPS,Filantr<c3><b3>pico,71
+2022-04,BA,CAPS,Filantr<c3><b3>pico,49
+2022-04,RS,CAPS,Filantr<c3><b3>pico,43
+2022-04,BR,CAPS,Privado,1005
+2022-04,SP,CAPS,Privado,225
+2022-04,RJ,CAPS,Privado,89
+2022-04,MG,CAPS,Privado,101
+2022-04,BA,CAPS,Privado,70
+2022-04,RS,CAPS,Privado,60
+2022-07,BR,CAPS,P<c3><ba>blico,1161
+2022-07,SP,CAPS,P<c3><ba>blico,247
+2022-07,RJ,CAPS,P<c3><ba>blico,102
+2022-07,MG,CAPS,P<c3><ba>blico,115
+2022-07,BA,CAPS,P<c3><ba>blico,79
+2022-07,RS,CAPS,P<c3><ba>blico,68
+2022-07,BR,CAPS,Filantr<c3><b3>pico,710
+2022-07,SP,CAPS,Filantr<c3><b3>pico,162
+2022-07,RJ,CAPS,Filantr<c3><b3>pico,64
+2022-07,MG,CAPS,Filantr<c3><b3>pico,71
+2022-07,BA,CAPS,Filantr<c3><b3>pico,51
+2022-07,RS,CAPS,Filantr<c3><b3>pico,44
+2022-07,BR,CAPS,Privado,985
+2022-07,SP,CAPS,Privado,222
+2022-07,RJ,CAPS,Privado,88
+2022-07,MG,CAPS,Privado,100
+2022-07,BA,CAPS,Privado,70
+2022-07,RS,CAPS,Privado,58
+2022-10,BR,CAPS,P<c3><ba>blico,1170
+2022-10,SP,CAPS,P<c3><ba>blico,250
+2022-10,RJ,CAPS,P<c3><ba>blico,104
+2022-10,MG,CAPS,P<c3><ba>blico,115
+2022-10,BA,CAPS,P<c3><ba>blico,80
+2022-10,RS,CAPS,P<c3><ba>blico,68
+2022-10,BR,CAPS,Filantr<c3><b3>pico,716
+2022-10,SP,CAPS,Filantr<c3><b3>pico,157
+2022-10,RJ,CAPS,Filantr<c3><b3>pico,64
+2022-10,MG,CAPS,Filantr<c3><b3>pico,72
+2022-10,BA,CAPS,Filantr<c3><b3>pico,49
+2022-10,RS,CAPS,Filantr<c3><b3>pico,43
+2022-10,BR,CAPS,Privado,1022
+2022-10,SP,CAPS,Privado,218
+2022-10,RJ,CAPS,Privado,91
+2022-10,MG,CAPS,Privado,102
+2022-10,BA,CAPS,Privado,71
+2022-10,RS,CAPS,Privado,59
+2023-01,BR,CAPS,P<c3><ba>blico,1155
+2023-01,SP,CAPS,P<c3><ba>blico,256
+2023-01,RJ,CAPS,P<c3><ba>blico,103
+2023-01,MG,CAPS,P<c3><ba>blico,116
+2023-01,BA,CAPS,P<c3><ba>blico,80
+2023-01,RS,CAPS,P<c3><ba>blico,70
+2023-01,BR,CAPS,Filantr<c3><b3>pico,716
+2023-01,SP,CAPS,Filantr<c3><b3>pico,159
+2023-01,RJ,CAPS,Filantr<c3><b3>pico,65
+2023-01,MG,CAPS,Filantr<c3><b3>pico,72
+2023-01,BA,CAPS,Filantr<c3><b3>pico,50
+2023-01,RS,CAPS,Filantr<c3><b3>pico,43
+2023-01,BR,CAPS,Privado,1034
+2023-01,SP,CAPS,Privado,224
+2023-01,RJ,CAPS,Privado,94
+2023-01,MG,CAPS,Privado,100
+2023-01,BA,CAPS,Privado,71
+2023-01,RS,CAPS,Privado,61
+2023-04,BR,CAPS,P<c3><ba>blico,1141
+2023-04,SP,CAPS,P<c3><ba>blico,255
+2023-04,RJ,CAPS,P<c3><ba>blico,104
+2023-04,MG,CAPS,P<c3><ba>blico,115
+2023-04,BA,CAPS,P<c3><ba>blico,81
+2023-04,RS,CAPS,P<c3><ba>blico,70
+2023-04,BR,CAPS,Filantr<c3><b3>pico,732
+2023-04,SP,CAPS,Filantr<c3><b3>pico,158
+2023-04,RJ,CAPS,Filantr<c3><b3>pico,65
+2023-04,MG,CAPS,Filantr<c3><b3>pico,72
+2023-04,BA,CAPS,Filantr<c3><b3>pico,51
+2023-04,RS,CAPS,Filantr<c3><b3>pico,43
+2023-04,BR,CAPS,Privado,1017
+2023-04,SP,CAPS,Privado,224
+2023-04,RJ,CAPS,Privado,90
+2023-04,MG,CAPS,Privado,100
+2023-04,BA,CAPS,Privado,72
+2023-04,RS,CAPS,Privado,62
+2023-07,BR,CAPS,P<c3><ba>blico,1177
+2023-07,SP,CAPS,P<c3><ba>blico,255
+2023-07,RJ,CAPS,P<c3><ba>blico,105
+2023-07,MG,CAPS,P<c3><ba>blico,119
+2023-07,BA,CAPS,P<c3><ba>blico,82
+2023-07,RS,CAPS,P<c3><ba>blico,71
+2023-07,BR,CAPS,Filantr<c3><b3>pico,734
+2023-07,SP,CAPS,Filantr<c3><b3>pico,163
+2023-07,RJ,CAPS,Filantr<c3><b3>pico,66
+2023-07,MG,CAPS,Filantr<c3><b3>pico,71
+2023-07,BA,CAPS,Filantr<c3><b3>pico,51
+2023-07,RS,CAPS,Filantr<c3><b3>pico,43
+2023-07,BR,CAPS,Privado,1019
+2023-07,SP,CAPS,Privado,219
+2023-07,RJ,CAPS,Privado,91
+2023-07,MG,CAPS,Privado,99
+2023-07,BA,CAPS,Privado,70
+2023-07,RS,CAPS,Privado,60
+2023-10,BR,CAPS,P<c3><ba>blico,1191
+2023-10,SP,CAPS,P<c3><ba>blico,256
+2023-10,RJ,CAPS,P<c3><ba>blico,105
+2023-10,MG,CAPS,P<c3><ba>blico,117
+2023-10,BA,CAPS,P<c3><ba>blico,82
+2023-10,RS,CAPS,P<c3><ba>blico,72
+2023-10,BR,CAPS,Filantr<c3><b3>pico,731
+2023-10,SP,CAPS,Filantr<c3><b3>pico,162
+2023-10,RJ,CAPS,Filantr<c3><b3>pico,67
+2023-10,MG,CAPS,Filantr<c3><b3>pico,76
+2023-10,BA,CAPS,Filantr<c3><b3>pico,50
+2023-10,RS,CAPS,Filantr<c3><b3>pico,44
+2023-10,BR,CAPS,Privado,1002
+2023-10,SP,CAPS,Privado,227
+2023-10,RJ,CAPS,Privado,89
+2023-10,MG,CAPS,Privado,104
+2023-10,BA,CAPS,Privado,71
+2023-10,RS,CAPS,Privado,60
+2024-01,BR,CAPS,P<c3><ba>blico,1186
+2024-01,SP,CAPS,P<c3><ba>blico,262
+2024-01,RJ,CAPS,P<c3><ba>blico,104
+2024-01,MG,CAPS,P<c3><ba>blico,118
+2024-01,BA,CAPS,P<c3><ba>blico,80
+2024-01,RS,CAPS,P<c3><ba>blico,70
+2024-01,BR,CAPS,Filantr<c3><b3>pico,747
+2024-01,SP,CAPS,Filantr<c3><b3>pico,159
+2024-01,RJ,CAPS,Filantr<c3><b3>pico,67
+2024-01,MG,CAPS,Filantr<c3><b3>pico,73
+2024-01,BA,CAPS,Filantr<c3><b3>pico,50
+2024-01,RS,CAPS,Filantr<c3><b3>pico,43
+2024-01,BR,CAPS,Privado,1041
+2024-01,SP,CAPS,Privado,222
+2024-01,RJ,CAPS,Privado,90
+2024-01,MG,CAPS,Privado,103
+2024-01,BA,CAPS,Privado,72
+2024-01,RS,CAPS,Privado,61
+2024-04,BR,CAPS,P<c3><ba>blico,1152
+2024-04,SP,CAPS,P<c3><ba>blico,254
+2024-04,RJ,CAPS,P<c3><ba>blico,108
+2024-04,MG,CAPS,P<c3><ba>blico,116
+2024-04,BA,CAPS,P<c3><ba>blico,82
+2024-04,RS,CAPS,P<c3><ba>blico,69
+2024-04,BR,CAPS,Filantr<c3><b3>pico,737
+2024-04,SP,CAPS,Filantr<c3><b3>pico,165
+2024-04,RJ,CAPS,Filantr<c3><b3>pico,66
+2024-04,MG,CAPS,Filantr<c3><b3>pico,73
+2024-04,BA,CAPS,Filantr<c3><b3>pico,51
+2024-04,RS,CAPS,Filantr<c3><b3>pico,44
+2024-04,BR,CAPS,Privado,1031
+2024-04,SP,CAPS,Privado,223
+2024-04,RJ,CAPS,Privado,90
+2024-04,MG,CAPS,Privado,101
+2024-04,BA,CAPS,Privado,71
+2024-04,RS,CAPS,Privado,60
+2024-07,BR,CAPS,P<c3><ba>blico,1203
+2024-07,SP,CAPS,P<c3><ba>blico,262
+2024-07,RJ,CAPS,P<c3><ba>blico,108
+2024-07,MG,CAPS,P<c3><ba>blico,119
+2024-07,BA,CAPS,P<c3><ba>blico,83
+2024-07,RS,CAPS,P<c3><ba>blico,70
+2024-07,BR,CAPS,Filantr<c3><b3>pico,738
+2024-07,SP,CAPS,Filantr<c3><b3>pico,169
+2024-07,RJ,CAPS,Filantr<c3><b3>pico,67
+2024-07,MG,CAPS,Filantr<c3><b3>pico,72
+2024-07,BA,CAPS,Filantr<c3><b3>pico,51
+2024-07,RS,CAPS,Filantr<c3><b3>pico,44
+2024-07,BR,CAPS,Privado,1024
+2024-07,SP,CAPS,Privado,232
+2024-07,RJ,CAPS,Privado,93
+2024-07,MG,CAPS,Privado,104
+2024-07,BA,CAPS,Privado,72
+2024-07,RS,CAPS,Privado,62
+2024-10,BR,CAPS,P<c3><ba>blico,1229
+2024-10,SP,CAPS,P<c3><ba>blico,258
+2024-10,RJ,CAPS,P<c3><ba>blico,105
+2024-10,MG,CAPS,P<c3><ba>blico,118
+2024-10,BA,CAPS,P<c3><ba>blico,83
+2024-10,RS,CAPS,P<c3><ba>blico,70
+2024-10,BR,CAPS,Filantr<c3><b3>pico,757
+2024-10,SP,CAPS,Filantr<c3><b3>pico,164
+2024-10,RJ,CAPS,Filantr<c3><b3>pico,65
+2024-10,MG,CAPS,Filantr<c3><b3>pico,73
+2024-10,BA,CAPS,Filantr<c3><b3>pico,51
+2024-10,RS,CAPS,Filantr<c3><b3>pico,44
+2024-10,BR,CAPS,Privado,1024
+2024-10,SP,CAPS,Privado,225
+2024-10,RJ,CAPS,Privado,92
+2024-10,MG,CAPS,Privado,104
+2024-10,BA,CAPS,Privado,72
+2024-10,RS,CAPS,Privado,61
+2025-01,BR,CAPS,P<c3><ba>blico,1211
+2025-01,SP,CAPS,P<c3><ba>blico,264
+2025-01,RJ,CAPS,P<c3><ba>blico,106
+2025-01,MG,CAPS,P<c3><ba>blico,118
+2025-01,BA,CAPS,P<c3><ba>blico,84
+2025-01,RS,CAPS,P<c3><ba>blico,71
+2025-01,BR,CAPS,Filantr<c3><b3>pico,735
+2025-01,SP,CAPS,Filantr<c3><b3>pico,163
+2025-01,RJ,CAPS,Filantr<c3><b3>pico,66
+2025-01,MG,CAPS,Filantr<c3><b3>pico,76
+2025-01,BA,CAPS,Filantr<c3><b3>pico,52
+2025-01,RS,CAPS,Filantr<c3><b3>pico,44
+2025-01,BR,CAPS,Privado,1019
+2025-01,SP,CAPS,Privado,224
+2025-01,RJ,CAPS,Privado,93
+2025-01,MG,CAPS,Privado,106
+2025-01,BA,CAPS,Privado,71
+2025-01,RS,CAPS,Privado,61
+2025-04,BR,CAPS,P<c3><ba>blico,1187
+2025-04,SP,CAPS,P<c3><ba>blico,259
+2025-04,RJ,CAPS,P<c3><ba>blico,108
+2025-04,MG,CAPS,P<c3><ba>blico,122
+2025-04,BA,CAPS,P<c3><ba>blico,82
+2025-04,RS,CAPS,P<c3><ba>blico,72
+2025-04,BR,CAPS,Filantr<c3><b3>pico,750
+2025-04,SP,CAPS,Filantr<c3><b3>pico,161
+2025-04,RJ,CAPS,Filantr<c3><b3>pico,68
+2025-04,MG,CAPS,Filantr<c3><b3>pico,75
+2025-04,BA,CAPS,Filantr<c3><b3>pico,51
+2025-04,RS,CAPS,Filantr<c3><b3>pico,43
+2025-04,BR,CAPS,Privado,1042
+2025-04,SP,CAPS,Privado,228
+2025-04,RJ,CAPS,Privado,93
+2025-04,MG,CAPS,Privado,104
+2025-04,BA,CAPS,Privado,73
+2025-04,RS,CAPS,Privado,62
+2025-07,BR,CAPS,P<c3><ba>blico,1185
+2025-07,SP,CAPS,P<c3><ba>blico,261
+2025-07,RJ,CAPS,P<c3><ba>blico,108
+2025-07,MG,CAPS,P<c3><ba>blico,119
+2025-07,BA,CAPS,P<c3><ba>blico,83
+2025-07,RS,CAPS,P<c3><ba>blico,72
+2025-07,BR,CAPS,Filantr<c3><b3>pico,751
+2025-07,SP,CAPS,Filantr<c3><b3>pico,168
+2025-07,RJ,CAPS,Filantr<c3><b3>pico,67
+2025-07,MG,CAPS,Filantr<c3><b3>pico,75
+2025-07,BA,CAPS,Filantr<c3><b3>pico,52
+2025-07,RS,CAPS,Filantr<c3><b3>pico,46
+2025-07,BR,CAPS,Privado,1065
+2025-07,SP,CAPS,Privado,229
+2025-07,RJ,CAPS,Privado,93
+2025-07,MG,CAPS,Privado,103
+2025-07,BA,CAPS,Privado,73
+2025-07,RS,CAPS,Privado,63
+2018-01,BR,Policl<c3><ad>nica,P<c3><ba>blico,1277
+2018-01,SP,Policl<c3><ad>nica,P<c3><ba>blico,291
+2018-01,RJ,Policl<c3><ad>nica,P<c3><ba>blico,113
+2018-01,MG,Policl<c3><ad>nica,P<c3><ba>blico,131
+2018-01,BA,Policl<c3><ad>nica,P<c3><ba>blico,91
+2018-01,RS,Policl<c3><ad>nica,P<c3><ba>blico,77
+2018-01,BR,Policl<c3><ad>nica,Filantr<c3><b3>pico,801
+2018-01,SP,Policl<c3><ad>nica,Filantr<c3><b3>pico,176
+2018-01,RJ,Policl<c3><ad>nica,Filantr<c3><b3>pico,72
+2018-01,MG,Policl<c3><ad>nica,Filantr<c3><b3>pico,80
+2018-01,BA,Policl<c3><ad>nica,Filantr<c3><b3>pico,55
+2018-01,RS,Policl<c3><ad>nica,Filantr<c3><b3>pico,49
+2018-01,BR,Policl<c3><ad>nica,Privado,1123
+2018-01,SP,Policl<c3><ad>nica,Privado,243
+2018-01,RJ,Policl<c3><ad>nica,Privado,103
+2018-01,MG,Policl<c3><ad>nica,Privado,113
+2018-01,BA,Policl<c3><ad>nica,Privado,79
+2018-01,RS,Policl<c3><ad>nica,Privado,67
+2018-04,BR,Policl<c3><ad>nica,P<c3><ba>blico,1270
+2018-04,SP,Policl<c3><ad>nica,P<c3><ba>blico,289
+2018-04,RJ,Policl<c3><ad>nica,P<c3><ba>blico,118
+2018-04,MG,Policl<c3><ad>nica,P<c3><ba>blico,130
+2018-04,BA,Policl<c3><ad>nica,P<c3><ba>blico,90
+2018-04,RS,Policl<c3><ad>nica,P<c3><ba>blico,78
+2018-04,BR,Policl<c3><ad>nica,Filantr<c3><b3>pico,798
+2018-04,SP,Policl<c3><ad>nica,Filantr<c3><b3>pico,174
+2018-04,RJ,Policl<c3><ad>nica,Filantr<c3><b3>pico,71
+2018-04,MG,Policl<c3><ad>nica,Filantr<c3><b3>pico,83
+2018-04,BA,Policl<c3><ad>nica,Filantr<c3><b3>pico,57
+2018-04,RS,Policl<c3><ad>nica,Filantr<c3><b3>pico,48
+2018-04,BR,Policl<c3><ad>nica,Privado,1109
+2018-04,SP,Policl<c3><ad>nica,Privado,248
+2018-04,RJ,Policl<c3><ad>nica,Privado,99
+2018-04,MG,Policl<c3><ad>nica,Privado,109
+2018-04,BA,Policl<c3><ad>nica,Privado,79
+2018-04,RS,Policl<c3><ad>nica,Privado,65
+2018-07,BR,Policl<c3><ad>nica,P<c3><ba>blico,1275
+2018-07,SP,Policl<c3><ad>nica,P<c3><ba>blico,280
+2018-07,RJ,Policl<c3><ad>nica,P<c3><ba>blico,116
+2018-07,MG,Policl<c3><ad>nica,P<c3><ba>blico,131
+2018-07,BA,Policl<c3><ad>nica,P<c3><ba>blico,90
+2018-07,RS,Policl<c3><ad>nica,P<c3><ba>blico,78
+2018-07,BR,Policl<c3><ad>nica,Filantr<c3><b3>pico,796
+2018-07,SP,Policl<c3><ad>nica,Filantr<c3><b3>pico,177
+2018-07,RJ,Policl<c3><ad>nica,Filantr<c3><b3>pico,71
+2018-07,MG,Policl<c3><ad>nica,Filantr<c3><b3>pico,82
+2018-07,BA,Policl<c3><ad>nica,Filantr<c3><b3>pico,55
+2018-07,RS,Policl<c3><ad>nica,Filantr<c3><b3>pico,47
+2018-07,BR,Policl<c3><ad>nica,Privado,1162
+2018-07,SP,Policl<c3><ad>nica,Privado,250
+2018-07,RJ,Policl<c3><ad>nica,Privado,100
+2018-07,MG,Policl<c3><ad>nica,Privado,112
+2018-07,BA,Policl<c3><ad>nica,Privado,80
+2018-07,RS,Policl<c3><ad>nica,Privado,67
+2018-10,BR,Policl<c3><ad>nica,P<c3><ba>blico,1295
+2018-10,SP,Policl<c3><ad>nica,P<c3><ba>blico,282
+2018-10,RJ,Policl<c3><ad>nica,P<c3><ba>blico,117
+2018-10,MG,Policl<c3><ad>nica,P<c3><ba>blico,128
+2018-10,BA,Policl<c3><ad>nica,P<c3><ba>blico,90
+2018-10,RS,Policl<c3><ad>nica,P<c3><ba>blico,76
+2018-10,BR,Policl<c3><ad>nica,Filantr<c3><b3>pico,807
+2018-10,SP,Policl<c3><ad>nica,Filantr<c3><b3>pico,175
+2018-10,RJ,Policl<c3><ad>nica,Filantr<c3><b3>pico,73
+2018-10,MG,Policl<c3><ad>nica,Filantr<c3><b3>pico,80
+2018-10,BA,Policl<c3><ad>nica,Filantr<c3><b3>pico,56
+2018-10,RS,Policl<c3><ad>nica,Filantr<c3><b3>pico,47
+2018-10,BR,Policl<c3><ad>nica,Privado,1125
+2018-10,SP,Policl<c3><ad>nica,Privado,246
+2018-10,RJ,Policl<c3><ad>nica,Privado,102
+2018-10,MG,Policl<c3><ad>nica,Privado,113
+2018-10,BA,Policl<c3><ad>nica,Privado,79
+2018-10,RS,Policl<c3><ad>nica,Privado,69
+2019-01,BR,Policl<c3><ad>nica,P<c3><ba>blico,1319
+2019-01,SP,Policl<c3><ad>nica,P<c3><ba>blico,282
+2019-01,RJ,Policl<c3><ad>nica,P<c3><ba>blico,118
+2019-01,MG,Policl<c3><ad>nica,P<c3><ba>blico,124
+2019-01,BA,Policl<c3><ad>nica,P<c3><ba>blico,90
+2019-01,RS,Policl<c3><ad>nica,P<c3><ba>blico,79
+2019-01,BR,Policl<c3><ad>nica,Filantr<c3><b3>pico,815
+2019-01,SP,Policl<c3><ad>nica,Filantr<c3><b3>pico,175
+2019-01,RJ,Policl<c3><ad>nica,Filantr<c3><b3>pico,74
+2019-01,MG,Policl<c3><ad>nica,Filantr<c3><b3>pico,80
+2019-01,BA,Policl<c3><ad>nica,Filantr<c3><b3>pico,56
+2019-01,RS,Policl<c3><ad>nica,Filantr<c3><b3>pico,48
+2019-01,BR,Policl<c3><ad>nica,Privado,1133
+2019-01,SP,Policl<c3><ad>nica,Privado,252
+2019-01,RJ,Policl<c3><ad>nica,Privado,102
+2019-01,MG,Policl<c3><ad>nica,Privado,114
+2019-01,BA,Policl<c3><ad>nica,Privado,79
+2019-01,RS,Policl<c3><ad>nica,Privado,68
+2019-04,BR,Policl<c3><ad>nica,P<c3><ba>blico,1283
+2019-04,SP,Policl<c3><ad>nica,P<c3><ba>blico,285
+2019-04,RJ,Policl<c3><ad>nica,P<c3><ba>blico,118
+2019-04,MG,Policl<c3><ad>nica,P<c3><ba>blico,131
+2019-04,BA,Policl<c3><ad>nica,P<c3><ba>blico,95
+2019-04,RS,Policl<c3><ad>nica,P<c3><ba>blico,77
+2019-04,BR,Policl<c3><ad>nica,Filantr<c3><b3>pico,824
+2019-04,SP,Policl<c3><ad>nica,Filantr<c3><b3>pico,177
+2019-04,RJ,Policl<c3><ad>nica,Filantr<c3><b3>pico,72
+2019-04,MG,Policl<c3><ad>nica,Filantr<c3><b3>pico,82
+2019-04,BA,Policl<c3><ad>nica,Filantr<c3><b3>pico,57
+2019-04,RS,Policl<c3><ad>nica,Filantr<c3><b3>pico,48
+2019-04,BR,Policl<c3><ad>nica,Privado,1117
+2019-04,SP,Policl<c3><ad>nica,Privado,244
+2019-04,RJ,Policl<c3><ad>nica,Privado,102
+2019-04,MG,Policl<c3><ad>nica,Privado,113
+2019-04,BA,Policl<c3><ad>nica,Privado,81
+2019-04,RS,Policl<c3><ad>nica,Privado,67
+2019-07,BR,Policl<c3><ad>nica,P<c3><ba>blico,1307
+2019-07,SP,Policl<c3><ad>nica,P<c3><ba>blico,292
+2019-07,RJ,Policl<c3><ad>nica,P<c3><ba>blico,122
+2019-07,MG,Policl<c3><ad>nica,P<c3><ba>blico,129
+2019-07,BA,Policl<c3><ad>nica,P<c3><ba>blico,90
+2019-07,RS,Policl<c3><ad>nica,P<c3><ba>blico,77
+2019-07,BR,Policl<c3><ad>nica,Filantr<c3><b3>pico,814
+2019-07,SP,Policl<c3><ad>nica,Filantr<c3><b3>pico,180
+2019-07,RJ,Policl<c3><ad>nica,Filantr<c3><b3>pico,77
+2019-07,MG,Policl<c3><ad>nica,Filantr<c3><b3>pico,82
+2019-07,BA,Policl<c3><ad>nica,Filantr<c3><b3>pico,56
+2019-07,RS,Policl<c3><ad>nica,Filantr<c3><b3>pico,49
+2019-07,BR,Policl<c3><ad>nica,Privado,1147
+2019-07,SP,Policl<c3><ad>nica,Privado,252
+2019-07,RJ,Policl<c3><ad>nica,Privado,104
+2019-07,MG,Policl<c3><ad>nica,Privado,113
+2019-07,BA,Policl<c3><ad>nica,Privado,79
+2019-07,RS,Policl<c3><ad>nica,Privado,67
+2019-10,BR,Policl<c3><ad>nica,P<c3><ba>blico,1316
+2019-10,SP,Policl<c3><ad>nica,P<c3><ba>blico,289
+2019-10,RJ,Policl<c3><ad>nica,P<c3><ba>blico,116
+2019-10,MG,Policl<c3><ad>nica,P<c3><ba>blico,131
+2019-10,BA,Policl<c3><ad>nica,P<c3><ba>blico,91
+2019-10,RS,Policl<c3><ad>nica,P<c3><ba>blico,78
+2019-10,BR,Policl<c3><ad>nica,Filantr<c3><b3>pico,827
+2019-10,SP,Policl<c3><ad>nica,Filantr<c3><b3>pico,181
+2019-10,RJ,Policl<c3><ad>nica,Filantr<c3><b3>pico,73
+2019-10,MG,Policl<c3><ad>nica,Filantr<c3><b3>pico,80
+2019-10,BA,Policl<c3><ad>nica,Filantr<c3><b3>pico,57
+2019-10,RS,Policl<c3><ad>nica,Filantr<c3><b3>pico,48
+2019-10,BR,Policl<c3><ad>nica,Privado,1110
+2019-10,SP,Policl<c3><ad>nica,Privado,258
+2019-10,RJ,Policl<c3><ad>nica,Privado,104
+2019-10,MG,Policl<c3><ad>nica,Privado,116
+2019-10,BA,Policl<c3><ad>nica,Privado,81
+2019-10,RS,Policl<c3><ad>nica,Privado,68
+2020-01,BR,Policl<c3><ad>nica,P<c3><ba>blico,1321
+2020-01,SP,Policl<c3><ad>nica,P<c3><ba>blico,293
+2020-01,RJ,Policl<c3><ad>nica,P<c3><ba>blico,119
+2020-01,MG,Policl<c3><ad>nica,P<c3><ba>blico,131
+2020-01,BA,Policl<c3><ad>nica,P<c3><ba>blico,92
+2020-01,RS,Policl<c3><ad>nica,P<c3><ba>blico,78
+2020-01,BR,Policl<c3><ad>nica,Filantr<c3><b3>pico,842
+2020-01,SP,Policl<c3><ad>nica,Filantr<c3><b3>pico,181
+2020-01,RJ,Policl<c3><ad>nica,Filantr<c3><b3>pico,72
+2020-01,MG,Policl<c3><ad>nica,Filantr<c3><b3>pico,83
+2020-01,BA,Policl<c3><ad>nica,Filantr<c3><b3>pico,57
+2020-01,RS,Policl<c3><ad>nica,Filantr<c3><b3>pico,49
+2020-01,BR,Policl<c3><ad>nica,Privado,1161
+2020-01,SP,Policl<c3><ad>nica,Privado,260
+2020-01,RJ,Policl<c3><ad>nica,Privado,103
+2020-01,MG,Policl<c3><ad>nica,Privado,114
+2020-01,BA,Policl<c3><ad>nica,Privado,80
+2020-01,RS,Policl<c3><ad>nica,Privado,69
+2020-04,BR,Policl<c3><ad>nica,P<c3><ba>blico,1337
+2020-04,SP,Policl<c3><ad>nica,P<c3><ba>blico,287
+2020-04,RJ,Policl<c3><ad>nica,P<c3><ba>blico,118
+2020-04,MG,Policl<c3><ad>nica,P<c3><ba>blico,131
+2020-04,BA,Policl<c3><ad>nica,P<c3><ba>blico,93
+2020-04,RS,Policl<c3><ad>nica,P<c3><ba>blico,80
+2020-04,BR,Policl<c3><ad>nica,Filantr<c3><b3>pico,844
+2020-04,SP,Policl<c3><ad>nica,Filantr<c3><b3>pico,178
+2020-04,RJ,Policl<c3><ad>nica,Filantr<c3><b3>pico,74
+2020-04,MG,Policl<c3><ad>nica,Filantr<c3><b3>pico,80
+2020-04,BA,Policl<c3><ad>nica,Filantr<c3><b3>pico,57
+2020-04,RS,Policl<c3><ad>nica,Filantr<c3><b3>pico,49
+2020-04,BR,Policl<c3><ad>nica,Privado,1139
+2020-04,SP,Policl<c3><ad>nica,Privado,258
+2020-04,RJ,Policl<c3><ad>nica,Privado,104
+2020-04,MG,Policl<c3><ad>nica,Privado,115
+2020-04,BA,Policl<c3><ad>nica,Privado,80
+2020-04,RS,Policl<c3><ad>nica,Privado,69
+2020-07,BR,Policl<c3><ad>nica,P<c3><ba>blico,1310
+2020-07,SP,Policl<c3><ad>nica,P<c3><ba>blico,300
+2020-07,RJ,Policl<c3><ad>nica,P<c3><ba>blico,120
+2020-07,MG,Policl<c3><ad>nica,P<c3><ba>blico,135
+2020-07,BA,Policl<c3><ad>nica,P<c3><ba>blico,91
+2020-07,RS,Policl<c3><ad>nica,P<c3><ba>blico,80
+2020-07,BR,Policl<c3><ad>nica,Filantr<c3><b3>pico,842
+2020-07,SP,Policl<c3><ad>nica,Filantr<c3><b3>pico,180
+2020-07,RJ,Policl<c3><ad>nica,Filantr<c3><b3>pico,75
+2020-07,MG,Policl<c3><ad>nica,Filantr<c3><b3>pico,83
+2020-07,BA,Policl<c3><ad>nica,Filantr<c3><b3>pico,56
+2020-07,RS,Policl<c3><ad>nica,Filantr<c3><b3>pico,50
+2020-07,BR,Policl<c3><ad>nica,Privado,1174
+2020-07,SP,Policl<c3><ad>nica,Privado,263
+2020-07,RJ,Policl<c3><ad>nica,Privado,104
+2020-07,MG,Policl<c3><ad>nica,Privado,115
+2020-07,BA,Policl<c3><ad>nica,Privado,79
+2020-07,RS,Policl<c3><ad>nica,Privado,68
+2020-10,BR,Policl<c3><ad>nica,P<c3><ba>blico,1354
+2020-10,SP,Policl<c3><ad>nica,P<c3><ba>blico,301
+2020-10,RJ,Policl<c3><ad>nica,P<c3><ba>blico,120
+2020-10,MG,Policl<c3><ad>nica,P<c3><ba>blico,132
+2020-10,BA,Policl<c3><ad>nica,P<c3><ba>blico,93
+2020-10,RS,Policl<c3><ad>nica,P<c3><ba>blico,79
+2020-10,BR,Policl<c3><ad>nica,Filantr<c3><b3>pico,827
+2020-10,SP,Policl<c3><ad>nica,Filantr<c3><b3>pico,185
+2020-10,RJ,Policl<c3><ad>nica,Filantr<c3><b3>pico,75
+2020-10,MG,Policl<c3><ad>nica,Filantr<c3><b3>pico,81
+2020-10,BA,Policl<c3><ad>nica,Filantr<c3><b3>pico,58
+2020-10,RS,Policl<c3><ad>nica,Filantr<c3><b3>pico,51
+2020-10,BR,Policl<c3><ad>nica,Privado,1163
+2020-10,SP,Policl<c3><ad>nica,Privado,249
+2020-10,RJ,Policl<c3><ad>nica,Privado,107
+2020-10,MG,Policl<c3><ad>nica,Privado,117
+2020-10,BA,Policl<c3><ad>nica,Privado,82
+2020-10,RS,Policl<c3><ad>nica,Privado,68
+2021-01,BR,Policl<c3><ad>nica,P<c3><ba>blico,1337
+2021-01,SP,Policl<c3><ad>nica,P<c3><ba>blico,296
+2021-01,RJ,Policl<c3><ad>nica,P<c3><ba>blico,119
+2021-01,MG,Policl<c3><ad>nica,P<c3><ba>blico,131
+2021-01,BA,Policl<c3><ad>nica,P<c3><ba>blico,92
+2021-01,RS,Policl<c3><ad>nica,P<c3><ba>blico,79
+2021-01,BR,Policl<c3><ad>nica,Filantr<c3><b3>pico,827
+2021-01,SP,Policl<c3><ad>nica,Filantr<c3><b3>pico,186
+2021-01,RJ,Policl<c3><ad>nica,Filantr<c3><b3>pico,74
+2021-01,MG,Policl<c3><ad>nica,Filantr<c3><b3>pico,84
+2021-01,BA,Policl<c3><ad>nica,Filantr<c3><b3>pico,58
+2021-01,RS,Policl<c3><ad>nica,Filantr<c3><b3>pico,50
+2021-01,BR,Policl<c3><ad>nica,Privado,1174
+2021-01,SP,Policl<c3><ad>nica,Privado,263
+2021-01,RJ,Policl<c3><ad>nica,Privado,105
+2021-01,MG,Policl<c3><ad>nica,Privado,119
+2021-01,BA,Policl<c3><ad>nica,Privado,82
+2021-01,RS,Policl<c3><ad>nica,Privado,69
+2021-04,BR,Policl<c3><ad>nica,P<c3><ba>blico,1341
+2021-04,SP,Policl<c3><ad>nica,P<c3><ba>blico,284
+2021-04,RJ,Policl<c3><ad>nica,P<c3><ba>blico,118
+2021-04,MG,Policl<c3><ad>nica,P<c3><ba>blico,134
+2021-04,BA,Policl<c3><ad>nica,P<c3><ba>blico,94
+2021-04,RS,Policl<c3><ad>nica,P<c3><ba>blico,82
+2021-04,BR,Policl<c3><ad>nica,Filantr<c3><b3>pico,837
+2021-04,SP,Policl<c3><ad>nica,Filantr<c3><b3>pico,183
+2021-04,RJ,Policl<c3><ad>nica,Filantr<c3><b3>pico,75
+2021-04,MG,Policl<c3><ad>nica,Filantr<c3><b3>pico,84
+2021-04,BA,Policl<c3><ad>nica,Filantr<c3><b3>pico,58
+2021-04,RS,Policl<c3><ad>nica,Filantr<c3><b3>pico,52
+2021-04,BR,Policl<c3><ad>nica,Privado,1176
+2021-04,SP,Policl<c3><ad>nica,Privado,253
+2021-04,RJ,Policl<c3><ad>nica,Privado,106
+2021-04,MG,Policl<c3><ad>nica,Privado,115
+2021-04,BA,Policl<c3><ad>nica,Privado,82
+2021-04,RS,Policl<c3><ad>nica,Privado,71
+2021-07,BR,Policl<c3><ad>nica,P<c3><ba>blico,1370
+2021-07,SP,Policl<c3><ad>nica,P<c3><ba>blico,292
+2021-07,RJ,Policl<c3><ad>nica,P<c3><ba>blico,119
+2021-07,MG,Policl<c3><ad>nica,P<c3><ba>blico,132
+2021-07,BA,Policl<c3><ad>nica,P<c3><ba>blico,94
+2021-07,RS,Policl<c3><ad>nica,P<c3><ba>blico,81
+2021-07,BR,Policl<c3><ad>nica,Filantr<c3><b3>pico,843
+2021-07,SP,Policl<c3><ad>nica,Filantr<c3><b3>pico,187
+2021-07,RJ,Policl<c3><ad>nica,Filantr<c3><b3>pico,76
+2021-07,MG,Policl<c3><ad>nica,Filantr<c3><b3>pico,82
+2021-07,BA,Policl<c3><ad>nica,Filantr<c3><b3>pico,58
+2021-07,RS,Policl<c3><ad>nica,Filantr<c3><b3>pico,51
+2021-07,BR,Policl<c3><ad>nica,Privado,1175
+2021-07,SP,Policl<c3><ad>nica,Privado,269
+2021-07,RJ,Policl<c3><ad>nica,Privado,105
+2021-07,MG,Policl<c3><ad>nica,Privado,117
+2021-07,BA,Policl<c3><ad>nica,Privado,82
+2021-07,RS,Policl<c3><ad>nica,Privado,69
+2021-10,BR,Policl<c3><ad>nica,P<c3><ba>blico,1346
+2021-10,SP,Policl<c3><ad>nica,P<c3><ba>blico,294
+2021-10,RJ,Policl<c3><ad>nica,P<c3><ba>blico,119
+2021-10,MG,Policl<c3><ad>nica,P<c3><ba>blico,133
+2021-10,BA,Policl<c3><ad>nica,P<c3><ba>blico,91
+2021-10,RS,Policl<c3><ad>nica,P<c3><ba>blico,78
+2021-10,BR,Policl<c3><ad>nica,Filantr<c3><b3>pico,821
+2021-10,SP,Policl<c3><ad>nica,Filantr<c3><b3>pico,185
+2021-10,RJ,Policl<c3><ad>nica,Filantr<c3><b3>pico,76
+2021-10,MG,Policl<c3><ad>nica,Filantr<c3><b3>pico,85
+2021-10,BA,Policl<c3><ad>nica,Filantr<c3><b3>pico,60
+2021-10,RS,Policl<c3><ad>nica,Filantr<c3><b3>pico,50
+2021-10,BR,Policl<c3><ad>nica,Privado,1197
+2021-10,SP,Policl<c3><ad>nica,Privado,253
+2021-10,RJ,Policl<c3><ad>nica,Privado,105
+2021-10,MG,Policl<c3><ad>nica,Privado,117
+2021-10,BA,Policl<c3><ad>nica,Privado,84
+2021-10,RS,Policl<c3><ad>nica,Privado,70
+2022-01,BR,Policl<c3><ad>nica,P<c3><ba>blico,1356
+2022-01,SP,Policl<c3><ad>nica,P<c3><ba>blico,296
+2022-01,RJ,Policl<c3><ad>nica,P<c3><ba>blico,121
+2022-01,MG,Policl<c3><ad>nica,P<c3><ba>blico,133
+2022-01,BA,Policl<c3><ad>nica,P<c3><ba>blico,96
+2022-01,RS,Policl<c3><ad>nica,P<c3><ba>blico,80
+2022-01,BR,Policl<c3><ad>nica,Filantr<c3><b3>pico,857
+2022-01,SP,Policl<c3><ad>nica,Filantr<c3><b3>pico,186
+2022-01,RJ,Policl<c3><ad>nica,Filantr<c3><b3>pico,75
+2022-01,MG,Policl<c3><ad>nica,Filantr<c3><b3>pico,84
+2022-01,BA,Policl<c3><ad>nica,Filantr<c3><b3>pico,59
+2022-01,RS,Policl<c3><ad>nica,Filantr<c3><b3>pico,50
+2022-01,BR,Policl<c3><ad>nica,Privado,1186
+2022-01,SP,Policl<c3><ad>nica,Privado,259
+2022-01,RJ,Policl<c3><ad>nica,Privado,109
+2022-01,MG,Policl<c3><ad>nica,Privado,119
+2022-01,BA,Policl<c3><ad>nica,Privado,84
+2022-01,RS,Policl<c3><ad>nica,Privado,71
+2022-04,BR,Policl<c3><ad>nica,P<c3><ba>blico,1374
+2022-04,SP,Policl<c3><ad>nica,P<c3><ba>blico,299
+2022-04,RJ,Policl<c3><ad>nica,P<c3><ba>blico,124
+2022-04,MG,Policl<c3><ad>nica,P<c3><ba>blico,134
+2022-04,BA,Policl<c3><ad>nica,P<c3><ba>blico,92
+2022-04,RS,Policl<c3><ad>nica,P<c3><ba>blico,84
+2022-04,BR,Policl<c3><ad>nica,Filantr<c3><b3>pico,870
+2022-04,SP,Policl<c3><ad>nica,Filantr<c3><b3>pico,185
+2022-04,RJ,Policl<c3><ad>nica,Filantr<c3><b3>pico,78
+2022-04,MG,Policl<c3><ad>nica,Filantr<c3><b3>pico,81
+2022-04,BA,Policl<c3><ad>nica,Filantr<c3><b3>pico,57
+2022-04,RS,Policl<c3><ad>nica,Filantr<c3><b3>pico,49
+2022-04,BR,Policl<c3><ad>nica,Privado,1169
+2022-04,SP,Policl<c3><ad>nica,Privado,264
+2022-04,RJ,Policl<c3><ad>nica,Privado,106
+2022-04,MG,Policl<c3><ad>nica,Privado,118
+2022-04,BA,Policl<c3><ad>nica,Privado,83
+2022-04,RS,Policl<c3><ad>nica,Privado,71
+2022-07,BR,Policl<c3><ad>nica,P<c3><ba>blico,1361
+2022-07,SP,Policl<c3><ad>nica,P<c3><ba>blico,301
+2022-07,RJ,Policl<c3><ad>nica,P<c3><ba>blico,121
+2022-07,MG,Policl<c3><ad>nica,P<c3><ba>blico,134
+2022-07,BA,Policl<c3><ad>nica,P<c3><ba>blico,95
+2022-07,RS,Policl<c3><ad>nica,P<c3><ba>blico,83
+2022-07,BR,Policl<c3><ad>nica,Filantr<c3><b3>pico,868
+2022-07,SP,Policl<c3><ad>nica,Filantr<c3><b3>pico,186
+2022-07,RJ,Policl<c3><ad>nica,Filantr<c3><b3>pico,75
+2022-07,MG,Policl<c3><ad>nica,Filantr<c3><b3>pico,84
+2022-07,BA,Policl<c3><ad>nica,Filantr<c3><b3>pico,57
+2022-07,RS,Policl<c3><ad>nica,Filantr<c3><b3>pico,52
+2022-07,BR,Policl<c3><ad>nica,Privado,1178
+2022-07,SP,Policl<c3><ad>nica,Privado,268
+2022-07,RJ,Policl<c3><ad>nica,Privado,107
+2022-07,MG,Policl<c3><ad>nica,Privado,117
+2022-07,BA,Policl<c3><ad>nica,Privado,81
+2022-07,RS,Policl<c3><ad>nica,Privado,70
+2022-10,BR,Policl<c3><ad>nica,P<c3><ba>blico,1394
+2022-10,SP,Policl<c3><ad>nica,P<c3><ba>blico,299
+2022-10,RJ,Policl<c3><ad>nica,P<c3><ba>blico,123
+2022-10,MG,Policl<c3><ad>nica,P<c3><ba>blico,140
+2022-10,BA,Policl<c3><ad>nica,P<c3><ba>blico,97
+2022-10,RS,Policl<c3><ad>nica,P<c3><ba>blico,83
+2022-10,BR,Policl<c3><ad>nica,Filantr<c3><b3>pico,868
+2022-10,SP,Policl<c3><ad>nica,Filantr<c3><b3>pico,185
+2022-10,RJ,Policl<c3><ad>nica,Filantr<c3><b3>pico,77
+2022-10,MG,Policl<c3><ad>nica,Filantr<c3><b3>pico,84
+2022-10,BA,Policl<c3><ad>nica,Filantr<c3><b3>pico,59
+2022-10,RS,Policl<c3><ad>nica,Filantr<c3><b3>pico,51
+2022-10,BR,Policl<c3><ad>nica,Privado,1204
+2022-10,SP,Policl<c3><ad>nica,Privado,265
+2022-10,RJ,Policl<c3><ad>nica,Privado,106
+2022-10,MG,Policl<c3><ad>nica,Privado,118
+2022-10,BA,Policl<c3><ad>nica,Privado,83
+2022-10,RS,Policl<c3><ad>nica,Privado,71
+2023-01,BR,Policl<c3><ad>nica,P<c3><ba>blico,1386
+2023-01,SP,Policl<c3><ad>nica,P<c3><ba>blico,307
+2023-01,RJ,Policl<c3><ad>nica,P<c3><ba>blico,122
+2023-01,MG,Policl<c3><ad>nica,P<c3><ba>blico,135
+2023-01,BA,Policl<c3><ad>nica,P<c3><ba>blico,96
+2023-01,RS,Policl<c3><ad>nica,P<c3><ba>blico,80
+2023-01,BR,Policl<c3><ad>nica,Filantr<c3><b3>pico,847
+2023-01,SP,Policl<c3><ad>nica,Filantr<c3><b3>pico,189
+2023-01,RJ,Policl<c3><ad>nica,Filantr<c3><b3>pico,76
+2023-01,MG,Policl<c3><ad>nica,Filantr<c3><b3>pico,87
+2023-01,BA,Policl<c3><ad>nica,Filantr<c3><b3>pico,59
+2023-01,RS,Policl<c3><ad>nica,Filantr<c3><b3>pico,51
+2023-01,BR,Policl<c3><ad>nica,Privado,1179
+2023-01,SP,Policl<c3><ad>nica,Privado,271
+2023-01,RJ,Policl<c3><ad>nica,Privado,107
+2023-01,MG,Policl<c3><ad>nica,Privado,121
+2023-01,BA,Policl<c3><ad>nica,Privado,84
+2023-01,RS,Policl<c3><ad>nica,Privado,72
+2023-04,BR,Policl<c3><ad>nica,P<c3><ba>blico,1382
+2023-04,SP,Policl<c3><ad>nica,P<c3><ba>blico,309
+2023-04,RJ,Policl<c3><ad>nica,P<c3><ba>blico,125
+2023-04,MG,Policl<c3><ad>nica,P<c3><ba>blico,136
+2023-04,BA,Policl<c3><ad>nica,P<c3><ba>blico,97
+2023-04,RS,Policl<c3><ad>nica,P<c3><ba>blico,82
+2023-04,BR,Policl<c3><ad>nica,Filantr<c3><b3>pico,867
+2023-04,SP,Policl<c3><ad>nica,Filantr<c3><b3>pico,184
+2023-04,RJ,Policl<c3><ad>nica,Filantr<c3><b3>pico,77
+2023-04,MG,Policl<c3><ad>nica,Filantr<c3><b3>pico,85
+2023-04,BA,Policl<c3><ad>nica,Filantr<c3><b3>pico,60
+2023-04,RS,Policl<c3><ad>nica,Filantr<c3><b3>pico,50
+2023-04,BR,Policl<c3><ad>nica,Privado,1197
+2023-04,SP,Policl<c3><ad>nica,Privado,276
+2023-04,RJ,Policl<c3><ad>nica,Privado,107
+2023-04,MG,Policl<c3><ad>nica,Privado,123
+2023-04,BA,Policl<c3><ad>nica,Privado,85
+2023-04,RS,Policl<c3><ad>nica,Privado,72
+2023-07,BR,Policl<c3><ad>nica,P<c3><ba>blico,1396
+2023-07,SP,Policl<c3><ad>nica,P<c3><ba>blico,305
+2023-07,RJ,Policl<c3><ad>nica,P<c3><ba>blico,126
+2023-07,MG,Policl<c3><ad>nica,P<c3><ba>blico,137
+2023-07,BA,Policl<c3><ad>nica,P<c3><ba>blico,96
+2023-07,RS,Policl<c3><ad>nica,P<c3><ba>blico,83
+2023-07,BR,Policl<c3><ad>nica,Filantr<c3><b3>pico,870
+2023-07,SP,Policl<c3><ad>nica,Filantr<c3><b3>pico,187
+2023-07,RJ,Policl<c3><ad>nica,Filantr<c3><b3>pico,77
+2023-07,MG,Policl<c3><ad>nica,Policl<c3><ad>nica ,87
+2023-07,BA,Policl<c3><ad>nica,Filantr<c3><b3>pico,58
+2023-07,RS,Policl<c3><ad>nica,Filantr<c3><b3>pico,51
+2023-07,BR,Policl<c3><ad>nica,Privado,1213
+2023-07,SP,Policl<c3><ad>nica,Privado,266
+2023-07,RJ,Policl<c3><ad>nica,Privado,107
+2023-07,MG,Policl<c3><ad>nica,Privado,119
+2023-07,BA,Policl<c3><ad>nica,Privado,81
+2023-07,RS,Policl<c3><ad>nica,Privado,71
+2023-10,BR,Policl<c3><ad>nica,P<c3><ba>blico,1339
+2023-10,SP,Policl<c3><ad>nica,P<c3><ba>blico,302
+2023-10,RJ,Policl<c3><ad>nica,P<c3><ba>blico,126
+2023-10,MG,Policl<c3><ad>nica,P<c3><ba>blico,141
+2023-10,BA,Policl<c3><ad>nica,P<c3><ba>blico,96
+2023-10,RS,Policl<c3><ad>nica,P<c3><ba>blico,81
+2023-10,BR,Policl<c3><ad>nica,Filantr<c3><b3>pico,912
+2023-10,SP,Policl<c3><ad>nica,Filantr<c3><b3>pico,196
+2023-10,RJ,Policl<c3><ad>nica,Filantr<c3><b3>pico,78
+2023-10,MG,Policl<c3><ad>nica,Filantr<c3><b3>pico,86
+2023-10,BA,Policl<c3><ad>nica,Filantr<c3><b3>pico,59
+2023-10,RS,Policl<c3><ad>nica,Filantr<c3><b3>pico,52
+2023-10,BR,Policl<c3><ad>nica,Privado,1192
+2023-10,SP,Policl<c3><ad>nica,Privado,266
+2023-10,RJ,Policl<c3><ad>nica,Privado,110
+2023-10,MG,Policl<c3><ad>nica,Privado,125
+2023-10,BA,Policl<c3><ad>nica,Privado,85
+2023-10,RS,Policl<c3><ad>nica,Privado,73
+2024-01,BR,Policl<c3><ad>nica,P<c3><ba>blico,1424
+2024-01,SP,Policl<c3><ad>nica,P<c3><ba>blico,306
+2024-01,RJ,Policl<c3><ad>nica,P<c3><ba>blico,125
+2024-01,MG,Policl<c3><ad>nica,P<c3><ba>blico,140
+2024-01,BA,Policl<c3><ad>nica,P<c3><ba>blico,98
+2024-01,RS,Policl<c3><ad>nica,P<c3><ba>blico,84
+2024-01,BR,Policl<c3><ad>nica,Filantr<c3><b3>pico,859
+2024-01,SP,Policl<c3><ad>nica,Filantr<c3><b3>pico,189
+2024-01,RJ,Policl<c3><ad>nica,Filantr<c3><b3>pico,79
+2024-01,MG,Policl<c3><ad>nica,Filantr<c3><b3>pico,86
+2024-01,BA,Policl<c3><ad>nica,Filantr<c3><b3>pico,60
+2024-01,RS,Policl<c3><ad>nica,Filantr<c3><b3>pico,53
+2024-01,BR,Policl<c3><ad>nica,Privado,1202
+2024-01,SP,Policl<c3><ad>nica,Privado,277
+2024-01,RJ,Policl<c3><ad>nica,Privado,109
+2024-01,MG,Policl<c3><ad>nica,Privado,122
+2024-01,BA,Policl<c3><ad>nica,Privado,81
+2024-01,RS,Policl<c3><ad>nica,Privado,74
+2024-04,BR,Policl<c3><ad>nica,P<c3><ba>blico,1436
+2024-04,SP,Policl<c3><ad>nica,P<c3><ba>blico,313
+2024-04,RJ,Policl<c3><ad>nica,P<c3><ba>blico,127
+2024-04,MG,Policl<c3><ad>nica,P<c3><ba>blico,142
+2024-04,BA,Policl<c3><ad>nica,P<c3><ba>blico,98
+2024-04,RS,Policl<c3><ad>nica,P<c3><ba>blico,85
+2024-04,BR,Policl<c3><ad>nica,Filantr<c3><b3>pico,899
+2024-04,SP,Policl<c3><ad>nica,Filantr<c3><b3>pico,188
+2024-04,RJ,Policl<c3><ad>nica,Filantr<c3><b3>pico,78
+2024-04,MG,Policl<c3><ad>nica,Filantr<c3><b3>pico,87
+2024-04,BA,Policl<c3><ad>nica,Filantr<c3><b3>pico,62
+2024-04,RS,Policl<c3><ad>nica,Filantr<c3><b3>pico,50
+2024-04,BR,Policl<c3><ad>nica,Privado,1228
+2024-04,SP,Policl<c3><ad>nica,Privado,264
+2024-04,RJ,Policl<c3><ad>nica,Privado,110
+2024-04,MG,Policl<c3><ad>nica,Privado,119
+2024-04,BA,Policl<c3><ad>nica,Privado,85
+2024-04,RS,Policl<c3><ad>nica,Privado,74
+2024-07,BR,Policl<c3><ad>nica,P<c3><ba>blico,1395
+2024-07,SP,Policl<c3><ad>nica,P<c3><ba>blico,307
+2024-07,RJ,Policl<c3><ad>nica,P<c3><ba>blico,125
+2024-07,MG,Policl<c3><ad>nica,P<c3><ba>blico,134
+2024-07,BA,Policl<c3><ad>nica,P<c3><ba>blico,96
+2024-07,RS,Policl<c3><ad>nica,P<c3><ba>blico,83
+2024-07,BR,Policl<c3><ad>nica,Filantr<c3><b3>pico,898
+2024-07,SP,Policl<c3><ad>nica,Filantr<c3><b3>pico,188
+2024-07,RJ,Policl<c3><ad>nica,Filantr<c3><b3>pico,78
+2024-07,MG,Policl<c3><ad>nica,Filantr<c3><b3>pico,87
+2024-07,BA,Policl<c3><ad>nica,Filantr<c3><b3>pico,62
+2024-07,RS,Policl<c3><ad>nica,Filantr<c3><b3>pico,52
+2024-07,BR,Policl<c3><ad>nica,Privado,1235
+2024-07,SP,Policl<c3><ad>nica,Privado,268
+2024-07,RJ,Policl<c3><ad>nica,Privado,108
+2024-07,MG,Policl<c3><ad>nica,Privado,121
+2024-07,BA,Policl<c3><ad>nica,Privado,88
+2024-07,RS,Policl<c3><ad>nica,Privado,72
+2024-10,BR,Policl<c3><ad>nica,P<c3><ba>blico,1418
+2024-10,SP,Policl<c3><ad>nica,P<c3><ba>blico,317
+2024-10,RJ,Policl<c3><ad>nica,P<c3><ba>blico,125
+2024-10,MG,Policl<c3><ad>nica,P<c3><ba>blico,140
+2024-10,BA,Policl<c3><ad>nica,P<c3><ba>blico,96
+2024-10,RS,Policl<c3><ad>nica,P<c3><ba>blico,84
+2024-10,BR,Policl<c3><ad>nica,Filantr<c3><b3>pico,892
+2024-10,SP,Policl<c3><ad>nica,Filantr<c3><b3>pico,193
+2024-10,RJ,Policl<c3><ad>nica,Filantr<c3><b3>pico,81
+2024-10,MG,Policl<c3><ad>nica,Filantr<c3><b3>pico,87
+2024-10,BA,Policl<c3><ad>nica,Filantr<c3><b3>pico,60
+2024-10,RS,Policl<c3><ad>nica,Filantr<c3><b3>pico,54
+2024-10,BR,Policl<c3><ad>nica,Privado,1250
+2024-10,SP,Policl<c3><ad>nica,Privado,271
+2024-10,RJ,Policl<c3><ad>nica,Privado,107
+2024-10,MG,Policl<c3><ad>nica,Privado,122
+2024-10,BA,Policl<c3><ad>nica,Privado,88
+2024-10,RS,Policl<c3><ad>nica,Privado,73
+2025-01,BR,Policl<c3><ad>nica,P<c3><ba>blico,1380
+2025-01,SP,Policl<c3><ad>nica,P<c3><ba>blico,313
+2025-01,RJ,Policl<c3><ad>nica,P<c3><ba>blico,126
+2025-01,MG,Policl<c3><ad>nica,P<c3><ba>blico,140
+2025-01,BA,Policl<c3><ad>nica,P<c3><ba>blico,99
+2025-01,RS,Policl<c3><ad>nica,P<c3><ba>blico,83
+2025-01,BR,Policl<c3><ad>nica,Filantr<c3><b3>pico,869
+2025-01,SP,Policl<c3><ad>nica,Filantr<c3><b3>pico,192
+2025-01,RJ,Policl<c3><ad>nica,Filantr<c3><b3>pico,79
+2025-01,MG,Policl<c3><ad>nica,Filantr<c3><b3>pico,88
+2025-01,BA,Policl<c3><ad>nica,Filantr<c3><b3>pico,61
+2025-01,RS,Policl<c3><ad>nica,Filantr<c3><b3>pico,53
+2025-01,BR,Policl<c3><ad>nica,Privado,1246
+2025-01,SP,Policl<c3><ad>nica,Privado,277
+2025-01,RJ,Policl<c3><ad>nica,Privado,110
+2025-01,MG,Policl<c3><ad>nica,Privado,123
+2025-01,BA,Policl<c3><ad>nica,Privado,86
+2025-01,RS,Policl<c3><ad>nica,Privado,73
+2025-04,BR,Policl<c3><ad>nica,P<c3><ba>blico,1453
+2025-04,SP,Policl<c3><ad>nica,P<c3><ba>blico,311
+2025-04,RJ,Policl<c3><ad>nica,P<c3><ba>blico,129
+2025-04,MG,Policl<c3><ad>nica,P<c3><ba>blico,140
+2025-04,BA,Policl<c3><ad>nica,P<c3><ba>blico,98
+2025-04,RS,Policl<c3><ad>nica,P<c3><ba>blico,85
+2025-04,BR,Policl<c3><ad>nica,Filantr<c3><b3>pico,901
+2025-04,SP,Policl<c3><ad>nica,Filantr<c3><b3>pico,192
+2025-04,RJ,Policl<c3><ad>nica,Filantr<c3><b3>pico,81
+2025-04,MG,Policl<c3><ad>nica,Filantr<c3><b3>pico,88
+2025-04,BA,Policl<c3><ad>nica,Filantr<c3><b3>pico,63
+2025-04,RS,Policl<c3><ad>nica,Filantr<c3><b3>pico,53
+2025-04,BR,Policl<c3><ad>nica,Privado,1246
+2025-04,SP,Policl<c3><ad>nica,Privado,272
+2025-04,RJ,Policl<c3><ad>nica,Privado,113
+2025-04,MG,Policl<c3><ad>nica,Privado,120
+2025-04,BA,Policl<c3><ad>nica,Privado,88
+2025-04,RS,Policl<c3><ad>nica,Privado,74
+2025-07,BR,Policl<c3><ad>nica,P<c3><ba>blico,1418
+2025-07,SP,Policl<c3><ad>nica,P<c3><ba>blico,313
+2025-07,RJ,Policl<c3><ad>nica,P<c3><ba>blico,126
+2025-07,MG,Policl<c3><ad>nica,P<c3><ba>blico,142
+2025-07,BA,Policl<c3><ad>nica,P<c3><ba>blico,100
+2025-07,RS,Policl<c3><ad>nica,P<c3><ba>blico,86
+2025-07,BR,Policl<c3><ad>nica,Filantr<c3><b3>pico,906
+2025-07,SP,Policl<c3><ad>nica,Filantr<c3><b3>pico,199
+2025-07,RJ,Policl<c3><ad>nica,Filantr<c3><b3>pico,80
+2025-07,MG,Policl<c3><ad>nica,Filantr<c3><b3>pico,89
+2025-07,BA,Policl<c3><ad>nica,Filantr<c3><b3>pico,63
+2025-07,RS,Policl<c3><ad>nica,Filantr<c3><b3>pico,54
+2025-07,BR,Policl<c3><ad>nica,Privado,1290
+2025-07,SP,Policl<c3><ad>nica,Privado,266
+2025-07,RJ,Policl<c3><ad>nica,Privado,109
+2025-07,MG,Policl<c3><ad>nica,Privado,124
+2025-07,BA,Policl<c3><ad>nica,Privado,87
+2025-07,RS,Policl<c3><ad>nica,Privado,74

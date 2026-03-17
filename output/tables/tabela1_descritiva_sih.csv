@@ -1,0 +1,79 @@
+cod_subgrupo,nome_subgrupo,grupo_did,periodo,qtd_media_mensal,valor_medio_real_R,valor_total_real_M,n_meses
+0301,Consultas/Atend.,controle,COVID (2020/03<e2><80><93>2021/06),682704,362.81,3951.9,16
+0301,Consultas/Atend.,controle,P<c3><b3>s-recomp. 2023 (2023/01<e2><80><93>2024/02),936180,295.81,3874.8,14
+0301,Consultas/Atend.,controle,P<c3><b3>s-recomp. 2024+ (2024/03<e2><80><93>2025/09),994120,274.28,5183.1,19
+0301,Consultas/Atend.,controle,Pr<c3><a9>-COVID (2018<e2><80><93>2020/02),867510,390.75,8812.7,26
+0301,Consultas/Atend.,controle,Recupera<c3><a7><c3><a3>o (2021/07<e2><80><93>2022/12),921871,318.74,5287.3,18
+0303,Trat. cl<c3><ad>nicos,controle,COVID (2020/03<e2><80><93>2021/06),337117,709.05,3814.7,16
+0303,Trat. cl<c3><ad>nicos,controle,P<c3><b3>s-recomp. 2023 (2023/01<e2><80><93>2024/02),462733,584.27,3783.4,14
+0303,Trat. cl<c3><ad>nicos,controle,P<c3><b3>s-recomp. 2024+ (2024/03<e2><80><93>2025/09),492776,540.21,5047.5,19
+0303,Trat. cl<c3><ad>nicos,controle,Pr<c3><a9>-COVID (2018<e2><80><93>2020/02),425527,767.03,8488.9,26
+0303,Trat. cl<c3><ad>nicos,controle,Recupera<c3><a7><c3><a3>o (2021/07<e2><80><93>2022/12),453894,635.32,5190.8,18
+0401,Peq. cirurgias,controle,COVID (2020/03<e2><80><93>2021/06),119828,564.64,1078.6,16
+0401,Peq. cirurgias,controle,P<c3><b3>s-recomp. 2023 (2023/01<e2><80><93>2024/02),165807,486.3,1128.3,14
+0401,Peq. cirurgias,controle,P<c3><b3>s-recomp. 2024+ (2024/03<e2><80><93>2025/09),172439,448.55,1468.4,19
+0401,Peq. cirurgias,controle,Pr<c3><a9>-COVID (2018<e2><80><93>2020/02),153624,610.16,2437.2,26
+0401,Peq. cirurgias,controle,Recupera<c3><a7><c3><a3>o (2021/07<e2><80><93>2022/12),164163,517.52,1527.4,18
+0411,Cir. ORL,controle,COVID (2020/03<e2><80><93>2021/06),19976,1414.85,450.3,16
+0411,Cir. ORL,controle,P<c3><b3>s-recomp. 2023 (2023/01<e2><80><93>2024/02),27667,1203.44,466.2,14
+0411,Cir. ORL,controle,P<c3><b3>s-recomp. 2024+ (2024/03<e2><80><93>2025/09),29560,1096.13,615.3,19
+0411,Cir. ORL,controle,Pr<c3><a9>-COVID (2018<e2><80><93>2020/02),25166,1530.98,1002.7,26
+0411,Cir. ORL,controle,Recupera<c3><a7><c3><a3>o (2021/07<e2><80><93>2022/12),26639,1269.15,608.2,18
+0412,Cir. tor<c3><a1>cica,controle,COVID (2020/03<e2><80><93>2021/06),9568,5997.33,914.7,16
+0412,Cir. tor<c3><a1>cica,controle,P<c3><b3>s-recomp. 2023 (2023/01<e2><80><93>2024/02),13313,4854.69,905,14
+0412,Cir. tor<c3><a1>cica,controle,P<c3><b3>s-recomp. 2024+ (2024/03<e2><80><93>2025/09),14215,4440.29,1197.1,19
+0412,Cir. tor<c3><a1>cica,controle,Pr<c3><a9>-COVID (2018<e2><80><93>2020/02),12186,6181.13,1958.5,26
+0412,Cir. tor<c3><a1>cica,controle,Recupera<c3><a7><c3><a3>o (2021/07<e2><80><93>2022/12),13016,5125.66,1201.2,18
+0413,Cir. reparadora,controle,COVID (2020/03<e2><80><93>2021/06),14589,1660,386.6,16
+0413,Cir. reparadora,controle,P<c3><b3>s-recomp. 2023 (2023/01<e2><80><93>2024/02),19612,1383.14,380.1,14
+0413,Cir. reparadora,controle,P<c3><b3>s-recomp. 2024+ (2024/03<e2><80><93>2025/09),21250,1273.27,514,19
+0413,Cir. reparadora,controle,Pr<c3><a9>-COVID (2018<e2><80><93>2020/02),18351,1787.41,852.3,26
+0413,Cir. reparadora,controle,Recupera<c3><a7><c3><a3>o (2021/07<e2><80><93>2022/12),19543,1499.23,527.3,18
+0304,Oncologia,tratamento_2023,COVID (2020/03<e2><80><93>2021/06),141835,3567.24,8072.9,16
+0304,Oncologia,tratamento_2023,P<c3><b3>s-recomp. 2023 (2023/01<e2><80><93>2024/02),215752,2933.74,8867.4,14
+0304,Oncologia,tratamento_2023,P<c3><b3>s-recomp. 2024+ (2024/03<e2><80><93>2025/09),228929,2773.99,12065.5,19
+0304,Oncologia,tratamento_2023,Pr<c3><a9>-COVID (2018<e2><80><93>2020/02),184044,3762.54,17991.3,26
+0304,Oncologia,tratamento_2023,Recupera<c3><a7><c3><a3>o (2021/07<e2><80><93>2022/12),195746,3204.73,11295.9,18
+0305,Nefrologia,tratamento_2023,COVID (2020/03<e2><80><93>2021/06),231275,1580.17,5816.9,16
+0305,Nefrologia,tratamento_2023,P<c3><b3>s-recomp. 2023 (2023/01<e2><80><93>2024/02),342473,1296.76,6218.3,14
+0305,Nefrologia,tratamento_2023,P<c3><b3>s-recomp. 2024+ (2024/03<e2><80><93>2025/09),365057,1200.59,8321.7,19
+0305,Nefrologia,tratamento_2023,Pr<c3><a9>-COVID (2018<e2><80><93>2020/02),294482,1633.89,12515.9,26
+0305,Nefrologia,tratamento_2023,Recupera<c3><a7><c3><a3>o (2021/07<e2><80><93>2022/12),310237,1371.32,7658.8,18
+0416,Cir. oncologia,tratamento_2023,COVID (2020/03<e2><80><93>2021/06),17435,7818.04,2175,16
+0416,Cir. oncologia,tratamento_2023,P<c3><b3>s-recomp. 2023 (2023/01<e2><80><93>2024/02),26045,6475.04,2362.5,14
+0416,Cir. oncologia,tratamento_2023,P<c3><b3>s-recomp. 2024+ (2024/03<e2><80><93>2025/09),28136,5956.95,3183.1,19
+0416,Cir. oncologia,tratamento_2023,Pr<c3><a9>-COVID (2018<e2><80><93>2020/02),22474,8388.88,4904.1,26
+0416,Cir. oncologia,tratamento_2023,Recupera<c3><a7><c3><a3>o (2021/07<e2><80><93>2022/12),23418,6670.85,2809.7,18
+0403,Cir. vis<c3><a3>o,tratamento_2024,COVID (2020/03<e2><80><93>2021/06),36183,2263.63,1302.8,16
+0403,Cir. vis<c3><a3>o,tratamento_2024,P<c3><b3>s-recomp. 2023 (2023/01<e2><80><93>2024/02),49324,1962.26,1354,14
+0403,Cir. vis<c3><a3>o,tratamento_2024,P<c3><b3>s-recomp. 2024+ (2024/03<e2><80><93>2025/09),59516,1765.81,1994.7,19
+0403,Cir. vis<c3><a3>o,tratamento_2024,Pr<c3><a9>-COVID (2018<e2><80><93>2020/02),45871,2410.91,2876.3,26
+0403,Cir. vis<c3><a3>o,tratamento_2024,Recupera<c3><a7><c3><a3>o (2021/07<e2><80><93>2022/12),48558,2064.4,1804.2,18
+0404,Cir. circulat<c3><b3>rio,tratamento_2024,COVID (2020/03<e2><80><93>2021/06),27972,6876.18,2866.2,15
+0404,Cir. vis<c3><a3>o,tratamento_2024,COVID (2020/03<e2><80><93>2021/06),28274,7950.93,224.8,1
+0404,Cir. circulat<c3><b3>rio,tratamento_2024,P<c3><b3>s-recomp. 2023 (2023/01<e2><80><93>2024/02),39231,5890.71,3236.4,14
+0404,Cir. circulat<c3><b3>rio,tratamento_2024,P<c3><b3>s-recomp. 2024+ (2024/03<e2><80><93>2025/09),46584,5479.14,4849.4,19
+0404,Cir. circulat<c3><b3>rio,tratamento_2024,Pr<c3><a9>-COVID (2018<e2><80><93>2020/02),34994,7611.3,6125.2,23
+0404,Cir. vis<c3><a3>o,tratamento_2024,Pr<c3><a9>-COVID (2018<e2><80><93>2020/02),35484,7588.84,806.2,3
+0404,Cir. circulat<c3><b3>rio,tratamento_2024,Recupera<c3><a7><c3><a3>o (2021/07<e2><80><93>2022/12),37890,6261.36,4030.3,17
+0404,Cir. vis<c3><a3>o,tratamento_2024,Recupera<c3><a7><c3><a3>o (2021/07<e2><80><93>2022/12),39932,6401.5,255.6,1
+0405,Cir. digestivo,tratamento_2024,COVID (2020/03<e2><80><93>2021/06),52033,2850.57,2376.9,16
+0405,Cir. digestivo,tratamento_2024,P<c3><b3>s-recomp. 2023 (2023/01<e2><80><93>2024/02),72447,2387.74,2422.2,14
+0405,Cir. digestivo,tratamento_2024,P<c3><b3>s-recomp. 2024+ (2024/03<e2><80><93>2025/09),86828,2231.83,3679.8,19
+0405,Cir. digestivo,tratamento_2024,Pr<c3><a9>-COVID (2018<e2><80><93>2020/02),65793,3060.44,5234.5,26
+0405,Cir. digestivo,tratamento_2024,Recupera<c3><a7><c3><a3>o (2021/07<e2><80><93>2022/12),70601,2506.31,3185.5,18
+0407,Cir. geniturin<c3><a1>rio,tratamento_2024,COVID (2020/03<e2><80><93>2021/06),43947,1923.68,1346.7,16
+0407,Cir. geniturin<c3><a1>rio,tratamento_2024,P<c3><b3>s-recomp. 2023 (2023/01<e2><80><93>2024/02),60416,1608.1,1359.1,14
+0407,Cir. geniturin<c3><a1>rio,tratamento_2024,P<c3><b3>s-recomp. 2024+ (2024/03<e2><80><93>2025/09),73049,1517.8,2105.4,19
+0407,Cir. geniturin<c3><a1>rio,tratamento_2024,Pr<c3><a9>-COVID (2018<e2><80><93>2020/02),56242,2096.7,3068.3,26
+0407,Cir. geniturin<c3><a1>rio,tratamento_2024,Recupera<c3><a7><c3><a3>o (2021/07<e2><80><93>2022/12),59639,1704.11,1827.9,18
+0408,Cir. osteomuscular,tratamento_2024,COVID (2020/03<e2><80><93>2021/06),64665,2568.15,2647,16
+0408,Cir. osteomuscular,tratamento_2024,P<c3><b3>s-recomp. 2023 (2023/01<e2><80><93>2024/02),88591,2141.11,2657.8,14
+0408,Cir. osteomuscular,tratamento_2024,P<c3><b3>s-recomp. 2024+ (2024/03<e2><80><93>2025/09),104414,1998.37,3965.1,19
+0408,Cir. osteomuscular,tratamento_2024,Pr<c3><a9>-COVID (2018<e2><80><93>2020/02),81832,2815.3,5991.2,26
+0408,Cir. osteomuscular,tratamento_2024,Recupera<c3><a7><c3><a3>o (2021/07<e2><80><93>2022/12),86868,2307.96,3607.2,18
+0505,Transplantes,tratamento_2024,COVID (2020/03<e2><80><93>2021/06),1998,44778.16,1431.2,16
+0505,Transplantes,tratamento_2024,P<c3><b3>s-recomp. 2023 (2023/01<e2><80><93>2024/02),2765,37536.11,1455.1,14
+0505,Transplantes,tratamento_2024,P<c3><b3>s-recomp. 2024+ (2024/03<e2><80><93>2025/09),3312,34495.98,2168.6,19
+0505,Transplantes,tratamento_2024,Pr<c3><a9>-COVID (2018<e2><80><93>2020/02),2548,49026.25,3247.5,26
+0505,Transplantes,tratamento_2024,Recupera<c3><a7><c3><a3>o (2021/07<e2><80><93>2022/12),2703,39872.32,1937.6,18

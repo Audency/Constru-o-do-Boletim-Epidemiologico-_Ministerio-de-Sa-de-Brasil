@@ -1,0 +1,218 @@
+competencia,data,tipo_estabelecimento,total_estab
+2018-01,2018-01-01,CAPS,2706
+2018-01,2018-01-01,Cl<c3><ad>nica/Centro Especialidade,12063
+2018-01,2018-01-01,Hospital Especializado,650
+2018-01,2018-01-01,Hospital Geral,2798
+2018-01,2018-01-01,Policl<c3><ad>nica,3201
+2018-01,2018-01-01,Pronto Socorro,856
+2018-01,2018-01-01,SADT,17851
+2018-04,2018-04-01,CAPS,2728
+2018-04,2018-04-01,Cl<c3><ad>nica/Centro Especialidade,11941
+2018-04,2018-04-01,Hospital Especializado,652
+2018-04,2018-04-01,Hospital Geral,2839
+2018-04,2018-04-01,Policl<c3><ad>nica,3177
+2018-04,2018-04-01,Pronto Socorro,844
+2018-04,2018-04-01,SADT,17993
+2018-07,2018-07-01,CAPS,2760
+2018-07,2018-07-01,Cl<c3><ad>nica/Centro Especialidade,12085
+2018-07,2018-07-01,Hospital Especializado,655
+2018-07,2018-07-01,Hospital Geral,2788
+2018-07,2018-07-01,Policl<c3><ad>nica,3233
+2018-07,2018-07-01,Pronto Socorro,853
+2018-07,2018-07-01,SADT,18104
+2018-10,2018-10-01,CAPS,2715
+2018-10,2018-10-01,Cl<c3><ad>nica/Centro Especialidade,12271
+2018-10,2018-10-01,Hospital Especializado,656
+2018-10,2018-10-01,Hospital Geral,2840
+2018-10,2018-10-01,Policl<c3><ad>nica,3227
+2018-10,2018-10-01,Pronto Socorro,856
+2018-10,2018-10-01,SADT,18153
+2019-01,2019-01-01,CAPS,2773
+2019-01,2019-01-01,Cl<c3><ad>nica/Centro Especialidade,12151
+2019-01,2019-01-01,Hospital Especializado,644
+2019-01,2019-01-01,Hospital Geral,2811
+2019-01,2019-01-01,Policl<c3><ad>nica,3267
+2019-01,2019-01-01,Pronto Socorro,869
+2019-01,2019-01-01,SADT,18230
+2019-04,2019-04-01,CAPS,2794
+2019-04,2019-04-01,Cl<c3><ad>nica/Centro Especialidade,12197
+2019-04,2019-04-01,Hospital Especializado,660
+2019-04,2019-04-01,Hospital Geral,2849
+2019-04,2019-04-01,Policl<c3><ad>nica,3224
+2019-04,2019-04-01,Pronto Socorro,870
+2019-04,2019-04-01,SADT,18098
+2019-07,2019-07-01,CAPS,2721
+2019-07,2019-07-01,Cl<c3><ad>nica/Centro Especialidade,12253
+2019-07,2019-07-01,Hospital Especializado,664
+2019-07,2019-07-01,Hospital Geral,2859
+2019-07,2019-07-01,Policl<c3><ad>nica,3268
+2019-07,2019-07-01,Pronto Socorro,865
+2019-07,2019-07-01,SADT,18646
+2019-10,2019-10-01,CAPS,2794
+2019-10,2019-10-01,Cl<c3><ad>nica/Centro Especialidade,12363
+2019-10,2019-10-01,Hospital Especializado,661
+2019-10,2019-10-01,Hospital Geral,2860
+2019-10,2019-10-01,Policl<c3><ad>nica,3253
+2019-10,2019-10-01,Pronto Socorro,865
+2019-10,2019-10-01,SADT,18462
+2020-01,2020-01-01,CAPS,2786
+2020-01,2020-01-01,Cl<c3><ad>nica/Centro Especialidade,12503
+2020-01,2020-01-01,Hospital Especializado,666
+2020-01,2020-01-01,Hospital Geral,2893
+2020-01,2020-01-01,Policl<c3><ad>nica,3324
+2020-01,2020-01-01,Pronto Socorro,867
+2020-01,2020-01-01,SADT,18384
+2020-04,2020-04-01,CAPS,2771
+2020-04,2020-04-01,Cl<c3><ad>nica/Centro Especialidade,12319
+2020-04,2020-04-01,Hospital Especializado,665
+2020-04,2020-04-01,Hospital Geral,2826
+2020-04,2020-04-01,Policl<c3><ad>nica,3320
+2020-04,2020-04-01,Pronto Socorro,876
+2020-04,2020-04-01,SADT,18589
+2020-07,2020-07-01,CAPS,2821
+2020-07,2020-07-01,Cl<c3><ad>nica/Centro Especialidade,12259
+2020-07,2020-07-01,Hospital Especializado,674
+2020-07,2020-07-01,Hospital Geral,2909
+2020-07,2020-07-01,Policl<c3><ad>nica,3326
+2020-07,2020-07-01,Pronto Socorro,886
+2020-07,2020-07-01,SADT,18765
+2020-10,2020-10-01,CAPS,2819
+2020-10,2020-10-01,Cl<c3><ad>nica/Centro Especialidade,12446
+2020-10,2020-10-01,Hospital Especializado,679
+2020-10,2020-10-01,Hospital Geral,2935
+2020-10,2020-10-01,Policl<c3><ad>nica,3344
+2020-10,2020-10-01,Pronto Socorro,887
+2020-10,2020-10-01,SADT,18931
+2021-01,2021-01-01,CAPS,2818
+2021-01,2021-01-01,Cl<c3><ad>nica/Centro Especialidade,12576
+2021-01,2021-01-01,Hospital Especializado,683
+2021-01,2021-01-01,Hospital Geral,2957
+2021-01,2021-01-01,Policl<c3><ad>nica,3338
+2021-01,2021-01-01,Pronto Socorro,880
+2021-01,2021-01-01,SADT,18737
+2021-04,2021-04-01,CAPS,2823
+2021-04,2021-04-01,Cl<c3><ad>nica/Centro Especialidade,12473
+2021-04,2021-04-01,Hospital Especializado,678
+2021-04,2021-04-01,Hospital Geral,2968
+2021-04,2021-04-01,Policl<c3><ad>nica,3354
+2021-04,2021-04-01,Pronto Socorro,909
+2021-04,2021-04-01,SADT,18578
+2021-07,2021-07-01,CAPS,2865
+2021-07,2021-07-01,Cl<c3><ad>nica/Centro Especialidade,12616
+2021-07,2021-07-01,Hospital Especializado,685
+2021-07,2021-07-01,Hospital Geral,2959
+2021-07,2021-07-01,Policl<c3><ad>nica,3388
+2021-07,2021-07-01,Pronto Socorro,884
+2021-07,2021-07-01,SADT,18916
+2021-10,2021-10-01,CAPS,2846
+2021-10,2021-10-01,Cl<c3><ad>nica/Centro Especialidade,12478
+2021-10,2021-10-01,Hospital Especializado,680
+2021-10,2021-10-01,Hospital Geral,2950
+2021-10,2021-10-01,Policl<c3><ad>nica,3364
+2021-10,2021-10-01,Pronto Socorro,913
+2021-10,2021-10-01,SADT,19125
+2022-01,2022-01-01,CAPS,2916
+2022-01,2022-01-01,Cl<c3><ad>nica/Centro Especialidade,12744
+2022-01,2022-01-01,Hospital Especializado,681
+2022-01,2022-01-01,Hospital Geral,2923
+2022-01,2022-01-01,Policl<c3><ad>nica,3399
+2022-01,2022-01-01,Pronto Socorro,905
+2022-01,2022-01-01,SADT,19239
+2022-04,2022-04-01,CAPS,2873
+2022-04,2022-04-01,Cl<c3><ad>nica/Centro Especialidade,12705
+2022-04,2022-04-01,Hospital Especializado,688
+2022-04,2022-04-01,Hospital Geral,2972
+2022-04,2022-04-01,Policl<c3><ad>nica,3413
+2022-04,2022-04-01,Pronto Socorro,907
+2022-04,2022-04-01,SADT,19334
+2022-07,2022-07-01,CAPS,2856
+2022-07,2022-07-01,Cl<c3><ad>nica/Centro Especialidade,12830
+2022-07,2022-07-01,Hospital Especializado,696
+2022-07,2022-07-01,Hospital Geral,3054
+2022-07,2022-07-01,Policl<c3><ad>nica,3407
+2022-07,2022-07-01,Pronto Socorro,899
+2022-07,2022-07-01,SADT,19048
+2022-10,2022-10-01,CAPS,2908
+2022-10,2022-10-01,Cl<c3><ad>nica/Centro Especialidade,12939
+2022-10,2022-10-01,Hospital Especializado,695
+2022-10,2022-10-01,Hospital Geral,3013
+2022-10,2022-10-01,Policl<c3><ad>nica,3466
+2022-10,2022-10-01,Pronto Socorro,907
+2022-10,2022-10-01,SADT,19372
+2023-01,2023-01-01,CAPS,2905
+2023-01,2023-01-01,Cl<c3><ad>nica/Centro Especialidade,12835
+2023-01,2023-01-01,Hospital Especializado,695
+2023-01,2023-01-01,Hospital Geral,3035
+2023-01,2023-01-01,Policl<c3><ad>nica,3412
+2023-01,2023-01-01,Pronto Socorro,911
+2023-01,2023-01-01,SADT,19238
+2023-04,2023-04-01,CAPS,2890
+2023-04,2023-04-01,Cl<c3><ad>nica/Centro Especialidade,12953
+2023-04,2023-04-01,Hospital Especializado,704
+2023-04,2023-04-01,Hospital Geral,3011
+2023-04,2023-04-01,Policl<c3><ad>nica,3446
+2023-04,2023-04-01,Pronto Socorro,917
+2023-04,2023-04-01,SADT,19553
+2023-07,2023-07-01,CAPS,2930
+2023-07,2023-07-01,Cl<c3><ad>nica/Centro Especialidade,13004
+2023-07,2023-07-01,Hospital Especializado,696
+2023-07,2023-07-01,Hospital Geral,3039
+2023-07,2023-07-01,Policl<c3><ad>nica,3479
+2023-07,2023-07-01,Pronto Socorro,905
+2023-07,2023-07-01,SADT,19310
+2023-10,2023-10-01,CAPS,2924
+2023-10,2023-10-01,Cl<c3><ad>nica/Centro Especialidade,13033
+2023-10,2023-10-01,Hospital Especializado,708
+2023-10,2023-10-01,Hospital Geral,3069
+2023-10,2023-10-01,Policl<c3><ad>nica,3443
+2023-10,2023-10-01,Pronto Socorro,924
+2023-10,2023-10-01,SADT,19435
+2024-01,2024-01-01,CAPS,2974
+2024-01,2024-01-01,Cl<c3><ad>nica/Centro Especialidade,13324
+2024-01,2024-01-01,Hospital Especializado,715
+2024-01,2024-01-01,Hospital Geral,3072
+2024-01,2024-01-01,Policl<c3><ad>nica,3485
+2024-01,2024-01-01,Pronto Socorro,912
+2024-01,2024-01-01,SADT,19687
+2024-04,2024-04-01,CAPS,2920
+2024-04,2024-04-01,Cl<c3><ad>nica/Centro Especialidade,13565
+2024-04,2024-04-01,Hospital Especializado,711
+2024-04,2024-04-01,Hospital Geral,3077
+2024-04,2024-04-01,Policl<c3><ad>nica,3563
+2024-04,2024-04-01,Pronto Socorro,926
+2024-04,2024-04-01,SADT,20518
+2024-07,2024-07-01,CAPS,2965
+2024-07,2024-07-01,Cl<c3><ad>nica/Centro Especialidade,13884
+2024-07,2024-07-01,Hospital Especializado,727
+2024-07,2024-07-01,Hospital Geral,3140
+2024-07,2024-07-01,Policl<c3><ad>nica,3528
+2024-07,2024-07-01,Pronto Socorro,923
+2024-07,2024-07-01,SADT,20417
+2024-10,2024-10-01,CAPS,3010
+2024-10,2024-10-01,Cl<c3><ad>nica/Centro Especialidade,13839
+2024-10,2024-10-01,Hospital Especializado,711
+2024-10,2024-10-01,Hospital Geral,3082
+2024-10,2024-10-01,Policl<c3><ad>nica,3560
+2024-10,2024-10-01,Pronto Socorro,927
+2024-10,2024-10-01,SADT,20579
+2025-01,2025-01-01,CAPS,2965
+2025-01,2025-01-01,Cl<c3><ad>nica/Centro Especialidade,14126
+2025-01,2025-01-01,Hospital Especializado,725
+2025-01,2025-01-01,Hospital Geral,3053
+2025-01,2025-01-01,Policl<c3><ad>nica,3495
+2025-01,2025-01-01,Pronto Socorro,932
+2025-01,2025-01-01,SADT,21057
+2025-04,2025-04-01,CAPS,2979
+2025-04,2025-04-01,Cl<c3><ad>nica/Centro Especialidade,14054
+2025-04,2025-04-01,Hospital Especializado,727
+2025-04,2025-04-01,Hospital Geral,3086
+2025-04,2025-04-01,Policl<c3><ad>nica,3600
+2025-04,2025-04-01,Pronto Socorro,935
+2025-04,2025-04-01,SADT,21422
+2025-07,2025-07-01,CAPS,3001
+2025-07,2025-07-01,Cl<c3><ad>nica/Centro Especialidade,14333
+2025-07,2025-07-01,Hospital Especializado,723
+2025-07,2025-07-01,Hospital Geral,3134
+2025-07,2025-07-01,Policl<c3><ad>nica,3614
+2025-07,2025-07-01,Pronto Socorro,945
+2025-07,2025-07-01,SADT,21022
