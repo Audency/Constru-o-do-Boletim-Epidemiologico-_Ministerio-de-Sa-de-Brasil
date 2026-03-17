@@ -1,153 +1,234 @@
-# Construção do Boletim Epidemiológico - Ministério da Saúde (Brasil)
+# Construção do Boletim Epidemiológico — Ministério da Saúde (Brasil)
 
-## Sobre o Projeto
+> Rotinas automatizadas de vigilância epidemiológica **e** análise econométrica do financiamento do SUS.
 
-Sistema de rotinas em R desenvolvido para a **Secretaria de Vigilância em Saúde (SVS)** do **Ministério da Saúde do Brasil**, responsável pela construção automatizada do **Boletim Epidemiológico da COVID-19**.
+---
 
-O projeto processa dados diários das Secretarias Estaduais de Saúde, realiza cálculos epidemiológicos e gera visualizações cartográficas e gráficas para publicação nos painéis oficiais do governo brasileiro.
+## Visão Geral
 
-## Pipeline de Dados
+Este repositório reúne dois componentes complementares desenvolvidos no âmbito do **Ministério da Saúde do Brasil**:
 
-O fluxo de trabalho segue uma ordem sequencial de execução:
+| Componente | Descrição |
+|:--|:--|
+| **Boletim Epidemiológico COVID-19** | Pipeline em R para construção automatizada do boletim diário da SVS, com monitoramento por UF e município, cards semanais e mapas de incidência. |
+| **Estudo: Defasagem da Tabela SUS (2018–2025)** | Análise econométrica (Diferença-em-Diferenças) dos efeitos da defasagem e recomposição dos valores da Tabela SUS sobre a produção e oferta de atenção especializada no Brasil. |
+
+---
+
+## Estrutura do Repositório
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│                    FONTES DE DADOS                              │
-│  Secretarias Estaduais de Saúde → Planilhas Excel/CSV           │
-└──────────────────────┬──────────────────────────────────────────┘
-                       │
-          ┌────────────▼────────────┐
-          │  Notebook 1 (K1)        │
-          │  Monitora_UF_v2.Rmd     │
-          │  Dados por Estado (UF)  │
-          └────────────┬────────────┘
-                       │
-          ┌────────────▼────────────┐
-          │  Notebook 2 (K2)        │
-          │  Monitora_MUN.Rmd       │
-          │  Dados por Município    │
-          └────────────┬────────────┘
-                       │
-          ┌────────────▼────────────┐
-          │  Notebook 3 (K3)        │
-          │  Paineis_SVS_NOVO.Rmd   │
-          │  Consolidação Geral     │
-          │  (DT_Monitora_COVID)    │
-          └────────────┬────────────┘
-                       │
-          ┌────────┬───┴───┬────────┐
-          ▼        ▼       ▼        ▼
-       ┌─────┐ ┌─────┐ ┌─────┐
-       │ K4  │ │ K5  │ │ K6  │
-       │Cards│ │Mapas│ │Mapas│
-       │Seman│ │ SE  │ │ Mês │
-       └─────┘ └─────┘ └─────┘
+.
+├── README.md
+│
+├── ── Boletim Epidemiológico COVID-19 ──────────────────────
+├── RNotebook1_Monitora_UF_v2.Rmd      # Monitoramento por UF (27 estados + DF)
+├── RNotebook2_Monitora_MUN.Rmd        # Monitoramento por município (~5.570)
+├── RNotebook3_Paineis_SVS_NOVO.Rmd    # Consolidação hierárquica (Brasil → Região → UF → Município)
+├── teste_Card_semanal_k4.Rmd          # Cards semanais com gráficos e mapas de tendência
+├── Script_municipios_k5.R             # Mapas de bolhas por semana epidemiológica
+├── Script_municipios_mapames_K6.R     # Mapas de bolhas por mês
+│
+├── ── Estudo Tabela SUS ───────────────────────────────────
+├── scripts/
+│   ├── 00_executar_tudo.R             # Orquestrador (executa etapas 1→4)
+│   ├── 01_download_data.py            # Download dos microdados do DATASUS
+│   ├── 01_gerar_dados.R               # Geração de dados simulados (SIGTAP, SIH, SIA, CNES, IPCA)
+│   ├── 02_processar_dados.R           # Processamento e construção dos painéis analíticos
+│   ├── 03_tabelas_figuras.R           # Tabelas descritivas e figuras para o manuscrito
+│   ├── 04_modelos_did.R               # Modelos Diferença-em-Diferenças (DiD)
+│   └── 05_gerar_manuscrito.py         # Geração do manuscrito (formato BMC Health Services Research)
+│
+├── data/
+│   ├── sigtap/                        # Procedimentos da Tabela SUS (SIGTAP)
+│   ├── sih/                           # Produção hospitalar (SIH/SUS)
+│   ├── sia/                           # Produção ambulatorial (SIA/SUS)
+│   ├── cnes/                          # Estabelecimentos de saúde (CNES)
+│   ├── raw/                           # Dados brutos auxiliares (IPCA)
+│   └── processed/                     # Painéis analíticos prontos para modelagem
+│
+├── output/
+│   ├── figures/                       # 8 figuras (PNG) para o manuscrito
+│   ├── tables/                        # 7 tabelas descritivas e analíticas (CSV)
+│   └── models/                        # Objetos dos modelos estimados (RData)
+│
+└── docs/
+    └── manuscrito_tabela_sus_bmc.docx # Manuscrito completo (estilo BMC)
 ```
 
-## Estrutura dos Arquivos
+---
 
-| Arquivo | Descrição | Tipo |
-|---------|-----------|------|
-| `RNotebook1_Monitora_UF_v2.Rmd` | Monitoramento diário por **Unidade da Federação** (27 estados + DF). Importa dados brutos, calcula casos/óbitos novos, média móvel, casos em acompanhamento e recuperados. | R Notebook |
-| `RNotebook2_Monitora_MUN.Rmd` | Monitoramento diário por **Município** (~5.570 municípios). Padroniza nomes, valida consistência temporal entre dias e gera relatório de inconsistências. | R Notebook |
-| `RNotebook3_Paineis_SVS_NOVO.Rmd` | **Consolidação hierárquica** dos dados em 4 níveis: Brasil (1), Regiões (2), UFs (3), Municípios (7). Gera o dataset principal `DT_Monitora_COVID` usado por todos os scripts de visualização. | R Notebook |
-| `teste_Card_semanal_k4.Rmd` | Gera **cards semanais** com gráficos de barras (casos/óbitos por SE) e mapas de tendência por UF (Redução/Estabilização/Incremento). | R Notebook |
-| `Script_municipios_k5.R` | Gera **mapas de bolhas por semana epidemiológica**: casos novos, óbitos novos, taxa de incidência e taxa de mortalidade por município. | Script R |
-| `Script_municipios_mapames_K6.R` | Gera **mapas de bolhas por mês**: mesmas visualizações do K5, mas com agregação mensal. | Script R |
+## 1. Boletim Epidemiológico COVID-19
 
-## Indicadores Calculados
+### Pipeline de Dados
 
-- **Casos novos / Óbitos novos**: incremento diário a partir dos dados acumulados
-- **Casos em acompanhamento**: soma da média móvel de 3 dias dos últimos 18 dias (estimativa de casos ativos)
-- **Casos recuperados**: casos acumulados - óbitos - em acompanhamento
-- **Taxa de incidência**: (casos novos / população) × 100.000 habitantes
-- **Taxa de mortalidade**: (óbitos novos / população) × 100.000 habitantes
-- **Variação semanal**: ((SE atual - SE anterior) / SE anterior) × 100, classificada em:
-  - **Redução**: < -5%
-  - **Estabilização**: entre -5% e +5%
-  - **Incremento**: > +5%
+```
+Secretarias Estaduais ──► Notebook 1 (UF) ──► Notebook 2 (MUN) ──► Notebook 3 (Consolidação)
+                                                                          │
+                                                              ┌───────────┼───────────┐
+                                                              ▼           ▼           ▼
+                                                          K4: Cards   K5: Mapas   K6: Mapas
+                                                          semanais    por SE      por mês
+```
 
-## Visualizações Geradas
+### Indicadores Calculados
 
-### Mapas
-- Mapa coroplético de tendência por UF (casos e óbitos)
-- Mapa de bolhas de casos novos por município
-- Mapa de bolhas de óbitos novos por município
-- Mapa de incidência por município (/100 mil hab.)
-- Mapa de mortalidade por município (/100 mil hab.)
+| Indicador | Fórmula |
+|:--|:--|
+| Casos novos / Óbitos novos | Incremento diário dos acumulados |
+| Casos em acompanhamento | Soma da MM(3) dos últimos 18 dias |
+| Casos recuperados | Acumulados − óbitos − em acompanhamento |
+| Taxa de incidência | (casos novos / população) × 100.000 hab. |
+| Taxa de mortalidade | (óbitos novos / população) × 100.000 hab. |
+| Variação semanal | ((SE atual − SE anterior) / SE anterior) × 100 |
 
-### Gráficos
-- Gráfico de barras de casos novos por semana epidemiológica
-- Gráfico de barras de óbitos novos por semana epidemiológica
+**Classificação de tendência:** Redução (< −5%) · Estabilização (−5% a +5%) · Incremento (> +5%)
 
-### Tabelas
-- Ranking de municípios com maior número de casos/óbitos
-- Ranking de municípios com maior incidência/mortalidade
-- Tabela comparativa semanal por UF
+### Visualizações
 
-## Dependências (Pacotes R)
+- Mapas coropléticos de tendência por UF (casos e óbitos)
+- Mapas de bolhas por município (incidência, mortalidade)
+- Gráficos de barras por semana epidemiológica
+- Rankings de municípios (casos, óbitos, taxas)
 
-### Manipulação de Dados
-- `tidyverse` - Conjunto de pacotes para ciência de dados
-- `data.table` - Manipulação eficiente de grandes volumes
-- `lubridate` - Manipulação de datas e semanas epidemiológicas
-- `hablar` - Funções auxiliares (sum_, min_, max_ com tratamento de NA)
-- `openxlsx` - Leitura/escrita de Excel
-- `abjutils` - Remoção de acentos (rm_accent)
-- `sjmisc` - Conversão de valores (set_na)
+---
 
-### Geoespacial
-- `sf` - Simple Features para dados geoespaciais
-- `brazilmaps` - Shapefiles do Brasil (estados, municípios, regiões)
-- `geobr` - Dados geográficos do IBGE
-- `ggsn` - Barra de escala e norte para mapas
-- `BAMMtools` - Classificação por Jenks natural breaks
-- `maptools` - Ferramentas para mapas
+## 2. Estudo: Defasagem e Recomposição da Tabela SUS
 
-### Visualização
-- `ggplot2` - Gráficos (incluso no tidyverse)
-- `gghighlight` - Destaque condicional em gráficos
-- `ggrepel` - Rótulos sem sobreposição
-- `ggflags` - Bandeiras como elementos gráficos
-- `gridExtra` - Arranjo de tabelas e gráficos
-- `hrbrthemes` - Temas elegantes para ggplot2
-- `extrafont` - Fontes tipográficas adicionais
+### Objetivo
+
+Analisar os efeitos da defasagem dos valores remuneratórios da Tabela SUS e de sua recomposição parcial (a partir de 2023) sobre a **produção hospitalar e ambulatorial** e a **oferta de serviços especializados** no Brasil entre 2018 e 2025.
+
+### Fontes de Dados
+
+| Sistema | Descrição |
+|:--|:--|
+| **SIGTAP** | Tabela de Procedimentos, Medicamentos e OPM do SUS |
+| **SIH/SUS** | Sistema de Informações Hospitalares |
+| **SIA/SUS** | Sistema de Informações Ambulatoriais |
+| **CNES** | Cadastro Nacional de Estabelecimentos de Saúde |
+| **IPCA** | Índice de Preços ao Consumidor Amplo (IBGE) |
+
+### Metodologia
+
+- **Desenho:** Quase-experimental com Diferença-em-Diferenças (DiD)
+- **Tratamento:** Recomposição da Tabela SUS (Portaria GM/MS nº 3.392/2024)
+- **Período:** Jan/2018 a Dez/2025 (dados mensais)
+- **Controles:** Tendências paralelas pré-tratamento, event study, placebo tests
+- **Erros-padrão:** HC1 (Heteroskedasticity-Consistent, White)
+
+### Resultados Gerados
+
+**Figuras** (`output/figures/`):
+
+| Arquivo | Conteúdo |
+|:--|:--|
+| `fig1_sigtap_series.png` | Evolução temporal dos valores SIGTAP (nominal vs. real) |
+| `fig2_sih_did_index.png` | Internações SIH — índice DiD |
+| `fig3_sia_subgrupos.png` | Produção SIA por subgrupo de procedimentos |
+| `fig4_cnes_evolucao.png` | Evolução da rede de estabelecimentos (CNES) |
+| `fig5_defasagem_real.png` | Defasagem real acumulada (IPCA) |
+| `fig6_valor_total.png` | Valor total pago pelo SUS |
+| `fig7_event_study.png` | Event study — leads e lags do tratamento |
+| `fig8_forest_uf.png` | Forest plot dos efeitos por UF |
+
+**Tabelas** (`output/tables/`):
+
+| Arquivo | Conteúdo |
+|:--|:--|
+| `tabela1_descritiva_*.csv` | Estatísticas descritivas SIH e SIA |
+| `tabela2_recomposicao_sigtap.csv` | Valores da recomposição SIGTAP |
+| `tabela3_resumo_did.csv` | Resumo dos modelos DiD |
+| `tabela4_variacao_pre_pos.csv` | Variação pré vs. pós-recomposição |
+| `tabela5_modelos_did.csv` | Coeficientes completos dos modelos |
+| `tabela6_efeitos_uf.csv` | Efeitos heterogêneos por UF |
+| `tabela7_placebo.csv` | Testes placebo |
+
+**Manuscrito** (`docs/manuscrito_tabela_sus_bmc.docx`):
+Artigo completo formatado no estilo BMC Health Services Research, com 33 referências bibliográficas.
+
+---
+
+## Como Executar
+
+### Pré-requisitos
+
+| Software | Versão |
+|:--|:--|
+| R | ≥ 4.0 |
+| Python | ≥ 3.8 (apenas para `01_download_data.py` e `05_gerar_manuscrito.py`) |
+| RStudio | Recomendado para os notebooks |
+
+### Pacotes R necessários
+
+```r
+# Manipulação de dados
+install.packages(c("tidyverse", "data.table", "lubridate", "readr", "openxlsx", "hablar"))
+
+# Geoespacial (Boletim COVID)
+install.packages(c("sf", "brazilmaps", "geobr", "ggsn", "BAMMtools", "maptools"))
+
+# Econometria (Estudo Tabela SUS)
+install.packages(c("lmtest", "sandwich", "broom"))
+
+# Visualização
+install.packages(c("ggplot2", "scales", "gridExtra", "ggrepel", "gghighlight", "hrbrthemes"))
+
+# Manuscrito
+pip install python-docx  # Python
+```
+
+### Execução — Boletim COVID-19
+
+```bash
+# Executar na ordem:
+# 1. RNotebook1_Monitora_UF_v2.Rmd
+# 2. RNotebook2_Monitora_MUN.Rmd
+# 3. RNotebook3_Paineis_SVS_NOVO.Rmd
+# 4. teste_Card_semanal_k4.Rmd / Script_municipios_k5.R / Script_municipios_mapames_K6.R
+```
+
+### Execução — Estudo Tabela SUS
+
+```bash
+cd scripts/
+
+# Opção 1: Executar tudo de uma vez
+Rscript 00_executar_tudo.R
+
+# Opção 2: Etapa por etapa
+Rscript 01_gerar_dados.R        # Gerar dados
+Rscript 02_processar_dados.R    # Processar painéis
+Rscript 03_tabelas_figuras.R    # Tabelas e figuras
+Rscript 04_modelos_did.R        # Modelos DiD
+python  05_gerar_manuscrito.py   # Manuscrito DOCX
+```
+
+---
 
 ## Dados de Referência
 
-- **Estimativas populacionais**: TCU 2019 (Tribunal de Contas da União)
-- **Semanas epidemiológicas**: Calculadas com `lubridate::epiweek()`
-- **Códigos IBGE**: Códigos de 2 dígitos (UF) e 6-7 dígitos (municípios)
-- **Início da série**: 25/02/2020 (1º caso confirmado no Brasil)
-
-## Como Usar
-
-### Pré-requisitos
-1. R (versão 4.0+)
-2. RStudio (recomendado)
-3. Pacotes listados na seção de dependências
-
-### Execução
-
-1. **Atualizar caminhos**: Ajustar a variável `path` em cada arquivo para o diretório do seu usuário
-2. **Executar na ordem**:
-   - Primeiro: `RNotebook1_Monitora_UF_v2.Rmd`
-   - Segundo: `RNotebook2_Monitora_MUN.Rmd`
-   - Terceiro: `RNotebook3_Paineis_SVS_NOVO.Rmd`
-   - Depois (independentes): `teste_Card_semanal_k4.Rmd`, `Script_municipios_k5.R`, `Script_municipios_mapames_K6.R`
-3. **Atualizar variáveis de controle** (marcadas com `### ATUALIZAR !!!`):
-   - Semana epidemiológica (`corteSemana`, `SE`)
-   - Datas dos arquivos de entrada
-   - Filtros de período
+- **Estimativas populacionais:** TCU 2019 (Tribunal de Contas da União)
+- **Semanas epidemiológicas:** `lubridate::epiweek()`
+- **Códigos IBGE:** 2 dígitos (UF), 6–7 dígitos (município)
+- **Início da série COVID:** 25/02/2020 (1º caso confirmado)
+- **Período Tabela SUS:** Jan/2018 – Dez/2025
 
 ## Autores
-- **Audencio Victors** - All
-- **Ronaldo Fernandes Santos Alves** - Notebooks 1, 2 e 3
-- **Plínio** - Cards semanais (K4)
-- **Equipe COE-COVID/SVS** - Scripts de mapas (K5, K6)
+
+- **Audencio Victors** — Coordenação geral
+- **Ronaldo Fernandes Santos Alves** — Notebooks 1, 2 e 3
+- **Plínio** — Cards semanais (K4)
+- **Equipe COE-COVID/SVS** — Scripts de mapas (K5, K6)
 
 ## Instituição
 
 **Ministério da Saúde do Brasil**
 Secretaria de Vigilância em Saúde (SVS)
 Centro de Operações de Emergências (COE-COVID)
+
+---
+
+## Licença
+
+Este projeto é de uso institucional do Ministério da Saúde do Brasil.
